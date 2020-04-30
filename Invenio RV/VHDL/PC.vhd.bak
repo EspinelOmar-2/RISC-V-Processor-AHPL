@@ -1,0 +1,112 @@
+--Definicion de las bibliotecas 
+library IEEE; 
+use IEEE.std_logic_1164.all;
+
+--******************************************************--
+-- DEFINICIÓN DE ENTIDAD                                --
+--******************************************************--
+
+--entity Contador is
+--port(
+--	--Entradas
+--	Reloj: in std_logic;
+--	Reset: in std_logic;
+--	control_Contador: in std_logic;                                                                                                                            
+--	--Salidas
+--	contador_Control: out std_logic
+--		
+--		);
+--	  
+--end Entity Contador;             
+
+entity PC is
+port(
+		--Entradas
+		
+			Reloj: in std_logic;
+			
+			Reset: in std_logic;
+			Control_PC:				in 	std_logic_vector(1 downto 0);
+			--Señales de control del pc, para su funncion individual, revisar bloque.
+			
+			ALU_PC: 					in 	std_logic_vector(31 downto 0);
+			--contiene el nuevo PC para ser almacenado.
+			
+		--Salidas
+		
+			PC_MAR: 					out	std_logic_vector(31 downto 0)
+			--Señal que envía la dirección desde el PC al MAR 
+	  );
+end entity PC;
+
+
+--******************************************************--
+--DEFINICIÓN DE ARQUITECTURA                                        --
+--******************************************************--
+
+architecture ContadorArch of Contador is
+
+--******************************************************--
+--DEFINICIÓN DE COMPONENTES Y SEÑALES DE CONEXIÓN                                        
+--******************************************************--
+
+component dffe
+port(D,clk,Clrn,Prn,Ena: in std_logic;
+	Q:out std_logic
+);
+end component;
+
+signal Q: std_logic_vector(31 downto 0);
+signal enable: std_logic_vector(31 downto 0);
+
+
+--******************************************************--
+--Instancias y Conectividad
+--******************************************************
+begin
+
+	D0 :dffe port map(not Q( 0),Reloj,Reset,'1', enable ( 0) ,Q( 0));
+	D1 :dffe port map(not Q( 1),Reloj,Reset,'1', enable ( 1) ,Q( 1));
+	D2 :dffe port map(not Q( 2),Reloj,Reset,'1', enable ( 2) ,Q( 2));
+	D3 :dffe port map(not Q( 3),Reloj,Reset,'1', enable ( 3) ,Q( 3));
+	D4 :dffe port map(not Q( 4),Reloj,Reset,'1', enable ( 4) ,Q( 4));
+	D5 :dffe port map(not Q( 5),Reloj,Reset,'1', enable ( 5) ,Q( 5));
+	D6 :dffe port map(not Q( 6),Reloj,Reset,'1', enable ( 6) ,Q( 6));
+	D7 :dffe port map(not Q( 7),Reloj,Reset,'1', enable ( 7) ,Q( 7));
+	D8 :dffe port map(not Q( 8),Reloj,Reset,'1', enable ( 8) ,Q( 8));
+	D9 :dffe port map(not Q( 9),Reloj,Reset,'1', enable ( 9) ,Q( 9));
+	D10:dffe port map(not Q(10),Reloj,Reset,'1', enable (10) ,Q(10));
+	D11:dffe port map(not Q(11),Reloj,Reset,'1', enable (11) ,Q(11));
+	D12:dffe port map(not Q(12),Reloj,Reset,'1', enable (12) ,Q(12));
+	D13:dffe port map(not Q(13),Reloj,Reset,'1', enable (13) ,Q(13));
+	D14:dffe port map(not Q(14),Reloj,Reset,'1', enable (14) ,Q(14));
+	D15:dffe port map(not Q(15),Reloj,Reset,'1', enable (15) ,Q(15));
+	D16:dffe port map(not Q(16),Reloj,Reset,'1', enable (16) ,Q(16));
+	D17:dffe port map(not Q(17),Reloj,Reset,'1', enable (17) ,Q(17));
+	D18:dffe port map(not Q(18),Reloj,Reset,'1', enable (18) ,Q(18));
+	D19:dffe port map(not Q(19),Reloj,Reset,'1', enable (19) ,Q(19));
+	D20:dffe port map(not Q(20),Reloj,Reset,'1', enable (20) ,Q(20));
+	D21:dffe port map(not Q(21),Reloj,Reset,'1', enable (21) ,Q(21));
+	D22:dffe port map(not Q(22),Reloj,Reset,'1', enable (22) ,Q(22));
+	D23:dffe port map(not Q(23),Reloj,Reset,'1', enable (23) ,Q(23));
+	D24:dffe port map(not Q(24),Reloj,Reset,'1', enable (24) ,Q(24));
+	D25:dffe port map(not Q(25),Reloj,Reset,'1', enable (25) ,Q(25));
+	D26:dffe port map(not Q(26),Reloj,Reset,'1', enable (26) ,Q(26));
+	D27:dffe port map(not Q(27),Reloj,Reset,'1', enable (27) ,Q(27));
+	D28:dffe port map(not Q(28),Reloj,Reset,'1', enable (28) ,Q(28));
+	D29:dffe port map(not Q(29),Reloj,Reset,'1', enable (29) ,Q(29));
+	D30:dffe port map(not Q(30),Reloj,Reset,'1', enable (30) ,Q(30));
+	D31:dffe port map(not Q(31),Reloj,Reset,'1', enable (31) ,Q(31));
+
+
+	enable (0) <= control_Contador;
+	enable (1) <= Q(0) and(control_Contador);
+	enable (2) <= enable(1) and Q(1);
+
+	
+	contador_Control<= Q(0) AND Q(1) AND Q(2);
+
+
+End  ContadorArch;
+
+

@@ -1,0 +1,143 @@
+--Definicion de las bibliotecas 
+library IEEE; 
+use IEEE.std_logic_1164.all;
+library ALTERA;
+use ALTERA.altera_primitives_components.all;
+
+--********************************************************************************--
+-- Comentarios :																						 --
+-- Bloque Proyecto, que contiene la declaracion de todos los bloques necesarios   --
+--del sistema, asi como su incializacion y las señales, tanto internas como del   --
+--sistema															                     		 --
+--********************************************************************************--
+
+--Declaracion de entradas y salidas del bloque--
+
+entity RepasoGrupo2 is
+port(
+		--Entradas
+		reset: in std_logic;
+		reloj: in std_logic;
+		inicio: in std_logic;
+		arbitro_Gol: in std_logic;
+		arbitro_No_Gol: in std_logic;
+		federacion: in std_logic;
+		nuevo_Tiro: in std_logic;
+		nivel_Arbitro: in	std_logic_vector (0 to 1);
+		
+		--Salidas
+		nivel_Real: out std_logic_vector (0 to 1);
+		Relojs: out std_logic;
+		error: out std_logic;
+		Qs: out std_logic_vector(0 to 11)
+
+	 );
+	 
+end Entity RepasoGrupo2;     
+--Señales de entity diferentes a la de los componentes
+architecture RepasoGrupo2Arch of RepasoGrupo2 is
+
+
+--Se definen todos los componentes que incluye el proyecto, con sus respectivas entradas y salidas
+
+--Contador: Usa flip flops para realizar una cuenta de 300 ns y reportarle a control al terminar
+component Cont_Aciertos is
+port(
+		--Entradas
+		reloj: in std_logic;
+		reset: in std_logic;
+		control_Cont_Aciertos: in std_logic;
+		--Salidas
+		cont_Aciertos_Control: out std_logic_vector (0 to 2)	
+	  );
+end component;
+
+component Cont_Tiro is
+port(
+		--Entradas
+		reloj: in std_logic;
+		reset: in std_logic;
+		control_Cont_Tiro: in std_logic;
+		--Salidas
+		cont_Tiro_Control: out std_logic	
+	  );
+end component;
+
+--comparador, compara los datos enviados desde registro y  memoria y lo reporta a control 
+component Visualizar is
+port(
+		--Entradas
+		Nivel_Arbitro: in std_logic_vector (0 to 1);
+		control_Visualizar: in std_logic_vector (0 to 2);
+		
+		--Salidas
+		Nivel_Real: out	std_logic_vector (0 to 1)
+	  );
+end component;
+
+--Maneja los estados y conecta los bloques
+component Control is
+	port(
+			--Entradas
+			reloj: in std_logic;
+			Reset: in std_logic;
+			Inicio: in std_logic;
+			Nuevo_Tiro: in std_logic;
+			Nivel_Arbitro: in std_logic_vector(0 to 1);
+			cont_Aciertos_Control: in std_logic_vector (0 to 2);
+			cont_Tiro_Control: in std_logic;
+			Arbitro_No_Gol: in std_logic;
+			Arbitro_Gol: in std_logic;
+			Federacion: in std_logic;
+	
+			
+			--Salidas
+			control_Visualizar: out std_logic_vector (0 to 2);
+			control_Cont_Aciertos: out std_logic;
+			Error: out std_logic;
+			control_Cont_Tiro: out std_logic;
+			Salidas: out std_logic_vector(0 to 11)
+		
+		 );
+end component;
+
+--CambiarEstado, GuardarDigito y  todas las salidas diferentes a las del entity
+--Recibe un arreglo de registro y lo envia de vuelta a la orden del control 
+component Memoria is
+port(
+		--Entradas
+		reloj: in std_logic;
+		registro_Memoria: in std_logic_vector (8 downto 0);
+		control_Memoria: in	std_logic;
+		Reset: in std_logic;
+		--Salidas
+		memoria_Comparador: out std_logic_vector (8 downto 0)
+	 );
+end component;
+
+
+--******************************************************--
+--Señales de conectividad del sistema
+signal control_Visualizar1: std_logic_vector (0 to 2);
+signal cont_Aciertos_Control1: std_logic_vector (0 to 2);
+signal control_Cont_Aciertos1: std_logic;
+signal cont_Tiro_Control1: std_logic;
+signal control_Cont_Tiro1: std_logic;
+signal Control_Salida: std_logic_vector (0 to 11);
+signal Control_error: std_logic;
+signal visualizar_Nivel_Real: std_logic_vector (0 to 1);
+
+--*****************************************************--
+-- Funcionamiento 
+begin
+
+Relojs<=reloj;
+bloqueVisualizar: Visualizar port map(Nivel_Arbitro,control_Visualizar1,visualizar_Nivel_Real);
+bloqueCont_Aciertos: Cont_Aciertos port map (reloj,reset,control_Cont_Aciertos1,cont_Aciertos_Control1);	
+bloqueCont_Tiro: Cont_Tiro port map(reloj,reset,control_Cont_Tiro1,cont_Tiro_Control1);
+bloqueControl: Control port map(reloj,Reset,Inicio,Nuevo_Tiro,Nivel_Arbitro,cont_Aciertos_Control1,cont_Tiro_Control1,Arbitro_No_Gol,Arbitro_Gol,Federacion,control_Visualizar1,control_Cont_Aciertos1,Control_error,control_Cont_Tiro1,Control_Salida);
+Qs<=Control_Salida;
+error<=Control_error;
+nivel_Real<=visualizar_Nivel_Real;
+
+End RepasoGrupo2Arch;

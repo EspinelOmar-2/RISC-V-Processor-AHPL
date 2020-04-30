@@ -1,0 +1,292 @@
+// Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
+// Your use of Altera Corporation's design tools, logic functions 
+// and other software and tools, and its AMPP partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Altera Program License 
+// Subscription Agreement, the Altera Quartus Prime License Agreement,
+// the Altera MegaCore Function License Agreement, or other 
+// applicable license agreement, including, without limitation, 
+// that your use is for the sole purpose of programming logic 
+// devices manufactured by Altera and sold by Altera or its 
+// authorized distributors.  Please refer to the applicable 
+// agreement for further details.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "03/25/2020 23:53:02"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          IR
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module IR_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg Control_IR;
+reg [31:0] MemoryOut;
+reg Reloj;
+reg Reset;
+// wires                                               
+wire [19:0] IR_ALU;
+wire [10:0] IR_Control;
+wire [11:0] IR_CSR;
+wire [14:0] IR_Registers;
+
+// assign statements (if any)                          
+IR i1 (
+// port map - connection between master ports and signals/registers   
+	.Control_IR(Control_IR),
+	.IR_ALU(IR_ALU),
+	.IR_Control(IR_Control),
+	.IR_CSR(IR_CSR),
+	.IR_Registers(IR_Registers),
+	.MemoryOut(MemoryOut),
+	.Reloj(Reloj),
+	.Reset(Reset)
+);
+initial 
+begin 
+#1000000 $stop;
+end 
+
+// Reset
+initial
+begin
+	Reset = 1'b0;
+	Reset = #30000 1'b1;
+end 
+
+// Reloj
+always
+begin
+	Reloj = 1'b0;
+	Reloj = #10000 1'b1;
+	#10000;
+end 
+
+// Control_IR
+initial
+begin
+	Control_IR = 1'b0;
+	Control_IR = #80000 1'b1;
+	Control_IR = #30000 1'b0;
+	Control_IR = #450000 1'b1;
+	Control_IR = #30000 1'b0;
+	Control_IR = #260000 1'b1;
+	Control_IR = #30000 1'b0;
+end 
+// MemoryOut[ 31 ]
+initial
+begin
+	MemoryOut[31] = 1'b0;
+	MemoryOut[31] = #500000 1'b1;
+	MemoryOut[31] = #290000 1'b0;
+end 
+// MemoryOut[ 30 ]
+initial
+begin
+	MemoryOut[30] = 1'b0;
+	MemoryOut[30] = #500000 1'b1;
+	MemoryOut[30] = #290000 1'b0;
+end 
+// MemoryOut[ 29 ]
+initial
+begin
+	MemoryOut[29] = 1'b0;
+	MemoryOut[29] = #500000 1'b1;
+	MemoryOut[29] = #290000 1'b0;
+end 
+// MemoryOut[ 28 ]
+initial
+begin
+	MemoryOut[28] = 1'b0;
+	MemoryOut[28] = #500000 1'b1;
+	MemoryOut[28] = #290000 1'b0;
+end 
+// MemoryOut[ 27 ]
+initial
+begin
+	MemoryOut[27] = 1'b1;
+	MemoryOut[27] = #500000 1'b0;
+	MemoryOut[27] = #290000 1'b1;
+end 
+// MemoryOut[ 26 ]
+initial
+begin
+	MemoryOut[26] = 1'b0;
+	MemoryOut[26] = #790000 1'b1;
+end 
+// MemoryOut[ 25 ]
+initial
+begin
+	MemoryOut[25] = 1'b1;
+	MemoryOut[25] = #500000 1'b0;
+	MemoryOut[25] = #290000 1'b1;
+end 
+// MemoryOut[ 24 ]
+initial
+begin
+	MemoryOut[24] = 1'b1;
+	MemoryOut[24] = #500000 1'b0;
+	MemoryOut[24] = #290000 1'b1;
+end 
+// MemoryOut[ 23 ]
+initial
+begin
+	MemoryOut[23] = 1'b0;
+	MemoryOut[23] = #790000 1'b1;
+end 
+// MemoryOut[ 22 ]
+initial
+begin
+	MemoryOut[22] = 1'b0;
+	MemoryOut[22] = #790000 1'b1;
+end 
+// MemoryOut[ 21 ]
+initial
+begin
+	MemoryOut[21] = 1'b0;
+	MemoryOut[21] = #790000 1'b1;
+end 
+// MemoryOut[ 20 ]
+initial
+begin
+	MemoryOut[20] = 1'b0;
+	MemoryOut[20] = #790000 1'b1;
+end 
+// MemoryOut[ 19 ]
+initial
+begin
+	MemoryOut[19] = 1'b1;
+	MemoryOut[19] = #500000 1'b0;
+	MemoryOut[19] = #290000 1'b1;
+end 
+// MemoryOut[ 18 ]
+initial
+begin
+	MemoryOut[18] = 1'b1;
+	MemoryOut[18] = #500000 1'b0;
+	MemoryOut[18] = #290000 1'b1;
+end 
+// MemoryOut[ 17 ]
+initial
+begin
+	MemoryOut[17] = 1'b0;
+	MemoryOut[17] = #790000 1'b1;
+end 
+// MemoryOut[ 16 ]
+initial
+begin
+	MemoryOut[16] = 1'b1;
+	MemoryOut[16] = #500000 1'b0;
+	MemoryOut[16] = #290000 1'b1;
+end 
+// MemoryOut[ 15 ]
+initial
+begin
+	MemoryOut[15] = 1'b0;
+	MemoryOut[15] = #790000 1'b1;
+end 
+// MemoryOut[ 14 ]
+initial
+begin
+	MemoryOut[14] = 1'b0;
+	MemoryOut[14] = #790000 1'b1;
+end 
+// MemoryOut[ 13 ]
+initial
+begin
+	MemoryOut[13] = 1'b0;
+	MemoryOut[13] = #790000 1'b1;
+end 
+// MemoryOut[ 12 ]
+initial
+begin
+	MemoryOut[12] = 1'b0;
+	MemoryOut[12] = #790000 1'b1;
+end 
+// MemoryOut[ 11 ]
+initial
+begin
+	MemoryOut[11] = 1'b1;
+	MemoryOut[11] = #500000 1'b0;
+	MemoryOut[11] = #290000 1'b1;
+end 
+// MemoryOut[ 10 ]
+initial
+begin
+	MemoryOut[10] = 1'b1;
+	MemoryOut[10] = #500000 1'b0;
+	MemoryOut[10] = #290000 1'b1;
+end 
+// MemoryOut[ 9 ]
+initial
+begin
+	MemoryOut[9] = 1'b1;
+	MemoryOut[9] = #500000 1'b0;
+	MemoryOut[9] = #290000 1'b1;
+end 
+// MemoryOut[ 8 ]
+initial
+begin
+	MemoryOut[8] = 1'b0;
+	MemoryOut[8] = #790000 1'b1;
+end 
+// MemoryOut[ 7 ]
+initial
+begin
+	MemoryOut[7] = 1'b0;
+	MemoryOut[7] = #790000 1'b1;
+end 
+// MemoryOut[ 6 ]
+initial
+begin
+	MemoryOut[6] = 1'b0;
+	MemoryOut[6] = #790000 1'b1;
+end 
+// MemoryOut[ 5 ]
+initial
+begin
+	MemoryOut[5] = 1'b0;
+	MemoryOut[5] = #790000 1'b1;
+end 
+// MemoryOut[ 4 ]
+initial
+begin
+	MemoryOut[4] = 1'b0;
+	MemoryOut[4] = #790000 1'b1;
+end 
+// MemoryOut[ 3 ]
+initial
+begin
+	MemoryOut[3] = 1'b1;
+	MemoryOut[3] = #790000 1'b0;
+end 
+// MemoryOut[ 2 ]
+initial
+begin
+	MemoryOut[2] = 1'b1;
+	MemoryOut[2] = #790000 1'b0;
+end 
+// MemoryOut[ 1 ]
+initial
+begin
+	MemoryOut[1] = 1'b1;
+	MemoryOut[1] = #790000 1'b0;
+end 
+// MemoryOut[ 0 ]
+initial
+begin
+	MemoryOut[0] = 1'b1;
+	MemoryOut[0] = #790000 1'b0;
+end 
+endmodule
+
