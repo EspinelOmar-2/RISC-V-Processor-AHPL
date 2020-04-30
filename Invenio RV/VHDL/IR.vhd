@@ -13,6 +13,7 @@ port(
 		
 			Reset: 				in std_logic;
 			--Señal para reiniciar el sistema
+			-- Holi soy un comentario
 				
 			Reloj: 				in std_logic;
 			--señal de reloj para elfuncionamiento d elos bloques
