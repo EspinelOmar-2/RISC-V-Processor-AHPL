@@ -110,10 +110,10 @@
 ║                                                21. BLTU /BGEU                                                         ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-15. Salida_ALU = Resta(Registers[IR(24:20)],Registers[IR(19:15)]);                                                       -- Se resta el valor de Registers direccion IR(24:20) con Registers
+15. Salida_ALU = Suma(Registers[IR(24:20)],Registers[IR(19:15)',1]);                                                     -- Se resta el valor de Registers direccion IR(24:20) con Registers
     -> (16)                                                                                                              -- direccion IR(14:19) pero no guarda el resultado
 
-16. Salida_ALU = Resta(Registers[IR(24:20)],Registers[IR(19:15)]);                                                       -- Se repite la accion del estado 15, mientras la resta se efectua
+16. Salida_ALU = Suma(Registers[IR(24:20)],Registers[IR(19:15)',1]);                                                     -- Se repite la accion del estado 15, mientras la resta se efectua
     ->
 (IR[12]'. ALU_Control[1]  X17) +                                                                                         -- Si se desea que sean iguales   , y son iguales    va al estado 17
 (IR[12]'. ALU_Control[1]' X 1) +                                                                                         -- Si se desea que sean iguales   , y son diferentes va al estado  1
@@ -126,10 +126,10 @@
 18. PC        <= Suma(PC, ((20 T IR(12)) ,IR(31), IR(7), IR(30:25), IR(11:8)));                                          -- Se repite la accion del estado 17, mientras la suma se efectua
     -> ( 1)
 
-19. Salida_ALU = Resta      ( Registers[IR(19:15)], Registers[IR(24:20)] );                                              -- Se compara el valor de Registers direccion IR(24:20) con Registers
+19. Salida_ALU = Suma( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                                 -- Se compara el valor de Registers direccion IR(24:20) con Registers
     -> (20)                                                                                                              -- direccion IR(14:19)La comparacion tiene en cuenta el complemento a2
 
-20. Salida_ALU = Resta      ( Registers[IR(19:15)], Registers[IR(24:20)] );                                              -- Se repite la accion del estado 19, mientras la comparacion se hace
+20. Salida_ALU = Suma( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                                 -- Se repite la accion del estado 19, mientras la comparacion se hace
     ->
 (ALU_Control[2] . ALU_Control[1]’ . IR[12]’ X17) +                                                                       -- rs1<rs2 blt
 (ALU_Control[2]’. ALU_Control[1]’ . IR[12]’ X 1) +                                                                       -- rs1>rs2 blt
@@ -137,10 +137,10 @@
 (ALU_Control[2] . ALU_Control[1]’ . IR[12]  X 1) +                                                                       -- rs1<rs2 bge
 (                 ALU_Control[1]  .         X 1) +                                                                       -- sr1=rs2 bge blt
 
-21. Salida_ALU = resta( Registers[ IR[19:15]], Registers[ IR[24:20]]);                                                   -- Se resta el valor de Registers direccion IR(24:20) con Registers
+21. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
     -> (22)                                                                                                              -- direccion IR(14:19) pero no guarda el resultado
 
-22. Salida_ALU = resta( Registers[ IR[19:15]], Registers[ IR[24:20]]);                                                   -- Se repite la accion del estado 21, mientras la resta se efectua
+22. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);                                                -- Se repite la accion del estado 21, mientras la resta se efectua
     ->
 (ALU_Control[3] . ALU_Control[1]’ . IR[12]’ X 1) +                                                                       -- rs1>rs2 bltu
 (ALU_Control[3]’. ALU_Control[1]’ . IR[12]’ X17) +                                                                       -- rs1<rs2 bltu
@@ -264,10 +264,10 @@
 39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Se repite la accion del estado 38, mientras la suma se efectua
     -> ( 1)
 
-40. Salida_ALU = Resta( Registers[IR(19:15)], IR[31:20] );                                                               -- Compara el dato en Registers direccion IR(19:15) con el dato
+40. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Compara el dato en Registers direccion IR(19:15) con el dato
     -> (41)                                                                                                              -- almacenado IR(31:20). Esta comparacion se hace en complemento a 2
 
-41. Salida_ALU = Resta( Registers[IR(19:15)], IR[31:20] );                                                               -- Se repite la accion del estado 40, mientras la comparacion se hace
+41. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se repite la accion del estado 40, mientras la comparacion se hace
     ->
 (ALU_Control[1]’. ALU_Control[2]’. X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15)GOTO 42
 (ALU_Control[1]’. ALU_Control[2] . X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15)GOTO 43
@@ -279,10 +279,10 @@
 43. Registers[IR(11:7)] <='0';                                                                                           -- Se guarda un 0x0 en Registers direccion IR(11:7)
     -> ( 1)
 
-44. Salida_ALU = Resta( Registers[IR(19:15)], IR[31:20] );                                                               -- Se resta el dato de Registers direccion IR(19:15) con el dato
+44. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se resta el dato de Registers direccion IR(19:15) con el dato
     -> (45)                                                                                                              -- almacenado en IR(31:20)
 
-45. Salida_ALU = Resta( Registers[IR(19:15)], IR[31:20] );                                                               -- Se repite la accion del estado 35, mientras la resta se efectua
+45. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se repite la accion del estado 35, mientras la resta se efectua
     ->
 (ALU_Control[1]’. ALU_Control[2] . X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15) GOTO 42
 (ALU_Control[1]’. ALU_Control[2]’. X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15) GOTO 43
@@ -339,13 +339,13 @@
 54. Registers[IR(11:7)] <= Suma (Registers[IR(19:15)], Registers[IR(24:20)]);                                            -- Se repite la accion del estado 56, mientras la suma se efectua
     -> ( 1)
 
-55. Salida_ALU           = Resta(Registers[IR(19:15)], Registers[IR(24:20)]);                                            -- Se restan los valores almacenados en Registers direcciones IR(19:15)
+55. Salida_ALU           = Suma (Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                       -- Se restan los valores almacenados en Registers direcciones IR(19:15)
     -> (56)                                                                                                              -- e IR(24:20) y el resultado va a Registers direccion IR(11:7)
 
-56. Salida_ALU           = Resta(Registers[IR(19:15)], Registers[IR(24:20)]);                                            -- Se repite la accion del estado 58, mientras la resta se efectua
+56. Salida_ALU           = Suma (Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                       -- Se repite la accion del estado 58, mientras la resta se efectua
     -> (57)
 
-57. Registers[IR(11:7)] <= Resta(Registers[IR(19:15)], Registers[IR(24:20)]);                                            -- Se repite la accion del estado 59, mientras la resta se efectua
+57. Registers[IR(11:7)] <= Suma (Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                       -- Se repite la accion del estado 59, mientras la resta se efectua
     -> ( 1)
 
 58. Counter <= Registers[IR(24:20)]                                                                                      -- Se carga al Counter el valor del Registers direccion IR(25:20)
@@ -357,19 +357,19 @@
 59. Registers[IR(11:7)] <= AluShiftRegister;                                                                             -- Se carga el valor del shift realizado al registro indicado
     -> ( 1)
 
-60. Salida_ALU = Resta( Registers[IR(19:15)], Registers[ IR(24:20)] );                                                   -- Se compara el valor de Registers direccion IR(24:20) con Registers
+60. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se compara el valor de Registers direccion IR(24:20) con Registers
     -> (61)                                                                                                              -- direccion IR(19:15)La comparacion tiene en cuenta el complemento a2
 
-61. Salida_ALU = Resta( Registers[IR(19:15)], Registers[ IR(24:20)] );                                                   -- Se repite la accion del estado 19, mientras la comparacion se hace
+61. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 19, mientras la comparacion se hace
     ->
 (ALU_Control[1]’ . ALU_Control[2]’. X42) +                                                                               -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
 (ALU_Control[1]’ . ALU_Control[2] . X43) +                                                                               -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
 (ALU_Control[1]                     X43)                                                                                 -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
-62. Salida_ALU = Resta( Registers[IR(19:15)], Registers[ IR(24:20)]);                                                    -- Se resta el valor de Registers direccion IR(24:20) con Registers
+62. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
     -> (63)                                                                                                              -- direccion IR(14:19) pero no guarda el resultado
 
-63. Salida_ALU = Resta( Registers[IR(19:15)], Registers[ IR(24:20)]);                                                    -- Se repite la accion del estado 59, mientras la resta se efectua
+63. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 59, mientras la resta se efectua
     ->
 (ALU_Control[1]’. ALU_Control[3] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
 (ALU_Control[1]’. ALU_Control[2]’. X43) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
@@ -437,5 +437,3 @@
 ║                                                  FUNCIONES LOGICAS                                                    ║
 ║                                                                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-
-Resta( DataA, DataB) = Suma (DataA, DataB' , 0x01);
