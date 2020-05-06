@@ -63,33 +63,32 @@
 (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           X74) +             -- 0110011    000            mul
 (IR[1]  . IR[0]' . IR[15]  . IR[14] . IR[13]’                                                         X75) +             -- 110 10                    swsp (push)
 (IR[1]  . IR[0]' . IR[15]' . IR[14] . IR[13]’)                                                        X79) +             -- 010 10                    lwsp (pop)
-(
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          )' +
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’                     )' +
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’                     )' +
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]                      )' +
-(IR[6]’ . IR[5]’ . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
-(IR[6]’ . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]’ )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]  )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
-(IR[6]  . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           )) X               -- Estado de exepcion de instruccion invalida
+((IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]  . IR[5]  . IR[4]’ . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’                     )' +
+ (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’                     )' +
+ (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]                      )' +
+ (IR[6]’ . IR[5]’ . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
+ (IR[6]’ . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
+ (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]’ )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]  )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
+ (IR[6]  . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
+ (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           )) X84            -- Estado de exepcion de instruccion invalida
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                         AUIPC                                                         ║
@@ -468,7 +467,7 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                          PUSH Y POP                                                          ║
+║                                                       PUSH Y POP                                                      ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 75. Salida_ALU = Suma(Registers[0 τ 010],IR[12:7]);                                                                      -- PUSH: Se suma Registers direccion IR(12:7) con el SP, revisar direccionamiento
@@ -486,7 +485,7 @@
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
     SP<=Inc(SP)                                                                                                          -- Incrementa el stack pointer
-    -> (1)
+    -> ( 1)
 
 79. Salida_ALU = Suma(Registers[0 τ 010],IR[12|6:2]);                                                                    --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
     -> (80)
@@ -500,11 +499,18 @@
 
 82. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 2)
     Read = 1;
-    ->(83)
+    -> (83)
 
 
 83.MemoryAddress = MAR;                                                                                                  -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
     Registers[IR(11:7)]        <= MemoryOut;                                                                             -- Se guardan los 4 Bytes en Registers en la direccion IR(11:7)
     SP<=Dec(SP)                                                                                                          -- Decrementa el stack pointer
+    -> ( 1)
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                           Invalid instruction exception                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+84. CSR[0x835] <= IR;
     -> ( 1)
