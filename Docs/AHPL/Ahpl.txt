@@ -61,6 +61,8 @@
 (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X66) +             -- 0110011    111            and
 (IR[6]  . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          X67) +             -- 1110011    CCC            csrrw/csrrs/csrrc/csrrwi/csrrsi/csrrci
 (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           X74) +             -- 0110011    000            mul
+(IR[1]  . IR[0]' . IR[15]  . IR[14] . IR[13]’                                                         X75) +             -- 110 10                    swsp (push)
+(IR[1]  . IR[0]' . IR[15]' . IR[14] . IR[13]’)                                                        X79) +             -- 010 10                    lwsp (pop)
 (
 (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
 (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
@@ -464,3 +466,45 @@
 ║                                                  FUNCIONES LOGICAS                                                    ║
 ║                                                                                                                       ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                          PUSH Y POP                                                          ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+75. Salida_ALU = Suma(Registers[0 τ 010],IR[12:7]);                                                                      -- PUSH: Se suma Registers direccion IR(12:7) con el SP, revisar direccionamiento
+    -> (76)
+
+76. MAR       <= Suma(Registers[0 τ 010],IR[12:7]);                                                                      -- Se repite la accion del estado 75, mientras la suma se efectua
+    -> (77)
+
+77. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
+    Read = 0;                                                                                                            -- Ciclo 1 de Write
+    MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
+    -> (33)
+
+78. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
+    Read = 0;                                                                                                            -- Ciclo 2 de Write
+    MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
+    SP<=Inc(SP)                                                                                                          -- Incrementa el stack pointer
+    -> (1)
+
+79. Salida_ALU = Suma(Registers[0 τ 010],IR[12|6:2]);                                                                    --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
+    -> (80)
+
+80. MAR       <= Suma(Registers[0 τ 010],IR[12|6:2]);                                                                    -- Se repite la accion del estado 79, mientras la suma se efectua
+    -> (81)
+
+81. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 1)
+    Read = 1;
+    -> (82)
+
+82. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 2)
+    Read = 1;
+    ->(83)
+
+
+83.MemoryAddress = MAR;                                                                                                  -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
+    Read = 1;
+    Registers[IR(11:7)]        <= MemoryOut;                                                                             -- Se guardan los 4 Bytes en Registers en la direccion IR(11:7)
+    SP<=Dec(SP)                                                                                                          -- Decrementa el stack pointer
+    -> ( 1)
