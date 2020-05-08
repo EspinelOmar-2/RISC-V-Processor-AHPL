@@ -264,6 +264,7 @@
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn(15: 0) = Registers[IR(24:20)](15: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 15
     MemoryIn(31:16) = Registers[IR(24:20)](   15);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  15    -> X 1.
+    -> ( 1)
 
 36. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
@@ -287,7 +288,7 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 38. Salida_ALU           = Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Suma Registers direccion IR(11:7) con los datos en IR(31:20)
-    -> ( 36)                                                                                                             -- el resultado se guarda en Registers direccion IR(11:7)
+    -> ( 39)                                                                                                             -- el resultado se guarda en Registers direccion IR(11:7)
 
 39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Se repite la accion del estado 38, mientras la suma se efectua
     -> ( 1)
