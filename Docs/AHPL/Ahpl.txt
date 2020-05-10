@@ -62,7 +62,7 @@
 (IR[6]  . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          X67) +             -- 1110011    CCC            csrrw/csrrs/csrrc/csrrwi/csrrsi/csrrci
 (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           X74) +             -- 0110011    000            mul
 (IR[1]  . IR[0]' . IR[15]  . IR[14] . IR[13]’                                                         X75) +             -- 110 10                    swsp (push)
-(IR[1]  . IR[0]' . IR[15]' . IR[14] . IR[13]’)                                                        X79) +             -- 010 10                    lwsp (pop)
+(IR[1]  . IR[0]' . IR[15]' . IR[14] . IR[13]’                                                         X79) +             -- 010 10                    lwsp (pop)
 ((IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
  (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
  (IR[6]  . IR[5]  . IR[4]’ . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          )' +
@@ -298,11 +298,11 @@
 
 41. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se repite la accion del estado 40, mientras la comparacion se hace
     ->
-(ALU_Control[1]’. ALU_Control[2]’. X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15)GOTO 42
-(ALU_Control[1]’. ALU_Control[2] . X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15)GOTO 43
+(ALU_Control[1]’. ALU_Control[2]’ X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15)GOTO 42
+(ALU_Control[1]’. ALU_Control[2]  X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15)GOTO 43
 (ALU_Control[1]                    X43)                                                                                  -- IR(31:20) = Registers direccion IR(19:15)GOTO 43
 
-42. Registers[IR(11:7)] <= '00000000000000000000000000000001';                                                           -- Se guarda un 0x1 en Registers direccion IR(11:7)
+42. Registers[IR(11:7)] <= '0 τ 01';                                                           -- Se guarda un 0x1 en Registers direccion IR(11:7)
     -> ( 1)
 
 43. Registers[IR(11:7)] <='0';                                                                                           -- Se guarda un 0x0 en Registers direccion IR(11:7)
@@ -456,7 +456,7 @@
 
 74. Registers(IR[11:7]) <= Multiply( Registers(IR[19:15]),Registers(IR[24:20]) );                                        -- Se realiza la multiplicacion entre Registers direcciones IR(19:15)
     ->                                                                                                                   -- e IR(24:20)
-(ALU_Control[0]' X81) +                                                                                                  -- La operacion aun no acaba, GOTO 81
+(ALU_Control[0]' X74) +                                                                                                  -- La operacion aun no acaba, GOTO 81
 (ALU_Control[0]  X 1)                                                                                                    -- La operacion ya termino
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
@@ -480,12 +480,12 @@
 77. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
     MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
-    -> (33)
+    -> (78)
 
 78. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
-    SP<=Inc(SP)                                                                                                          -- Incrementa el stack pointer
+    SP<=Inc(SP);                                                                                                          -- Incrementa el stack pointer
     -> ( 1)
 
 79. Salida_ALU = Suma(Registers[0 τ 010],IR[12|6:2]);                                                                    --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
@@ -506,7 +506,7 @@
 83.MemoryAddress = MAR;                                                                                                  -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
     Registers[IR(11:7)]        <= MemoryOut;                                                                             -- Se guardan los 4 Bytes en Registers en la direccion IR(11:7)
-    SP<=Dec(SP)                                                                                                          -- Decrementa el stack pointer
+    SP<=Dec(SP);                                                                                                         -- Decrementa el stack pointer
     -> ( 1)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
