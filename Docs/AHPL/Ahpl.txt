@@ -332,19 +332,19 @@
 (IR[30]'.IR[14]  X51) +                                                                                                  -- SRLI
 (IR[31]          X52)                                                                                                    -- SRAI
 
-50. LogicShiftLeft(IR(19:15));                                                                                           -- Se hace El corrimiento a izquierda 1 vez del dato IR(19:15)
+50. LogicShiftLeft(Registers[IR(19:15)]);                                                                                           -- Se hace El corrimiento a izquierda 1 vez del dato IR(19:15)
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
     ->
 (CounterControl' X50) +                                                                                                  -- Se va a este mismo estado si el contador no ha llegado al maximo
 (CounterControl  X59)                                                                                                    -- Se va al estado donde se guarda el resultado
 
-51. LogicShiftRight(IR(19:15));                                                                                          -- Se hace El corrimiento a derecha 1 vez del dato IR(19:15)
+51. LogicShiftRight(Registers[IR(19:15)]);                                                                                          -- Se hace El corrimiento a derecha 1 vez del dato IR(19:15)
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
     ->
 (CounterControl' X51) +                                                                                                  -- Se va a este mismo estado si el contador no ha llegado al maximo
 (CounterControl  X59)                                                                                                    -- Se va al estado donde se guarda el resultado
 
-52. ArithmeticShiftRight(IR(19:15));                                                                                     -- Se hace corriemiento aritmetico izquierda 1 vez del dato IR(19:15)
+52. ArithmeticShiftRight(Registers[IR(19:15)]);                                                                                     -- Se hace corriemiento aritmetico izquierda 1 vez del dato IR(19:15)
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
     ->
 (CounterControl' X52) +                                                                                                  -- Se va a este mismo estado si el contador no ha llegado al maximo
@@ -441,7 +441,7 @@
 70. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],Registers[IR(19:15)] );                                                   -- Se escribe en el CSR direccion IR(31:20) el resultado del AND entre
     -> ( 1)                                                                                                              -- Registers en las direcciones IR(11:7) e IR(19:15)
 
-71. CSR[IR[31:20]] <= sext(IR[19:15]);                                                                                   -- El CSR direccion IR(31:20) toma el IR(19:15) con signo extendido
+71. CSR[IR[31:20]] <=( IR[19] τ (IR[19:15]));                                                                                   -- El CSR direccion IR(31:20) toma el IR(19:15) con signo extendido
     -> ( 1)
 
 72. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],IR(19:15) );                                                              -- Se escribe en el CSR direccion IR(31:20) el resultado del OR  entre
@@ -514,4 +514,5 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 84. CSR[0x835] <= IR;
+    Error = 1;
     -> ( 1)
