@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcessorRV
-Wed Apr 01 19:07:04 2020
+Fri May 22 23:31:03 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -10,7 +10,13 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -37,20 +43,20 @@ agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Wed Apr 01 19:07:04 2020           ;
+; Analysis & Synthesis Status        ; Successful - Fri May 22 23:31:03 2020       ;
 ; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                      ; ProcessorRV                                 ;
-; Top-level Entity Name              ; ProcessorRV                                 ;
+; Top-level Entity Name              ; FullPartialProduct                          ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 64                                          ;
+;     Total combinational functions  ; 64                                          ;
+;     Dedicated logic registers      ; 0                                           ;
+; Total registers                    ; 0                                           ;
+; Total pins                         ; 68                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -60,7 +66,7 @@ agreement for further details.
 ; Option                                                                     ; Setting            ; Default Value      ;
 +----------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                     ; EP4CE22F17C6       ;                    ;
-; Top-level entity name                                                      ; ProcessorRV        ; ProcessorRV        ;
+; Top-level entity name                                                      ; FullPartialProduct ; ProcessorRV        ;
 ; Family name                                                                ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                                      ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
@@ -152,38 +158,172 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                            ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+; VHDL/SinglePartialProduct.vhd    ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/SinglePartialProduct.vhd ;         ;
+; VHDL/FullPartialProduct.vhd      ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd   ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++-------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary           ;
++---------------------------------------------+---------+
+; Resource                                    ; Usage   ;
++---------------------------------------------+---------+
+; Estimated Total logic elements              ; 64      ;
+;                                             ;         ;
+; Total combinational functions               ; 64      ;
+; Logic element usage by number of LUT inputs ;         ;
+;     -- 4 input functions                    ; 31      ;
+;     -- 3 input functions                    ; 2       ;
+;     -- <=2 input functions                  ; 31      ;
+;                                             ;         ;
+; Logic elements by mode                      ;         ;
+;     -- normal mode                          ; 64      ;
+;     -- arithmetic mode                      ; 0       ;
+;                                             ;         ;
+; Total registers                             ; 0       ;
+;     -- Dedicated logic registers            ; 0       ;
+;     -- I/O registers                        ; 0       ;
+;                                             ;         ;
+; I/O pins                                    ; 68      ;
+;                                             ;         ;
+; Embedded Multiplier 9-bit elements          ; 0       ;
+;                                             ;         ;
+; Maximum fan-out node                        ; S~input ;
+; Maximum fan-out                             ; 33      ;
+; Total fan-out                               ; 293     ;
+; Average fan-out                             ; 1.47    ;
++---------------------------------------------+---------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; Compilation Hierarchy Node      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                            ; Library Name ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+; |FullPartialProduct             ; 64 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 68   ; 0            ; |FullPartialProduct                            ; work         ;
+;    |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP0  ; work         ;
+;    |SinglePartialProduct:BPP10| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP10 ; work         ;
+;    |SinglePartialProduct:BPP11| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP11 ; work         ;
+;    |SinglePartialProduct:BPP12| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP12 ; work         ;
+;    |SinglePartialProduct:BPP13| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP13 ; work         ;
+;    |SinglePartialProduct:BPP14| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP14 ; work         ;
+;    |SinglePartialProduct:BPP15| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP15 ; work         ;
+;    |SinglePartialProduct:BPP16| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP16 ; work         ;
+;    |SinglePartialProduct:BPP17| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP17 ; work         ;
+;    |SinglePartialProduct:BPP18| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP18 ; work         ;
+;    |SinglePartialProduct:BPP19| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP19 ; work         ;
+;    |SinglePartialProduct:BPP1|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP1  ; work         ;
+;    |SinglePartialProduct:BPP20| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP20 ; work         ;
+;    |SinglePartialProduct:BPP21| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP21 ; work         ;
+;    |SinglePartialProduct:BPP22| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP22 ; work         ;
+;    |SinglePartialProduct:BPP23| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP23 ; work         ;
+;    |SinglePartialProduct:BPP24| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP24 ; work         ;
+;    |SinglePartialProduct:BPP25| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP25 ; work         ;
+;    |SinglePartialProduct:BPP26| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP26 ; work         ;
+;    |SinglePartialProduct:BPP27| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP27 ; work         ;
+;    |SinglePartialProduct:BPP28| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP28 ; work         ;
+;    |SinglePartialProduct:BPP29| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP29 ; work         ;
+;    |SinglePartialProduct:BPP2|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP2  ; work         ;
+;    |SinglePartialProduct:BPP30| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP30 ; work         ;
+;    |SinglePartialProduct:BPP31| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP31 ; work         ;
+;    |SinglePartialProduct:BPP32| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP32 ; work         ;
+;    |SinglePartialProduct:BPP3|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP3  ; work         ;
+;    |SinglePartialProduct:BPP4|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP4  ; work         ;
+;    |SinglePartialProduct:BPP5|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP5  ; work         ;
+;    |SinglePartialProduct:BPP6|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP6  ; work         ;
+;    |SinglePartialProduct:BPP7|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP7  ; work         ;
+;    |SinglePartialProduct:BPP8|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP8  ; work         ;
+;    |SinglePartialProduct:BPP9|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |FullPartialProduct|SinglePartialProduct:BPP9  ; work         ;
++---------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 68                          ;
+; cycloneiii_lcell_comb ; 64                          ;
+;     normal            ; 64                          ;
+;         2 data inputs ; 31                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 31                          ;
+;                       ;                             ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.97                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Wed Apr 01 19:06:54 2020
+    Info: Processing started: Fri May 22 23:30:52 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessorRV -c ProcessorRV
 Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/singlepartialproduct.vhd
+    Info (12022): Found design unit 1: SinglePartialProduct-SinglePartialProductArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/SinglePartialProduct.vhd Line: 41
+    Info (12023): Found entity 1: SinglePartialProduct File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/SinglePartialProduct.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/fullpartialproduct.vhd
+    Info (12022): Found design unit 1: FullPartialProduct-FullPartialProductArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd Line: 37
+    Info (12023): Found entity 1: FullPartialProduct File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd Line: 9
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/boothdecoder.vhd
+    Info (12022): Found design unit 1: BoothDecoder-BoothDecoderArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BoothDecoder.vhd Line: 37
+    Info (12023): Found entity 1: BoothDecoder File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BoothDecoder.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/processorrv.vhd
-    Info (12022): Found design unit 1: ProcessorRV-ProcessorRVArch File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 49
-    Info (12023): Found entity 1: ProcessorRV File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 16
+    Info (12022): Found design unit 1: ProcessorRV-ProcessorRVArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ProcessorRV.vhd Line: 49
+    Info (12023): Found entity 1: ProcessorRV File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ProcessorRV.vhd Line: 16
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/pc.vhd
-    Info (12022): Found design unit 1: PC-PCArch File: C:/Users/usuario/Videos/Invenio RV/VHDL/PC.vhd Line: 36
-    Info (12023): Found entity 1: PC File: C:/Users/usuario/Videos/Invenio RV/VHDL/PC.vhd Line: 9
+    Info (12022): Found design unit 1: PC-PCArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/PC.vhd Line: 39
+    Info (12023): Found entity 1: PC File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/PC.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/ir.vhd
-    Info (12022): Found design unit 1: IR-IRArch File: C:/Users/usuario/Videos/Invenio RV/VHDL/IR.vhd Line: 47
-    Info (12023): Found entity 1: IR File: C:/Users/usuario/Videos/Invenio RV/VHDL/IR.vhd Line: 10
-Info (12127): Elaborating entity "ProcessorRV" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at ProcessorRV.vhd(360): used implicit default value for signal "Control_IRX" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 360
-Info (12128): Elaborating entity "IR" for hierarchy "IR:bloqueIR" File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 369
-Info (12128): Elaborating entity "PC" for hierarchy "PC:bloquePC" File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 388
-Error (12006): Node instance "bloqueRegisters" instantiates undefined entity "Registers". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 400
-Error (12006): Node instance "bloqueMAR" instantiates undefined entity "MAR". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 418
-Error (12006): Node instance "bloqueControl" instantiates undefined entity "Control". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 432
-Error (12006): Node instance "bloqueALU" instantiates undefined entity "ALU". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 456
-Error (12006): Node instance "bloqueCSR" instantiates undefined entity "CSR". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 480
-Error (12006): Node instance "bloqueCounter" instantiates undefined entity "Counter". Make sure that the required user library paths are specified correctly. If the project contains EDIF Input Files (.edf), make sure that you specified the EDA synthesis tool settings correctly. Otherwise, define the specified entity or change the calling entity. The Altera Knowledge Database contains many articles with specific details on how to resolve this error. Visit the Knowledge Database at https://www.altera.com/support/support-resources/knowledge-base/search.html and search for this specific error message number. File: C:/Users/usuario/Videos/Invenio RV/VHDL/ProcessorRV.vhd Line: 493
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 6 errors, 2 warnings
-    Error: Peak virtual memory: 4955 megabytes
-    Error: Processing ended: Wed Apr 01 19:07:05 2020
-    Error: Elapsed time: 00:00:11
-    Error: Total CPU time (on all processors): 00:00:18
+    Info (12022): Found design unit 1: IR-IRArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/IR.vhd Line: 48
+    Info (12023): Found entity 1: IR File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/IR.vhd Line: 10
+Info (12127): Elaborating entity "FullPartialProduct" for the top level hierarchy
+Info (12128): Elaborating entity "SinglePartialProduct" for hierarchy "SinglePartialProduct:BPP0" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd Line: 57
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 132 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 35 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 64 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4961 megabytes
+    Info: Processing ended: Fri May 22 23:31:03 2020
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:25
 
 

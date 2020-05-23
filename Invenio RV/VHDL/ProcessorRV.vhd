@@ -13,7 +13,8 @@ use ALTERA.altera_primitives_components.all;
 
 --Declaracion de entradas y salidas del bloque--
 
-1port(
+entity ProcessorRV is
+port(
 		--Entradas
 		
 			Reset: 				in std_logic;

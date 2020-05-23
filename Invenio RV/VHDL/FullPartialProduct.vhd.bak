@@ -1,0 +1,63 @@
+--Definicion de las bibliotecas 
+library IEEE; 
+use IEEE.std_logic_1164.all;
+
+--******************************************************--
+-- DEFINICIÓN DE ENTIDAD                                --
+--******************************************************--
+     
+entity FullPartialProduct is
+port(
+		--Entradas
+		
+			Multiplicand:	in std_logic_vector(15 downto 0);
+			
+			--Señales del multiplicando, el 0 es el lsb y 1 el msb
+			
+			S:						in	std_logic;
+			-- Señal S para el signo del producto parcial
+				
+			Select_M:			in	std_logic;
+			--Señal que selecciona si el multiplicando se multiplica por uno
+			
+			Select_2M: 			in	std_logic;
+			--Señal que selecciona si el multiplicando se multiplica por dos
+		--Salidas
+		
+			PartialProduct32Bits:	out std_logic_vector(16 downto 0)
+		
+	  );
+end entity FullPartialProduct;
+
+
+--******************************************************--
+--DEFINICIÓN DE ARQUITECTURA                            --
+--******************************************************--
+
+architecture FullPartialProductArch of FullPartialProduct is
+
+--******************************************************--
+--DEFINICIÓN DE COMPONENTES Y SEÑALES DE CONEXIÓN                                        
+--******************************************************--
+
+component SinglePartialProduct is
+port(MultiplicandLSB,MultiplicandMSB,S,Select_M,Select_2M: 		in	 std_logic;
+			PartialProduct:				out std_logic
+		
+	  );
+end component;
+
+
+signal PartialOut: std_logic_vector(16 to 0);
+
+--******************************************************--
+--Instancias y Conectividad
+--******************************************************
+begin
+	BPP0: BoothPartialProduct port map(Multiplicand(0),Multiplicand(0),S,Select_M,Select_M, PartialOut(0));
+	BPP1: BoothPartialProduct port map(Multiplicand(0),Multiplicand(1),S,Select_M,Select_2M,PartialOut(1));
+
+	PartialProduct32Bits<=PartialOut;
+End  FullPartialProductArch;
+
+

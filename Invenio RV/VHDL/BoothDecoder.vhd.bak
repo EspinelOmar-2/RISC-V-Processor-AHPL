@@ -1,0 +1,62 @@
+--Definicion de las bibliotecas 
+library IEEE; 
+use IEEE.std_logic_1164.all;
+
+--******************************************************--
+-- DEFINICIÓN DE ENTIDAD                                --
+--******************************************************--
+     
+entity BoothDecoder is
+port(
+		--Entradas
+		
+			A:				in std_logic;
+			B: 			in std_logic;
+			C:				in std_logic;
+			
+			--Señales del multiplicador a es el lsb y c el msb
+		--Salidas
+		
+			S:				out	std_logic;
+			-- Señal S para el signo del producto parcial
+			
+			NotS:			out	std_logic;
+			--Señal S negada
+				
+			Select_M:	out	std_logic;
+			--Señal que selecciona si el multiplicando se multiplica por uno
+			
+			Select_2M: 	out	std_logic
+			--Señal que selecciona si el multiplicando se multiplica por dos
+	  );
+end entity BoothDecoder;
+
+
+--******************************************************--
+--DEFINICIÓN DE ARQUITECTURA                                        --
+--******************************************************--
+
+architecture BoothDecoderArch of BoothDecoder is
+
+--******************************************************--
+--DEFINICIÓN DE COMPONENTES Y SEÑALES DE CONEXIÓN                                        
+--******************************************************--
+
+--******************************************************--
+--Instancias y Conectividad
+--******************************************************
+begin
+
+	Select_M	<=(A XOR B);
+
+	S			<=(C 	  );
+			
+	NotS		<=(NOT C);
+			
+	Select_2M<=(NOT ( (A XOR B)OR(B XNOR C) ));
+
+
+
+End  BoothDecoderArch;
+
+
