@@ -479,7 +479,7 @@
 77. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
     MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
-    -> (33)
+    -> (78)
 
 78. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 2 de Write
@@ -487,10 +487,10 @@
     SP<=Inc(SP)                                                                                                          -- Incrementa el stack pointer
     -> ( 1)
 
-79. Salida_ALU = Suma(Registers[0 τ 010],IR[12|6:2]);                                                                    --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
+79. Salida_ALU = Suma(Registers[0 τ 010],IR[12 , 6:2]);                                                                  --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
     -> (80)
 
-80. MAR       <= Suma(Registers[0 τ 010],IR[12|6:2]);                                                                    -- Se repite la accion del estado 79, mientras la suma se efectua
+80. MAR       <= Suma(Registers[0 τ 010],IR[12 , 6:2]);                                                                  -- Se repite la accion del estado 79, mientras la suma se efectua
     -> (81)
 
 81. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 1)
@@ -500,7 +500,6 @@
 82. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 2)
     Read = 1;
     -> (83)
-
 
 83.MemoryAddress = MAR;                                                                                                  -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
@@ -512,5 +511,97 @@
 ║                                           Invalid instruction exception                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-84. CSR[0x835] <= IR;
+84. CSR[0x343] <= IR;                                                                                                    -- Se guarda la informacion de la instruccion invalida en MTVal
+    -> (85)
+
+85.  MAR <=Registers[0 τ 010];                                                                                           -- Se envia la informacion del SP al MAR
+    -> (86)
+
+86. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
+    Read = 0;                                                                                                            -- Ciclo 1 de Write
+    MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
+    -> (87)
+
+87. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
+    Read = 0;                                                                                                            -- Ciclo 2 de Write
+    MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
+    SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
+    -> (88)
+
+88. Pc <= CSR[0x341];                                                                                                    --
+    -> (1)
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                Interruption Cycle                                                     ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+
+89. NULL
+    ->
+(CSR[768][4]'                                                                       X  1) +                            -- Si No estan habilitadas las interrupciones  se va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]'                                X  1) +                            -- Si estan habilitadas las interrupciones pero no hay Request va al FETCH
+(CSR[768][4] . IRQ[0]                                . CSR[772][28]'                X  1) +                            -- Si hay request del IRQ[0] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29]'                X  1) +                            -- Si hay request del IRQ[1] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30]'                X  1) +                            -- Si hay request del IRQ[2] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31]'                X  1) +                            -- Si hay request del IRQ[3] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]                                . CSR[772][28] . CSR[812][31]  X 90) +                            --  Si hay Request valido del IRQ[0:3] Pero se esta atendiendo otra
+(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29] . CSR[812][31]  X 91) +                            --  interrupcion, se va aun estado para dar a conocer que hay una
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] . CSR[812][31]  X 92) +                            --  interrupcion pendiente, cual es y luego se va al fetch
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] . CSR[812][31]  X 93) +                            --
+(CSR[768][4] . IRQ[0]                                . CSR[772][28] . CSR[812][31]' X 95) +
+(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29] . CSR[812][31]' X 95) +
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] . CSR[812][31]' X 95) +
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] . CSR[812][31]' X 95)
+
+90. CSR[812][27] <= '1';
+    -> (94)
+
+91. CSR[812][28] <= '1';
+    -> (94)
+
+92. CSR[812][29] <= '1';
+    -> (94)
+
+93. CSR[812][30] <= '1';
+    -> (94)
+
+94. CSR[812][11] <= '1';
     -> ( 1)
+
+95.  MAR <=Registers[0 τ 010];                                                                                           -- Se envia la informacion del SP al MAR -- PUSH PC
+    -> (96)
+
+96. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
+    Read = 0;                                                                                                            -- Ciclo 1 de Write
+    MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
+    -> (97)
+
+97. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
+    Read = 0;                                                                                                            -- Ciclo 2 de Write
+    MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
+    SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
+    ->
+(IRQ[0]                                . CSR[772][28] X  98) +
+(IRQ[0]' . IRQ[1]                      . CSR[772][29] X  99) +
+(IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] X 100) +
+(IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] X 101)
+
+98. Pc <= CSR(0x307);
+    -> ( 1)
+
+99. Pc <= CSR(0x308);
+    -> ( 1)
+
+100. Pc <= CSR(0x309);
+     -> ( 1)
+
+101. Pc <= CSR(0x310);
+     -> ( 1)
+
+TO DO
+Cable entre SP y MAR (?? Bits)
+Cable entre PC y MEMORIA (32 bits)
+Cable entre IR y CSR (32 bits datos)
+Cable entre CSR y Control (32 bits)
+Cable de entrada IRQ y ACK (4 de IRQ 4 de ACK)
+Cable de CSR a CONTROL de 6 bits (direcciones constantes)
+Cable de CSR a PC (size -> PC)
