@@ -4,375 +4,275 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "IR_Registers[0]",
+					"name" : "PartialProduct32Bits[0]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[1]",
+					"name" : "PartialProduct32Bits[1]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[2]",
+					"name" : "PartialProduct32Bits[2]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[3]",
+					"name" : "PartialProduct32Bits[3]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[4]",
+					"name" : "PartialProduct32Bits[4]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[5]",
+					"name" : "PartialProduct32Bits[5]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[6]",
+					"name" : "PartialProduct32Bits[6]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[7]",
+					"name" : "PartialProduct32Bits[7]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[8]",
+					"name" : "PartialProduct32Bits[8]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[9]",
+					"name" : "PartialProduct32Bits[9]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[10]",
+					"name" : "PartialProduct32Bits[10]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[11]",
+					"name" : "PartialProduct32Bits[11]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[12]",
+					"name" : "PartialProduct32Bits[12]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[13]",
+					"name" : "PartialProduct32Bits[13]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Registers[14]",
+					"name" : "PartialProduct32Bits[14]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[0]",
+					"name" : "PartialProduct32Bits[15]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[1]",
+					"name" : "PartialProduct32Bits[16]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[2]",
+					"name" : "PartialProduct32Bits[17]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[3]",
+					"name" : "PartialProduct32Bits[18]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[4]",
+					"name" : "PartialProduct32Bits[19]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[5]",
+					"name" : "PartialProduct32Bits[20]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[6]",
+					"name" : "PartialProduct32Bits[21]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[7]",
+					"name" : "PartialProduct32Bits[22]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[8]",
+					"name" : "PartialProduct32Bits[23]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[9]",
+					"name" : "PartialProduct32Bits[24]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_Control[10]",
+					"name" : "PartialProduct32Bits[25]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[0]",
+					"name" : "PartialProduct32Bits[26]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[1]",
+					"name" : "PartialProduct32Bits[27]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[2]",
+					"name" : "PartialProduct32Bits[28]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[3]",
+					"name" : "PartialProduct32Bits[29]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[4]",
+					"name" : "PartialProduct32Bits[30]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[5]",
+					"name" : "PartialProduct32Bits[31]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[6]",
+					"name" : "PartialProduct32Bits[32]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[7]",
+					"name" : "S",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[8]",
+					"name" : "Multiplicand[0]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[9]",
+					"name" : "Select_M",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[10]",
+					"name" : "Multiplicand[1]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[11]",
+					"name" : "Select_2M",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[12]",
+					"name" : "Multiplicand[2]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[13]",
+					"name" : "Multiplicand[3]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[14]",
+					"name" : "Multiplicand[4]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[15]",
+					"name" : "Multiplicand[5]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[16]",
+					"name" : "Multiplicand[6]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[17]",
+					"name" : "Multiplicand[7]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[18]",
+					"name" : "Multiplicand[8]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_ALU[19]",
+					"name" : "Multiplicand[9]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[0]",
+					"name" : "Multiplicand[10]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[1]",
+					"name" : "Multiplicand[11]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[2]",
+					"name" : "Multiplicand[12]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[3]",
+					"name" : "Multiplicand[13]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[4]",
+					"name" : "Multiplicand[14]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[5]",
+					"name" : "Multiplicand[15]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[6]",
+					"name" : "Multiplicand[16]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[7]",
+					"name" : "Multiplicand[17]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[8]",
+					"name" : "Multiplicand[18]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[9]",
+					"name" : "Multiplicand[19]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[10]",
+					"name" : "Multiplicand[20]",
 					"strict" : false
 				},
 				{
-					"name" : "IR_CSR[11]",
+					"name" : "Multiplicand[21]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[7]",
+					"name" : "Multiplicand[22]",
 					"strict" : false
 				},
 				{
-					"name" : "Reloj",
+					"name" : "Multiplicand[23]",
 					"strict" : false
 				},
 				{
-					"name" : "Reset",
+					"name" : "Multiplicand[24]",
 					"strict" : false
 				},
 				{
-					"name" : "Control_IR",
+					"name" : "Multiplicand[25]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[8]",
+					"name" : "Multiplicand[26]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[9]",
+					"name" : "Multiplicand[27]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[10]",
+					"name" : "Multiplicand[28]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[11]",
+					"name" : "Multiplicand[29]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[15]",
+					"name" : "Multiplicand[30]",
 					"strict" : false
 				},
 				{
-					"name" : "MemoryOut[16]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[17]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[18]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[19]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[20]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[21]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[22]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[23]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[24]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[0]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[1]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[2]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[3]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[4]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[5]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[6]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[12]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[13]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[14]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[30]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[25]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[26]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[27]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[28]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[29]",
-					"strict" : false
-				},
-				{
-					"name" : "MemoryOut[31]",
+					"name" : "Multiplicand[31]",
 					"strict" : false
 				}
 			]
