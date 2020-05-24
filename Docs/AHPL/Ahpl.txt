@@ -98,7 +98,7 @@
     -> ( 8)                                                                                                              -- desplazado 12 bits a la izquierda
 
  7. Registers[IR(11:7)] <= Suma(Pc,( IR(31:12), (12 T 0) ));                                                             -- Se repite la accion del estado 7, mientras la suma se efectua
-    -> ( 1)
+    -> (89)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                          LUI                                                          ║
@@ -106,7 +106,7 @@
 
  8. Registers[IR(11:7)](31:12) <= IR(31:12);                                                                             -- Escribe en Registers direccion IR(11:7) el dato del IR(31:12)
     Registers[IR(11:7)](11: 0) <= '0';                                                                                   -- y rellena los 11 LSB con 0
-    -> ( 1)
+    -> (89)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                       JAL/JALR                                                        ║
@@ -123,13 +123,13 @@
     -> (12)                                                                                                              -- hacerle offset extendido en signo (una suerte de shift aritmetico)
 
 12. PC        <= Suma(PC, sext( IR(31:12) ));                                                                            -- Se repite la accion del estado 11, mientras la suma se efectua
-    -> ( 1)
+    -> (89)
 
 13. Salida_ALU = Suma(Registers[IR(19:15)], sext(IR(31:12)) );                                                           -- Escribe en PC la suma entre Registers direccion IR(19:15) y el
     -> (14)                                                                                                              -- valor de IR(12:31) al hacerle offset extendido en signo
 
 14. PC        <= Suma(Registers[IR(19:15)], sext(IR(31:12)) );                                                           -- Se repite la accion del estado 13, mientras la suma se efectua
-    -> ( 1)
+    -> (89)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                INSTRUCCIONES DE SALTOS                                                ║
@@ -144,15 +144,15 @@
 16. Salida_ALU = Suma(Registers[IR(24:20)],Registers[IR(19:15)',1]);                                                     -- Se repite la accion del estado 15, mientras la resta se efectua
     ->
 (IR[12]'. ALU_Control[1]  X17) +                                                                                         -- Si se desea que sean iguales   , y son iguales    va al estado 17
-(IR[12]'. ALU_Control[1]' X 1) +                                                                                         -- Si se desea que sean iguales   , y son diferentes va al estado  1
-(IR[12] . ALU_Control[1]  X 1) +                                                                                         -- Si se desea que sean diferentes, y son iguales    va al estado  1
+(IR[12]'. ALU_Control[1]' X89) +                                                                                         -- Si se desea que sean iguales   , y son diferentes va al estado  1
+(IR[12] . ALU_Control[1]  X89) +                                                                                         -- Si se desea que sean diferentes, y son iguales    va al estado  1
 (IR[12] . ALU_Control[1]' X17)                                                                                           -- Si se desea que sean diferentes, y son diferentes va al estado 17
 
 17. Salida_ALU = Suma(PC, ((20 T IR(12)) ,IR(31), IR(7), IR(30:25), IR(11:8)));                                          -- Se suma PC con un arreglo de valores del IR
     ->  (18)
 
 18. PC        <= Suma(PC, ((20 T IR(12)) ,IR(31), IR(7), IR(30:25), IR(11:8)));                                          -- Se repite la accion del estado 17, mientras la suma se efectua
-    -> ( 1)
+    -> (89)
 
 19. Salida_ALU = Suma( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                                 -- Se compara el valor de Registers direccion IR(24:20) con Registers
     -> (20)                                                                                                              -- direccion IR(14:19)La comparacion tiene en cuenta el complemento a2
@@ -160,21 +160,21 @@
 20. Salida_ALU = Suma( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                                 -- Se repite la accion del estado 19, mientras la comparacion se hace
     ->
 (ALU_Control[2] . ALU_Control[1]’ . IR[12]’ X17) +                                                                       -- rs1<rs2 blt
-(ALU_Control[2]’. ALU_Control[1]’ . IR[12]’ X 1) +                                                                       -- rs1>rs2 blt
+(ALU_Control[2]’. ALU_Control[1]’ . IR[12]’ X89) +                                                                       -- rs1>rs2 blt
 (ALU_Control[2]’. ALU_Control[1]’ . IR[12]  X17) +                                                                       -- rs1>rs2 bge
-(ALU_Control[2] . ALU_Control[1]’ . IR[12]  X 1) +                                                                       -- rs1<rs2 bge
-(                 ALU_Control[1]  .         X 1) +                                                                       -- sr1=rs2 bge blt
+(ALU_Control[2] . ALU_Control[1]’ . IR[12]  X89) +                                                                       -- rs1<rs2 bge
+(                 ALU_Control[1]  .         X89) +                                                                       -- sr1=rs2 bge blt
 
 21. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
     -> (22)                                                                                                              -- direccion IR(14:19) pero no guarda el resultado
 
 22. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);                                                -- Se repite la accion del estado 21, mientras la resta se efectua
     ->
-(ALU_Control[3] . ALU_Control[1]’ . IR[12]’ X 1) +                                                                       -- rs1>rs2 bltu
+(ALU_Control[3] . ALU_Control[1]’ . IR[12]’ X89) +                                                                       -- rs1>rs2 bltu
 (ALU_Control[3]’. ALU_Control[1]’ . IR[12]’ X17) +                                                                       -- rs1<rs2 bltu
-(                 ALU_Control[1]            X 1) +                                                                       -- rs1=rs2 bltu bgeu
+(                 ALU_Control[1]            X89) +                                                                       -- rs1=rs2 bltu bgeu
 (ALU_Control[3] . ALU_Control[1]’ . IR[12]  X17) +                                                                       -- rs1>rs2 bgeu
-(ALU_Control[3]’. ALU_Control[1]’ . IR[12]  X 1) +                                                                       -- rs1<rs2 bgeu
+(ALU_Control[3]’. ALU_Control[1]’ . IR[12]  X89) +                                                                       -- rs1<rs2 bgeu
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                     PREPARACION DE LECTURA/ESCRITURA EN MEMORIA                                       ║
@@ -211,30 +211,30 @@
     Read = 1;
     Registers[IR(11:7)]( 7: 0) <= MemoryOut(7: 0);                                                                       -- Se guarda  el LSByte en Registers en la direccion IR(11:7)
     Registers[IR(11:7)](31: 8) <= MemoryOut(7);                                                                          -- Se extiende el signo del valor a guardar
-    -> ( 1)
+    -> (89)
 
 28. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
     Registers[IR(11:7)](15: 0) <= MemoryOut(15: 0);                                                                      -- Se guardan los 2 LSBytes en Registers en la direccion IR(11:7)
     Registers[IR(11:7)](31:16) <= MemoryOut(15);                                                                         -- Se extiende el signo del valor a guardar
-    -> ( 1)
+    -> (89)
 
 29.MemoryAddress = MAR;                                                                                                  -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
     Registers[IR(11:7)]        <= MemoryOut;                                                                             -- Se guardan los 4 Bytes en Registers en la direccion IR(11:7)
-    -> ( 1)
+    -> (89)
 
 30. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
     Registers[IR(11:7)]( 7: 0) <= MemoryOut(7:0);                                                                        -- Se guarda  el LSByte en Registers en la direccion IR(11:7)
     Registers[IR(11:7)](31: 8) <= '0' ;                                                                                  -- Se rellena el registro con ceros
-    -> ( 1)
+    -> (89)
 
 31. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
     Registers[IR(11:7)](15: 0) <= MemoryOut(15:0);                                                                       -- Se guardan los 2 LSBytes en Registers en la direccion IR(11:7)
     Registers[IR(11:7)](31:16) <= '0';                                                                                   -- Se rellena el registro con ceros
-    -> ( 1)
+    -> (89)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                         INSTRUCCIONES DE ESCRITURA EN MEMORIA                                         ║
@@ -252,7 +252,7 @@
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn( 7: 0) = Registers[IR(24:20)]( 7: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 7
     MemoryIn(31: 8) = Registers[IR(24:20)](    7);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  7
-    -> ( 1)
+    -> (89)
 
 34. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
@@ -264,6 +264,7 @@
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn(15: 0) = Registers[IR(24:20)](15: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 15
     MemoryIn(31:16) = Registers[IR(24:20)](   15);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  15    -> X 1.
+    -> (89)
 
 36. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
@@ -273,7 +274,7 @@
 37. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn = Registers[IR(24:20)];                                                                                     -- Se envia los datos de Registers direccion IR(24:20)
-    -> ( 1)
+    -> (89)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                              Operaciones de datos en registros con datos inmediatos                                   ║
@@ -290,7 +291,7 @@
     -> ( 36)                                                                                                             -- el resultado se guarda en Registers direccion IR(11:7)
 
 39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Se repite la accion del estado 38, mientras la suma se efectua
-    -> ( 1)
+    -> (89)
 
 40. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Compara el dato en Registers direccion IR(19:15) con el dato
     -> (41)                                                                                                              -- almacenado IR(31:20). Esta comparacion se hace en complemento a 2
@@ -302,10 +303,10 @@
 (ALU_Control[1]                    X43)                                                                                  -- IR(31:20) = Registers direccion IR(19:15)GOTO 43
 
 42. Registers[IR(11:7)] <= '00000000000000000000000000000001';                                                           -- Se guarda un 0x1 en Registers direccion IR(11:7)
-    -> ( 1)
+    -> (89)
 
 43. Registers[IR(11:7)] <='0';                                                                                           -- Se guarda un 0x0 en Registers direccion IR(11:7)
-    -> ( 1)
+    -> (89)
 
 44. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se resta el dato de Registers direccion IR(19:15) con el dato
     -> (45)                                                                                                              -- almacenado en IR(31:20)
@@ -317,13 +318,13 @@
 (ALU_Control[1]                    X43)                                                                                  -- IR(31:20) = Registers direccion IR(19:15) GOTO 43
 
 46. Registers[IR(11:7)] <= XOR(Registers[IR(19:15)], IR[31:20]);                                                         -- Se hace el XOR entre Registers direccion IR(19:15) con el dato
-    -> ( 1)                                                                                                              -- almacenado en IR(31:20)
+    -> (89)                                                                                                              -- almacenado en IR(31:20)
 
 47. Registers[IR(11:7)] <=  OR(Registers[IR(19:15)], IR[31:20]);                                                         -- Se hace el OR entre e Registers direccion IR(19:15) con el dato
-    -> ( 1)                                                                                                              -- almacenado en IR(31:20)
+    -> (89)                                                                                                              -- almacenado en IR(31:20)
 
 48. Registers[IR(11:7)] <=  AND(Registers[IR(19:15)], IR[31:20]);                                                        -- Se hace el AND entre e Registers direccion IR(19:15) con el dato
-    -> ( 1)                                                                                                              -- almacenado en IR(31:20)
+    -> (89)                                                                                                              -- almacenado en IR(31:20)
 
 49. Counter <= IR(25:20);                                                                                                -- Se carga al Counter el valor de IR(25:20)
     ->
@@ -365,7 +366,7 @@
     -> (54)                                                                                                              -- e IR(24:20) y el resultado va a Registers direccion IR(11:7)
 
 54. Registers[IR(11:7)] <= Suma (Registers[IR(19:15)], Registers[IR(24:20)]);                                            -- Se repite la accion del estado 56, mientras la suma se efectua
-    -> ( 1)
+    -> (89)
 
 55. Salida_ALU           = Suma (Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                       -- Se restan los valores almacenados en Registers direcciones IR(19:15)
     -> (56)                                                                                                              -- e IR(24:20) y el resultado va a Registers direccion IR(11:7)
@@ -374,7 +375,7 @@
     -> (57)
 
 57. Registers[IR(11:7)] <= Suma (Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                       -- Se repite la accion del estado 59, mientras la resta se efectua
-    -> ( 1)
+    -> (89)
 
 58. Counter <= Registers[IR(24:20)]                                                                                      -- Se carga al Counter el valor del Registers direccion IR(25:20)
     ->
@@ -383,7 +384,7 @@
 (IR[14] . IR[30]’ X 52)                                                                                                  -- SRA
 
 59. Registers[IR(11:7)] <= AluShiftRegister;                                                                             -- Se carga el valor del shift realizado al registro indicado
-    -> ( 1)
+    -> (89)
 
 60. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se compara el valor de Registers direccion IR(24:20) con Registers
     -> (61)                                                                                                              -- direccion IR(19:15)La comparacion tiene en cuenta el complemento a2
@@ -404,13 +405,13 @@
 (ALU_Control[1]                    X43)                                                                                  -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
 64. Registers[IR(11:7)] <= XOR( Registers[IR(19:15)], Registers[IR(24:20)] );                                            -- Se hace el XOR entre Registers direccion IR(19:15) con el dato
-    -> ( 1)                                                                                                              -- en Registers direccion (24:20)
+    -> (89)                                                                                                              -- en Registers direccion (24:20)
 
 65. Registers[IR(11:7)] <= OR ( Registers[IR(19:15)], Registers[IR(24:20)] );                                            -- Se hace el OR  entre Registers direccion IR(19:15) con el dato
-    -> ( 1)                                                                                                              -- en Registers direccion (24:20)
+    -> (89)                                                                                                              -- en Registers direccion (24:20)
 
 66. Registers[IR(11:7)] <= AND( Registers[IR(19:15)], Registers[IR(24:20)] );                                            -- Se hace el AND entre Registers direccion IR(19:15) con el dato
-    -> ( 1)                                                                                                              -- en Registers direccion (24:20)
+    -> (89)                                                                                                              -- en Registers direccion (24:20)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                         Instrucciones de Control Status Register                                      ║
@@ -432,22 +433,22 @@
 (IR[14] . IR[13] . IR[12]  X73)                                                                                          --CSRRCI
 
 68. CSR[IR(31:20)] <= Registers(IR[19:15]);                                                                              -- Se escribe en el CSR direccion IR(31:20) el dato de Registers
-    -> ( 1)                                                                                                              -- direccion IR(19:15)
+    -> (89)                                                                                                              -- direccion IR(19:15)
 
 69. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],Registers[IR(19:15)] );                                                   -- Se escribe en el CSR direccion IR(31:20) el resultado del OR  entre
-    -> ( 1)                                                                                                              -- Registers en las direcciones IR(11:7) e IR(19:15)
+    -> (89)                                                                                                              -- Registers en las direcciones IR(11:7) e IR(19:15)
 
 70. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],Registers[IR(19:15)] );                                                   -- Se escribe en el CSR direccion IR(31:20) el resultado del AND entre
-    -> ( 1)                                                                                                              -- Registers en las direcciones IR(11:7) e IR(19:15)
+    -> (89)                                                                                                              -- Registers en las direcciones IR(11:7) e IR(19:15)
 
 71. CSR[IR[31:20]] <= sext(IR[19:15]);                                                                                   -- El CSR direccion IR(31:20) toma el IR(19:15) con signo extendido
-    -> ( 1)
+    -> (89)
 
 72. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],IR(19:15) );                                                              -- Se escribe en el CSR direccion IR(31:20) el resultado del OR  entre
-    -> ( 1)                                                                                                              -- Registers en la direccion IR(11:7) y el dato en IR(19:15)
+    -> (89)                                                                                                              -- Registers en la direccion IR(11:7) y el dato en IR(19:15)
 
 73. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],IR(19:15) );                                                              -- Se escribe en el CSR direccion IR(31:20) el resultado del AND entre
-    -> ( 1)                                                                                                              -- Registers en la direccion IR(11:7) y el dato en IR(19:15)
+    -> (89)                                                                                                              -- Registers en la direccion IR(11:7) y el dato en IR(19:15)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                          MUL                                                          ║
@@ -457,14 +458,6 @@
     ->                                                                                                                   -- e IR(24:20)
 (ALU_Control[0]' X81) +                                                                                                  -- La operacion aun no acaba, GOTO 81
 (ALU_Control[0]  X 1)                                                                                                    -- La operacion ya termino
-
-╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-║                                                                                                                       ║
-     (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)  (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)  (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)  (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)
-║                                                                                                                       ║
-║                                                  FUNCIONES LOGICAS                                                    ║
-║                                                                                                                       ║
-╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                       PUSH Y POP                                                      ║
@@ -485,7 +478,7 @@
     Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
     SP<=Inc(SP)                                                                                                          -- Incrementa el stack pointer
-    -> ( 1)
+    -> (89)
 
 79. Salida_ALU = Suma(Registers[0 τ 010],IR[12 , 6:2]);                                                                  --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
     -> (80)
@@ -505,16 +498,16 @@
     Read = 1;
     Registers[IR(11:7)]        <= MemoryOut;                                                                             -- Se guardan los 4 Bytes en Registers en la direccion IR(11:7)
     SP<=Dec(SP)                                                                                                          -- Decrementa el stack pointer
-    -> ( 1)
+    -> (89)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                           Invalid instruction exception                                               ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-84. CSR[0x343] <= IR;                                                                                                    -- Se guarda la informacion de la instruccion invalida en MTVal
+84. CSR[835] <= IR;                                                                                                    -- Se guarda la informacion de la instruccion invalida en MTVal
     -> (85)
 
-85.  MAR <=Registers[0 τ 010];                                                                                           -- Se envia la informacion del SP al MAR
+85.  MAR <= Registers[0 τ 010];                                                                                          -- Se envia la informacion del SP al MAR
     -> (86)
 
 86. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
@@ -528,46 +521,51 @@
     SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
     -> (88)
 
-88. Pc <= CSR[0x341];                                                                                                    --
+88. Pc <= CSR[833];                                                                                                    -- Se escribe la direccion de atencion de excepcion en el PC
     -> (1)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                                                       ║
+     (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)  (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)  (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)  (ฅ＾・ω・＾)ฅ ฅ(＾・ω・＾ฅ)
+║                                                                                                                       ║
 ║                                                Interruption Cycle                                                     ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 89. NULL
     ->
-(CSR[768][4]'                                                                       X  1) +                            -- Si No estan habilitadas las interrupciones  se va al FETCH
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]'                                X  1) +                            -- Si estan habilitadas las interrupciones pero no hay Request va al FETCH
-(CSR[768][4] . IRQ[0]                                . CSR[772][28]'                X  1) +                            -- Si hay request del IRQ[0] pero esa interrupcion esta deshabilitada va al FETCH
-(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29]'                X  1) +                            -- Si hay request del IRQ[1] pero esa interrupcion esta deshabilitada va al FETCH
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30]'                X  1) +                            -- Si hay request del IRQ[2] pero esa interrupcion esta deshabilitada va al FETCH
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31]'                X  1) +                            -- Si hay request del IRQ[3] pero esa interrupcion esta deshabilitada va al FETCH
-(CSR[768][4] . IRQ[0]                                . CSR[772][28] . CSR[812][31]  X 90) +                            --  Si hay Request valido del IRQ[0:3] Pero se esta atendiendo otra
-(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29] . CSR[812][31]  X 91) +                            --  interrupcion, se va aun estado para dar a conocer que hay una
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] . CSR[812][31]  X 92) +                            --  interrupcion pendiente, cual es y luego se va al fetch
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] . CSR[812][31]  X 93) +                            --
-(CSR[768][4] . IRQ[0]                                . CSR[772][28] . CSR[812][31]' X 95) +
-(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29] . CSR[812][31]' X 95) +
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] . CSR[812][31]' X 95) +
-(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] . CSR[812][31]' X 95)
+(CSR[768][4]'                                                                       X  1) +                              -- Si No estan habilitadas las interrupciones  se va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]'                                X  1) +                              -- Si estan habilitadas las interrupciones pero no hay Request va al FETCH
+(CSR[768][4] . IRQ[0]                                . CSR[772][28]'                X  1) +                              -- Si hay request del IRQ[0] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29]'                X  1) +                              -- Si hay request del IRQ[1] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30]'                X  1) +                              -- Si hay request del IRQ[2] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31]'                X  1) +                              -- Si hay request del IRQ[3] pero esa interrupcion esta deshabilitada va al FETCH
+(CSR[768][4] . IRQ[0]                                . CSR[772][28] . CSR[836][31]  X 90) +                              --    Si hay Request valido del IRQ[0:3] Pero se esta atendiendo otra
+(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29] . CSR[836][31]  X 91) +                              --    interrupcion, se va aun estado para dar a conocer que hay una
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] . CSR[836][31]  X 92) +                              --    interrupcion pendiente, cual es la fuente de la interrupcion
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] . CSR[836][31]  X 93) +                              --    y luego se va al fetch
+(CSR[768][4] . IRQ[0]                                . CSR[772][28] . CSR[836][31]' X 95) +                              -- El request es valido y se puede atender
+(CSR[768][4] . IRQ[0]' . IRQ[1]                      . CSR[772][29] . CSR[836][31]' X 95) +                              -- El request es valido y se puede atender
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] . CSR[836][31]' X 95) +                              -- El request es valido y se puede atender
+(CSR[768][4] . IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] . CSR[836][31]' X 95)                                -- El request es valido y se puede atender
 
-90. CSR[812][27] <= '1';
+90. CSR[836][27] <= '1';                                                                                                 -- Se guarda que el periferico 0 pidio interrupcion
     -> (94)
 
-91. CSR[812][28] <= '1';
+91. CSR[836][28] <= '1';                                                                                                 -- Se guarda que el periferico 1 pidio interrupcion
     -> (94)
 
-92. CSR[812][29] <= '1';
+92. CSR[836][29] <= '1';                                                                                                 -- Se guarda que el periferico 2 pidio interrupcion
     -> (94)
 
-93. CSR[812][30] <= '1';
+93. CSR[836][30] <= '1';                                                                                                 -- Se guarda que el periferico 3 pidio interrupcion
     -> (94)
 
-94. CSR[812][11] <= '1';
+94. CSR[836][11] <= '1';                                                                                                 -- Se guarda que hay una interrupcion pendiente
     -> ( 1)
 
-95.  MAR <=Registers[0 τ 010];                                                                                           -- Se envia la informacion del SP al MAR -- PUSH PC
+95.  MAR             <= Registers[0 τ 010];                                                                              -- Se envia la informacion del SP al MAR -- PUSH PC
+	CSR[836][31:27] <= "10000";
+	CSR[836][11]    <= '0';
     -> (96)
 
 96. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
@@ -580,22 +578,26 @@
     MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
     SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
     ->
-(IRQ[0]                                . CSR[772][28] X  98) +
+(IRQ[0]                                . CSR[772][28] X  98) +                                                           -- Se selecciona que interrupcion se va a atender
 (IRQ[0]' . IRQ[1]                      . CSR[772][29] X  99) +
 (IRQ[0]' . IRQ[1]' . IRQ[2]            . CSR[772][30] X 100) +
 (IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] X 101)
 
-98. Pc <= CSR(0x307);
-    -> ( 1)
-
-99. Pc <= CSR(0x308);
-    -> ( 1)
-
-100. Pc <= CSR(0x309);
+98.  Pc <= CSR(775);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 0
      -> ( 1)
 
-101. Pc <= CSR(0x310);
+99.  Pc <= CSR(776);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 1
      -> ( 1)
+
+100. Pc <= CSR(777);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 2
+     -> ( 1)
+
+101. Pc <= CSR(778);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 3
+     -> ( 1)
+
+╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
+║                                                  FUNCIONES LOGICAS                                                    ║
+╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 TO DO
 Cable entre SP y MAR (?? Bits)
