@@ -457,7 +457,7 @@
 74. Registers(IR[11:7]) <= Multiply( Registers(IR[19:15]),Registers(IR[24:20]) );                                        -- Se realiza la multiplicacion entre Registers direcciones IR(19:15)
     ->                                                                                                                   -- e IR(24:20)
 (ALU_Control[0]' X81) +                                                                                                  -- La operacion aun no acaba, GOTO 81
-(ALU_Control[0]  X 1)                                                                                                    -- La operacion ya termino
+(ALU_Control[0]  X89)                                                                                                    -- La operacion ya termino
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                       PUSH Y POP                                                      ║
@@ -522,7 +522,7 @@
     -> (88)
 
 88. Pc <= CSR[833];                                                                                                      -- Se escribe la direccion de atencion de excepcion en el PC
-    -> (1)
+    -> ( 1)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                                                                                       ║
@@ -584,19 +584,19 @@
 (IRQ[0]' . IRQ[1]' . IRQ[2]' . IRQ[3]  . CSR[772][31] X 101)
 
 98.  Pc    <= CSR(775);                                                                                                  -- se carga la direccion del porgrama de la interrupcion 0
-	Ack[0] = 0;
+	Ack[0] = 1;
      -> ( 1)
 
 99.  Pc <= CSR(776);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 1
-	Ack[1] = 0;
+	Ack[1] = 1;
      -> ( 1)
 
 100. Pc <= CSR(777);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 2
-	Ack[2] = 0;
+	Ack[2] = 1;
      -> ( 1)
 
 101. Pc <= CSR(778);                                                                                                     -- se carga la direccion del porgrama de la interrupcion 3
-	Ack[3] = 0;
+	Ack[3] = 1;
      -> ( 1)
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
@@ -612,3 +612,5 @@ Cable entre IR y CSR (32 bits datos)
 Cable entre CSR y PC (32 bits)
 Cable de entrada IRQ y ACK (4 de IRQ 4 de ACK)
 Cable de CSR a CONTROL de 6 bits (direcciones constantes)
+
+Modificar tambien el MAR y añadir el Q el estado 95
