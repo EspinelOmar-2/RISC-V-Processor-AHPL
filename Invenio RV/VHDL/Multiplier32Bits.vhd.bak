@@ -1,0 +1,63 @@
+--Definicion de las bibliotecas 
+library IEEE; 
+use IEEE.std_logic_1164.all;
+
+--******************************************************--
+-- DEFINICIÓN DE ENTIDAD                                --
+--******************************************************--
+     
+entity Multiplier32Bits is
+port(
+		--Entradas
+		
+			Multiplicand:	in std_logic_vector(31 downto 0);
+			--Señal del multiplicando, el 0 es el lsb y 31 el msb
+			
+			Multiplier:		in std_logic_vector(31 downto 0);
+			--Señal del multiplicador, el 0 es el lsb y 31 el msb
+		--Salidas
+		
+			Result:			out std_logic_vector(31 downto 0)
+		
+	  );
+end entity Multiplier32Bits;
+
+
+--******************************************************--
+--DEFINICIÓN DE ARQUITECTURA                            --
+--******************************************************--
+
+architecture Multiplier32BitsArch of Multiplier32Bits is
+
+--******************************************************--
+--DEFINICIÓN DE COMPONENTES Y SEÑALES DE CONEXIÓN                                        
+--******************************************************--
+
+component FullPartialProduct is
+port(Multiplicand:				in  std_logic_vector(31 downto 0);
+		S,Select_M,Select_2M: 	in	 std_logic;
+		PartialProduct32Bits:	out std_logic_vector(32 downto 0)
+	  );
+end component;
+
+
+component SinglePartialProduct is
+port(MultiplicandLSB,MultiplicandMSB,S,Select_M,Select_2M: 		in	 std_logic;
+			PartialProduct:				out std_logic
+		
+	  );
+end component;
+
+
+signal PartialOut: std_logic_vector(32 downto 0);
+
+--******************************************************--
+--Instancias y Conectividad
+--******************************************************
+begin
+
+
+	PartialProduct32Bits<=PartialOut;
+End  Multiplier32BitsArch;
+
+
