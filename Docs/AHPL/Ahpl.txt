@@ -604,6 +604,8 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 TO DO
+Eliminar cable entre CSR y ALU
+
 Cable entre PC y MAR (32 bits)
 Cable entre PC y MEMORIA (32 bits)
 Cable entre IR y CSR (32 bits datos)
