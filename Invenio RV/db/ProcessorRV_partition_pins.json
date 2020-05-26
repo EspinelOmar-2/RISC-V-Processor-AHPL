@@ -4,139 +4,131 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "PartialProduct32Bits[0]",
+					"name" : "Result[0]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[1]",
+					"name" : "Result[1]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[2]",
+					"name" : "Result[2]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[3]",
+					"name" : "Result[3]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[4]",
+					"name" : "Result[4]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[5]",
+					"name" : "Result[5]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[6]",
+					"name" : "Result[6]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[7]",
+					"name" : "Result[7]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[8]",
+					"name" : "Result[8]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[9]",
+					"name" : "Result[9]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[10]",
+					"name" : "Result[10]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[11]",
+					"name" : "Result[11]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[12]",
+					"name" : "Result[12]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[13]",
+					"name" : "Result[13]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[14]",
+					"name" : "Result[14]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[15]",
+					"name" : "Result[15]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[16]",
+					"name" : "Result[16]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[17]",
+					"name" : "Result[17]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[18]",
+					"name" : "Result[18]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[19]",
+					"name" : "Result[19]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[20]",
+					"name" : "Result[20]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[21]",
+					"name" : "Result[21]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[22]",
+					"name" : "Result[22]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[23]",
+					"name" : "Result[23]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[24]",
+					"name" : "Result[24]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[25]",
+					"name" : "Result[25]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[26]",
+					"name" : "Result[26]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[27]",
+					"name" : "Result[27]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[28]",
+					"name" : "Result[28]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[29]",
+					"name" : "Result[29]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[30]",
+					"name" : "Result[30]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[31]",
-					"strict" : false
-				},
-				{
-					"name" : "PartialProduct32Bits[32]",
-					"strict" : false
-				},
-				{
-					"name" : "S",
+					"name" : "Result[31]",
 					"strict" : false
 				},
 				{
@@ -144,7 +136,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Select_M",
+					"name" : "Multiplier[0]",
 					"strict" : false
 				},
 				{
@@ -152,7 +144,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "Select_2M",
+					"name" : "Multiplier[1]",
 					"strict" : false
 				},
 				{
@@ -160,7 +152,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[3]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[4]",
 					"strict" : false
 				},
 				{
@@ -172,7 +176,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[6]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[7]",
 					"strict" : false
 				},
 				{
@@ -184,11 +200,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[8]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[9]",
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[10]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[11]",
 					"strict" : false
 				},
 				{
@@ -200,11 +232,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[12]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[13]",
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[13]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[15]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[14]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[14]",
 					"strict" : false
 				},
 				{
@@ -216,7 +264,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[16]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[17]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[17]",
 					"strict" : false
 				},
 				{
@@ -224,7 +280,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[18]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[19]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[19]",
 					"strict" : false
 				},
 				{
@@ -232,11 +296,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[20]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[21]",
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[21]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[22]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[23]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[22]",
 					"strict" : false
 				},
 				{
@@ -248,7 +328,15 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[24]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[25]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[25]",
 					"strict" : false
 				},
 				{
@@ -256,7 +344,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[26]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[27]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[28]",
 					"strict" : false
 				},
 				{
@@ -268,7 +368,19 @@
 					"strict" : false
 				},
 				{
+					"name" : "Multiplier[29]",
+					"strict" : false
+				},
+				{
 					"name" : "Multiplicand[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[30]",
+					"strict" : false
+				},
+				{
+					"name" : "Multiplier[31]",
 					"strict" : false
 				},
 				{

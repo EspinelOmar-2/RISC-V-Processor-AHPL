@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "Cyclone IV E"
 set_global_assignment -name DEVICE EP4CE22F17C6
-set_global_assignment -name TOP_LEVEL_ENTITY FullPartialProduct
+set_global_assignment -name TOP_LEVEL_ENTITY Multiplier32Bits
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 15.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "23:08:35  MARCH 23, 2020"
 set_global_assignment -name LAST_QUARTUS_VERSION 15.1.0
@@ -62,8 +62,19 @@ set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/PCSim.vwf
 set_global_assignment -name VHDL_FILE VHDL/IR.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/IRSim.vwf
 set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/BoothDecoderSim.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/FullPartialProductSim.vwf
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder32.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder30.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder26.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder22.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder18.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder14.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder10.vhd
+set_global_assignment -name VHDL_FILE VHDL/CRAAdder6.vhd
+set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/CRAAdder30.vwf
+set_global_assignment -name VHDL_FILE VHDL/Multiplier32Bits.vhd
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/FullPartialProductSim.vwf
+set_global_assignment -name VECTOR_WAVEFORM_FILE Simulaciones/Multiplier32BitsSim.vwf
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
