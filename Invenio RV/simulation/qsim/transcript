@@ -2,37 +2,42 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 18:58:59 on May 25,2020
+# Start time: 14:31:44 on May 27,2020
 # vlog -work work ProcessorRV.vo 
-# -- Compiling module Multiplier32Bits
+# -- Compiling module ArithmeticShiftRight
 # 
 # Top level modules:
-# 	Multiplier32Bits
-# End time: 18:58:59 on May 25,2020, Elapsed time: 0:00:00
+# 	ArithmeticShiftRight
+# End time: 14:31:44 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 18:59:00 on May 25,2020
-# vlog -work work Multiplier32BitsSim.vwf.vt 
-# -- Compiling module Multiplier32Bits_vlg_vec_tst
+# Start time: 14:31:44 on May 27,2020
+# vlog -work work ArithmeticShiftRightSim.vwf.vt 
+# -- Compiling module ArithmeticShiftRight_vlg_vec_tst
 # 
 # Top level modules:
-# 	Multiplier32Bits_vlg_vec_tst
-# End time: 18:59:00 on May 25,2020, Elapsed time: 0:00:00
+# 	ArithmeticShiftRight_vlg_vec_tst
+# End time: 14:31:44 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.Multiplier32Bits_vlg_vec_tst -voptargs=""+acc"" 
-# Start time: 18:59:00 on May 25,2020
-# Loading work.Multiplier32Bits_vlg_vec_tst
-# Loading work.Multiplier32Bits
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ArithmeticShiftRight_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 14:31:44 on May 27,2020
+# Loading work.ArithmeticShiftRight_vlg_vec_tst
+# Loading work.ArithmeticShiftRight
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
 # SDF 10.4b Compiler 2015.05 May 27 2015
 # 
 # Loading instances from ProcessorRV_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
 # Loading timing data from ProcessorRV_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /Multiplier32Bits_vlg_vec_tst File: Multiplier32BitsSim.vwf.vt
-# ** Note: $finish    : Multiplier32BitsSim.vwf.vt(47)
-#    Time: 1 us  Iteration: 0  Instance: /Multiplier32Bits_vlg_vec_tst
-# End time: 18:59:00 on May 25,2020, Elapsed time: 0:00:00
+#    Time: 0 ps  Iteration: 0  Instance: /ArithmeticShiftRight_vlg_vec_tst File: ArithmeticShiftRightSim.vwf.vt
+# ** Note: $finish    : ArithmeticShiftRightSim.vwf.vt(53)
+#    Time: 1 us  Iteration: 0  Instance: /ArithmeticShiftRight_vlg_vec_tst
+# End time: 14:31:45 on May 27,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

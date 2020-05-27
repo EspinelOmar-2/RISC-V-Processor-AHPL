@@ -8,14 +8,14 @@ z2
 !i10f 100
 cModel Technology
 Z0 dC:/Users/usuario/Videos/Invenio RV/simulation/qsim
-vBoothDecoder
-Z1 !s110 1590188579
+vArithmeticShiftRight
+Z1 !s110 1590607904
 !i10b 1
-!s100 D:K5IhEej1X:9fW2SOV1M0
-ISj]UBDD5K4]oDg=S`nSl53
+!s100 `FjR[?^^o8WhWdS?3NVME2
+I^Y_73n3hcC5YA2C=d36VF0
 Z2 VDg1SIo80bB@j0V0VzS_@n1
 Z3 dC:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim
-w1590188578
+w1590607901
 Z4 8ProcessorRV.vo
 Z5 FProcessorRV.vo
 Z6 L0 32
@@ -23,14 +23,56 @@ Z7 OV;L;10.4b;61
 r1
 !s85 0
 31
-Z8 !s108 1590188579.000000
+Z8 !s108 1590607904.000000
 Z9 !s107 ProcessorRV.vo|
 Z10 !s90 -work|work|ProcessorRV.vo|
 !i113 1
 Z11 o-work work
+n@arithmetic@shift@right
+vArithmeticShiftRight_vlg_vec_tst
+R1
+!i10b 1
+!s100 HYeGd_H5>dNdJ2n3^MmZ31
+IV^L^=g6J>mnmb3F_PXeC02
+R2
+R3
+w1590607896
+8ArithmeticShiftRightSim.vwf.vt
+FArithmeticShiftRightSim.vwf.vt
+Z12 L0 30
+R7
+r1
+!s85 0
+31
+R8
+!s107 ArithmeticShiftRightSim.vwf.vt|
+!s90 -work|work|ArithmeticShiftRightSim.vwf.vt|
+!i113 1
+R11
+n@arithmetic@shift@right_vlg_vec_tst
+vBoothDecoder
+Z13 !s110 1590188579
+!i10b 1
+!s100 D:K5IhEej1X:9fW2SOV1M0
+ISj]UBDD5K4]oDg=S`nSl53
+R2
+R3
+w1590188578
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z14 !s108 1590188579.000000
+R9
+R10
+!i113 1
+R11
 n@booth@decoder
 vBoothDecoder_vlg_vec_tst
-R1
+R13
 !i10b 1
 !s100 Yg0oFl_cWWVNVW]XF^SF01
 I^DR]YEdlZ7CO5R^dAMX7H0
@@ -39,19 +81,19 @@ R3
 w1590188574
 8BoothDecoderSim.vwf.vt
 FBoothDecoderSim.vwf.vt
-Z12 L0 30
+R12
 R7
 r1
 !s85 0
 31
-R8
+R14
 !s107 BoothDecoderSim.vwf.vt|
 !s90 -work|work|BoothDecoderSim.vwf.vt|
 !i113 1
 R11
 n@booth@decoder_vlg_vec_tst
 vBoothPartialProduct
-Z13 !s110 1590202632
+Z15 !s110 1590202632
 !i10b 1
 !s100 _d<^zkG6S0PWVEiVe2e7Q3
 IT;l<l^D<8KjFLjm3M`mPF2
@@ -65,14 +107,14 @@ R7
 r1
 !s85 0
 31
-Z14 !s108 1590202632.000000
+Z16 !s108 1590202632.000000
 R9
 R10
 !i113 1
 R11
 n@booth@partial@product
 vBoothPartialProduct_vlg_vec_tst
-R13
+R15
 !i10b 1
 !s100 @5lklA3lCNQVki5Q35K8Z1
 IN?[m3DXI8KVNi9aLY:b?X1
@@ -86,14 +128,14 @@ R7
 r1
 !s85 0
 31
-R14
+R16
 !s107 BoothPartialProductSim.vwf.vt|
 !s90 -work|work|BoothPartialProductSim.vwf.vt|
 !i113 1
 R11
 n@booth@partial@product_vlg_vec_tst
 vCRAAdder30
-Z15 !s110 1590370165
+Z17 !s110 1590370165
 !i10b 1
 !s100 mX6e`C`kd>@YJ=6<3z8Rh0
 I5e7:GO:jQMP=W8>llE[;81
@@ -107,14 +149,14 @@ R7
 r1
 !s85 0
 31
-Z16 !s108 1590370165.000000
+Z18 !s108 1590370165.000000
 R9
 R10
 !i113 1
 R11
 n@c@r@a@adder30
 vCRAAdder30_vlg_vec_tst
-R15
+R17
 !i10b 1
 !s100 Bl6R<T9S0Aij=9z^=<8F=2
 I`[97ST_go6Xm0]H6mZGUN1
@@ -128,14 +170,14 @@ R7
 r1
 !s85 0
 31
-R16
+R18
 !s107 CRAAdder30.vwf.vt|
 !s90 -work|work|CRAAdder30.vwf.vt|
 !i113 1
 R11
 n@c@r@a@adder30_vlg_vec_tst
 vFullPartialProduct
-Z17 !s110 1590208394
+Z19 !s110 1590208394
 !i10b 1
 !s100 ]H9en7=ajgW8oaVF?^jIc3
 Ia^0YT7cEk4`kaOFaC@OZe3
@@ -149,14 +191,14 @@ R7
 r1
 !s85 0
 31
-Z18 !s108 1590208394.000000
+Z20 !s108 1590208394.000000
 R9
 R10
 !i113 1
 R11
 n@full@partial@product
 vFullPartialProduct_vlg_vec_tst
-R17
+R19
 !i10b 1
 !s100 ]XK]7X]YC5m0CB[obSX;m3
 IN]?>FVG5Y`[iQCVbigXC33
@@ -170,14 +212,14 @@ R7
 r1
 !s85 0
 31
-R18
+R20
 !s107 FullPartialProductSim.vwf.vt|
 !s90 -work|work|FullPartialProductSim.vwf.vt|
 !i113 1
 R11
 n@full@partial@product_vlg_vec_tst
 vIR
-Z19 !s110 1585198434
+Z21 !s110 1585198434
 !i10b 1
 !s100 _:g@ij?^IHjNc]nBkmgoV3
 INjO0NnmZCFPgVjK<XCUS12
@@ -191,14 +233,14 @@ R7
 r1
 !s85 0
 31
-Z20 !s108 1585198434.000000
+Z22 !s108 1585198434.000000
 R9
 R10
 !i113 1
 R11
 n@i@r
 vIR_vlg_vec_tst
-R19
+R21
 !i10b 1
 !s100 5R?]kb]YCjj7i31YP5N:g2
 I=G]G7F;5IAgCOQhmC3gMN2
@@ -212,12 +254,96 @@ R7
 r1
 !s85 0
 31
-R20
+R22
 !s107 IRSim.vwf.vt|
 !s90 -work|work|IRSim.vwf.vt|
 !i113 1
 R11
 n@i@r_vlg_vec_tst
+vLeftShift
+Z23 !s110 1590594596
+!i10b 1
+!s100 =1N=@:=:_l[N:g]glO8Sz2
+IL5VZnE:jLbEXg^obGL]N?3
+R2
+R3
+w1590594595
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z24 !s108 1590594596.000000
+R9
+R10
+!i113 1
+R11
+n@left@shift
+vLeftShift_vlg_vec_tst
+R23
+!i10b 1
+!s100 1hEDNbdd9S^z=nGX5K>Da3
+IXg4T@@PdhDjXc5HC8TNj:3
+R2
+R3
+w1590594590
+8LeftShiftSim.vwf.vt
+FLeftShiftSim.vwf.vt
+R12
+R7
+r1
+!s85 0
+31
+R24
+!s107 LeftShiftSim.vwf.vt|
+!s90 -work|work|LeftShiftSim.vwf.vt|
+!i113 1
+R11
+n@left@shift_vlg_vec_tst
+vLogicalShiftRight
+Z25 !s110 1590601459
+!i10b 1
+!s100 7CN?c2=[^EFFKV^XbJF=S0
+IlCgkbjeh?E4]fNmX:Z[5O1
+R2
+R3
+w1590601458
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z26 !s108 1590601459.000000
+R9
+R10
+!i113 1
+R11
+n@logical@shift@right
+vLogicalShiftRight_vlg_vec_tst
+R25
+!i10b 1
+!s100 J5_T7LYg5F69KQFICm9OS1
+I00VN7J^k0b:H_n^To22^F0
+R2
+R3
+w1590601453
+8LogicalShiftRightSim.vwf.vt
+FLogicalShiftRightSim.vwf.vt
+R12
+R7
+r1
+!s85 0
+31
+R26
+!s107 LogicalShiftRightSim.vwf.vt|
+!s90 -work|work|LogicalShiftRightSim.vwf.vt|
+!i113 1
+R11
+n@logical@shift@right_vlg_vec_tst
 vMultiplier32Bits
 !s110 1590451139
 !i10b 1
@@ -261,7 +387,7 @@ r1
 R11
 n@multiplier32@bits_vlg_vec_tst
 vPC
-Z21 !s110 1585109993
+Z27 !s110 1585109993
 !i10b 1
 !s100 78Ff?AzDQMdV@H1_L50hR2
 IO4df8Tam>1QDHzSQ;<<e]2
@@ -275,14 +401,14 @@ R7
 r1
 !s85 0
 31
-Z22 !s108 1585109993.000000
+Z28 !s108 1585109993.000000
 R9
 R10
 !i113 1
 R11
 n@p@c
 vPC_vlg_vec_tst
-R21
+R27
 !i10b 1
 !s100 Vclgcl^B6a4b:LzJ2_;8l1
 Ibe8DzN?S1P;fzz1T0AXZd0
@@ -296,7 +422,7 @@ R7
 r1
 !s85 0
 31
-R22
+R28
 !s107 PCSim.vwf.vt|
 !s90 -work|work|PCSim.vwf.vt|
 !i113 1

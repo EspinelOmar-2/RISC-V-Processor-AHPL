@@ -1,15 +1,15 @@
-Fitter Status : Successful - Mon May 25 18:57:23 2020
+Fitter Status : Successful - Wed May 27 14:28:55 2020
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : ProcessorRV
-Top-level Entity Name : Multiplier32Bits
+Top-level Entity Name : ArithmeticShiftRight
 Family : Cyclone IV E
 Device : EP4CE22F17C6
 Timing Models : Final
-Total logic elements : 907 / 22,320 ( 4 % )
-    Total combinational functions : 907 / 22,320 ( 4 % )
-    Dedicated logic registers : 0 / 22,320 ( 0 % )
-Total registers : 0
-Total pins : 96 / 154 ( 62 % )
+Total logic elements : 32 / 22,320 ( < 1 % )
+    Total combinational functions : 32 / 22,320 ( < 1 % )
+    Dedicated logic registers : 32 / 22,320 ( < 1 % )
+Total registers : 32
+Total pins : 68 / 154 ( 44 % )
 Total virtual pins : 0
 Total memory bits : 0 / 608,256 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 132 ( 0 % )
