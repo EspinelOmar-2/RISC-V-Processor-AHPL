@@ -15,7 +15,7 @@ port(
 			--Señal para reiniciar el sistema
 				
 			Reloj: 				in std_logic;
-			--señal de reloj para elfuncionamiento de los bloques
+			--señal de reloj para el funcionamiento de los bloques
 			
 			MemoryOut: 				in 	std_logic_vector(31 downto 0);
 			--Salida de datos de la memoria, en este caso, contiene la instrucción 

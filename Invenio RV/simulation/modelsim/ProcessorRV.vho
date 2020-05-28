@@ -17,7 +17,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 15.0.0 Build 145 04/22/2015 SJ Web Edition"
 
--- DATE "05/27/2020 23:18:24"
+-- DATE "05/28/2020 00:53:31"
 
 -- 
 -- Device: Altera EP4CE22F17C6 Package FBGA256
