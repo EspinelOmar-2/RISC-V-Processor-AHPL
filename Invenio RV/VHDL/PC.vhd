@@ -98,41 +98,70 @@ begin
 	D31:dffe port map(D(31),Reloj,Reset,'1', enable (31) ,Q(31));
 
 	
-	D( 0)<=ALU_PC(0);
-	D( 1)<=ALU_PC(1);
-	D( 2)<=(not Q( 2) AND NOT Control_PC(1)) OR (ALU_PC( 2) AND Control_PC(1) );
-	D( 3)<=(not Q( 3) AND NOT Control_PC(1)) OR (ALU_PC( 3) AND Control_PC(1) );
-	D( 4)<=(not Q( 4) AND NOT Control_PC(1)) OR (ALU_PC( 4) AND Control_PC(1) );
-	D( 5)<=(not Q( 5) AND NOT Control_PC(1)) OR (ALU_PC( 5) AND Control_PC(1) );
-	D( 6)<=(not Q( 6) AND NOT Control_PC(1)) OR (ALU_PC( 6) AND Control_PC(1) );
-	D( 7)<=(not Q( 7) AND NOT Control_PC(1)) OR (ALU_PC( 7) AND Control_PC(1) );
-	D( 8)<=(not Q( 8) AND NOT Control_PC(1)) OR (ALU_PC( 8) AND Control_PC(1) );
-	D( 9)<=(not Q( 9) AND NOT Control_PC(1)) OR (ALU_PC( 9) AND Control_PC(1) );
-	D(10)<=(not Q(10) AND NOT Control_PC(1)) OR (ALU_PC(10) AND Control_PC(1) );
-	D(11)<=(not Q(11) AND NOT Control_PC(1)) OR (ALU_PC(11) AND Control_PC(1) );
-	D(12)<=(not Q(12) AND NOT Control_PC(1)) OR (ALU_PC(12) AND Control_PC(1) );
-	D(13)<=(not Q(13) AND NOT Control_PC(1)) OR (ALU_PC(13) AND Control_PC(1) );
-	D(14)<=(not Q(14) AND NOT Control_PC(1)) OR (ALU_PC(14) AND Control_PC(1) );
-	D(15)<=(not Q(15) AND NOT Control_PC(1)) OR (ALU_PC(15) AND Control_PC(1) );
-	D(16)<=(not Q(16) AND NOT Control_PC(1)) OR (ALU_PC(16) AND Control_PC(1) );
-	D(17)<=(not Q(17) AND NOT Control_PC(1)) OR (ALU_PC(17) AND Control_PC(1) );
-	D(18)<=(not Q(18) AND NOT Control_PC(1)) OR (ALU_PC(18) AND Control_PC(1) );
-	D(19)<=(not Q(19) AND NOT Control_PC(1)) OR (ALU_PC(19) AND Control_PC(1) );
-	D(20)<=(not Q(20) AND NOT Control_PC(1)) OR (ALU_PC(20) AND Control_PC(1) );
-	D(21)<=(not Q(21) AND NOT Control_PC(1)) OR (ALU_PC(21) AND Control_PC(1) );
-	D(22)<=(not Q(22) AND NOT Control_PC(1)) OR (ALU_PC(22) AND Control_PC(1) );
-	D(23)<=(not Q(23) AND NOT Control_PC(1)) OR (ALU_PC(23) AND Control_PC(1) );
-	D(24)<=(not Q(24) AND NOT Control_PC(1)) OR (ALU_PC(24) AND Control_PC(1) );
-	D(25)<=(not Q(25) AND NOT Control_PC(1)) OR (ALU_PC(25) AND Control_PC(1) );
-	D(26)<=(not Q(26) AND NOT Control_PC(1)) OR (ALU_PC(26) AND Control_PC(1) );
-	D(27)<=(not Q(27) AND NOT Control_PC(1)) OR (ALU_PC(27) AND Control_PC(1) );
-	D(28)<=(not Q(28) AND NOT Control_PC(1)) OR (ALU_PC(28) AND Control_PC(1) );
-	D(29)<=(not Q(29) AND NOT Control_PC(1)) OR (ALU_PC(29) AND Control_PC(1) );
-	D(30)<=(not Q(30) AND NOT Control_PC(1)) OR (ALU_PC(30) AND Control_PC(1) );
-	D(31)<=(not Q(31) AND NOT Control_PC(1)) OR (ALU_PC(31) AND Control_PC(1) );
+	D( 0)<=(ALU_PC( 0) AND Control_PC(1) AND NOT Control_PC(2)) OR (CSR_PC(0) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 1)<=(ALU_PC( 1) AND Control_PC(1) AND NOT Control_PC(2)) OR (CSR_PC(1) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 2)<=(ALU_PC( 2) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 2) AND NOT Control_PC(1) AND NOT Control_PC(2))		  
+		  OR(CSR_PC( 2) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 3)<=(ALU_PC( 3) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 3) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+		  OR(CSR_PC( 3) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 4)<=(ALU_PC( 4) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 4) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+		  OR(CSR_PC( 4) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 5)<=(ALU_PC( 5) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 5) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+		  OR(CSR_PC( 5) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 6)<=(ALU_PC( 6) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 6) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC( 6) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 7)<=(ALU_PC( 7) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 7) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC( 7) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 8)<=(ALU_PC( 8) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 8) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC( 8) AND Control_PC(2) AND NOT Control_PC(1));
+	D( 9)<=(ALU_PC( 9) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q( 9) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC( 9) AND Control_PC(2) AND NOT Control_PC(1));
+	D(10)<=(ALU_PC(10) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(10) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(10) AND Control_PC(2) AND NOT Control_PC(1));
+	D(11)<=(ALU_PC(11) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(11) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(11) AND Control_PC(2) AND NOT Control_PC(1));
+	D(12)<=(ALU_PC(12) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(12) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(12) AND Control_PC(2) AND NOT Control_PC(1));
+	D(13)<=(ALU_PC(13) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(13) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(13) AND Control_PC(2) AND NOT Control_PC(1));
+	D(14)<=(ALU_PC(14) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(14) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(14) AND Control_PC(2) AND NOT Control_PC(1));
+	D(15)<=(ALU_PC(15) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(15) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(15) AND Control_PC(2) AND NOT Control_PC(1));
+	D(16)<=(ALU_PC(16) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(16) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(16) AND Control_PC(2) AND NOT Control_PC(1));
+	D(17)<=(ALU_PC(17) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(17) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(17) AND Control_PC(2) AND NOT Control_PC(1));
+	D(18)<=(ALU_PC(18) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(18) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(18) AND Control_PC(2) AND NOT Control_PC(1));
+	D(19)<=(ALU_PC(19) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(19) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(19) AND Control_PC(2) AND NOT Control_PC(1));
+	D(20)<=(ALU_PC(20) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(20) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(20) AND Control_PC(2) AND NOT Control_PC(1));
+	D(21)<=(ALU_PC(21) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(21) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(21) AND Control_PC(2) AND NOT Control_PC(1));
+	D(22)<=(ALU_PC(22) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(22) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(22) AND Control_PC(2) AND NOT Control_PC(1));
+	D(23)<=(ALU_PC(23) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(23) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(23) AND Control_PC(2) AND NOT Control_PC(1));
+	D(24)<=(ALU_PC(24) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(24) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+        OR(CSR_PC(24) AND Control_PC(2) AND NOT Control_PC(1));
+	D(25)<=(ALU_PC(25) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(25) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(25) AND Control_PC(2) AND NOT Control_PC(1));
+	D(26)<=(ALU_PC(26) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(26) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+        OR(CSR_PC(26) AND Control_PC(2) AND NOT Control_PC(1));
+	D(27)<=(ALU_PC(27) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(27) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(27) AND Control_PC(2) AND NOT Control_PC(1));
+	D(28)<=(ALU_PC(28) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(28) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(28) AND Control_PC(2) AND NOT Control_PC(1));
+	D(29)<=(ALU_PC(29) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(29) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(29) AND Control_PC(2) AND NOT Control_PC(1));
+	D(30)<=(ALU_PC(30) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(30) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(30) AND Control_PC(2) AND NOT Control_PC(1));
+	D(31)<=(ALU_PC(31) AND Control_PC(1) AND NOT Control_PC(2)) OR (NOT Q(31) AND NOT Control_PC(1) AND NOT Control_PC(2)) 
+     	  OR(CSR_PC(31) AND Control_PC(2) AND NOT Control_PC(1));
 
-	
-	--Que el enable se encienda cada qu
+	--Enables dependiendo de si es auto aumento o cargado por alu o CSR
 	
 	enable ( 0)<= Control_PC(1) OR Control_PC(2);
 	enable ( 1)<= Control_PC(1) OR Control_PC(2);
