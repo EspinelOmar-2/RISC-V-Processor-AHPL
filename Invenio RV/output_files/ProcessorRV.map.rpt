@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ProcessorRV
-Wed May 27 14:28:42 2020
-Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Wed May 27 23:17:59 2020
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
 ---------------------
@@ -30,7 +30,7 @@ functions, and any output files from any of the foregoing
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
+Subscription Agreement, the Altera Quartus II License Agreement,
 the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
@@ -40,24 +40,24 @@ agreement for further details.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed May 27 14:28:42 2020       ;
-; Quartus Prime Version              ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
-; Revision Name                      ; ProcessorRV                                 ;
-; Top-level Entity Name              ; ArithmeticShiftRight                        ;
-; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 33                                          ;
-;     Total combinational functions  ; 32                                          ;
-;     Dedicated logic registers      ; 32                                          ;
-; Total registers                    ; 32                                          ;
-; Total pins                         ; 68                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed May 27 23:17:58 2020      ;
+; Quartus II 64-Bit Version          ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
+; Revision Name                      ; ProcessorRV                                ;
+; Top-level Entity Name              ; ArithmeticShiftRight                       ;
+; Family                             ; Cyclone IV E                               ;
+; Total logic elements               ; 33                                         ;
+;     Total combinational functions  ; 32                                         ;
+;     Dedicated logic registers      ; 32                                         ;
+; Total registers                    ; 32                                         ;
+; Total pins                         ; 68                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
 
 
 +------------------------------------------------------------------------------------------------------------------------+
@@ -147,24 +147,30 @@ agreement for further details.
 +----------------------------------------------------------------------------+----------------------+--------------------+
 
 
-Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
-+-------------------------------------+
-; Parallel Compilation                ;
-+----------------------------+--------+
-; Processors                 ; Number ;
-+----------------------------+--------+
-; Number detected on machine ; 8      ;
-; Maximum allowed            ; 1      ;
-+----------------------------+--------+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 1           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; VHDL/ArithmeticShiftRight.vhd    ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ArithmeticShiftRight.vhd ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                          ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
+; VHDL/ArithmeticShiftRight.vhd    ; yes             ; User VHDL File  ; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ArithmeticShiftRight.vhd ;         ;
++----------------------------------+-----------------+-----------------+------------------------------------------------------------------------------------------------+---------+
 
 
 +-------------------------------------------------------------+
@@ -247,7 +253,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -255,74 +261,74 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Wed May 27 14:28:23 2020
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Wed May 27 23:17:39 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessorRV -c ProcessorRV
-Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (11104): Parallel Compilation has detected 4 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 2 of the 2 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/logicalshiftright.vhd
-    Info (12022): Found design unit 1: LogicalShiftRight-LogicalShiftRightArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/LogicalShiftRight.vhd Line: 38
-    Info (12023): Found entity 1: LogicalShiftRight File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/LogicalShiftRight.vhd Line: 9
+    Info (12022): Found design unit 1: LogicalShiftRight-LogicalShiftRightArch
+    Info (12023): Found entity 1: LogicalShiftRight
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/singlepartialproduct.vhd
-    Info (12022): Found design unit 1: SinglePartialProduct-SinglePartialProductArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/SinglePartialProduct.vhd Line: 41
-    Info (12023): Found entity 1: SinglePartialProduct File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/SinglePartialProduct.vhd Line: 9
+    Info (12022): Found design unit 1: SinglePartialProduct-SinglePartialProductArch
+    Info (12023): Found entity 1: SinglePartialProduct
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/fullpartialproduct.vhd
-    Info (12022): Found design unit 1: FullPartialProduct-FullPartialProductArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd Line: 37
-    Info (12023): Found entity 1: FullPartialProduct File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd Line: 9
+    Info (12022): Found design unit 1: FullPartialProduct-FullPartialProductArch
+    Info (12023): Found entity 1: FullPartialProduct
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/boothdecoder.vhd
-    Info (12022): Found design unit 1: BoothDecoder-BoothDecoderArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BoothDecoder.vhd Line: 37
-    Info (12023): Found entity 1: BoothDecoder File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BoothDecoder.vhd Line: 9
+    Info (12022): Found design unit 1: BoothDecoder-BoothDecoderArch
+    Info (12023): Found entity 1: BoothDecoder
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/processorrv.vhd
-    Info (12022): Found design unit 1: ProcessorRV-ProcessorRVArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ProcessorRV.vhd Line: 49
-    Info (12023): Found entity 1: ProcessorRV File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ProcessorRV.vhd Line: 16
+    Info (12022): Found design unit 1: ProcessorRV-ProcessorRVArch
+    Info (12023): Found entity 1: ProcessorRV
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/pc.vhd
-    Info (12022): Found design unit 1: PC-PCArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/PC.vhd Line: 39
-    Info (12023): Found entity 1: PC File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/PC.vhd Line: 9
+    Info (12022): Found design unit 1: PC-PCArch
+    Info (12023): Found entity 1: PC
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/ir.vhd
-    Info (12022): Found design unit 1: IR-IRArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/IR.vhd Line: 48
-    Info (12023): Found entity 1: IR File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/IR.vhd Line: 10
+    Info (12022): Found design unit 1: IR-IRArch
+    Info (12023): Found entity 1: IR
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder32.vhd
-    Info (12022): Found design unit 1: CRAAdder32-CRAAdder32Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder32.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder32 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder32.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder32-CRAAdder32Arch
+    Info (12023): Found entity 1: CRAAdder32
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder30.vhd
-    Info (12022): Found design unit 1: CRAAdder30-CRAAdder30Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder30.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder30 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder30.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder30-CRAAdder30Arch
+    Info (12023): Found entity 1: CRAAdder30
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder26.vhd
-    Info (12022): Found design unit 1: CRAAdder26-CRAAdder26Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder26.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder26 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder26.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder26-CRAAdder26Arch
+    Info (12023): Found entity 1: CRAAdder26
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder22.vhd
-    Info (12022): Found design unit 1: CRAAdder22-CRAAdder22Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder22.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder22 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder22.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder22-CRAAdder22Arch
+    Info (12023): Found entity 1: CRAAdder22
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder18.vhd
-    Info (12022): Found design unit 1: CRAAdder18-CRAAdder18Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder18.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder18 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder18.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder18-CRAAdder18Arch
+    Info (12023): Found entity 1: CRAAdder18
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder14.vhd
-    Info (12022): Found design unit 1: CRAAdder14-CRAAdder14Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder14.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder14 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder14.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder14-CRAAdder14Arch
+    Info (12023): Found entity 1: CRAAdder14
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder10.vhd
-    Info (12022): Found design unit 1: CRAAdder10-CRAAdder10Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder10.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder10 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder10.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder10-CRAAdder10Arch
+    Info (12023): Found entity 1: CRAAdder10
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/craadder6.vhd
-    Info (12022): Found design unit 1: CRAAdder6-CRAAdder6Arch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder6.vhd Line: 35
-    Info (12023): Found entity 1: CRAAdder6 File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder6.vhd Line: 9
+    Info (12022): Found design unit 1: CRAAdder6-CRAAdder6Arch
+    Info (12023): Found entity 1: CRAAdder6
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/multiplier32bits.vhd
-    Info (12022): Found design unit 1: Multiplier32Bits-Multiplier32BitsArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 30
-    Info (12023): Found entity 1: Multiplier32Bits File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 9
+    Info (12022): Found design unit 1: Multiplier32Bits-Multiplier32BitsArch
+    Info (12023): Found entity 1: Multiplier32Bits
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/blockand.vhd
-    Info (12022): Found design unit 1: BlockAnd-BlockAndArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BlockAnd.vhd Line: 31
-    Info (12023): Found entity 1: BlockAnd File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BlockAnd.vhd Line: 9
+    Info (12022): Found design unit 1: BlockAnd-BlockAndArch
+    Info (12023): Found entity 1: BlockAnd
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/blockor.vhd
-    Info (12022): Found design unit 1: BlockOr-BlockOrArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BlockOr.vhd Line: 31
-    Info (12023): Found entity 1: BlockOr File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BlockOr.vhd Line: 9
+    Info (12022): Found design unit 1: BlockOr-BlockOrArch
+    Info (12023): Found entity 1: BlockOr
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/blockxor.vhd
-    Info (12022): Found design unit 1: BlockXor-BlockXorArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BlockXor.vhd Line: 31
-    Info (12023): Found entity 1: BlockXor File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BlockXor.vhd Line: 9
+    Info (12022): Found design unit 1: BlockXor-BlockXorArch
+    Info (12023): Found entity 1: BlockXor
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/leftshift.vhd
-    Info (12022): Found design unit 1: LeftShift-LeftShiftArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/LeftShift.vhd Line: 38
-    Info (12023): Found entity 1: LeftShift File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/LeftShift.vhd Line: 9
+    Info (12022): Found design unit 1: LeftShift-LeftShiftArch
+    Info (12023): Found entity 1: LeftShift
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/arithmeticshiftright.vhd
-    Info (12022): Found design unit 1: ArithmeticShiftRight-ArithmeticShiftRightArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ArithmeticShiftRight.vhd Line: 38
-    Info (12023): Found entity 1: ArithmeticShiftRight File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ArithmeticShiftRight.vhd Line: 9
+    Info (12022): Found design unit 1: ArithmeticShiftRight-ArithmeticShiftRightArch
+    Info (12023): Found entity 1: ArithmeticShiftRight
 Info (12127): Elaborating entity "ArithmeticShiftRight" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -331,10 +337,10 @@ Info (21057): Implemented 101 device resources after synthesis - the final resou
     Info (21058): Implemented 36 input pins
     Info (21059): Implemented 32 output pins
     Info (21061): Implemented 33 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4961 megabytes
-    Info: Processing ended: Wed May 27 14:28:42 2020
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:38
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 709 megabytes
+    Info: Processing ended: Wed May 27 23:17:59 2020
+    Info: Elapsed time: 00:00:20
+    Info: Total CPU time (on all processors): 00:00:39
 
 

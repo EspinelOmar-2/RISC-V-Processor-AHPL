@@ -1,6 +1,6 @@
 EDA Netlist Writer report for ProcessorRV
-Wed May 27 14:31:41 2020
-Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+Wed May 27 23:18:24 2020
+Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
 ---------------------
@@ -24,7 +24,7 @@ functions, and any output files from any of the foregoing
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
+Subscription Agreement, the Altera Quartus II License Agreement,
 the Altera MegaCore Function License Agreement, or other 
 applicable license agreement, including, without limitation, 
 that your use is for the sole purpose of programming logic 
@@ -37,7 +37,7 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Wed May 27 14:31:41 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed May 27 23:18:24 2020 ;
 ; Revision Name             ; ProcessorRV                           ;
 ; Top-level Entity Name     ; ArithmeticShiftRight                  ;
 ; Family                    ; Cyclone IV E                          ;
@@ -45,77 +45,63 @@ agreement for further details.
 +---------------------------+---------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Simulation Settings                                                                                                           ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Option                                                                                            ; Setting                   ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
-; Tool Name                                                                                         ; ModelSim-Altera (Verilog) ;
-; Generate netlist for functional simulation only                                                   ; Off                       ;
-; Time scale                                                                                        ; 1 ps                      ;
-; Truncate long hierarchy paths                                                                     ; Off                       ;
-; Map illegal HDL characters                                                                        ; Off                       ;
-; Flatten buses into individual nodes                                                               ; Off                       ;
-; Maintain hierarchy                                                                                ; Off                       ;
-; Bring out device-wide set/reset signals as ports                                                  ; Off                       ;
-; Enable glitch filtering                                                                           ; Off                       ;
-; Do not write top level VHDL entity                                                                ; Off                       ;
-; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                       ;
-; Architecture name in VHDL output netlist                                                          ; structure                 ;
-; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                       ;
-; Generate third-party EDA tool command script for gate-level simulation                            ; Off                       ;
-+---------------------------------------------------------------------------------------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Simulation Settings                                                                                                        ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Option                                                                                            ; Setting                ;
++---------------------------------------------------------------------------------------------------+------------------------+
+; Tool Name                                                                                         ; ModelSim-Altera (VHDL) ;
+; Generate netlist for functional simulation only                                                   ; Off                    ;
+; Time scale                                                                                        ; 1 ps                   ;
+; Truncate long hierarchy paths                                                                     ; Off                    ;
+; Map illegal HDL characters                                                                        ; Off                    ;
+; Flatten buses into individual nodes                                                               ; Off                    ;
+; Maintain hierarchy                                                                                ; Off                    ;
+; Bring out device-wide set/reset signals as ports                                                  ; Off                    ;
+; Enable glitch filtering                                                                           ; Off                    ;
+; Do not write top level VHDL entity                                                                ; Off                    ;
+; Disable detection of setup and hold time violations in the input registers of bi-directional pins ; Off                    ;
+; Architecture name in VHDL output netlist                                                          ; structure              ;
+; Generate third-party EDA tool command script for RTL functional simulation                        ; Off                    ;
+; Generate third-party EDA tool command script for gate-level simulation                            ; Off                    ;
++---------------------------------------------------------------------------------------------------+------------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------+
-; Simulation Generated Files                                                                                               ;
-+--------------------------------------------------------------------------------------------------------------------------+
-; Generated Files                                                                                                          ;
-+--------------------------------------------------------------------------------------------------------------------------+
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_6_1200mv_85c_slow.vo     ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_6_1200mv_0c_slow.vo      ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_min_1200mv_0c_fast.vo    ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV.vo                       ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_6_1200mv_85c_v_slow.sdo  ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_6_1200mv_0c_v_slow.sdo   ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_min_1200mv_0c_v_fast.sdo ;
-; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//ProcessorRV_v.sdo                    ;
-+--------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------+
+; Simulation Generated Files                                                                                                  ;
++-----------------------------------------------------------------------------------------------------------------------------+
+; Generated Files                                                                                                             ;
++-----------------------------------------------------------------------------------------------------------------------------+
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_6_1200mv_85c_slow.vho      ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_6_1200mv_0c_slow.vho       ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_min_1200mv_0c_fast.vho     ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV.vho                        ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_6_1200mv_85c_vhd_slow.sdo  ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_6_1200mv_0c_vhd_slow.sdo   ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_min_1200mv_0c_vhd_fast.sdo ;
+; C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/ProcessorRV_vhd.sdo                    ;
++-----------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------+
 ; EDA Netlist Writer Messages ;
 +-----------------------------+
 Info: *******************************************************************
-Info: Running Quartus Prime EDA Netlist Writer
-    Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Copyright (C) 1991-2015 Altera Corporation. All rights reserved.
-    Info: Your use of Altera Corporation's design tools, logic functions 
-    Info: and other software and tools, and its AMPP partner logic 
-    Info: functions, and any output files from any of the foregoing 
-    Info: (including device programming or simulation files), and any 
-    Info: associated documentation or information are expressly subject 
-    Info: to the terms and conditions of the Altera Program License 
-    Info: Subscription Agreement, the Altera Quartus Prime License Agreement,
-    Info: the Altera MegaCore Function License Agreement, or other 
-    Info: applicable license agreement, including, without limitation, 
-    Info: that your use is for the sole purpose of programming logic 
-    Info: devices manufactured by Altera and sold by Altera or its 
-    Info: authorized distributors.  Please refer to the applicable 
-    Info: agreement for further details.
-    Info: Processing started: Wed May 27 14:31:40 2020
-Info: Command: quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/" ProcessorRV -c ProcessorRV
-Info (204019): Generated file ProcessorRV_6_1200mv_85c_slow.vo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV_6_1200mv_0c_slow.vo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV_min_1200mv_0c_fast.vo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV.vo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV_6_1200mv_85c_v_slow.sdo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV_6_1200mv_0c_v_slow.sdo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV_min_1200mv_0c_v_fast.sdo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info (204019): Generated file ProcessorRV_v.sdo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
-Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4824 megabytes
-    Info: Processing ended: Wed May 27 14:31:41 2020
+Info: Running Quartus II 64-Bit EDA Netlist Writer
+    Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
+    Info: Processing started: Wed May 27 23:18:23 2020
+Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off ProcessorRV -c ProcessorRV
+Info (204019): Generated file ProcessorRV_6_1200mv_85c_slow.vho in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV_6_1200mv_0c_slow.vho in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV_min_1200mv_0c_fast.vho in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV.vho in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV_6_1200mv_85c_vhd_slow.sdo in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV_6_1200mv_0c_vhd_slow.sdo in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV_min_1200mv_0c_vhd_fast.sdo in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info (204019): Generated file ProcessorRV_vhd.sdo in folder "C:/Users/Rubia/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/modelsim/" for EDA simulation tool
+Info: Quartus II 64-Bit EDA Netlist Writer was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 576 megabytes
+    Info: Processing ended: Wed May 27 23:18:24 2020
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 

@@ -13,10 +13,9 @@ port(
 		
 			Reset: 				in std_logic;
 			--Señal para reiniciar el sistema
-			-- Holi soy un comentario
 				
 			Reloj: 				in std_logic;
-			--señal de reloj para elfuncionamiento d elos bloques
+			--señal de reloj para elfuncionamiento de los bloques
 			
 			MemoryOut: 				in 	std_logic_vector(31 downto 0);
 			--Salida de datos de la memoria, en este caso, contiene la instrucción 
@@ -28,15 +27,18 @@ port(
 		
 			IR_Registers:  		out 	std_logic_vector(25 downto 0);
 			--envia la direcciones de los registros rd, rs1 o rs2 de las instrucciones para acceder a los registros necesarios.
-			
+
 			IR_Control: 			out 	std_logic_vector(11 downto 0);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU: 					out 	std_logic_vector(19 downto 0);
+			IR_ALU: 					out 	std_logic_vector(24 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
-			IR_CSR: 				out 	std_logic_vector(11 downto 0)
+			IR_CSR: 				   out 	std_logic_vector(31 downto 0);
 			--Envia las dirección de los CSR donde se realiza la instrucción.
+			
+			IR_Counter: 			out	std_logic_vector(5 downto 0)
+			--Carga un valor inmediato a Counter
 	  );
 end entity IR;
 
@@ -112,7 +114,7 @@ begin
 			--Direccion rd: 	0:5
 			--Dato immediato 	5:25
 			--Direccion rs1 	9:13
-			--Direccion rs2	14:18
+			--Direccion rs2  14:18
 			
 			
 			IR_Control(6 downto 0)<=Q(6 downto 0);
@@ -121,13 +123,15 @@ begin
 			IR_Control(11)<=Q(30);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU<= Q(31 downto 12);
+			IR_ALU<= Q(31 downto 7);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
-			IR_CSR<=Q(31 downto 20);
-
+			IR_CSR<= Q(31 downto 0);
 			--Envia las dirección de los CSR donde se realiza la instrucción.
 
+			IR_Counter<= Q(25 downto 20);
+			--Carga un valor inmediato a counter
+			
 End  IRArch;
 
 

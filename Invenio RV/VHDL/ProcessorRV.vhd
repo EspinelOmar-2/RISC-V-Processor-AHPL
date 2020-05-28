@@ -57,13 +57,13 @@ component IR is
 port(
 		--Entradas
 		
-			Reset: 				in std_logic;
+			Reset: 				   in std_logic;
 			--Señal para reiniciar el sistema
 				
-			Reloj: 				in std_logic;
+			Reloj: 				   in std_logic;
 			--señal de reloj para elfuncionamiento d elos bloques
-			
-			MemoryOut: 				in 	std_logic_vector(31 downto 0);
+			  
+			MemoryOut: 				in std_logic_vector(31 downto 0);
 			--Salida de datos de la memoria, en este caso, contiene la instrucción 
 			
 			Control_IR:				in std_logic;
@@ -77,11 +77,14 @@ port(
 			IR_Control: 			out 	std_logic_vector(11 downto 0);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU: 					out 	std_logic_vector(19 downto 0);
+			IR_ALU: 					out 	std_logic_vector(24 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
-			IR_CSR: 				out 	std_logic_vector(11 downto 0)
+			IR_CSR: 				   out 	std_logic_vector(31 downto 0);
 			--Envia las dirección de los CSR donde se realiza la instrucción.
+			
+			IR_Counter: 			out	std_logic_vector(5 downto 0)
+			--Carga un valor inmediato a Counter	  
 	  );
 end component;
 
@@ -285,7 +288,7 @@ port(
 			ALU_CSR: 			in 	std_logic_vector(31 downto 0);
 			--Señal de salida de la ALU, envia a los CSR el resultado de una operación.
 			
-			IR_CSRs: 			in 	std_logic_vector(11 downto 0);
+			IR_CSRs: 			in 	std_logic_vector(31 downto 0);
 			--Envia las dirección de los CSR donde se realiza la instrucción.
 				
 	--Salidas
