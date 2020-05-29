@@ -2,37 +2,42 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 23:33:14 on May 22,2020
+# Start time: 14:31:44 on May 27,2020
 # vlog -work work ProcessorRV.vo 
-# -- Compiling module FullPartialProduct
+# -- Compiling module ArithmeticShiftRight
 # 
 # Top level modules:
-# 	FullPartialProduct
-# End time: 23:33:14 on May 22,2020, Elapsed time: 0:00:00
+# 	ArithmeticShiftRight
+# End time: 14:31:44 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 23:33:14 on May 22,2020
-# vlog -work work FullPartialProductSim.vwf.vt 
-# -- Compiling module FullPartialProduct_vlg_vec_tst
+# Start time: 14:31:44 on May 27,2020
+# vlog -work work ArithmeticShiftRightSim.vwf.vt 
+# -- Compiling module ArithmeticShiftRight_vlg_vec_tst
 # 
 # Top level modules:
-# 	FullPartialProduct_vlg_vec_tst
-# End time: 23:33:14 on May 22,2020, Elapsed time: 0:00:00
+# 	ArithmeticShiftRight_vlg_vec_tst
+# End time: 14:31:44 on May 27,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.FullPartialProduct_vlg_vec_tst -voptargs=""+acc"" 
-# Start time: 23:33:14 on May 22,2020
-# Loading work.FullPartialProduct_vlg_vec_tst
-# Loading work.FullPartialProduct
+# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ArithmeticShiftRight_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 14:31:44 on May 27,2020
+# Loading work.ArithmeticShiftRight_vlg_vec_tst
+# Loading work.ArithmeticShiftRight
 # Loading cycloneive_ver.cycloneive_io_obuf
 # Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
 # Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
 # SDF 10.4b Compiler 2015.05 May 27 2015
 # 
 # Loading instances from ProcessorRV_v.sdo
+# Loading altera_ver.PRIM_GDFF_LOW
 # Loading timing data from ProcessorRV_v.sdo
 # ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /FullPartialProduct_vlg_vec_tst File: FullPartialProductSim.vwf.vt
-# ** Note: $finish    : FullPartialProductSim.vwf.vt(51)
-#    Time: 1 us  Iteration: 0  Instance: /FullPartialProduct_vlg_vec_tst
-# End time: 23:33:15 on May 22,2020, Elapsed time: 0:00:01
+#    Time: 0 ps  Iteration: 0  Instance: /ArithmeticShiftRight_vlg_vec_tst File: ArithmeticShiftRightSim.vwf.vt
+# ** Note: $finish    : ArithmeticShiftRightSim.vwf.vt(53)
+#    Time: 1 us  Iteration: 0  Instance: /ArithmeticShiftRight_vlg_vec_tst
+# End time: 14:31:45 on May 27,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

@@ -4,275 +4,275 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "PartialProduct32Bits[0]",
+					"name" : "ArithmeticShiftRightRegister[0]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[1]",
+					"name" : "ArithmeticShiftRightRegister[1]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[2]",
+					"name" : "ArithmeticShiftRightRegister[2]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[3]",
+					"name" : "ArithmeticShiftRightRegister[3]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[4]",
+					"name" : "ArithmeticShiftRightRegister[4]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[5]",
+					"name" : "ArithmeticShiftRightRegister[5]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[6]",
+					"name" : "ArithmeticShiftRightRegister[6]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[7]",
+					"name" : "ArithmeticShiftRightRegister[7]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[8]",
+					"name" : "ArithmeticShiftRightRegister[8]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[9]",
+					"name" : "ArithmeticShiftRightRegister[9]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[10]",
+					"name" : "ArithmeticShiftRightRegister[10]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[11]",
+					"name" : "ArithmeticShiftRightRegister[11]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[12]",
+					"name" : "ArithmeticShiftRightRegister[12]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[13]",
+					"name" : "ArithmeticShiftRightRegister[13]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[14]",
+					"name" : "ArithmeticShiftRightRegister[14]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[15]",
+					"name" : "ArithmeticShiftRightRegister[15]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[16]",
+					"name" : "ArithmeticShiftRightRegister[16]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[17]",
+					"name" : "ArithmeticShiftRightRegister[17]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[18]",
+					"name" : "ArithmeticShiftRightRegister[18]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[19]",
+					"name" : "ArithmeticShiftRightRegister[19]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[20]",
+					"name" : "ArithmeticShiftRightRegister[20]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[21]",
+					"name" : "ArithmeticShiftRightRegister[21]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[22]",
+					"name" : "ArithmeticShiftRightRegister[22]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[23]",
+					"name" : "ArithmeticShiftRightRegister[23]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[24]",
+					"name" : "ArithmeticShiftRightRegister[24]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[25]",
+					"name" : "ArithmeticShiftRightRegister[25]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[26]",
+					"name" : "ArithmeticShiftRightRegister[26]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[27]",
+					"name" : "ArithmeticShiftRightRegister[27]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[28]",
+					"name" : "ArithmeticShiftRightRegister[28]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[29]",
+					"name" : "ArithmeticShiftRightRegister[29]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[30]",
+					"name" : "ArithmeticShiftRightRegister[30]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[31]",
+					"name" : "ArithmeticShiftRightRegister[31]",
 					"strict" : false
 				},
 				{
-					"name" : "PartialProduct32Bits[32]",
+					"name" : "DataIn[0]",
 					"strict" : false
 				},
 				{
-					"name" : "S",
+					"name" : "Replace",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[0]",
+					"name" : "Reloj",
 					"strict" : false
 				},
 				{
-					"name" : "Select_M",
+					"name" : "Reset",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[1]",
+					"name" : "Enable",
 					"strict" : false
 				},
 				{
-					"name" : "Select_2M",
+					"name" : "DataIn[1]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[2]",
+					"name" : "DataIn[2]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[3]",
+					"name" : "DataIn[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[4]",
+					"name" : "DataIn[4]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[5]",
+					"name" : "DataIn[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[6]",
+					"name" : "DataIn[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[7]",
+					"name" : "DataIn[7]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[8]",
+					"name" : "DataIn[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[9]",
+					"name" : "DataIn[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[10]",
+					"name" : "DataIn[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[11]",
+					"name" : "DataIn[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[12]",
+					"name" : "DataIn[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[13]",
+					"name" : "DataIn[13]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[14]",
+					"name" : "DataIn[14]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[15]",
+					"name" : "DataIn[15]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[16]",
+					"name" : "DataIn[16]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[17]",
+					"name" : "DataIn[17]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[18]",
+					"name" : "DataIn[18]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[19]",
+					"name" : "DataIn[19]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[20]",
+					"name" : "DataIn[20]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[21]",
+					"name" : "DataIn[21]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[22]",
+					"name" : "DataIn[22]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[23]",
+					"name" : "DataIn[23]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[24]",
+					"name" : "DataIn[24]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[25]",
+					"name" : "DataIn[25]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[26]",
+					"name" : "DataIn[26]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[27]",
+					"name" : "DataIn[27]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[28]",
+					"name" : "DataIn[28]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[29]",
+					"name" : "DataIn[29]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[30]",
+					"name" : "DataIn[30]",
 					"strict" : false
 				},
 				{
-					"name" : "Multiplicand[31]",
+					"name" : "DataIn[31]",
 					"strict" : false
 				}
 			]

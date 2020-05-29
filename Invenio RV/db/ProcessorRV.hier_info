@@ -1,498 +1,227 @@
-|FullPartialProduct
-Multiplicand[0] => SinglePartialProduct:BPP0.MultiplicandLSB
-Multiplicand[0] => SinglePartialProduct:BPP0.MultiplicandMSB
-Multiplicand[0] => SinglePartialProduct:BPP1.MultiplicandLSB
-Multiplicand[1] => SinglePartialProduct:BPP1.MultiplicandMSB
-Multiplicand[1] => SinglePartialProduct:BPP2.MultiplicandLSB
-Multiplicand[2] => SinglePartialProduct:BPP2.MultiplicandMSB
-Multiplicand[2] => SinglePartialProduct:BPP3.MultiplicandLSB
-Multiplicand[3] => SinglePartialProduct:BPP3.MultiplicandMSB
-Multiplicand[3] => SinglePartialProduct:BPP4.MultiplicandLSB
-Multiplicand[4] => SinglePartialProduct:BPP4.MultiplicandMSB
-Multiplicand[4] => SinglePartialProduct:BPP5.MultiplicandLSB
-Multiplicand[5] => SinglePartialProduct:BPP5.MultiplicandMSB
-Multiplicand[5] => SinglePartialProduct:BPP6.MultiplicandLSB
-Multiplicand[6] => SinglePartialProduct:BPP6.MultiplicandMSB
-Multiplicand[6] => SinglePartialProduct:BPP7.MultiplicandLSB
-Multiplicand[7] => SinglePartialProduct:BPP7.MultiplicandMSB
-Multiplicand[7] => SinglePartialProduct:BPP8.MultiplicandLSB
-Multiplicand[8] => SinglePartialProduct:BPP8.MultiplicandMSB
-Multiplicand[8] => SinglePartialProduct:BPP9.MultiplicandLSB
-Multiplicand[9] => SinglePartialProduct:BPP9.MultiplicandMSB
-Multiplicand[9] => SinglePartialProduct:BPP10.MultiplicandLSB
-Multiplicand[10] => SinglePartialProduct:BPP10.MultiplicandMSB
-Multiplicand[10] => SinglePartialProduct:BPP11.MultiplicandLSB
-Multiplicand[11] => SinglePartialProduct:BPP11.MultiplicandMSB
-Multiplicand[11] => SinglePartialProduct:BPP12.MultiplicandLSB
-Multiplicand[12] => SinglePartialProduct:BPP12.MultiplicandMSB
-Multiplicand[12] => SinglePartialProduct:BPP13.MultiplicandLSB
-Multiplicand[13] => SinglePartialProduct:BPP13.MultiplicandMSB
-Multiplicand[13] => SinglePartialProduct:BPP14.MultiplicandLSB
-Multiplicand[14] => SinglePartialProduct:BPP14.MultiplicandMSB
-Multiplicand[14] => SinglePartialProduct:BPP15.MultiplicandLSB
-Multiplicand[15] => SinglePartialProduct:BPP15.MultiplicandMSB
-Multiplicand[15] => SinglePartialProduct:BPP16.MultiplicandLSB
-Multiplicand[16] => SinglePartialProduct:BPP16.MultiplicandMSB
-Multiplicand[16] => SinglePartialProduct:BPP17.MultiplicandLSB
-Multiplicand[17] => SinglePartialProduct:BPP17.MultiplicandMSB
-Multiplicand[17] => SinglePartialProduct:BPP18.MultiplicandLSB
-Multiplicand[18] => SinglePartialProduct:BPP18.MultiplicandMSB
-Multiplicand[18] => SinglePartialProduct:BPP19.MultiplicandLSB
-Multiplicand[19] => SinglePartialProduct:BPP19.MultiplicandMSB
-Multiplicand[19] => SinglePartialProduct:BPP20.MultiplicandLSB
-Multiplicand[20] => SinglePartialProduct:BPP20.MultiplicandMSB
-Multiplicand[20] => SinglePartialProduct:BPP21.MultiplicandLSB
-Multiplicand[21] => SinglePartialProduct:BPP21.MultiplicandMSB
-Multiplicand[21] => SinglePartialProduct:BPP22.MultiplicandLSB
-Multiplicand[22] => SinglePartialProduct:BPP22.MultiplicandMSB
-Multiplicand[22] => SinglePartialProduct:BPP23.MultiplicandLSB
-Multiplicand[23] => SinglePartialProduct:BPP23.MultiplicandMSB
-Multiplicand[23] => SinglePartialProduct:BPP24.MultiplicandLSB
-Multiplicand[24] => SinglePartialProduct:BPP24.MultiplicandMSB
-Multiplicand[24] => SinglePartialProduct:BPP25.MultiplicandLSB
-Multiplicand[25] => SinglePartialProduct:BPP25.MultiplicandMSB
-Multiplicand[25] => SinglePartialProduct:BPP26.MultiplicandLSB
-Multiplicand[26] => SinglePartialProduct:BPP26.MultiplicandMSB
-Multiplicand[26] => SinglePartialProduct:BPP27.MultiplicandLSB
-Multiplicand[27] => SinglePartialProduct:BPP27.MultiplicandMSB
-Multiplicand[27] => SinglePartialProduct:BPP28.MultiplicandLSB
-Multiplicand[28] => SinglePartialProduct:BPP28.MultiplicandMSB
-Multiplicand[28] => SinglePartialProduct:BPP29.MultiplicandLSB
-Multiplicand[29] => SinglePartialProduct:BPP29.MultiplicandMSB
-Multiplicand[29] => SinglePartialProduct:BPP30.MultiplicandLSB
-Multiplicand[30] => SinglePartialProduct:BPP30.MultiplicandMSB
-Multiplicand[30] => SinglePartialProduct:BPP31.MultiplicandLSB
-Multiplicand[31] => SinglePartialProduct:BPP31.MultiplicandMSB
-Multiplicand[31] => SinglePartialProduct:BPP32.MultiplicandLSB
-Multiplicand[31] => SinglePartialProduct:BPP32.MultiplicandMSB
-S => SinglePartialProduct:BPP0.S
-S => SinglePartialProduct:BPP1.S
-S => SinglePartialProduct:BPP2.S
-S => SinglePartialProduct:BPP3.S
-S => SinglePartialProduct:BPP4.S
-S => SinglePartialProduct:BPP5.S
-S => SinglePartialProduct:BPP6.S
-S => SinglePartialProduct:BPP7.S
-S => SinglePartialProduct:BPP8.S
-S => SinglePartialProduct:BPP9.S
-S => SinglePartialProduct:BPP10.S
-S => SinglePartialProduct:BPP11.S
-S => SinglePartialProduct:BPP12.S
-S => SinglePartialProduct:BPP13.S
-S => SinglePartialProduct:BPP14.S
-S => SinglePartialProduct:BPP15.S
-S => SinglePartialProduct:BPP16.S
-S => SinglePartialProduct:BPP17.S
-S => SinglePartialProduct:BPP18.S
-S => SinglePartialProduct:BPP19.S
-S => SinglePartialProduct:BPP20.S
-S => SinglePartialProduct:BPP21.S
-S => SinglePartialProduct:BPP22.S
-S => SinglePartialProduct:BPP23.S
-S => SinglePartialProduct:BPP24.S
-S => SinglePartialProduct:BPP25.S
-S => SinglePartialProduct:BPP26.S
-S => SinglePartialProduct:BPP27.S
-S => SinglePartialProduct:BPP28.S
-S => SinglePartialProduct:BPP29.S
-S => SinglePartialProduct:BPP30.S
-S => SinglePartialProduct:BPP31.S
-S => SinglePartialProduct:BPP32.S
-Select_M => SinglePartialProduct:BPP0.Select_M
-Select_M => SinglePartialProduct:BPP0.Select_2M
-Select_M => SinglePartialProduct:BPP1.Select_M
-Select_M => SinglePartialProduct:BPP2.Select_M
-Select_M => SinglePartialProduct:BPP3.Select_M
-Select_M => SinglePartialProduct:BPP4.Select_M
-Select_M => SinglePartialProduct:BPP5.Select_M
-Select_M => SinglePartialProduct:BPP6.Select_M
-Select_M => SinglePartialProduct:BPP7.Select_M
-Select_M => SinglePartialProduct:BPP8.Select_M
-Select_M => SinglePartialProduct:BPP9.Select_M
-Select_M => SinglePartialProduct:BPP10.Select_M
-Select_M => SinglePartialProduct:BPP11.Select_M
-Select_M => SinglePartialProduct:BPP12.Select_M
-Select_M => SinglePartialProduct:BPP13.Select_M
-Select_M => SinglePartialProduct:BPP14.Select_M
-Select_M => SinglePartialProduct:BPP15.Select_M
-Select_M => SinglePartialProduct:BPP16.Select_M
-Select_M => SinglePartialProduct:BPP17.Select_M
-Select_M => SinglePartialProduct:BPP18.Select_M
-Select_M => SinglePartialProduct:BPP19.Select_M
-Select_M => SinglePartialProduct:BPP20.Select_M
-Select_M => SinglePartialProduct:BPP21.Select_M
-Select_M => SinglePartialProduct:BPP22.Select_M
-Select_M => SinglePartialProduct:BPP23.Select_M
-Select_M => SinglePartialProduct:BPP24.Select_M
-Select_M => SinglePartialProduct:BPP25.Select_M
-Select_M => SinglePartialProduct:BPP26.Select_M
-Select_M => SinglePartialProduct:BPP27.Select_M
-Select_M => SinglePartialProduct:BPP28.Select_M
-Select_M => SinglePartialProduct:BPP29.Select_M
-Select_M => SinglePartialProduct:BPP30.Select_M
-Select_M => SinglePartialProduct:BPP31.Select_M
-Select_2M => SinglePartialProduct:BPP1.Select_2M
-Select_2M => SinglePartialProduct:BPP2.Select_2M
-Select_2M => SinglePartialProduct:BPP3.Select_2M
-Select_2M => SinglePartialProduct:BPP4.Select_2M
-Select_2M => SinglePartialProduct:BPP5.Select_2M
-Select_2M => SinglePartialProduct:BPP6.Select_2M
-Select_2M => SinglePartialProduct:BPP7.Select_2M
-Select_2M => SinglePartialProduct:BPP8.Select_2M
-Select_2M => SinglePartialProduct:BPP9.Select_2M
-Select_2M => SinglePartialProduct:BPP10.Select_2M
-Select_2M => SinglePartialProduct:BPP11.Select_2M
-Select_2M => SinglePartialProduct:BPP12.Select_2M
-Select_2M => SinglePartialProduct:BPP13.Select_2M
-Select_2M => SinglePartialProduct:BPP14.Select_2M
-Select_2M => SinglePartialProduct:BPP15.Select_2M
-Select_2M => SinglePartialProduct:BPP16.Select_2M
-Select_2M => SinglePartialProduct:BPP17.Select_2M
-Select_2M => SinglePartialProduct:BPP18.Select_2M
-Select_2M => SinglePartialProduct:BPP19.Select_2M
-Select_2M => SinglePartialProduct:BPP20.Select_2M
-Select_2M => SinglePartialProduct:BPP21.Select_2M
-Select_2M => SinglePartialProduct:BPP22.Select_2M
-Select_2M => SinglePartialProduct:BPP23.Select_2M
-Select_2M => SinglePartialProduct:BPP24.Select_2M
-Select_2M => SinglePartialProduct:BPP25.Select_2M
-Select_2M => SinglePartialProduct:BPP26.Select_2M
-Select_2M => SinglePartialProduct:BPP27.Select_2M
-Select_2M => SinglePartialProduct:BPP28.Select_2M
-Select_2M => SinglePartialProduct:BPP29.Select_2M
-Select_2M => SinglePartialProduct:BPP30.Select_2M
-Select_2M => SinglePartialProduct:BPP31.Select_2M
-Select_2M => SinglePartialProduct:BPP32.Select_M
-Select_2M => SinglePartialProduct:BPP32.Select_2M
-PartialProduct32Bits[0] <= SinglePartialProduct:BPP0.PartialProduct
-PartialProduct32Bits[1] <= SinglePartialProduct:BPP1.PartialProduct
-PartialProduct32Bits[2] <= SinglePartialProduct:BPP2.PartialProduct
-PartialProduct32Bits[3] <= SinglePartialProduct:BPP3.PartialProduct
-PartialProduct32Bits[4] <= SinglePartialProduct:BPP4.PartialProduct
-PartialProduct32Bits[5] <= SinglePartialProduct:BPP5.PartialProduct
-PartialProduct32Bits[6] <= SinglePartialProduct:BPP6.PartialProduct
-PartialProduct32Bits[7] <= SinglePartialProduct:BPP7.PartialProduct
-PartialProduct32Bits[8] <= SinglePartialProduct:BPP8.PartialProduct
-PartialProduct32Bits[9] <= SinglePartialProduct:BPP9.PartialProduct
-PartialProduct32Bits[10] <= SinglePartialProduct:BPP10.PartialProduct
-PartialProduct32Bits[11] <= SinglePartialProduct:BPP11.PartialProduct
-PartialProduct32Bits[12] <= SinglePartialProduct:BPP12.PartialProduct
-PartialProduct32Bits[13] <= SinglePartialProduct:BPP13.PartialProduct
-PartialProduct32Bits[14] <= SinglePartialProduct:BPP14.PartialProduct
-PartialProduct32Bits[15] <= SinglePartialProduct:BPP15.PartialProduct
-PartialProduct32Bits[16] <= SinglePartialProduct:BPP16.PartialProduct
-PartialProduct32Bits[17] <= SinglePartialProduct:BPP17.PartialProduct
-PartialProduct32Bits[18] <= SinglePartialProduct:BPP18.PartialProduct
-PartialProduct32Bits[19] <= SinglePartialProduct:BPP19.PartialProduct
-PartialProduct32Bits[20] <= SinglePartialProduct:BPP20.PartialProduct
-PartialProduct32Bits[21] <= SinglePartialProduct:BPP21.PartialProduct
-PartialProduct32Bits[22] <= SinglePartialProduct:BPP22.PartialProduct
-PartialProduct32Bits[23] <= SinglePartialProduct:BPP23.PartialProduct
-PartialProduct32Bits[24] <= SinglePartialProduct:BPP24.PartialProduct
-PartialProduct32Bits[25] <= SinglePartialProduct:BPP25.PartialProduct
-PartialProduct32Bits[26] <= SinglePartialProduct:BPP26.PartialProduct
-PartialProduct32Bits[27] <= SinglePartialProduct:BPP27.PartialProduct
-PartialProduct32Bits[28] <= SinglePartialProduct:BPP28.PartialProduct
-PartialProduct32Bits[29] <= SinglePartialProduct:BPP29.PartialProduct
-PartialProduct32Bits[30] <= SinglePartialProduct:BPP30.PartialProduct
-PartialProduct32Bits[31] <= SinglePartialProduct:BPP31.PartialProduct
-PartialProduct32Bits[32] <= SinglePartialProduct:BPP32.PartialProduct
-
-
-|FullPartialProduct|SinglePartialProduct:BPP0
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP1
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP2
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP3
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP4
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP5
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP6
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP7
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP8
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP9
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP10
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP11
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP12
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP13
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP14
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP15
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP16
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP17
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP18
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP19
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP20
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP21
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP22
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP23
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP24
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP25
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP26
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP27
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP28
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP29
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP30
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP31
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|FullPartialProduct|SinglePartialProduct:BPP32
-MultiplicandLSB => PartialProduct.IN0
-MultiplicandMSB => PartialProduct.IN0
-S => PartialProduct.IN1
-Select_M => PartialProduct.IN1
-Select_2M => PartialProduct.IN1
-PartialProduct <= PartialProduct.DB_MAX_OUTPUT_PORT_TYPE
+|ArithmeticShiftRight
+Reloj => D0.CLK
+Reloj => D1.CLK
+Reloj => D2.CLK
+Reloj => D3.CLK
+Reloj => D4.CLK
+Reloj => D5.CLK
+Reloj => D6.CLK
+Reloj => D7.CLK
+Reloj => D8.CLK
+Reloj => D9.CLK
+Reloj => D10.CLK
+Reloj => D11.CLK
+Reloj => D12.CLK
+Reloj => D13.CLK
+Reloj => D14.CLK
+Reloj => D15.CLK
+Reloj => D16.CLK
+Reloj => D17.CLK
+Reloj => D18.CLK
+Reloj => D19.CLK
+Reloj => D20.CLK
+Reloj => D21.CLK
+Reloj => D22.CLK
+Reloj => D23.CLK
+Reloj => D24.CLK
+Reloj => D25.CLK
+Reloj => D26.CLK
+Reloj => D27.CLK
+Reloj => D28.CLK
+Reloj => D29.CLK
+Reloj => D30.CLK
+Reloj => D31.CLK
+Reset => D0.ACLR
+Reset => D1.ACLR
+Reset => D2.ACLR
+Reset => D3.ACLR
+Reset => D4.ACLR
+Reset => D5.ACLR
+Reset => D6.ACLR
+Reset => D7.ACLR
+Reset => D8.ACLR
+Reset => D9.ACLR
+Reset => D10.ACLR
+Reset => D11.ACLR
+Reset => D12.ACLR
+Reset => D13.ACLR
+Reset => D14.ACLR
+Reset => D15.ACLR
+Reset => D16.ACLR
+Reset => D17.ACLR
+Reset => D18.ACLR
+Reset => D19.ACLR
+Reset => D20.ACLR
+Reset => D21.ACLR
+Reset => D22.ACLR
+Reset => D23.ACLR
+Reset => D24.ACLR
+Reset => D25.ACLR
+Reset => D26.ACLR
+Reset => D27.ACLR
+Reset => D28.ACLR
+Reset => D29.ACLR
+Reset => D30.ACLR
+Reset => D31.ACLR
+Enable => D0.ENA
+Enable => D1.ENA
+Enable => D2.ENA
+Enable => D3.ENA
+Enable => D4.ENA
+Enable => D5.ENA
+Enable => D6.ENA
+Enable => D7.ENA
+Enable => D8.ENA
+Enable => D9.ENA
+Enable => D10.ENA
+Enable => D11.ENA
+Enable => D12.ENA
+Enable => D13.ENA
+Enable => D14.ENA
+Enable => D15.ENA
+Enable => D16.ENA
+Enable => D17.ENA
+Enable => D18.ENA
+Enable => D19.ENA
+Enable => D20.ENA
+Enable => D21.ENA
+Enable => D22.ENA
+Enable => D23.ENA
+Enable => D24.ENA
+Enable => D25.ENA
+Enable => D26.ENA
+Enable => D27.ENA
+Enable => D28.ENA
+Enable => D29.ENA
+Enable => D30.ENA
+Enable => D31.ENA
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+Replace => D.IN0
+DataIn[0] => D.IN1
+DataIn[1] => D.IN1
+DataIn[2] => D.IN1
+DataIn[3] => D.IN1
+DataIn[4] => D.IN1
+DataIn[5] => D.IN1
+DataIn[6] => D.IN1
+DataIn[7] => D.IN1
+DataIn[8] => D.IN1
+DataIn[9] => D.IN1
+DataIn[10] => D.IN1
+DataIn[11] => D.IN1
+DataIn[12] => D.IN1
+DataIn[13] => D.IN1
+DataIn[14] => D.IN1
+DataIn[15] => D.IN1
+DataIn[16] => D.IN1
+DataIn[17] => D.IN1
+DataIn[18] => D.IN1
+DataIn[19] => D.IN1
+DataIn[20] => D.IN1
+DataIn[21] => D.IN1
+DataIn[22] => D.IN1
+DataIn[23] => D.IN1
+DataIn[24] => D.IN1
+DataIn[25] => D.IN1
+DataIn[26] => D.IN1
+DataIn[27] => D.IN1
+DataIn[28] => D.IN1
+DataIn[29] => D.IN1
+DataIn[30] => D.IN1
+DataIn[31] => D.IN1
+ArithmeticShiftRightRegister[0] << D0.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[1] << D1.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[2] << D2.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[3] << D3.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[4] << D4.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[5] << D5.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[6] << D6.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[7] << D7.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[8] << D8.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[9] << D9.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[10] << D10.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[11] << D11.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[12] << D12.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[13] << D13.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[14] << D14.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[15] << D15.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[16] << D16.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[17] << D17.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[18] << D18.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[19] << D19.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[20] << D20.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[21] << D21.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[22] << D22.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[23] << D23.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[24] << D24.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[25] << D25.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[26] << D26.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[27] << D27.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[28] << D28.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[29] << D29.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[30] << D30.DB_MAX_OUTPUT_PORT_TYPE
+ArithmeticShiftRightRegister[31] << D31.DB_MAX_OUTPUT_PORT_TYPE
 
 

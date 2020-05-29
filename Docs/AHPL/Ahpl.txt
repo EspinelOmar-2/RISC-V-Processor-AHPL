@@ -504,6 +504,7 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 84. CSR[835] <= IR;                                                                                                      -- Se guarda la informacion de la instruccion invalida en MTVal
+    Error = 1;
     -> (85)
 
 85.  MAR <= Registers[0 τ 010];                                                                                          -- Se envia la informacion del SP al MAR

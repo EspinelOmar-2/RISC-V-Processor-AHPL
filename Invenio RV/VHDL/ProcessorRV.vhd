@@ -57,13 +57,13 @@ component IR is
 port(
 		--Entradas
 		
-			Reset: 				in std_logic;
+			Reset: 				   in std_logic;
 			--Señal para reiniciar el sistema
 				
-			Reloj: 				in std_logic;
+			Reloj: 				   in std_logic;
 			--señal de reloj para elfuncionamiento d elos bloques
-			
-			MemoryOut: 				in 	std_logic_vector(31 downto 0);
+			  
+			MemoryOut: 				in std_logic_vector(31 downto 0);
 			--Salida de datos de la memoria, en este caso, contiene la instrucción 
 			
 			Control_IR:				in std_logic;
@@ -77,11 +77,14 @@ port(
 			IR_Control: 			out 	std_logic_vector(11 downto 0);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU: 					out 	std_logic_vector(19 downto 0);
+			IR_ALU: 					out 	std_logic_vector(24 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
-			IR_CSR: 				out 	std_logic_vector(11 downto 0)
+			IR_CSR: 				   out 	std_logic_vector(31 downto 0);
 			--Envia las dirección de los CSR donde se realiza la instrucción.
+			
+			IR_Counter: 			out	std_logic_vector(5 downto 0)
+			--Carga un valor inmediato a Counter	  
 	  );
 end component;
 
@@ -98,18 +101,21 @@ port(
 			Reloj: 				in std_logic;
 			--señal de reloj para elfuncionamiento d elos bloques
 			
-			Control_PC:				in 	std_logic_vector(1 downto 0);
+			Control_PC:			in 	std_logic_vector(2 downto 0);
 			--Señales de control del pc, para su funncion individual, revisar bloque.
 			
-			ALU_PC: 					in 	std_logic_vector(31 downto 0);
+			ALU_PC: 				in 	std_logic_vector(31 downto 0);
+			--contiene el nuevo PC para ser almacenado.
+			
+			CSR_PC: 				in 	std_logic_vector(31 downto 0);
 			--contiene el nuevo PC para ser almacenado.
 			
 		--Salidas
 		
-			PC_MAR: 					out	std_logic_vector(31 downto 0);
+			PC_MAR: 				out	std_logic_vector(31 downto 0);
 			--Señal que envía la dirección desde el PC al MAR 
 			
-			PC_ALU: 					out	std_logic_vector(31 downto 0)
+			PC_ALU: 				out	std_logic_vector(31 downto 0)
 			--Señal que envía el contenido del PC a la ALU
 	  );
 end component;
@@ -200,7 +206,7 @@ port(
 				
 	--Salidas
 	
-			Control_PC: 			out	std_logic_vector(1 downto 0);
+			Control_PC: 			out	std_logic_vector(2 downto 0);
 			--señales de control del pc cada señal se especifica en el bloque del PC
 			
 			Control_Registers:	out	std_logic_vector(3 downto 0);
@@ -237,7 +243,7 @@ port(
 			Registers_ALU: 	in 	std_logic_vector(63 downto 0);
 			--Señal que transmite los datos de los registros a la ALU para ser operados.
 			
-			IR_ALU: 				in 	std_logic_vector(19 downto 0);
+			IR_ALU: 				in 	std_logic_vector(24 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
 			CSR_ALU: 			in 	std_logic_vector(31 downto 0);
@@ -285,13 +291,16 @@ port(
 			ALU_CSR: 			in 	std_logic_vector(31 downto 0);
 			--Señal de salida de la ALU, envia a los CSR el resultado de una operación.
 			
-			IR_CSRs: 			in 	std_logic_vector(11 downto 0);
+			IR_CSR: 				in 	std_logic_vector(31 downto 0);
 			--Envia las dirección de los CSR donde se realiza la instrucción.
 				
 	--Salidas
 	
-			CSR_ALU: 			out	std_logic_vector(31 downto 0)
+			CSR_ALU: 			out	std_logic_vector(31 downto 0);
 			--Envia a la ALU los datos para hacer una operación.
+			
+			CSR_PC: 				out 	std_logic_vector(31 downto 0)
+			--contiene el nuevo PC para ser almacenado.
 
 	 );
 end component;
@@ -313,6 +322,9 @@ port(
 			
 			Control_Counter: 	 in 	std_logic_vector(1 downto 0);
 			--Señal de control para el contador.
+			
+			IR_Counter: 		 in	std_logic_vector(5 downto 0);
+			--Carga un valor inmediato a Counter
 
 				
 	--Salidas
@@ -330,9 +342,11 @@ signal	IR_RegistersX:  		std_logic_vector(25 downto 0);
 			
 signal	IR_ControlX: 			std_logic_vector(11 downto 0);
 
-signal	IR_ALUX: 				std_logic_vector(19 downto 0);
+signal	IR_ALUX: 				std_logic_vector(24 downto 0);
 
-signal	IR_CSRX: 				std_logic_vector(11 downto 0);
+signal	IR_CSRX: 				std_logic_vector(31 downto 0);
+
+signal	IR_CounterX: 			std_logic_vector(5  downto 0);
 			
 signal	PC_MARX: 				std_logic_vector(31 downto 0);
 
@@ -342,7 +356,7 @@ signal	Registers_ALUX: 		std_logic_vector(63 downto 0);
 
 signal	Registers_CounterX: 	std_logic_vector(31 downto 0);
 			
-signal	Control_PCX: 			std_logic_vector(1  downto 0);
+signal	Control_PCX: 			std_logic_vector(2  downto 0);
 
 signal	Control_RegistersX:	std_logic_vector(3  downto 0);
 			
@@ -361,6 +375,8 @@ signal	ALU_MARX: 				std_logic_vector(31 downto 0);
 signal	ALU_ControlX: 			std_logic_vector(3  downto 0);
 
 signal	CSR_ALUX: 				std_logic_vector(31 downto 0);
+
+signal	CSR_PCX: 				std_logic_vector(31 downto 0);
 
 signal	Counter_ControlX: 	std_logic;
 
@@ -388,7 +404,9 @@ bloqueIR: IR port map(
 
 			IR_ALUX,
 
-			IR_CSRX
+			IR_CSRX,
+			
+			IR_CounterX
 
 	  );
 
@@ -400,6 +418,8 @@ bloquePC: PC port map(
 			Control_PCX,
 	
 			ALU_PCX,
+			
+			CSR_PCX,
 
 			PC_MARX,
 			
@@ -498,7 +518,9 @@ bloqueCSR: CSR port map(
 
 			IR_CSRX,
 
-			CSR_ALUX
+			CSR_ALUX,
+			
+			CSR_PCX
 	 );
 
 bloqueCounter: Counter port map(
@@ -510,6 +532,8 @@ bloqueCounter: Counter port map(
 			Registers_CounterX,
 			
 			Control_CounterX,
+			
+			IR_ControlX,
 
 			Counter_ControlX
 	 );
