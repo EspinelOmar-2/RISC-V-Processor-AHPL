@@ -36,9 +36,8 @@
  5. Pc <= Inc(Pc);                                                                                                       -- Posiciones del IR
     ->                                                                                                                   --[6.....0][14...12][30]
 (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          X 6) +             -- 0010111                   auipc
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                   lui
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 1101111                   jal
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 1100111                   jalr
+(IR[6]’ . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                   lui
+(IR[6]  . IR[5]  . IR[4]’ .        . IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 1101111                   jal/jalr
 (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’                     X15) +             -- 1100011    00C            beq/bne
 (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’                     X19) +             -- 1100011    10C            blt/bge
 (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]                      X21) +             -- 1100011    11C            bltu/bgeu
