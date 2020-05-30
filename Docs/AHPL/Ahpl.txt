@@ -35,59 +35,58 @@
 
  5. Pc <= Inc(Pc);                                                                                                       -- Posiciones del IR
     ->                                                                                                                   --[6.....0][14...12][30]
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          X 6) +             -- 0010111                   auipc
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                   lui
-(IR[6]  . IR[5]  . IR[4]’ .        . IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 1101111                   jal/jalr
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’                     X15) +             -- 1100011    00C            beq/bne
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’                     X19) +             -- 1100011    10C            blt/bge
-(IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]                      X21) +             -- 1100011    11C            bltu/bgeu
-(IR[6]’ . IR[5]’ . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          X23) +             -- 0000011    CCC            lb/lh/lw/lbu/lhu
-(IR[6]’ . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          X23) +             -- 0100011    CCC            sb/sh/sw
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           X38) +             -- 0010011    000            addi
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           X40) +             -- 0010011    010            slti
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            X44) +             -- 0010011    011            sltiu
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           X46) +             -- 0010011    100            xori
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           X47) +             -- 0010011    110            ori
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X48) +             -- 0010011    111            andi
-(IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            X49) +             -- 0010011    C01    C       slli/srli/srai
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]’ X53) +             -- 0110011    000    0       add
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]  X55) +             -- 0110011    000    1       sub
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            X58) +             -- 0110011    C01    C       sll/srl/sra
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           X60) +             -- 0110011    010            slt
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            X62) +             -- 0110011    011            sltu
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           X64) +             -- 0110011    100            xor
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           X65) +             -- 0110011    110            or
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X66) +             -- 0110011    111            and
-(IR[6]  . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          X67) +             -- 1110011    CCC            csrrw/csrrs/csrrc/csrrwi/csrrsi/csrrci
-(IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           X74) +             -- 0110011    000            mul
-(IR[1]  . IR[0]' . IR[15]  . IR[14] . IR[13]’                                                         X75) +             -- 110 10                    swsp (push)
-(IR[1]  . IR[0]' . IR[15]' . IR[14] . IR[13]’)                                                        X79) +             -- 010 10                    lwsp (pop)
-((IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
- (IR[6]  . IR[5]  . IR[4]’ . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          )' +
- (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]  . IR[1]  . IR[0]                                          )' +
- (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’                     )' +
- (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’                     )' +
- (IR[6]  . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]                      )' +
- (IR[6]’ . IR[5]’ . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
- (IR[6]’ . IR[5]  . IR[4]’ . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
- (IR[6]’ . IR[5]’ . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]’ )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’ . IR[30]  )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]            . IR[13]’ . IR[12]            )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]’           )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]  . IR[12]            )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]’ . IR[12]’           )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]’           )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
- (IR[6]  . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]                                          )' +
- (IR[6]’ . IR[5]  . IR[4]  . IR[3]’ . IR[2]’ . IR[1]  . IR[0]  . IR[14]’ . IR[13]’ . IR[12]’           )) X84            -- Estado de exepcion de instruccion invalida
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 6) +             -- 0010111                   auipc
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                   lui
+(IR[6]  . IR[5]  . IR[4]' .          IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 110C111                   jal/jalr
+(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]'                     X15) +             -- 1100011    00C            beq/bne
+(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]'                     X19) +             -- 1100011    10C            blt/bge
+(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]                      X21) +             -- 1100011    11C            bltu/bgeu
+(IR[6]' .          IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X23) +             -- 0C00011    CCC            lb/lh/lw/lbu/lhu  sb/sh/sw
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X38) +             -- 0010011    000            addi
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X40) +             -- 0010011    010            slti
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X44) +             -- 0010011    011            sltiu
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X46) +             -- 0010011    100            xori
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X47) +             -- 0010011    110            ori
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X48) +             -- 0010011    111            andi
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X49) +             -- 0010011    C01    C       slli/srli/srai
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]' X53) +             -- 0110011    000    0       add
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]  X55) +             -- 0110011    000    1       sub
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X58) +             -- 0110011    C01    C       sll/srl/sra
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X60) +             -- 0110011    010            slt
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X62) +             -- 0110011    011            sltu
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X64) +             -- 0110011    100            xor
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X65) +             -- 0110011    110            or
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X66) +             -- 0110011    111            and
+(IR[6]  . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X67) +             -- 1110011    CCC            csrrw/csrrs/csrrc/csrrwi/csrrsi/csrrci
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X74) +             -- 0110011    000            mul
+(                                             IR[1]  . IR[0]' . IR[15]  . IR[14]  . IR[13]'           X75) +             --      10    110            swsp (push)
+(                                             IR[1]  . IR[0]' . IR[15]' . IR[14]  . IR[13]'           X79) +             --      10    010            lwsp (pop)
+((IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]  . IR[5]  . IR[4]' . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          )' +
+ (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]'                     )' +
+ (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]'                     )' +
+ (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]                      )' +
+ (IR[6]' . IR[5]' . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          )' +
+ (IR[6]' . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
+ (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]' )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]  )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            )' +
+ (IR[6]  . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          )' +
+ (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           )) X84            -- Estado de exepcion de instruccion invalida
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                                         AUIPC                                                         ║
@@ -116,7 +115,7 @@
 
 10. Registers[IR(11:7)] <= Suma(Pc,4);                                                                                   -- Se repite la accion del estado 9 y se selecciona el siguiente estado
     -> (IR[3]  X11) +                                                                                                    -- 1 JAL
-       (IR[3]’ X13)                                                                                                      -- 0 JALR
+       (IR[3]' X13)                                                                                                      -- 0 JALR
 
 11. Salida_ALU = Suma(PC, sext( IR(31:12) ));                                                                            -- Escribe en PC la suma entre el PC actual y el valor de IR(12:31) al
     -> (12)                                                                                                              -- hacerle offset extendido en signo (una suerte de shift aritmetico)
@@ -158,10 +157,10 @@
 
 20. Salida_ALU = Suma( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                                 -- Se repite la accion del estado 19, mientras la comparacion se hace
     ->
-(ALU_Control[2] . ALU_Control[1]’ . IR[12]’ X17) +                                                                       -- rs1<rs2 blt
-(ALU_Control[2]’. ALU_Control[1]’ . IR[12]’ X89) +                                                                       -- rs1>rs2 blt
-(ALU_Control[2]’. ALU_Control[1]’ . IR[12]  X17) +                                                                       -- rs1>rs2 bge
-(ALU_Control[2] . ALU_Control[1]’ . IR[12]  X89) +                                                                       -- rs1<rs2 bge
+(ALU_Control[2] . ALU_Control[1]' . IR[12]' X17) +                                                                       -- rs1<rs2 blt
+(ALU_Control[2]'. ALU_Control[1]' . IR[12]' X89) +                                                                       -- rs1>rs2 blt
+(ALU_Control[2]'. ALU_Control[1]' . IR[12]  X17) +                                                                       -- rs1>rs2 bge
+(ALU_Control[2] . ALU_Control[1]' . IR[12]  X89) +                                                                       -- rs1<rs2 bge
 (                 ALU_Control[1]  .         X89) +                                                                       -- sr1=rs2 bge blt
 
 21. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
@@ -169,11 +168,11 @@
 
 22. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);                                                -- Se repite la accion del estado 21, mientras la resta se efectua
     ->
-(ALU_Control[3] . ALU_Control[1]’ . IR[12]’ X89) +                                                                       -- rs1>rs2 bltu
-(ALU_Control[3]’. ALU_Control[1]’ . IR[12]’ X17) +                                                                       -- rs1<rs2 bltu
+(ALU_Control[3] . ALU_Control[1]' . IR[12]' X89) +                                                                       -- rs1>rs2 bltu
+(ALU_Control[3]'. ALU_Control[1]' . IR[12]' X17) +                                                                       -- rs1<rs2 bltu
 (                 ALU_Control[1]            X89) +                                                                       -- rs1=rs2 bltu bgeu
-(ALU_Control[3] . ALU_Control[1]’ . IR[12]  X17) +                                                                       -- rs1>rs2 bgeu
-(ALU_Control[3]’. ALU_Control[1]’ . IR[12]  X89) +                                                                       -- rs1<rs2 bgeu
+(ALU_Control[3] . ALU_Control[1]' . IR[12]  X17) +                                                                       -- rs1>rs2 bgeu
+(ALU_Control[3]'. ALU_Control[1]' . IR[12]  X89) +                                                                       -- rs1<rs2 bgeu
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                     PREPARACION DE LECTURA/ESCRITURA EN MEMORIA                                       ║
@@ -184,10 +183,10 @@
 
 24. MAR       <= Suma(Registers[IR(19:15)],IR[31:20]);                                                                   -- Se repite la accion del estado 23, mientras la suma se efectua
     ->
-(IR[5]’                   X25) +                                                                                         -- Se decodifica si se requiere leer     un dato
-(IR[5] .IR[13]’ . IR[12]’ X32) +                                                                                         -- Se decodifica si se requiere escribir un dato de 1Byte
-(IR[5] .IR[13]’ . IR[12]  X34) +                                                                                         -- Se decodifica si se requiere escribir un dato de 2Byte
-(IR[5] .IR[13]  . IR[12]’ X36)                                                                                           -- Se decodifica si se requiere escribir un dato de 4Byte
+(IR[5]'                   X25) +                                                                                         -- Se decodifica si se requiere leer     un dato
+(IR[5] .IR[13]' . IR[12]' X32) +                                                                                         -- Se decodifica si se requiere escribir un dato de 1Byte
+(IR[5] .IR[13]' . IR[12]  X34) +                                                                                         -- Se decodifica si se requiere escribir un dato de 2Byte
+(IR[5] .IR[13]  . IR[12]' X36)                                                                                           -- Se decodifica si se requiere escribir un dato de 4Byte
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 ║                                          INSTRUCCIONES DE LECTURA EN MEMORIA                                          ║
@@ -200,11 +199,11 @@
 26. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 2)
     Read = 1;
     ->
-(IR[14]’ . IR[13]’ . IR[12]’ X27) +                                                                                      -- 000 goto LB
-(IR[14]’ . IR[13]’ . IR[12]  X28) +                                                                                      -- 001 goto LH
-(IR[14]’ . IR[13]  . IR[12]’ X29) +                                                                                      -- 010 goto LW
-(IR[14]  . IR[13]’ . IR[12]’ X30) +                                                                                      -- 100 goto LBU
-(IR[14]  . IR[13]’ . IR[12]  X31)                                                                                        -- 101 goto LHU
+(IR[14]' . IR[13]' . IR[12]' X27) +                                                                                      -- 000 goto LB
+(IR[14]' . IR[13]' . IR[12]  X28) +                                                                                      -- 001 goto LH
+(IR[14]' . IR[13]  . IR[12]' X29) +                                                                                      -- 010 goto LW
+(IR[14]  . IR[13]' . IR[12]' X30) +                                                                                      -- 100 goto LBU
+(IR[14]  . IR[13]' . IR[12]  X31)                                                                                        -- 101 goto LHU
 
 27. MemoryAddress = MAR;                                                                                                 -- Se pide el dato de la direccion MAR a la memoria (Ciclo 3)
     Read = 1;
@@ -297,8 +296,8 @@
 
 41. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se repite la accion del estado 40, mientras la comparacion se hace
     ->
-(ALU_Control[1]’. ALU_Control[2]’. X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15)GOTO 42
-(ALU_Control[1]’. ALU_Control[2] . X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15)GOTO 43
+(ALU_Control[1]'. ALU_Control[2]'. X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15)GOTO 42
+(ALU_Control[1]'. ALU_Control[2] . X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15)GOTO 43
 (ALU_Control[1]                    X43)                                                                                  -- IR(31:20) = Registers direccion IR(19:15)GOTO 43
 
 42. Registers[IR(11:7)] <= '00000000000000000000000000000001';                                                           -- Se guarda un 0x1 en Registers direccion IR(11:7)
@@ -312,8 +311,8 @@
 
 45. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Se repite la accion del estado 35, mientras la resta se efectua
     ->
-(ALU_Control[1]’. ALU_Control[2] . X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15) GOTO 42
-(ALU_Control[1]’. ALU_Control[2]’. X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15) GOTO 43
+(ALU_Control[1]'. ALU_Control[2] . X42) +                                                                                -- IR(31:20) > Registers direccion IR(19:15) GOTO 42
+(ALU_Control[1]'. ALU_Control[2]'. X43) +                                                                                -- IR(31:20) < Registers direccion IR(19:15) GOTO 43
 (ALU_Control[1]                    X43)                                                                                  -- IR(31:20) = Registers direccion IR(19:15) GOTO 43
 
 46. Registers[IR(11:7)] <= XOR(Registers[IR(19:15)], IR[31:20]);                                                         -- Se hace el XOR entre Registers direccion IR(19:15) con el dato
@@ -378,9 +377,9 @@
 
 58. Counter <= Registers[IR(24:20)]                                                                                      -- Se carga al Counter el valor del Registers direccion IR(25:20)
     ->
-(IR[14]’          X 50) +                                                                                                -- SLL
-(IR[14] . IR[30]’ X 51) +                                                                                                -- SRL
-(IR[14] . IR[30]’ X 52)                                                                                                  -- SRA
+(IR[14]'          X 50) +                                                                                                -- SLL
+(IR[14] . IR[30]' X 51) +                                                                                                -- SRL
+(IR[14] . IR[30]' X 52)                                                                                                  -- SRA
 
 59. Registers[IR(11:7)] <= AluShiftRegister;                                                                             -- Se carga el valor del shift realizado al registro indicado
     -> (89)
@@ -390,8 +389,8 @@
 
 61. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 19, mientras la comparacion se hace
     ->
-(ALU_Control[1]’ . ALU_Control[2]’. X42) +                                                                               -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
-(ALU_Control[1]’ . ALU_Control[2] . X43) +                                                                               -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
+(ALU_Control[1]' . ALU_Control[2]'. X42) +                                                                               -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
+(ALU_Control[1]' . ALU_Control[2] . X43) +                                                                               -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
 (ALU_Control[1]                     X43)                                                                                 -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
 62. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
@@ -399,8 +398,8 @@
 
 63. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 59, mientras la resta se efectua
     ->
-(ALU_Control[1]’. ALU_Control[3] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
-(ALU_Control[1]’. ALU_Control[2]’. X43) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
+(ALU_Control[1]'. ALU_Control[3] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
+(ALU_Control[1]'. ALU_Control[2]'. X43) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
 (ALU_Control[1]                    X43)                                                                                  -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
 64. Registers[IR(11:7)] <= XOR( Registers[IR(19:15)], Registers[IR(24:20)] );                                            -- Se hace el XOR entre Registers direccion IR(19:15) con el dato
