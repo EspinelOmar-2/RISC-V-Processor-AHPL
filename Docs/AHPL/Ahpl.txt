@@ -34,33 +34,33 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
  5. Pc <= Inc(Pc);                                                                                                       -- Posiciones del IR
-    ->                                                                                                                   --[6.....0][14...12][30]
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 6) +             -- 0010111                   auipc
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                   lui
-(IR[6]  . IR[5]  . IR[4]' .          IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 110C111                   jal/jalr
-(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]'                     X15) +             -- 1100011    00C            beq/bne
-(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]'                     X19) +             -- 1100011    10C            blt/bge
-(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]                      X21) +             -- 1100011    11C            bltu/bgeu
-(IR[6]' .          IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X23) +             -- 0C00011    CCC            lb/lh/lw/lbu/lhu  sb/sh/sw
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X38) +             -- 0010011    000            addi
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X40) +             -- 0010011    010            slti
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X44) +             -- 0010011    011            sltiu
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X46) +             -- 0010011    100            xori
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X47) +             -- 0010011    110            ori
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X48) +             -- 0010011    111            andi
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X49) +             -- 0010011    C01    C       slli/srli/srai
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]' X53) +             -- 0110011    000    0       add
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]  X55) +             -- 0110011    000    1       sub
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X58) +             -- 0110011    C01    C       sll/srl/sra
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X60) +             -- 0110011    010            slt
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X62) +             -- 0110011    011            sltu
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X64) +             -- 0110011    100            xor
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X65) +             -- 0110011    110            or
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X66) +             -- 0110011    111            and
-(IR[6]  . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X67) +             -- 1110011    CCC            csrrw/csrrs/csrrc/csrrwi/csrrsi/csrrci
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X74) +             -- 0110011    000            mul
-(                                             IR[1]  . IR[0]' . IR[15]  . IR[14]  . IR[13]'           X75) +             --      10    110            swsp (push)
-(                                             IR[1]  . IR[0]' . IR[15]' . IR[14]  . IR[13]'           X79) +             --      10    010            lwsp (pop)
+    ->                                                                                                                   --[6.....0][15	...12][30]
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 6) +             -- 0010111                    auipc
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                    lui
+(IR[6]  . IR[5]  . IR[4]' .          IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 110C111                    jal/jalr
+(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]'                     X15) +             -- 1100011     00C            beq/bne
+(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]'                     X19) +             -- 1100011     10C            blt/bge
+(IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]                      X21) +             -- 1100011     11C            bltu/bgeu
+(IR[6]' .          IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X23) +             -- 0C00011     CCC            lb/lh/lw/lbu/lhu  sb/sh/sw
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X38) +             -- 0010011     000            addi
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X40) +             -- 0010011     010            slti
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X44) +             -- 0010011     011            sltiu
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X46) +             -- 0010011     100            xori
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X47) +             -- 0010011     110            ori
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X48) +             -- 0010011     111            andi
+(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X49) +             -- 0010011     C01    C       slli/srli/srai
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]' X53) +             -- 0110011     000    0       add
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]  X55) +             -- 0110011     000    1       sub
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X58) +             -- 0110011     C01    C       sll/srl/sra
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X60) +             -- 0110011     010            slt
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X62) +             -- 0110011     011            sltu
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X64) +             -- 0110011     100            xor
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X65) +             -- 0110011     110            or
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X66) +             -- 0110011     111            and
+(IR[6]  . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X67) +             -- 1110011     CCC            csrrw/csrrs/csrrc/csrrwi/csrrsi/csrrci
+(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X74) +             -- 0110011     000            mul
+(                                             IR[1]  . IR[0]' . IR[15]  . IR[14]  . IR[13]'           X75) +             --      10    110             swsp (push)
+(                                             IR[1]  . IR[0]' . IR[15]' . IR[14]  . IR[13]'           X79) +             --      10    010             lwsp (pop)
 ((IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          )' +
  (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          )' +
  (IR[6]  . IR[5]  . IR[4]' . IR[3]  . IR[2]  . IR[1]  . IR[0]                                          )' +
@@ -93,7 +93,7 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
  6. Salida_ALU           = Suma(Pc,( IR(31:12), (12 T 0) ));                                                             -- Escribe en Registers direccion IR(11:7) la suma del PC con IR(31:12)
-    -> ( 8)                                                                                                              -- desplazado 12 bits a la izquierda
+    -> ( 7)                                                                                                              -- desplazado 12 bits a la izquierda
 
  7. Registers[IR(11:7)] <= Suma(Pc,( IR(31:12), (12 T 0) ));                                                             -- Se repite la accion del estado 7, mientras la suma se efectua
     -> (89)
@@ -286,7 +286,7 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 38. Salida_ALU           = Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Suma Registers direccion IR(11:7) con los datos en IR(31:20)
-    -> ( 36)                                                                                                             -- el resultado se guarda en Registers direccion IR(11:7)
+    -> ( 39)                                                                                                             -- el resultado se guarda en Registers direccion IR(11:7)
 
 39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Se repite la accion del estado 38, mientras la suma se efectua
     -> (89)
@@ -328,7 +328,7 @@
     ->
 (IR[30]'.IR[14]' X50) +                                                                                                  -- SLLI
 (IR[30]'.IR[14]  X51) +                                                                                                  -- SRLI
-(IR[31]          X52)                                                                                                    -- SRAI
+(IR[30]          X52)                                                                                                    -- SRAI
 
 50. LogicShiftLeft(IR(19:15));                                                                                           -- Se hace El corrimiento a izquierda 1 vez del dato IR(19:15)
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
