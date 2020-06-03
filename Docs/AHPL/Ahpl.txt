@@ -398,7 +398,7 @@
 
 63. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 59, mientras la resta se efectua
     ->
-(ALU_Control[1]'. ALU_Control[3] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
+(ALU_Control[1]'. ALU_Control[2] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
 (ALU_Control[1]'. ALU_Control[2]'. X43) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
 (ALU_Control[1]                    X43)                                                                                  -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
@@ -454,7 +454,7 @@
 
 74. Registers(IR[11:7]) <= Multiply( Registers(IR[19:15]),Registers(IR[24:20]) );                                        -- Se realiza la multiplicacion entre Registers direcciones IR(19:15)
     ->                                                                                                                   -- e IR(24:20)
-(ALU_Control[0]' X81) +                                                                                                  -- La operacion aun no acaba, GOTO 81
+(ALU_Control[0]' X74) +                                                                                                  -- La operacion aun no acaba, GOTO 81
 (ALU_Control[0]  X89)                                                                                                    -- La operacion ya termino
 
 ╔═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
