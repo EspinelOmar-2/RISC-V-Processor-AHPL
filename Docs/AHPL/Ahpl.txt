@@ -34,14 +34,14 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
  5. Pc <= Inc(Pc);                                                                                                       -- Posiciones del IR
-    ->                                                                                                                   --[6.....0][15	...12][30]
+    ->                                                                                                                   --[6.....0][15...12][30]
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 6) +             -- 0010111                    auipc
 (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]  . IR[1]  . IR[0]                                          X 8) +             -- 0110111                    lui
 (IR[6]  . IR[5]  . IR[4]' .          IR[2]  . IR[1]  . IR[0]                                          X 9) +             -- 110C111                    jal/jalr
 (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]'                     X15) +             -- 1100011     00C            beq/bne
 (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]'                     X19) +             -- 1100011     10C            blt/bge
 (IR[6]  . IR[5]  . IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]                      X21) +             -- 1100011     11C            bltu/bgeu
-(IR[6]' .          IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X23) +             -- 0C00011     CCC            lb/lh/lw/lbu/lhu  sb/sh/sw
+(IR[6]' .          IR[4]' . IR[3]' . IR[2]' . IR[1]  . IR[0]                                          X23) +             -- 0C00011     CCC            lb/lh/lw/lbu/lhu/sb/sh/sw
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]'           X38) +             -- 0010011     000            addi
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X40) +             -- 0010011     010            slti
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X44) +             -- 0010011     011            sltiu
@@ -379,7 +379,7 @@
     ->
 (IR[14]'          X 50) +                                                                                                -- SLL
 (IR[14] . IR[30]' X 51) +                                                                                                -- SRL
-(IR[14] . IR[30]' X 52)                                                                                                  -- SRA
+(IR[14] . IR[30]  X 52)                                                                                                  -- SRA
 
 59. Registers[IR(11:7)] <= AluShiftRegister;                                                                             -- Se carga el valor del shift realizado al registro indicado
     -> (89)
