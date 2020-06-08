@@ -1,0 +1,350 @@
+PC:
+	0.   PC <= 0;
+	5.   Pc <= Inc(Pc);  
+	12.  PC <= Suma(PC, sext( IR(31:12) ));
+	14.  PC <= Suma(Registers[IR(19:15)], sext(IR(31:12)) );
+	18.  PC <= Suma(PC, ((20 T IR(12)) ,IR(31), IR(7), IR(30:25), IR(11:8)));
+	88.  Pc <= CSR[833];
+	98.  Pc <= CSR(775);
+	99.  Pc <= CSR(776); 
+	100. Pc <= CSR(777); 
+	101. Pc <= CSR(778); 
+
+	DevNote: Tres bits de control a pc el 0 para que se incremente, el 1 para que acepte ALU, el 2 para que reciba CSR, No se necesita decoder, 
+
+MAR:	
+	1.  MAR <= PC;
+	24. MAR <= Suma(Registers[IR(19:15)],IR[31:20]);
+	76. MAR <= Suma(Registers[0 τ 010],IR[12:7]);
+	80. MAR <= Suma(Registers[0 τ 010],IR[12|6:2]);
+	85. MAR <= Registers[0 τ 010]; 
+	95. MAR <= Registers[0 τ 010]; 
+	DevNote:  tres bits de control a MAR, el primero para que reciba Pc el segundo para que reciba alu y el tercero para que reciba registers
+
+MemoryAddress:
+	2.  MemoryAddress = MAR;
+	3.  MemoryAddress = MAR;
+	4.  MemoryAddress = MAR;
+	25. MemoryAddress = MAR;
+	26. MemoryAddress = MAR; 
+	27. MemoryAddress = MAR;
+	28. MemoryAddress = MAR;
+	29. MemoryAddress = MAR;
+	30. MemoryAddress = MAR;
+	31. MemoryAddress = MAR;
+	32. MemoryAddress = MAR; 
+	33. MemoryAddress = MAR;
+	34. MemoryAddress = MAR;
+	35. MemoryAddress = MAR;
+	36. MemoryAddress = MAR; 
+	37. MemoryAddress = MAR;
+	77. MemoryAddress = MAR; 
+	78. MemoryAddress = MAR;	
+	81. MemoryAddress = MAR;
+	82. MemoryAddress = MAR;
+	83. MemoryAddress = MAR;
+	86. MemoryAddress = MAR;
+	87. MemoryAddress = MAR;
+	96. MemoryAddress = MAR;
+	97. MemoryAddress = MAR; 
+
+	DevNote: Es la unica salida del MAR y siempre toma el valor del registro, no se necesita accion de control para esto.
+
+Control:
+	Read:
+	2. Read = 1; 
+	3. Read = 1; 
+	4. Read = 1;
+	25.Read = 1;
+	26.Read = 1;
+	27.Read = 1;
+	28.Read = 1;
+	29.Read = 1;
+	30.Read = 1;
+	31.Read = 1;
+	32.Read = 0; 
+	33.Read = 0;
+	34.Read = 0;
+	35.Read = 0;
+	36.Read = 0;
+	37.Read = 0;
+	77.Read = 0;
+	78.Read = 0;
+	81.Read = 1;
+	82.Read = 1;
+	83.Read = 1;
+	86.Read = 0;
+	87.Read = 0;
+	96.Read = 0;
+	97.Read = 0;
+
+	Error:
+	84. Error = 1;
+	
+	ACK:
+	98.	Ack[0] = 1;
+	99.	Ack[1] = 1;
+	100.	Ack[2] = 1;
+	101.	Ack[3] = 1;
+	DevNote: se deben añadir estas señales y activarlas en estos estados.
+
+Instruction Register:
+	4. IR <= Instruction;
+	
+	DevNote: una señal de control para que reemplace su valor por el valor del cable instruccion
+	
+ALU:
+	6.  Salida_ALU           = Suma(Pc,( IR(31:12), (12 T 0) )); Dato1: Pc. Dato2: Rellena con 0 los bits del 0 al 11 y el  12 	al 31 del IR, 
+	7.  Registers[IR(11:7)] <= Suma(Pc,( IR(31:12), (12 T 0) )); Dato1: Rellena con 0 los bits del 0 al 11 y el  12 al 31 del 	IR, Dato2: Pc. 
+	
+	9.  Salida_ALU           = Suma(Pc,4);
+	10. Registers[IR(11:7)] <= Suma(Pc,4);
+	
+	11. Salida_ALU = Suma(PC, sext( IR(31:12) )); IR(31:12): MSB  31|19:12|20|30:21   LSB
+	12.PC         <= Suma(PC, sext( IR(31:12) )); IR(31:12): MSB  31|19:12|20|30:21   LSB
+	
+	13. Salida_ALU = Suma(Registers[IR(19:15)], sext(IR(31:12)) ); IR(31:12): MSB 31:12 LSB
+	14. PC        <= Suma(Registers[IR(19:15)], sext(IR(31:12)) ); IR(31:12): MSB 31:12 LSB
+	
+	15. Salida_ALU = Suma( Registers[ IR(24:20)], Registers[ IR(19:15)]', 1);
+	16. Salida_ALU = Suma( Registers[ IR(24:20)], Registers[ IR(19:15)]', 1);
+	19. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1);
+	20. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1); 
+	21. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);
+	22. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);
+	55. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1); 
+	56. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1);
+	60. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1);
+	61. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1);
+	62. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1);
+	63. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1);
+	
+	17. Salida_ALU = Suma(PC, ( IR(31) T IR(31), IR(7), IR(30:25), IR(11:8)));   MSB 31|7|30:25|11:8 LSB
+	18. PC        <= Suma(PC, ( IR(31) T IR(31), IR(7), IR(30:25), IR(11:8)));   MSB 31|7|30:25|11:8 LSB
+	
+	23. Salida_ALU = Suma( Registers[IR(19:15)],     IR[31:20]); sext(IR[31:20])
+	38. Salida_ALU = Suma( Registers[IR(11:7)], sext(IR(31:20) ); IR(31:20)) MSB 31:20 LSB	
+
+	24. MAR       <= Suma(Registers[IR(19:15)],IR[31:20]); sext(IR[31:20]) 
+	
+	39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)], sext(IR(31:20) ); IR(31:20)) MSB 31:20 LSB
+
+	40. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 ); IR(31:20)) MSB 31:20 LSB
+	41. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 ); IR(31:20)) MSB 31:20 LSB
+	44. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 ); IR(31:20)) MSB 31:20 LSB
+	45. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 ); IR(31:20)) MSB 31:20 LSB
+
+	46. Registers[IR(11:7)] <= XOR(Registers[IR(19:15)], IR[31:20]); IR(31:20)) MSB 31:20 LSB
+
+	47. Registers[IR(11:7)] <=  OR(Registers[IR(19:15)], IR[31:20]); IR(31:20)) MSB 31:20 LSB
+
+	48. Registers[IR(11:7)] <=  AND(Registers[IR(19:15)], IR[31:20]); IR(31:20)) MSB 31:20 LSB
+
+	50. LogicShiftLeft(Registers[IR(19:15)]);
+
+	51. LogicShiftRight(Registers[IR(19:15)]);
+	
+	52. ArithmeticShiftRight(Registers[IR(19:15)]);
+ 
+	53. Salida_ALU = Suma (Registers[IR(19:15)], Registers[IR(24:20)]);
+	54. Salida_ALU = Suma (Registers[IR(19:15)], Registers[IR(24:20)]);
+	
+	57. Registers[IR(11:7)] <= Suma (Registers[IR(19:15)], Registers[IR(24:20)]', 1 );
+
+	59. Registers[IR(11:7)] <= AluShiftRegister;
+
+	64. Registers[IR(11:7)] <= XOR( Registers[IR(19:15)], Registers[IR(24:20)] );
+
+	65. Registers[IR(11:7)] <= OR ( Registers[IR(19:15)], Registers[IR(24:20)] );
+
+	66. Registers[IR(11:7)] <= AND( Registers[IR(19:15)], Registers[IR(24:20)] );
+
+	69. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],Registers[IR(19:15)] );
+
+   	70. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],Registers[IR(19:15)] );
+
+	72. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],IR( IR[19] τ (IR[19:15])); 
+
+	73. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],IR( IR[19] τ (IR[19:15]));
+
+	74. Registers(IR[11:7]) <= Multiply( Registers(IR[19:15]),Registers(IR[24:20]) );
+
+	75. Salida_ALU = Suma(Registers[0 τ 010],IR[12:7]);
+	76. MAR       <= Suma(Registers[0 τ 010],IR[12:7]);
+
+	79. Salida_ALU = Suma(Registers[0 τ 010],IR[12|6:2]);
+	80. MAR       <= Suma(Registers[0 τ 010],IR[12|6:2]);
+
+	DevNote: Se necesita decoder adentro de la ALU, se agrupan instrucciones iguales, con esto se obtienen 31 cables de control a ALU para la decodificacion
+
+Registers:
+	0 : 
+	7.  Registers[IR(11:7)] <= Suma(Pc,( IR(31:12), (12 τ 0) )); Mismo cable SALIDA_ALU
+	10. Registers[IR(11:7)] <= Suma(Pc,4);
+	59. Registers[IR(11:7)] <= AluShiftRegister;
+
+	1:
+	8.  Registers[IR(11:7)](31:12) <= IR(31:12); 
+	8.  Registers[IR(11:7)](11: 0) <= '0';
+
+	2:
+	13. Salida_ALU = Suma(    Registers[IR(19:15)], sext(IR(31:12)) ); 
+	14. PC        <= Suma(    Registers[IR(19:15)], sext(IR(31:12)) );
+	23. Salida_ALU = Suma(    Registers[IR(19:15)], IR[31:20]);
+	24. MAR       <= Suma(    Registers[IR(19:15)], IR[31:20]);
+	40. Salida_ALU = Suma(    Registers[IR(19:15)], IR[31:20]', 1 ); 
+	41. Salida_ALU = Suma(    Registers[IR(19:15)], IR[31:20]', 1 );
+	44. Salida_ALU = Suma(    Registers[IR(19:15)], IR[31:20]', 1 );
+	45. Salida_ALU = Suma(    Registers[IR(19:15)], IR[31:20]', 1 );
+	50. LogicShiftLeft   (    Registers[IR(19:15)]);
+	51. LogicShiftRight  (    Registers[IR(19:15)]);
+	52. ArithmeticShiftRight( Registers[IR(19:15)]);
+
+
+	3:
+	15. Salida_ALU = Suma(Registers[IR(24:20)],Registers[IR(19:15)',1]);
+	16. Salida_ALU = Suma(Registers[IR(24:20)],Registers[IR(19:15)',1]);
+
+	4:
+	19. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1 ); 
+	20. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1 );
+	21. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);
+	22. Salida_ALU = Suma( Registers[ IR[19:15]], Registers[ IR[24:20]]', 1);
+	53. Salida_ALU = Suma (Registers[ IR(19:15)], Registers[ IR(24:20)]);
+	54. Salida_ALU = Suma (Registers[ IR(19:15)], Registers[ IR(24:20)]);
+	55. Salida_ALU = Suma (Registers[ IR(19:15)], Registers[ IR(24:20)]', 1 ); 
+	56. Salida_ALU = Suma (Registers[ IR(19:15)], Registers[ IR(24:20)]', 1 );
+	60. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1 );
+	61. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1 );
+	62. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1 );
+	63. Salida_ALU = Suma( Registers[ IR(19:15)], Registers[ IR(24:20)]', 1 );
+
+	5:
+	27.Registers[IR(11:7)]( 7: 0) <= MemoryOut(7: 0); 
+	27.Registers[IR(11:7)](31: 8) <= MemoryOut(7);  esto es Sign extended
+
+	6:
+	28.Registers[IR(11:7)](15: 0) <= MemoryOut(15: 0);
+	28.Registers[IR(11:7)](31:16) <= MemoryOut(15);
+
+	7:
+	29. Registers[IR(11:7)]        <= MemoryOut;
+	83. Registers[IR(11:7)]        <= MemoryOut; 
+
+	8:
+	30.Registers[IR(11:7)]( 7: 0) <= MemoryOut(7:0); 
+	30.Registers[IR(11:7)](31: 8) <= '0' ;
+
+	9:
+	31.Registers[IR(11:7)](15: 0) <= MemoryOut(15:0);  
+ 	31.Registers[IR(11:7)](31:16) <= '0';
+
+	10:
+	32.MemoryIn( 7: 0) = Registers[IR(24:20)]( 7: 0);
+	32.MemoryIn(31: 8) = Registers[IR(24:20)](    7);
+ 	33.MemoryIn( 7: 0) = Registers[IR(24:20)]( 7: 0);
+	33.MemoryIn(31: 8) = Registers[IR(24:20)](    7); 
+
+	11:
+	34.MemoryIn(15: 0) = Registers[IR(24:20)](15: 0);
+	34.MemoryIn(31:16) = Registers[IR(24:20)](   15);
+	35.MemoryIn(15: 0) = Registers[IR(24:20)](15: 0);
+	35.MemoryIn(31:16) = Registers[IR(24:20)](   15);
+
+	12:
+	36.MemoryIn = Registers[IR(24:20)];
+	37.MemoryIn = Registers[IR(24:20)];
+
+
+	13:
+	38. Salida_ALU    = Suma( Registers[IR(11:7)],IR(31:20) );
+	72. CSR[IR(31:20)]<= OR ( Registers[IR(11:7)],IR(19:15) );
+	73. CSR[IR(31:20)]<= AND( Registers[IR(11:7)],IR(19:15) );
+
+	14:
+	39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)],IR(31:20) );
+
+	15:
+	42. Registers[IR(11:7)] <= '0 τ 01';
+ 
+	16:
+	43. Registers[IR(11:7)] <='0'; 
+
+	17:
+	46. Registers[IR(11:7)] <=  XOR(Registers[IR(19:15)], IR[31:20]);
+	47. Registers[IR(11:7)] <=  OR (Registers[IR(19:15)], IR[31:20]);
+	48. Registers[IR(11:7)] <=  AND(Registers[IR(19:15)], IR[31:20]);
+
+	18:
+	57. Registers[IR(11:7)] <= Suma    ( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );
+	64. Registers[IR(11:7)] <= XOR     ( Registers[IR(19:15)], Registers[IR(24:20)] );
+	65. Registers[IR(11:7)] <= OR      ( Registers[IR(19:15)], Registers[IR(24:20)] );
+	66. Registers[IR(11:7)] <= AND     ( Registers[IR(19:15)], Registers[IR(24:20)] );
+	74. Registers(IR[11:7]) <= Multiply( Registers(IR[19:15]), Registers(IR[24:20]) );
+
+	19:
+	67. Registers(IR[11:7]) <= CSR[IR(31:20)]; 
+	
+	20:
+	68. CSR[IR(31:20)] <= Registers(IR[19:15]);
+	
+	21:
+	69. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],Registers[IR(19:15)] );
+	70. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],Registers[IR(19:15)] );
+
+	22:
+	75. Salida_ALU = Suma(Registers[0 τ 010],IR[12:7]);
+	76. MAR       <= Suma(Registers[0 τ 010],IR[12:7]);
+	79. Salida_ALU = Suma(Registers[0 τ 010],IR[12|6:2]);
+	80. MAR       <= Suma(Registers[0 τ 010],IR[12|6:2]);
+
+	23:
+	77. MemoryIn = Registers[IR(6:2)];
+	78. MemoryIn = Registers[IR(6:2)];
+
+	24:
+	95. MAR             <= Registers[0 τ 010];   
+
+	25:
+	86.MemoryIn = PC; 
+	87.MemoryIn = PC;
+	96.MemoryIn = PC; 
+	97.MemoryIn = PC;
+
+	DevNote: e necesita decoder adentro de registers, se agrupan instrucciones iguales, con esto se obtienen 25 cables de control a Registers para la decodificacion
+
+Counter:
+	49. Counter <= IR(25:20);
+	50. Counter <= Inc(Counter);
+	51. Counter <= Inc(Counter);
+	52. Counter <= Inc(Counter);
+	58. Counter <= Registers[IR(24:20)] 
+
+	Devnote: tres cables, uno que incremente, uno que reemplace por IR y otro que reemplace por Registers no se necesita decoder
+CSR:
+	67. Registers(IR[11:7]) <= CSR[IR(31:20)];
+	68. CSR[IR(31:20)] <= Registers(IR[19:15]);
+	69. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],Registers[IR(19:15)] );
+	70. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],Registers[IR(19:15)] );
+	71. CSR[IR[31:20]] <= ( IR[19] τ (IR[19:15]));
+	72. CSR[IR(31:20)] <= OR ( Registers[IR(11:7)],IR(19:15) );
+	73. CSR[IR(31:20)] <= AND( Registers[IR(11:7)],IR(19:15) );
+	90. CSR[836][27] <= '1'; 
+	91. CSR[836][28] <= '1'; 
+	92. CSR[836][29] <= '1';
+	93. CSR[836][30] <= '1'; 
+	94. CSR[836][11] <= '1';
+	95. CSR[836][31:27] <= "10000";
+	95. CSR[836][11]    <= '0';
+	98.  Pc    <= CSR(775); 
+	99.  Pc <= CSR(776);
+	100. Pc <= CSR(777);
+	101. Pc <= CSR(778);
+	DevNote: 18 cables, uno por estado
+SP:
+	78.SP<=Inc(SP);
+	83.SP<=Dec(SP);
+	84.SP<=Dec(SP);
+	87.SP <= Inc(SP)
+	97.SP <= Inc(SP)
+	DevNote: dos cables, bit 0 aumenta, bit 1 disminuye
