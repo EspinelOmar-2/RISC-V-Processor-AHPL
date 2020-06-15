@@ -1,0 +1,87 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\OneDrives\OneDrive\DOCUMENTOS\11 Semestre\ProyectoDeGrado\VHDL\Memory\simulation\modelsim
+Ememory
+Z1 w1592234369
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx6 altera 11 dffeas_pack 0 22 oY7WPe2I:Taj0>HV`A`AH0
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx6 altera 28 altera_primitives_components 0 22 H[E=U;zSVlD;ca@gnkzIO0
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dD:\OneDrives\OneDrive\DOCUMENTOS\11 Semestre\ProyectoDeGrado\VHDL\Memory\simulation\modelsim
+Z9 8D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd
+Z10 FD:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd
+l0
+L21
+VocL?:kh159PGA;XAW>QGa3
+!s100 bYC:a^mEBd0Ln8_M;`B2L0
+Z11 OV;C;10.1d;51
+31
+!i10b 1
+Z12 !s108 1592234592.637000
+Z13 !s90 -reportprogress|300|-93|-work|work|D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd|
+Z14 !s107 D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd|
+Z15 o-93 -work work -O0
+Z16 tExplicit 1
+Amemoryarch
+Z17 DPx9 altera_mf 20 altera_mf_components 0 22 zh;bE09gCIPDVLK?MN49L3
+Z18 DEx4 work 8 mymemory 0 22 ;dW_8:<>2Ql[Dl:XVkjiW1
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 6 memory 0 22 ocL?:kh159PGA;XAW>QGa3
+l37
+L33
+VARfL55iDh;P?X[M:k>g0]1
+!s100 O<Ud924Sja`=DHg_5M:fW1
+R11
+31
+!i10b 1
+R12
+R13
+R14
+R15
+R16
+Emymemory
+Z19 w1592234129
+R17
+R6
+R7
+R8
+Z20 8D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd
+Z21 FD:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd
+l0
+L43
+V;dW_8:<>2Ql[Dl:XVkjiW1
+R11
+31
+Z22 !s108 1592234591.969000
+Z23 !s90 -reportprogress|300|-93|-work|work|D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd|
+Z24 !s107 D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd|
+R15
+R16
+!s100 oEg[]7RjhT>l7JA:F5R2j3
+!i10b 1
+Asyn
+R17
+R6
+R7
+R18
+l60
+L56
+VK>Z`IX]zYQ8PW4O5MB]M52
+R11
+31
+R22
+R23
+R24
+R15
+R16
+!s100 =Q^2_oSI:cjlkXTXhzEcf0
+!i10b 1

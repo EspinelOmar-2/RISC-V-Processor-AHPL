@@ -1,0 +1,41 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--                Disegno Digital                       --
+--          Seccion de Tecnicas Digitales               --
+-- 													              --
+-- Titulo :    TestBenchModule                          --
+-- Fecha  :  	D:XX M:XX Y:20XX                         --
+--******************************************************--
+
+LIBRARY IEEE;
+USE IEEE.std_logic_1164.ALL;
+USE IEEE.numeric_std.ALL;
+
+ENTITY TestProtocolMemory IS
+END TestProtocolMemory;
+
+ARCHITECTURE TestProtocolMemoryArch OF TestProtocolMemory IS
+
+--******************************************************--
+-- Segnales a evaluar, las mismas definidas en el Work del bloque a evaluar
+--******************************************************--
+
+SIGNAL SIG1 : STD_LOGIC_VECTOR;
+SIGNAL SIG2 : STD_LOGIC_VECTOR;
+SIGNAL SIGN : STD_LOGIC_VECTOR;
+
+BEGIN
+
+X1: ENTITY WORK.Memory 
+PORT MAP	  (Address => Address,
+				DataIn  => DataIn,
+				Clk     => Clk,
+				WrEn    => WrEn,
+				DataOut => DataOut
+			  );
+
+Clk <= NOT Clk AFTER 10 ns;
+
+Rst <= '0' AFTER 20 ns;
+
+END TestProtocolMemoryArch;

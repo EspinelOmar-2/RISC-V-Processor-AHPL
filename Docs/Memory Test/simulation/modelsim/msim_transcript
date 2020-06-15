@@ -1,0 +1,378 @@
+# Reading C:/altera/13.1/modelsim_ase/tcl/vsim/pref.tcl 
+# do Memory_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+# vcom -93 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+# 
+cd {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory}
+# reading C:\altera\13.1\modelsim_ase\win32aloem/../modelsim.ini
+vlib work
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# ** Error: (vcom-11) Could not find work.mymemory.
+# 
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd(47): (vcom-1195) Cannot find expanded name "work.MyMemory".
+# 
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd(47): Unknown expanded name.
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd(70): VHDL Compiler exiting
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd(23): (vcom-1272) Length of expected is 16; length of actual is 13.
+# 
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd(41): (vcom-1272) Length of expected is 16; length of actual is 13.
+# 
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd(42): (vcom-1272) Length of expected is 16; length of actual is 13.
+# 
+# ** Error: D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd(47): VHDL Compiler exiting
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+vsim work.testprotocolmemory
+# vsim work.testprotocolmemory 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading work.testprotocolmemory(testprotocolmemoryarch)
+# Loading altera_mf.altera_mf_components
+# Loading work.memory(memoryarch)
+# Loading work.mymemory(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+add wave -position insertpoint  \
+sim:/testprotocolmemory/Address \
+sim:/testprotocolmemory/DataIn \
+sim:/testprotocolmemory/RdWrN \
+sim:/testprotocolmemory/Clk \
+sim:/testprotocolmemory/DataOut
+run 500ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/WaveMemory.do}
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+vsim work.testprotocolmemory
+# vsim work.testprotocolmemory 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading work.testprotocolmemory(testprotocolmemoryarch)
+# Loading altera_mf.altera_mf_components
+# Loading work.memory(memoryarch)
+# Loading work.mymemory(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+do WaveMemory.do
+run 500ns
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/WaveMemory.do}
+# Cannot determine language of D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MemoryInit.hex
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/WaveMemory.do}
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+vsim work.testprotocolmemory
+# vsim work.testprotocolmemory 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading work.testprotocolmemory(testprotocolmemoryarch)
+# Loading altera_mf.altera_mf_components
+# Loading work.memory(memoryarch)
+# Loading work.mymemory(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+do WaveMemory.do
+run 500ns
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Memory
+# -- Compiling architecture MemoryArch of Memory
+# -- Loading package altera_mf_components
+# -- Loading entity MyMemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package altera_mf_components
+# -- Compiling entity MyMemory
+# -- Compiling architecture SYN of mymemory
+vcom -reportprogress 300 -work work {D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity TestProtocolMemory
+# -- Compiling architecture TestProtocolMemoryArch of TestProtocolMemory
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading entity Memory
+vsim work.testprotocolmemory
+# vsim work.testprotocolmemory 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.numeric_std(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading work.testprotocolmemory(testprotocolmemoryarch)
+# Loading altera_mf.altera_mf_components
+# Loading work.memory(memoryarch)
+# Loading work.mymemory(syn)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading altera_mf.altera_common_conversion(body)
+# Loading altera_mf.altera_device_families(body)
+# Loading altera_mf.altsyncram(translated)
+do WaveMemory.do

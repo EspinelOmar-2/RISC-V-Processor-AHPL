@@ -1,0 +1,129 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\OneDrives\OneDrive\DOCUMENTOS\11 Semestre\ProyectoDeGrado\VHDL\Memory
+Ememory
+Z1 w1592235351
+Z2 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z3 DPx6 altera 11 dffeas_pack 0 22 oY7WPe2I:Taj0>HV`A`AH0
+Z4 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z5 DPx6 altera 28 altera_primitives_components 0 22 H[E=U;zSVlD;ca@gnkzIO0
+Z6 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z7 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z8 dD:\OneDrives\OneDrive\DOCUMENTOS\11 Semestre\ProyectoDeGrado\VHDL\Memory
+Z9 8D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd
+Z10 FD:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd
+l0
+L21
+V7mcCKeb]hOGEHMJMX;oY02
+Z11 OV;C;10.1d;51
+32
+Z12 !s108 1592235465.791000
+Z13 !s90 -reportprogress|300|-work|work|D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd|
+Z14 !s107 D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/Memory.vhd|
+Z15 o-work work -O0
+Z16 tExplicit 1
+!s100 bYC:a^mEBd0Ln8_M;`B2L0
+!i10b 1
+Amemoryarch
+Z17 DPx9 altera_mf 20 altera_mf_components 0 22 zh;bE09gCIPDVLK?MN49L3
+Z18 DEx4 work 8 mymemory 0 22 <996WV[I:Mk9YCIeF>VfW1
+R2
+R3
+R4
+R5
+R6
+R7
+Z19 DEx4 work 6 memory 0 22 7mcCKeb]hOGEHMJMX;oY02
+l38
+L33
+VWXe_K4FJHL?2J>3YP8CSk3
+R11
+32
+R12
+R13
+R14
+R15
+R16
+!s100 BoBDjMj5Amgm?C]866G@i1
+!i10b 1
+Emymemory
+Z20 w1592234129
+R17
+R6
+R7
+R8
+Z21 8D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd
+Z22 FD:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd
+l0
+L43
+V<996WV[I:Mk9YCIeF>VfW1
+R11
+32
+Z23 !s108 1592235466.050000
+Z24 !s90 -reportprogress|300|-work|work|D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd|
+Z25 !s107 D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/MyMemory.vhd|
+R15
+R16
+!s100 oEg[]7RjhT>l7JA:F5R2j3
+!i10b 1
+Asyn
+R17
+R6
+R7
+R18
+l60
+L56
+V8IfoO^HzGzCNGmRYdOGcT2
+!s100 =Q^2_oSI:cjlkXTXhzEcf0
+R11
+32
+R23
+R24
+R25
+R15
+R16
+!i10b 1
+Etestprotocolmemory
+Z26 w1592235451
+Z27 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R6
+R7
+R8
+Z28 8D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd
+Z29 FD:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd
+l0
+L14
+VZ_mMSnI5m>4T002<DlX5J3
+!s100 h86MfSXXG5:iZihl2^Z:<2
+R11
+32
+!i10b 1
+Z30 !s108 1592235466.359000
+Z31 !s90 -reportprogress|300|-work|work|D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd|
+Z32 !s107 D:/OneDrives/OneDrive/DOCUMENTOS/11 Semestre/ProyectoDeGrado/VHDL/Memory/TestProtocolMemory.vhd|
+R15
+R16
+Atestprotocolmemoryarch
+R2
+R3
+R4
+R5
+R19
+R27
+R6
+R7
+Z33 DEx4 work 18 testprotocolmemory 0 22 Z_mMSnI5m>4T002<DlX5J3
+l29
+L17
+V1J@9mgW08Nm`T`kMVQ2Pn3
+!s100 R[21SJLT1V90:O;FzBfTF3
+R11
+32
+!i10b 1
+R30
+R31
+R32
+R15
+R16
