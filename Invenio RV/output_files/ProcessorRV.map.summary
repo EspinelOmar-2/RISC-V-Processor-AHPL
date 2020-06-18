@@ -1,14 +1,17 @@
-Analysis & Synthesis Status : Successful - Thu May 28 02:08:49 2020
-Quartus II 64-Bit Version : 15.0.0 Build 145 04/22/2015 SJ Web Edition
+Analysis & Synthesis Status : Successful - Fri Jun 12 10:53:39 2020
+Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : ProcessorRV
-Top-level Entity Name : ArithmeticShiftRight
-Family : Cyclone IV E
-Total logic elements : 33
-    Total combinational functions : 32
-    Dedicated logic registers : 32
-Total registers : 32
-Total pins : 68
+Top-level Entity Name : ALU
+Family : Cyclone V
+Logic utilization (in ALMs) : N/A
+Total registers : 96
+Total pins : 553
 Total virtual pins : 0
-Total memory bits : 0
-Embedded Multiplier 9-bit elements : 0
+Total block memory bits : 0
+Total DSP Blocks : 0
+Total HSSI RX PCSs : 0
+Total HSSI PMA RX Deserializers : 0
+Total HSSI TX PCSs : 0
+Total HSSI PMA TX Serializers : 0
 Total PLLs : 0
+Total DLLs : 0
