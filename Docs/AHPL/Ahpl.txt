@@ -325,24 +325,25 @@
     -> (89)                                                                                                              -- almacenado en IR(31:20)
 
 49. Counter <= IR(25:20);                                                                                                -- Se carga al Counter el valor de IR(25:20)
+AluShiftRegister<=Registers[IR(19:15)];
     ->
 (IR[30]'.IR[14]' X50) +                                                                                                  -- SLLI
 (IR[30]'.IR[14]  X51) +                                                                                                  -- SRLI
 (IR[30]          X52)                                                                                                    -- SRAI
 
-50. LogicShiftLeft(IR(19:15));                                                                                           -- Se hace El corrimiento a izquierda 1 vez del dato IR(19:15)
+50. LogicShiftLeft(Registers[IR(19:15)];                                                                                 -- Se hace El corrimiento a izquierda 1 vez del dato Registers[IR(19:15)]
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
     ->
 (CounterControl' X50) +                                                                                                  -- Se va a este mismo estado si el contador no ha llegado al maximo
 (CounterControl  X59)                                                                                                    -- Se va al estado donde se guarda el resultado
 
-51. LogicShiftRight(IR(19:15));                                                                                          -- Se hace El corrimiento a derecha 1 vez del dato IR(19:15)
+51. LogicShiftRight(Registers[IR(19:15)];                                                                                -- Se hace El corrimiento a derecha 1 vez del dato Registers[IR(19:15)]
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
     ->
 (CounterControl' X51) +                                                                                                  -- Se va a este mismo estado si el contador no ha llegado al maximo
 (CounterControl  X59)                                                                                                    -- Se va al estado donde se guarda el resultado
 
-52. ArithmeticShiftRight(IR(19:15));                                                                                     -- Se hace corriemiento aritmetico izquierda 1 vez del dato IR(19:15)
+52. ArithmeticShiftRight(Registers[IR(19:15)]);                                                                            -- Se hace corriemiento aritmetico izquierda 1 vez del dato Registers[IR(19:15)]
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados
     ->
 (CounterControl' X52) +                                                                                                  -- Se va a este mismo estado si el contador no ha llegado al maximo
@@ -396,7 +397,7 @@
 62. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
     -> (63)                                                                                                              -- direccion IR(14:19) pero no guarda el resultado
 
-63. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 59, mientras la resta se efectua
+63. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 63, mientras la resta se efectua
     ->
 (ALU_Control[1]'. ALU_Control[3] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
 (ALU_Control[1]'. ALU_Control[2]'. X43) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43

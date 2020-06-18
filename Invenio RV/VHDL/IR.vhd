@@ -31,7 +31,7 @@ port(
 			IR_Control: 			out 	std_logic_vector(11 downto 0);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU: 					out 	std_logic_vector(24 downto 0);
+			IR_ALU: 					out 	std_logic_vector(29 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
 			IR_CSR: 				   out 	std_logic_vector(31 downto 0);
@@ -123,7 +123,8 @@ begin
 			IR_Control(11)<=Q(30);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU<= Q(31 downto 7);
+			IR_ALU(24 downto 0 )<= Q(31 downto 7);
+			IR_ALU(29 downto 25)<= Q(6  downto 2);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
 			IR_CSR<= Q(31 downto 0);

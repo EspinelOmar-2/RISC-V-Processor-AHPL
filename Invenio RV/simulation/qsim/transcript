@@ -2,42 +2,32 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 14:31:44 on May 27,2020
+# Start time: 18:49:20 on Jun 12,2020
 # vlog -work work ProcessorRV.vo 
-# -- Compiling module ArithmeticShiftRight
+# -- Compiling module ALU
 # 
 # Top level modules:
-# 	ArithmeticShiftRight
-# End time: 14:31:44 on May 27,2020, Elapsed time: 0:00:00
+# 	ALU
+# End time: 18:49:21 on Jun 12,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim ALTERA vlog 10.4b Compiler 2015.05 May 27 2015
-# Start time: 14:31:44 on May 27,2020
-# vlog -work work ArithmeticShiftRightSim.vwf.vt 
-# -- Compiling module ArithmeticShiftRight_vlg_vec_tst
+# Start time: 18:49:21 on Jun 12,2020
+# vlog -work work ALUSimDecode3.vwf.vt 
+# -- Compiling module ALU_vlg_vec_tst
 # 
 # Top level modules:
-# 	ArithmeticShiftRight_vlg_vec_tst
-# End time: 14:31:44 on May 27,2020, Elapsed time: 0:00:00
+# 	ALU_vlg_vec_tst
+# End time: 18:49:21 on Jun 12,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -novopt -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ArithmeticShiftRight_vlg_vec_tst -voptargs=""+acc"" 
-# Start time: 14:31:44 on May 27,2020
-# Loading work.ArithmeticShiftRight_vlg_vec_tst
-# Loading work.ArithmeticShiftRight
-# Loading cycloneive_ver.cycloneive_io_obuf
-# Loading cycloneive_ver.cycloneive_io_ibuf
-# Loading cycloneive_ver.cycloneive_clkctrl
-# Loading cycloneive_ver.cycloneive_mux41
-# Loading cycloneive_ver.cycloneive_ena_reg
-# Loading cycloneive_ver.cycloneive_lcell_comb
+# vsim -novopt -c -t 1ps -L cyclonev_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.ALU_vlg_vec_tst -voptargs=""+acc"" 
+# Start time: 18:49:21 on Jun 12,2020
+# Loading work.ALU_vlg_vec_tst
+# Loading work.ALU
 # Loading altera_ver.dffeas
-# SDF 10.4b Compiler 2015.05 May 27 2015
-# 
-# Loading instances from ProcessorRV_v.sdo
 # Loading altera_ver.PRIM_GDFF_LOW
-# Loading timing data from ProcessorRV_v.sdo
-# ** Note: (vsim-3587) SDF Backannotation Successfully Completed.
-#    Time: 0 ps  Iteration: 0  Instance: /ArithmeticShiftRight_vlg_vec_tst File: ArithmeticShiftRightSim.vwf.vt
-# ** Note: $finish    : ArithmeticShiftRightSim.vwf.vt(53)
-#    Time: 1 us  Iteration: 0  Instance: /ArithmeticShiftRight_vlg_vec_tst
-# End time: 14:31:45 on May 27,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
+# ** Warning: Design size of 13050 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+# ** Note: $finish    : ALUSimDecode3.vwf.vt(79)
+#    Time: 1 us  Iteration: 0  Instance: /ALU_vlg_vec_tst
+# End time: 18:49:24 on Jun 12,2020, Elapsed time: 0:00:03
+# Errors: 0, Warnings: 1

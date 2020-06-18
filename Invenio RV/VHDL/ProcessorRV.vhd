@@ -77,7 +77,7 @@ port(
 			IR_Control: 			out 	std_logic_vector(11 downto 0);
 			--envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.
 			
-			IR_ALU: 					out 	std_logic_vector(24 downto 0);
+			IR_ALU: 					out 	std_logic_vector(29 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
 			IR_CSR: 				   out 	std_logic_vector(31 downto 0);
@@ -243,7 +243,7 @@ port(
 			Registers_ALU: 	in 	std_logic_vector(63 downto 0);
 			--Señal que transmite los datos de los registros a la ALU para ser operados.
 			
-			IR_ALU: 				in 	std_logic_vector(24 downto 0);
+			IR_ALU: 				in 	std_logic_vector(29 downto 0);
 			--Envia los datos que deben ser operados en la ALU, tales como datos inmediatos en las instrucciones.
 			
 			CSR_ALU: 			in 	std_logic_vector(31 downto 0);
@@ -342,7 +342,7 @@ signal	IR_RegistersX:  		std_logic_vector(25 downto 0);
 			
 signal	IR_ControlX: 			std_logic_vector(11 downto 0);
 
-signal	IR_ALUX: 				std_logic_vector(24 downto 0);
+signal	IR_ALUX: 				std_logic_vector(29 downto 0);
 
 signal	IR_CSRX: 				std_logic_vector(31 downto 0);
 

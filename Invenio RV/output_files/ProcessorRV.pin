@@ -5,7 +5,7 @@
  -- (including device programming or simulation files), and any 
  -- associated documentation or information are expressly subject 
  -- to the terms and conditions of the Altera Program License 
- -- Subscription Agreement, the Altera Quartus II License Agreement,
+ -- Subscription Agreement, the Altera Quartus Prime License Agreement,
  -- the Altera MegaCore Function License Agreement, or other 
  -- applicable license agreement, including, without limitation, 
  -- that your use is for the sole purpose of programming logic 
@@ -13,10 +13,10 @@
  -- authorized distributors.  Please refer to the applicable 
  -- agreement for further details.
  -- 
- -- This is a Quartus II output file. It is for reporting purposes only, and is
- -- not intended for use as a Quartus II input file. This file cannot be used
- -- to make Quartus II pin assignments - for instructions on how to make pin
- -- assignments, please see Quartus II help.
+ -- This is a Quartus Prime output file. It is for reporting purposes only, and is
+ -- not intended for use as a Quartus Prime input file. This file cannot be used
+ -- to make Quartus Prime pin assignments - for instructions on how to make pin
+ -- assignments, please see Quartus Prime help.
  ---------------------------------------------------------------------------------
 
 
@@ -24,17 +24,20 @@
  ---------------------------------------------------------------------------------
  -- NC            : No Connect. This pin has no internal connection to the device.
  -- DNU           : Do Not Use. This pin MUST NOT be connected.
- -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.2V).
+ -- VCCPGM        : Dedicated power pin for configuration, which MUST be connected to 1.8V, 2.5V, 3.0V or 3.3V depending on the requirements of the configuration device.
+ -- VCCINT        : Dedicated power pin, which MUST be connected to VCC  (1.1V).
  -- VCCIO         : Dedicated power pin, which MUST be connected to VCC
  --                 of its bank.
- --                  Bank 1:       2.5V
- --                  Bank 2:       2.5V
- --                  Bank 3:       2.5V
- --                  Bank 4:       2.5V
- --                  Bank 5:       2.5V
- --                  Bank 6:       2.5V
- --                  Bank 7:       2.5V
- --                  Bank 8:       2.5V
+ --                  Bank 3A:       2.5V
+ --                  Bank 3B:       2.5V
+ --                  Bank 4A:       2.5V
+ --                  Bank 5A:       2.5V
+ --                  Bank 5B:       2.5V
+ --                  Bank 6A:  2.5V
+ --                  Bank 7A:  2.5V
+ --                  Bank 8A:  2.5V
+ -- RREF          : External reference resistor for the quad, MUST be connected to
+ --                 GND via a 2k Ohm resistor.
  -- GND           : Dedicated ground pin. Dedicated GND pins MUST be connected to GND.
  --                  It can also be used to report unused dedicated pins. The connection
  --                  on the board for unused dedicated pins depends on whether this will
@@ -49,13 +52,16 @@
  --                  This pin should be connected to GND. It may also be connected  to a
  --                  valid signal  on the board  (low, high, or toggling)  if that signal
  --                  is required for a different revision of the design.
- -- GND*          : Unused  I/O  pin. Connect each pin marked GND* directly to GND
- --                  or leave it unconnected.
+ -- GND*          : Unused  I/O  pin.   For transceiver I/O banks, connect each pin marked GND*
+ --                  either individually through a 10k Ohm resistor to GND or tie all pins
+ --                  together and connect through a single 10k Ohm resistor to GND.
  -- RESERVED      : Unused I/O pin, which MUST be left unconnected.
  -- RESERVED_INPUT    : Pin is tri-stated and should be connected to the board.
  -- RESERVED_INPUT_WITH_WEAK_PULLUP    : Pin is tri-stated with internal weak pull-up resistor.
  -- RESERVED_INPUT_WITH_BUS_HOLD       : Pin is tri-stated with bus-hold circuitry.
  -- RESERVED_OUTPUT_DRIVEN_HIGH        : Pin is output driven high.
+ -- GXB_NC        : Unused GXB Transmitter or dedicated clock output pin. This pin
+ --                 must not be connected.
  ---------------------------------------------------------------------------------
 
 
@@ -64,264 +70,1160 @@
  -- Pin directions (input, output or bidir) are based on device operating in user mode.
  ---------------------------------------------------------------------------------
 
-Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-CHIP  "ProcessorRV"  ASSIGNED TO AN: EP4CE22F17C6
+Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
+CHIP  "ProcessorRV"  ASSIGNED TO AN: 5CGXFC9E7F35C8
 
 Pin Name/Usage               : Location  : Dir.   : I/O Standard      : Voltage : I/O Bank  : User Assignment
 -------------------------------------------------------------------------------------------------------------
-VCCIO8                       : A1        : power  :                   : 2.5V    : 8         :                
-ArithmeticShiftRightRegister[7] : A2        : output : 2.5 V             :         : 8         : N              
-DataIn[18]                   : A3        : input  : 2.5 V             :         : 8         : N              
-DataIn[29]                   : A4        : input  : 2.5 V             :         : 8         : N              
-Enable                       : A5        : input  : 2.5 V             :         : 8         : N              
-DataIn[2]                    : A6        : input  : 2.5 V             :         : 8         : N              
-ArithmeticShiftRightRegister[2] : A7        : output : 2.5 V             :         : 8         : N              
-GND+                         : A8        :        :                   :         : 8         :                
-GND+                         : A9        :        :                   :         : 7         :                
-DataIn[14]                   : A10       : input  : 2.5 V             :         : 7         : N              
-DataIn[3]                    : A11       : input  : 2.5 V             :         : 7         : N              
-ArithmeticShiftRightRegister[31] : A12       : output : 2.5 V             :         : 7         : N              
-DataIn[1]                    : A13       : input  : 2.5 V             :         : 7         : N              
-ArithmeticShiftRightRegister[5] : A14       : output : 2.5 V             :         : 7         : N              
-ArithmeticShiftRightRegister[0] : A15       : output : 2.5 V             :         : 7         : N              
-VCCIO7                       : A16       : power  :                   : 2.5V    : 7         :                
-DataIn[25]                   : B1        : input  : 2.5 V             :         : 1         : N              
+ALU_Registers[7]             : A2        : output : 2.5 V             :         : 8A        : N              
+ASRRegistero[28]             : A3        : output : 2.5 V             :         : 8A        : N              
+GND                          : A4        : gnd    :                   :         :           :                
+ALU_Registers[15]            : A5        : output : 2.5 V             :         : 8A        : N              
+AdderResulto[17]             : A6        : output : 2.5 V             :         : 8A        : N              
+PC_ALU[30]                   : A7        : input  : 2.5 V             :         : 8A        : N              
+LSRegistero[2]               : A8        : output : 2.5 V             :         : 8A        : N              
+GND                          : A9        : gnd    :                   :         :           :                
+AddrMode34o[2]               : A10       : output : 2.5 V             :         : 8A        : N              
+ALU_MAR[11]                  : A11       : output : 2.5 V             :         : 8A        : N              
+ALU_PC[6]                    : A12       : output : 2.5 V             :         : 8A        : N              
+ALU_MAR[16]                  : A13       : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : A14       : power  :                   : 2.5V    : 8A        :                
+PC_ALU[11]                   : A15       : input  : 2.5 V             :         : 8A        : N              
+Control_ALU[33]              : A16       : input  : 2.5 V             :         : 8A        : N              
+ALU_PC[10]                   : A17       : output : 2.5 V             :         : 8A        : N              
+PC_ALU[6]                    : A18       : input  : 2.5 V             :         : 8A        : N              
+GND                          : A19       : gnd    :                   :         :           :                
+ALU_PC[24]                   : A20       : output : 2.5 V             :         : 7A        : N              
+LSRegistero[9]               : A21       : output : 2.5 V             :         : 7A        : N              
+IR_ALU[0]                    : A22       : input  : 2.5 V             :         : 7A        : N              
+PC_ALU[0]                    : A23       : input  : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : A24       : power  :                   : 2.5V    : 7A        :                
+ALU_PC[11]                   : A25       : output : 2.5 V             :         : 7A        : N              
+ALU_Registers[18]            : A26       : output : 2.5 V             :         : 7A        : N              
+ALU_Control[1]               : A27       : output : 2.5 V             :         : 7A        : N              
+CSR_ALU[27]                  : A28       : input  : 2.5 V             :         : 7A        : N              
+GND                          : A29       : gnd    :                   :         :           :                
+NC                           : A30       :        :                   :         :           :                
+NC                           : A31       :        :                   :         :           :                
+NC                           : A32       :        :                   :         :           :                
+NC                           : A33       :        :                   :         :           :                
+GND                          : AA1       :        :                   :         : B1L       :                
+GND                          : AA2       :        :                   :         : B1L       :                
+GND                          : AA3       : gnd    :                   :         :           :                
+GND                          : AA4       : gnd    :                   :         :           :                
+GND                          : AA5       : gnd    :                   :         :           :                
+GND                          : AA6       : gnd    :                   :         :           :                
+VCCL_GXBL                    : AA7       : power  :                   : 1.1V    :           :                
+GND                          : AA8       : gnd    :                   :         :           :                
+VCCE_GXBL                    : AA9       : power  :                   : 1.1V    :           :                
+GND                          : AA10      : gnd    :                   :         :           :                
+GND                          : AA11      :        :                   :         : B0L       :                
+GND                          : AA12      : gnd    :                   :         :           :                
+VCC                          : AA13      : power  :                   : 1.1V    :           :                
+GND                          : AA14      : gnd    :                   :         :           :                
+Control_ALU[18]              : AA15      : input  : 2.5 V             :         : 3A        : N              
+Control_ALU[15]              : AA16      : input  : 2.5 V             :         : 3B        : N              
+PC_ALU[14]                   : AA17      : input  : 2.5 V             :         : 3B        : N              
+PC_ALU[13]                   : AA18      : input  : 2.5 V             :         : 3B        : N              
+GND                          : AA19      : gnd    :                   :         :           :                
+ALU_PC[27]                   : AA20      : output : 2.5 V             :         : 4A        : N              
+LSRRegistero[26]             : AA21      : output : 2.5 V             :         : 5A        : N              
+AddrMode34o[19]              : AA22      : output : 2.5 V             :         : 5A        : N              
+ALU_PC[15]                   : AA23      : output : 2.5 V             :         : 5A        : N              
+VCCIO5A                      : AA24      : power  :                   : 2.5V    : 5A        :                
+ALU_MAR[26]                  : AA25      : output : 2.5 V             :         : 5A        : N              
+VCCPD5A                      : AA26      : power  :                   : 2.5V    : 5A        :                
+Registers_ALU[52]            : AA27      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[23]            : AA28      : input  : 2.5 V             :         : 5A        : N              
+GND                          : AA29      : gnd    :                   :         :           :                
+LSRegistero[14]              : AA30      : output : 2.5 V             :         : 5A        : N              
+Registers_ALU[4]             : AA31      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[9]             : AA32      : input  : 2.5 V             :         : 5B        : N              
+LSRRegistero[28]             : AA33      : output : 2.5 V             :         : 6A        : N              
+GND                          : AA34      : gnd    :                   :         :           :                
+GND                          : AB1       : gnd    :                   :         :           :                
+GND                          : AB2       : gnd    :                   :         :           :                
+GXB_NC                       : AB3       :        :                   :         : B1L       :                
+GXB_NC                       : AB4       :        :                   :         : B1L       :                
+GND                          : AB5       : gnd    :                   :         :           :                
+GND                          : AB6       : gnd    :                   :         :           :                
+GND                          : AB7       : gnd    :                   :         :           :                
+VCCH_GXBL                    : AB8       : power  :                   : 2.5V    :           :                
+GND                          : AB9       : gnd    :                   :         :           :                
+GND                          : AB10      :        :                   :         : B0L       :                
+GND                          : AB11      : gnd    :                   :         :           :                
+GND                          : AB12      : gnd    :                   :         :           :                
+ALU_Registers[1]             : AB13      : output : 2.5 V             :         : 3A        : N              
+ALU_CSR[13]                  : AB14      : output : 2.5 V             :         : 3A        : N              
+ALU_CSR[28]                  : AB15      : output : 2.5 V             :         : 3A        : N              
+Control_ALU[17]              : AB16      : input  : 2.5 V             :         : 3B        : N              
+VCCIO3B                      : AB17      : power  :                   : 2.5V    : 3B        :                
+ALU_PC[3]                    : AB18      : output : 2.5 V             :         : 3B        : N              
+ALU_PC[29]                   : AB19      : output : 2.5 V             :         : 4A        : N              
+LSRRegistero[21]             : AB20      : output : 2.5 V             :         : 4A        : N              
+ASRRegistero[9]              : AB21      : output : 2.5 V             :         : 4A        : N              
+GND                          : AB22      : gnd    :                   :         :           :                
+MulResulto[4]                : AB23      : output : 2.5 V             :         : 5A        : N              
+PC_ALU[9]                    : AB24      : input  : 2.5 V             :         : 5A        : N              
+AdderResulto[20]             : AB25      : output : 2.5 V             :         : 5A        : N              
+VCCPD5A                      : AB26      : power  :                   : 2.5V    : 5A        :                
+VCCIO5A                      : AB27      : power  :                   : 2.5V    : 5A        :                
+ALU_Registers[6]             : AB28      : output : 2.5 V             :         : 5A        : N              
+MulResulto[22]               : AB29      : output : 2.5 V             :         : 5A        : N              
+AdderResulto[12]             : AB30      : output : 2.5 V             :         : 5A        : N              
+Registers_ALU[6]             : AB31      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AB32      : gnd    :                   :         :           :                
+Registers_ALU[50]            : AB33      : input  : 2.5 V             :         : 5B        : N              
+LSRegistero[30]              : AB34      : output : 2.5 V             :         : 5B        : N              
+GND                          : AC1       :        :                   :         : B1L       :                
+GND                          : AC2       :        :                   :         : B1L       :                
+GND                          : AC3       : gnd    :                   :         :           :                
+GND                          : AC4       : gnd    :                   :         :           :                
+GND                          : AC5       : gnd    :                   :         :           :                
+GND                          : AC6       : gnd    :                   :         :           :                
+VCCL_GXBL                    : AC7       : power  :                   : 1.1V    :           :                
+GND                          : AC8       : gnd    :                   :         :           :                
+VCCE_GXBL                    : AC9       : power  :                   : 1.1V    :           :                
+GND                          : AC10      : gnd    :                   :         :           :                
+VCCA_FPLL                    : AC11      : power  :                   : 2.5V    :           :                
+ASRRegistero[7]              : AC12      : output : 2.5 V             :         : 3A        : N              
+ASRRegistero[16]             : AC13      : output : 2.5 V             :         : 3A        : N              
+ALU_Registers[10]            : AC14      : output : 2.5 V             :         : 3A        : N              
+GND                          : AC15      : gnd    :                   :         :           :                
+ASRRegistero[23]             : AC16      : output : 2.5 V             :         : 3B        : N              
+IR_ALU[18]                   : AC17      : input  : 2.5 V             :         : 3B        : N              
+ALU_MAR[8]                   : AC18      : output : 2.5 V             :         : 3B        : N              
+LSRRegistero[10]             : AC19      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AC20      : power  :                   : 2.5V    : 4A        :                
+Registers_ALU[57]            : AC21      : input  : 2.5 V             :         : 4A        : N              
+LSRegistero[19]              : AC22      : output : 2.5 V             :         : 4A        : N              
+AdderResulto[26]             : AC23      : output : 2.5 V             :         : 5A        : N              
+MulResulto[16]               : AC24      : output : 2.5 V             :         : 5A        : N              
+GND                          : AC25      : gnd    :                   :         :           :                
+AddrMode32o[10]              : AC26      : output : 2.5 V             :         : 5A        : N              
+ALU_CSR[1]                   : AC27      : output : 2.5 V             :         : 5A        : N              
+LSRegistero[18]              : AC28      : output : 2.5 V             :         : 5A        : N              
+ALU_PC[14]                   : AC29      : output : 2.5 V             :         : 5A        : N              
+VCCIO5B                      : AC30      : power  :                   : 2.5V    : 5B        :                
+IR_ALU[24]                   : AC31      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[38]            : AC32      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[51]            : AC33      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[34]            : AC34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AD1       : gnd    :                   :         :           :                
+GND                          : AD2       : gnd    :                   :         :           :                
+GXB_NC                       : AD3       :        :                   :         : B0L       :                
+GXB_NC                       : AD4       :        :                   :         : B0L       :                
+GND                          : AD5       : gnd    :                   :         :           :                
+GND                          : AD6       : gnd    :                   :         :           :                
+GND                          : AD7       : gnd    :                   :         :           :                
+VCCE_GXBL                    : AD8       : power  :                   : 1.1V    :           :                
+GND                          : AD9       : gnd    :                   :         :           :                
+GND                          : AD10      : gnd    :                   :         :           :                
+ASRRegistero[19]             : AD11      : output : 2.5 V             :         : 3A        : N              
+LSRegistero[3]               : AD12      : output : 2.5 V             :         : 3A        : N              
+VCCIO3A                      : AD13      : power  :                   : 2.5V    : 3A        :                
+ALU_Registers[29]            : AD14      : output : 2.5 V             :         : 3A        : N              
+LSRegistero[23]              : AD15      : output : 2.5 V             :         : 3A        : N              
+Registers_ALU[61]            : AD16      : input  : 2.5 V             :         : 3B        : N              
+IR_ALU[20]                   : AD17      : input  : 2.5 V             :         : 3B        : N              
+GND                          : AD18      : gnd    :                   :         :           :                
+ASRRegistero[0]              : AD19      : output : 2.5 V             :         : 4A        : N              
+IR_ALU[8]                    : AD20      : input  : 2.5 V             :         : 4A        : N              
+ALU_MAR[24]                  : AD21      : output : 2.5 V             :         : 4A        : N              
+Registers_ALU[30]            : AD22      : input  : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AD23      : power  :                   : 2.5V    : 4A        :                
+AdderResulto[14]             : AD24      : output : 2.5 V             :         : 5A        : N              
+AdderResulto[13]             : AD25      : output : 2.5 V             :         : 5A        : N              
+VCCA_FPLL                    : AD26      : power  :                   : 2.5V    :           :                
+VCCPGM                       : AD27      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+GND                          : AD28      : gnd    :                   :         :           :                
+LSRegistero[15]              : AD29      : output : 2.5 V             :         : 5A        : N              
+IR_ALU[21]                   : AD30      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[3]             : AD31      : input  : 2.5 V             :         : 5B        : N              
+Reset                        : AD32      : input  : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : AD33      : power  :                   : 2.5V    : 5B        :                
+Registers_ALU[45]            : AD34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AE1       :        :                   :         : B0L       :                
+GND                          : AE2       :        :                   :         : B0L       :                
+GND                          : AE3       : gnd    :                   :         :           :                
+GND                          : AE4       : gnd    :                   :         :           :                
+GND                          : AE5       : gnd    :                   :         :           :                
+GND                          : AE6       : gnd    :                   :         :           :                
+GND                          : AE7       : gnd    :                   :         :           :                
+GND                          : AE8       : gnd    :                   :         :           :                
+GND                          : AE9       : gnd    :                   :         :           :                
+TDI                          : AE10      : input  :                   :         : 3A        :                
+GND                          : AE11      : gnd    :                   :         :           :                
+VCC_AUX                      : AE12      : power  :                   : 2.5V    :           :                
+VCCPD3A                      : AE13      : power  :                   : 2.5V    : 3A        :                
+ALU_CSR[21]                  : AE14      : output : 2.5 V             :         : 3A        : N              
+VCCPD3A                      : AE15      : power  :                   : 2.5V    : 3A        :                
+VCCIO3B                      : AE16      : power  :                   : 2.5V    : 3B        :                
+VCCPD3B4A                    : AE17      : power  :                   : 2.5V    : 3B, 4A    :                
+VCC_AUX                      : AE18      : power  :                   : 2.5V    :           :                
+LSRRegistero[25]             : AE19      : output : 2.5 V             :         : 4A        : N              
+ALU_CSR[31]                  : AE20      : output : 2.5 V             :         : 4A        : N              
+GND                          : AE21      : gnd    :                   :         :           :                
+VCCPD3B4A                    : AE22      : power  :                   : 2.5V    : 3B, 4A    :                
+AddrMode34o[27]              : AE23      : output : 2.5 V             :         : 4A        : N              
+VCC_AUX                      : AE24      : power  :                   : 2.5V    :           :                
+AddrMode34o[24]              : AE25      : output : 2.5 V             :         : 4A        : N              
+VCCIO5A                      : AE26      : power  :                   : 2.5V    : 5A        :                
+VREFB5AN0                    : AE27      : power  :                   :         : 5A        :                
+AdderResulto[28]             : AE28      : output : 2.5 V             :         : 5A        : N              
+MulResulto[23]               : AE29      : output : 2.5 V             :         : 5A        : N              
+Registers_ALU[10]            : AE30      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AE31      : gnd    :                   :         :           :                
+Registers_ALU[36]            : AE32      : input  : 2.5 V             :         : 5B        : N              
+Control_ALU[29]              : AE33      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[17]            : AE34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AF1       : gnd    :                   :         :           :                
+GND                          : AF2       : gnd    :                   :         :           :                
+GXB_NC                       : AF3       :        :                   :         : B0L       :                
+GXB_NC                       : AF4       :        :                   :         : B0L       :                
+GND                          : AF5       : gnd    :                   :         :           :                
+GND                          : AF6       : gnd    :                   :         :           :                
+GND                          : AF7       : gnd    :                   :         :           :                
+NC                           : AF8       :        :                   :         :           :                
+VCCIO3A                      : AF9       : power  :                   : 2.5V    : 3A        :                
+DCLK                         : AF10      :        :                   :         : 3A        :                
+TDO                          : AF11      : output :                   :         : 3A        :                
+VCCPGM                       : AF12      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+CSR_ALU[28]                  : AF13      : input  : 2.5 V             :         : 3A        : N              
+GND                          : AF14      : gnd    :                   :         :           :                
+VCCPD3B4A                    : AF15      : power  :                   : 2.5V    : 3B, 4A    :                
+VCCPD3B4A                    : AF16      : power  :                   : 2.5V    : 3B, 4A    :                
+DNU                          : AF17      :        :                   :         :           :                
+PC_ALU[31]                   : AF18      : input  : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AF19      : power  :                   : 2.5V    : 4A        :                
+VCCPD3B4A                    : AF20      : power  :                   : 2.5V    : 3B, 4A    :                
+VCCPD3B4A                    : AF21      : power  :                   : 2.5V    : 3B, 4A    :                
+ASRRegistero[21]             : AF22      : output : 2.5 V             :         : 4A        : N              
+ALU_PC[22]                   : AF23      : output : 2.5 V             :         : 4A        : N              
+GND                          : AF24      : gnd    :                   :         :           :                
+CSR_ALU[22]                  : AF25      : input  : 2.5 V             :         : 4A        : N              
+LSRegistero[25]              : AF26      : output : 2.5 V             :         : 5A        : N              
+ALU_PC[23]                   : AF27      : output : 2.5 V             :         : 5A        : N              
+MulResulto[24]               : AF28      : output : 2.5 V             :         : 5A        : N              
+VCCIO5A                      : AF29      : power  :                   : 2.5V    : 5A        :                
+Registers_ALU[24]            : AF30      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[37]            : AF31      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[5]             : AF32      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[13]            : AF33      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AF34      : gnd    :                   :         :           :                
+GND                          : AG1       :        :                   :         : B0L       :                
+GND                          : AG2       :        :                   :         : B0L       :                
+GND                          : AG3       : gnd    :                   :         :           :                
+GND                          : AG4       : gnd    :                   :         :           :                
+GND                          : AG5       : gnd    :                   :         :           :                
+GND                          : AG6       : gnd    :                   :         :           :                
+GND                          : AG7       : gnd    :                   :         :           :                
+NC                           : AG8       :        :                   :         :           :                
+DNU                          : AG9       :        :                   :         :           :                
+nCSO, DATA4                  : AG10      :        :                   :         : 3A        :                
+TMS                          : AG11      : input  :                   :         : 3A        :                
+VCCIO3A                      : AG12      : power  :                   : 2.5V    : 3A        :                
+LSRegistero[7]               : AG13      : output : 2.5 V             :         : 3A        : N              
+ALU_Registers[22]            : AG14      : output : 2.5 V             :         : 3A        : N              
+Control_ALU[25]              : AG15      : input  : 2.5 V             :         : 3B        : N              
+ASRRegistero[8]              : AG16      : output : 2.5 V             :         : 3B        : N              
+GND                          : AG17      : gnd    :                   :         :           :                
+IR_ALU[10]                   : AG18      : input  : 2.5 V             :         : 4A        : N              
+Control_ALU[35]              : AG19      : input  : 2.5 V             :         : 4A        : N              
+VREFB4AN0                    : AG20      : power  :                   :         : 4A        :                
+ASRRegistero[5]              : AG21      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AG22      : power  :                   : 2.5V    : 4A        :                
+CSR_ALU[5]                   : AG23      : input  : 2.5 V             :         : 4A        : N              
+AddrMode32o[31]              : AG24      : output : 2.5 V             :         : 4A        : N              
+AdderResulto[7]              : AG25      : output : 2.5 V             :         : 4A        : N              
+PC_ALU[22]                   : AG26      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AG27      : gnd    :                   :         :           :                
+MulResulto[5]                : AG28      : output : 2.5 V             :         : 5A        : N              
+IR_ALU[16]                   : AG29      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[25]            : AG30      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[8]             : AG31      : input  : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : AG32      : power  :                   : 2.5V    : 5B        :                
+Registers_ALU[41]            : AG33      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[39]            : AG34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AH1       : gnd    :                   :         :           :                
+GND                          : AH2       : gnd    :                   :         :           :                
+GXB_NC                       : AH3       :        :                   :         : B0L       :                
+GXB_NC                       : AH4       :        :                   :         : B0L       :                
+GND                          : AH5       : gnd    :                   :         :           :                
+NC                           : AH6       :        :                   :         :           :                
+NC                           : AH7       :        :                   :         :           :                
+AS_DATA2, DATA2              : AH8       :        :                   :         : 3A        :                
+AS_DATA0, ASDO, DATA0        : AH9       :        :                   :         : 3A        :                
+GND                          : AH10      : gnd    :                   :         :           :                
+VREFB3AN0                    : AH11      : power  :                   :         : 3A        :                
+ALU_CSR[19]                  : AH12      : output : 2.5 V             :         : 3A        : N              
+ALU_Registers[17]            : AH13      : output : 2.5 V             :         : 3A        : N              
+LSRegistero[24]              : AH14      : output : 2.5 V             :         : 3A        : N              
+VCCIO3B                      : AH15      : power  :                   : 2.5V    : 3B        :                
+IR_ALU[14]                   : AH16      : input  : 2.5 V             :         : 3B        : N              
+ALU_Control[3]               : AH17      : output : 2.5 V             :         : 3B        : N              
+VREFB3BN0                    : AH18      : power  :                   :         : 3B        :                
+PC_ALU[25]                   : AH19      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AH20      : gnd    :                   :         :           :                
+AdderResulto[8]              : AH21      : output : 2.5 V             :         : 4A        : N              
+LSRRegistero[7]              : AH22      : output : 2.5 V             :         : 4A        : N              
+AddrMode32o[4]               : AH23      : output : 2.5 V             :         : 4A        : N              
+ALU_PC[30]                   : AH24      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AH25      : power  :                   : 2.5V    : 4A        :                
+AddrMode32o[25]              : AH26      : output : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH27      :        :                   :         : 4A        :                
+ALU_PC[28]                   : AH28      : output : 2.5 V             :         : 5A        : N              
+ASRRegistero[4]              : AH29      : output : 2.5 V             :         : 5A        : N              
+GND                          : AH30      : gnd    :                   :         :           :                
+Control_ALU[21]              : AH31      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[42]            : AH32      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[0]             : AH33      : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[33]            : AH34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AJ1       :        :                   :         : B0L       :                
+GND                          : AJ2       :        :                   :         : B0L       :                
+GND                          : AJ3       : gnd    :                   :         :           :                
+GND                          : AJ4       : gnd    :                   :         :           :                
+GND                          : AJ5       : gnd    :                   :         :           :                
+AS_DATA3, DATA3              : AJ6       :        :                   :         : 3A        :                
+AS_DATA1, DATA1              : AJ7       :        :                   :         : 3A        :                
+VCCIO3A                      : AJ8       : power  :                   : 2.5V    : 3A        :                
+LSRegistero[0]               : AJ9       : output : 2.5 V             :         : 3A        : N              
+ASRRegistero[22]             : AJ10      : output : 2.5 V             :         : 3A        : N              
+ASRRegistero[3]              : AJ11      : output : 2.5 V             :         : 3A        : N              
+ALU_Registers[19]            : AJ12      : output : 2.5 V             :         : 3A        : N              
+GND                          : AJ13      : gnd    :                   :         :           :                
+LSRegistero[20]              : AJ14      : output : 2.5 V             :         : 3A        : N              
+Control_ALU[27]              : AJ15      : input  : 2.5 V             :         : 3B        : N              
+LSRegistero[31]              : AJ16      : output : 2.5 V             :         : 3B        : N              
+LSRRegistero[6]              : AJ17      : output : 2.5 V             :         : 3B        : N              
+VCCIO4A                      : AJ18      : power  :                   : 2.5V    : 4A        :                
+Control_ALU[8]               : AJ19      : input  : 2.5 V             :         : 4A        : N              
+AdderResulto[22]             : AJ20      : output : 2.5 V             :         : 4A        : N              
+LSRRegistero[14]             : AJ21      : output : 2.5 V             :         : 4A        : N              
+ALU_CSR[29]                  : AJ22      : output : 2.5 V             :         : 4A        : N              
+GND                          : AJ23      : gnd    :                   :         :           :                
+ALU_MAR[19]                  : AJ24      : output : 2.5 V             :         : 4A        : N              
+LSRRegistero[23]             : AJ25      : output : 2.5 V             :         : 4A        : N              
+ASRRegistero[10]             : AJ26      : output : 2.5 V             :         : 4A        : N              
+CSR_ALU[6]                   : AJ27      : input  : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AJ28      : power  :                   : 2.5V    : 4A        :                
+ALU_MAR[22]                  : AJ29      : output : 2.5 V             :         : 4A        : N              
+Registers_ALU[18]            : AJ30      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[32]            : AJ31      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[21]            : AJ32      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AJ33      : gnd    :                   :         :           :                
+Control_ALU[14]              : AJ34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AK1       : gnd    :                   :         :           :                
+GND                          : AK2       : gnd    :                   :         :           :                
+GND                          : AK3       : gnd    :                   :         :           :                
+NC                           : AK4       :        :                   :         :           :                
+TCK                          : AK5       : input  :                   :         : 3A        :                
+GND                          : AK6       : gnd    :                   :         :           :                
+LSRRegistero[16]             : AK7       : output : 2.5 V             :         : 3A        : N              
+AddrMode34o[4]               : AK8       : output : 2.5 V             :         : 3A        : N              
+ASRRegistero[29]             : AK9       : output : 2.5 V             :         : 3A        : N              
+IR_ALU[28]                   : AK10      : input  : 2.5 V             :         : 3A        : N              
+VCCIO3A                      : AK11      : power  :                   : 2.5V    : 3A        :                
+LSRegistero[27]              : AK12      : output : 2.5 V             :         : 3A        : N              
+LSRegistero[29]              : AK13      : output : 2.5 V             :         : 3A        : N              
+Control_ALU[19]              : AK14      : input  : 2.5 V             :         : 3A        : N              
+ASRRegistero[18]             : AK15      : output : 2.5 V             :         : 3B        : N              
+GND                          : AK16      : gnd    :                   :         :           :                
+Control_ALU[2]               : AK17      : input  : 2.5 V             :         : 3B        : N              
+AddrMode32o[19]              : AK18      : output : 2.5 V             :         : 3B        : N              
+Control_ALU[11]              : AK19      : input  : 2.5 V             :         : 4A        : N              
+MulResulto[3]                : AK20      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AK21      : power  :                   : 2.5V    : 4A        :                
+ALU_Registers[9]             : AK22      : output : 2.5 V             :         : 4A        : N              
+AddrMode34o[1]               : AK23      : output : 2.5 V             :         : 4A        : N              
+IR_ALU[4]                    : AK24      : input  : 2.5 V             :         : 4A        : N              
+CSR_ALU[0]                   : AK25      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AK26      : gnd    :                   :         :           :                
+ALU_MAR[12]                  : AK27      : output : 2.5 V             :         : 4A        : N              
+Registers_ALU[26]            : AK28      : input  : 2.5 V             :         : 4A        : N              
+AddrMode34o[9]               : AK29      : output : 2.5 V             :         : 4A        : N              
+ASRRegistero[15]             : AK30      : output : 2.5 V             :         : 5A        : N              
+VCCIO5A                      : AK31      : power  :                   : 2.5V    : 5A        :                
+Registers_ALU[20]            : AK32      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[22]            : AK33      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[2]             : AK34      : input  : 2.5 V             :         : 5B        : N              
+NC                           : AL1       :        :                   :         :           :                
+NC                           : AL2       :        :                   :         :           :                
+NC                           : AL3       :        :                   :         :           :                
+NC                           : AL4       :        :                   :         :           :                
+GND                          : AL5       : gnd    :                   :         :           :                
+AddrMode34o[3]               : AL6       : output : 2.5 V             :         : 3A        : N              
+IR_ALU[29]                   : AL7       : input  : 2.5 V             :         : 3A        : N              
+LSRRegistero[2]              : AL8       : output : 2.5 V             :         : 3A        : N              
+GND                          : AL9       : gnd    :                   :         :           :                
+AdderResulto[30]             : AL10      : output : 2.5 V             :         : 3A        : N              
+Registers_ALU[62]            : AL11      : input  : 2.5 V             :         : 3B        : N              
+Control_ALU[36]              : AL12      : input  : 2.5 V             :         : 3B        : N              
+ALU_CSR[30]                  : AL13      : output : 2.5 V             :         : 3B        : N              
+VCCIO3B                      : AL14      : power  :                   : 2.5V    : 3B        :                
+ALU_CSR[20]                  : AL15      : output : 2.5 V             :         : 3B        : N              
+Control_ALU[0]               : AL16      : input  : 2.5 V             :         : 3B        : N              
+PC_ALU[5]                    : AL17      : input  : 2.5 V             :         : 3B        : N              
+ALU_MAR[2]                   : AL18      : output : 2.5 V             :         : 3B        : N              
+GND                          : AL19      : gnd    :                   :         :           :                
+PC_ALU[1]                    : AL20      : input  : 2.5 V             :         : 4A        : N              
+ALU_Registers[0]             : AL21      : output : 2.5 V             :         : 4A        : N              
+ALU_CSR[4]                   : AL22      : output : 2.5 V             :         : 4A        : N              
+PC_ALU[10]                   : AL23      : input  : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AL24      : power  :                   : 2.5V    : 4A        :                
+ALU_MAR[14]                  : AL25      : output : 2.5 V             :         : 4A        : N              
+ALU_Registers[25]            : AL26      : output : 2.5 V             :         : 4A        : N              
+Registers_ALU[54]            : AL27      : input  : 2.5 V             :         : 4A        : N              
+MulResulto[0]                : AL28      : output : 2.5 V             :         : 4A        : N              
+GND                          : AL29      : gnd    :                   :         :           :                
+MulResulto[31]               : AL30      : output : 2.5 V             :         : 4A        : N              
+CSR_ALU[30]                  : AL31      : input  : 2.5 V             :         : 4A        : N              
+Registers_ALU[49]            : AL32      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[48]            : AL33      : input  : 2.5 V             :         : 5A        : N              
+GND                          : AL34      : gnd    :                   :         :           :                
+NC                           : AM1       :        :                   :         :           :                
+NC                           : AM2       :        :                   :         :           :                
+GND                          : AM3       : gnd    :                   :         :           :                
+LSRegistero[11]              : AM4       : output : 2.5 V             :         : 3A        : N              
+ALU_CSR[6]                   : AM5       : output : 2.5 V             :         : 3A        : N              
+ASRRegistero[12]             : AM6       : output : 2.5 V             :         : 3A        : N              
+VCCIO3A                      : AM7       : power  :                   : 2.5V    : 3A        :                
+ALU_Registers[11]            : AM8       : output : 2.5 V             :         : 3A        : N              
+ALU_CSR[14]                  : AM9       : output : 2.5 V             :         : 3A        : N              
+ALU_CSR[11]                  : AM10      : output : 2.5 V             :         : 3A        : N              
+ASRRegistero[11]             : AM11      : output : 2.5 V             :         : 3B        : N              
+GND                          : AM12      : gnd    :                   :         :           :                
+Control_ALU[16]              : AM13      : input  : 2.5 V             :         : 3B        : N              
+AdderResulto[10]             : AM14      : output : 2.5 V             :         : 3B        : N              
+ALU_Registers[30]            : AM15      : output : 2.5 V             :         : 3B        : N              
+LSRRegistero[19]             : AM16      : output : 2.5 V             :         : 3B        : N              
+VCCIO3B                      : AM17      : power  :                   : 2.5V    : 3B        :                
+PC_ALU[26]                   : AM18      : input  : 2.5 V             :         : 3B        : N              
+PC_ALU[23]                   : AM19      : input  : 2.5 V             :         : 4A        : N              
+Control_ALU[34]              : AM20      : input  : 2.5 V             :         : 4A        : N              
+Control_ALU[1]               : AM21      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AM22      : gnd    :                   :         :           :                
+ASRRegistero[1]              : AM23      : output : 2.5 V             :         : 4A        : N              
+ALU_PC[13]                   : AM24      : output : 2.5 V             :         : 4A        : N              
+LSRegistero[1]               : AM25      : output : 2.5 V             :         : 4A        : N              
+AdderResulto[18]             : AM26      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AM27      : power  :                   : 2.5V    : 4A        :                
+Control_ALU[4]               : AM28      : input  : 2.5 V             :         : 4A        : N              
+LSRegistero[10]              : AM29      : output : 2.5 V             :         : 4A        : N              
+Control_ALU[26]              : AM30      : input  : 2.5 V             :         : 4A        : N              
+Registers_ALU[27]            : AM31      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AM32      : gnd    :                   :         :           :                
+Registers_ALU[56]            : AM33      : input  : 2.5 V             :         : 5A        : N              
+Registers_ALU[35]            : AM34      : input  : 2.5 V             :         : 5B        : N              
+NC                           : AN1       :        :                   :         :           :                
+NC                           : AN2       :        :                   :         :           :                
+NC                           : AN3       :        :                   :         :           :                
+ALU_CSR[22]                  : AN4       : output : 2.5 V             :         : 3A        : N              
+LSRegistero[26]              : AN5       : output : 2.5 V             :         : 3A        : N              
+GND                          : AN6       : gnd    :                   :         :           :                
+ALU_MAR[30]                  : AN7       : output : 2.5 V             :         : 3A        : N              
+ALU_PC[1]                    : AN8       : output : 2.5 V             :         : 3A        : N              
+ALU_CSR[27]                  : AN9       : output : 2.5 V             :         : 3A        : N              
+VCCIO3B                      : AN10      : power  :                   : 2.5V    : 3B        :                
+Registers_ALU[60]            : AN11      : input  : 2.5 V             :         : 3B        : N              
+AdderResulto[24]             : AN12      : output : 2.5 V             :         : 3B        : N              
+ASRRegistero[31]             : AN13      : output : 2.5 V             :         : 3B        : N              
+ASRRegistero[20]             : AN14      : output : 2.5 V             :         : 3B        : N              
+GND                          : AN15      : gnd    :                   :         :           :                
+ALU_CSR[0]                   : AN16      : output : 2.5 V             :         : 3B        : N              
+ALU_PC[12]                   : AN17      : output : 2.5 V             :         : 3B        : N              
+ALU_PC[2]                    : AN18      : output : 2.5 V             :         : 3B        : N              
+ALU_MAR[23]                  : AN19      : output : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AN20      : power  :                   : 2.5V    : 4A        :                
+ALU_MAR[18]                  : AN21      : output : 2.5 V             :         : 4A        : N              
+ALU_MAR[13]                  : AN22      : output : 2.5 V             :         : 4A        : N              
+PC_ALU[17]                   : AN23      : input  : 2.5 V             :         : 4A        : N              
+ALU_PC[4]                    : AN24      : output : 2.5 V             :         : 4A        : N              
+GND                          : AN25      : gnd    :                   :         :           :                
+PC_ALU[21]                   : AN26      : input  : 2.5 V             :         : 4A        : N              
+ALU_MAR[7]                   : AN27      : output : 2.5 V             :         : 4A        : N              
+ALU_Registers[31]            : AN28      : output : 2.5 V             :         : 4A        : N              
+IR_ALU[3]                    : AN29      : input  : 2.5 V             :         : 4A        : N              
+VCCIO4A                      : AN30      : power  :                   : 2.5V    : 4A        :                
+Registers_ALU[31]            : AN31      : input  : 2.5 V             :         : 4A        : N              
+AddrMode32o[3]               : AN32      : output : 2.5 V             :         : 4A        : N              
+Registers_ALU[29]            : AN33      : input  : 2.5 V             :         : 5A        : N              
+Control_ALU[30]              : AN34      : input  : 2.5 V             :         : 5B        : N              
+GND                          : AP2       : gnd    :                   :         :           :                
+NC                           : AP3       :        :                   :         :           :                
+GND                          : AP4       : gnd    :                   :         :           :                
+ALU_Registers[8]             : AP5       : output : 2.5 V             :         : 3A        : N              
+LSRRegistero[3]              : AP6       : output : 2.5 V             :         : 3A        : N              
+LSRegistero[22]              : AP7       : output : 2.5 V             :         : 3A        : N              
+GND                          : AP8       : gnd    :                   :         :           :                
+Control_ALU[28]              : AP9       : input  : 2.5 V             :         : 3B        : N              
+ALU_Registers[20]            : AP10      : output : 2.5 V             :         : 3B        : N              
+AdderResulto[16]             : AP11      : output : 2.5 V             :         : 3B        : N              
+AdderResulto[21]             : AP12      : output : 2.5 V             :         : 3B        : N              
+GND                          : AP13      : gnd    :                   :         :           :                
+ALU_MAR[31]                  : AP14      : output : 2.5 V             :         : 3B        : N              
+IR_ALU[13]                   : AP15      : input  : 2.5 V             :         : 3B        : N              
+ALU_MAR[21]                  : AP16      : output : 2.5 V             :         : 3B        : N              
+Registers_ALU[63]            : AP17      : input  : 2.5 V             :         : 3B        : N              
+GND                          : AP18      : gnd    :                   :         :           :                
+PC_ALU[15]                   : AP19      : input  : 2.5 V             :         : 4A        : N              
+PC_ALU[18]                   : AP20      : input  : 2.5 V             :         : 4A        : N              
+ALU_PC[8]                    : AP21      : output : 2.5 V             :         : 4A        : N              
+PC_ALU[29]                   : AP22      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AP23      : gnd    :                   :         :           :                
+PC_ALU[28]                   : AP24      : input  : 2.5 V             :         : 4A        : N              
+ALU_MAR[3]                   : AP25      : output : 2.5 V             :         : 4A        : N              
+ALU_MAR[1]                   : AP26      : output : 2.5 V             :         : 4A        : N              
+IR_ALU[26]                   : AP27      : input  : 2.5 V             :         : 4A        : N              
+GND                          : AP28      : gnd    :                   :         :           :                
+PC_ALU[3]                    : AP29      : input  : 2.5 V             :         : 4A        : N              
+ALU_PC[7]                    : AP30      : output : 2.5 V             :         : 4A        : N              
+Registers_ALU[59]            : AP31      : input  : 2.5 V             :         : 4A        : N              
+ALU_Registers[12]            : AP32      : output : 2.5 V             :         : 4A        : N              
+GND                          : AP33      : gnd    :                   :         :           :                
+LSRRegistero[22]             : B1        : output : 2.5 V             :         : 8A        : N              
 GND                          : B2        : gnd    :                   :         :           :                
-ArithmeticShiftRightRegister[15] : B3        : output : 2.5 V             :         : 8         : N              
-ArithmeticShiftRightRegister[19] : B4        : output : 2.5 V             :         : 8         : N              
-DataIn[22]                   : B5        : input  : 2.5 V             :         : 8         : N              
-DataIn[21]                   : B6        : input  : 2.5 V             :         : 8         : N              
-ArithmeticShiftRightRegister[11] : B7        : output : 2.5 V             :         : 8         : N              
-GND+                         : B8        :        :                   :         : 8         :                
-GND+                         : B9        :        :                   :         : 7         :                
-ArithmeticShiftRightRegister[9] : B10       : output : 2.5 V             :         : 7         : N              
-DataIn[6]                    : B11       : input  : 2.5 V             :         : 7         : N              
-ArithmeticShiftRightRegister[4] : B12       : output : 2.5 V             :         : 7         : N              
-DataIn[7]                    : B13       : input  : 2.5 V             :         : 7         : N              
-DataIn[27]                   : B14       : input  : 2.5 V             :         : 7         : N              
-GND                          : B15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : B16       :        :                   :         : 6         :                
-~ALTERA_ASDO_DATA1~ / RESERVED_INPUT_WITH_WEAK_PULLUP : C1        : input  : 2.5 V             :         : 1         : N              
-DataIn[20]                   : C2        : input  : 2.5 V             :         : 1         : N              
-ArithmeticShiftRightRegister[25] : C3        : output : 2.5 V             :         : 8         : N              
-VCCIO8                       : C4        : power  :                   : 2.5V    : 8         :                
+AdderResulto[25]             : B3        : output : 2.5 V             :         : 8A        : N              
+ALU_Registers[16]            : B4        : output : 2.5 V             :         : 8A        : N              
+Control_ALU[6]               : B5        : input  : 2.5 V             :         : 8A        : N              
+ALU_Registers[28]            : B6        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : B7        : power  :                   : 2.5V    : 8A        :                
+Control_ALU[7]               : B8        : input  : 2.5 V             :         : 8A        : N              
+ALU_CSR[7]                   : B9        : output : 2.5 V             :         : 8A        : N              
+ALU_CSR[18]                  : B10       : output : 2.5 V             :         : 8A        : N              
+PC_ALU[24]                   : B11       : input  : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : B12       : power  :                   : 2.5V    : 8A        :                
+LSRRegistero[0]              : B13       : output : 2.5 V             :         : 8A        : N              
+Control_ALU[13]              : B14       : input  : 2.5 V             :         : 8A        : N              
+AdderResulto[5]              : B15       : output : 2.5 V             :         : 8A        : N              
+ALU_PC[26]                   : B16       : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : B17       : power  :                   : 2.5V    : 8A        :                
+Control_ALU[9]               : B18       : input  : 2.5 V             :         : 8A        : N              
+AddrMode34o[16]              : B19       : output : 2.5 V             :         : 7A        : N              
+ALU_MAR[20]                  : B20       : output : 2.5 V             :         : 7A        : N              
+ALU_MAR[9]                   : B21       : output : 2.5 V             :         : 7A        : N              
+GND                          : B22       : gnd    :                   :         :           :                
+PC_ALU[12]                   : B23       : input  : 2.5 V             :         : 7A        : N              
+PC_ALU[19]                   : B24       : input  : 2.5 V             :         : 7A        : N              
+IR_ALU[5]                    : B25       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[19]                  : B26       : input  : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : B27       : power  :                   : 2.5V    : 7A        :                
+CSR_ALU[1]                   : B28       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[12]                  : B29       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[25]                  : B30       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[21]                  : B31       : input  : 2.5 V             :         : 7A        : N              
+GND                          : B32       : gnd    :                   :         :           :                
+NC                           : B33       :        :                   :         :           :                
+GND                          : B34       : gnd    :                   :         :           :                
+AddrMode34o[13]              : C1        : output : 2.5 V             :         : 8A        : N              
+NC                           : C2        :        :                   :         :           :                
+GND                          : C3        : gnd    :                   :         :           :                
+GND                          : C4        : gnd    :                   :         :           :                
 GND                          : C5        : gnd    :                   :         :           :                
-ArithmeticShiftRightRegister[12] : C6        : output : 2.5 V             :         : 8         : N              
-VCCIO8                       : C7        : power  :                   : 2.5V    : 8         :                
-ArithmeticShiftRightRegister[30] : C8        : output : 2.5 V             :         : 8         : N              
-DataIn[8]                    : C9        : input  : 2.5 V             :         : 7         : N              
-VCCIO7                       : C10       : power  :                   : 2.5V    : 7         :                
-DataIn[17]                   : C11       : input  : 2.5 V             :         : 7         : N              
-GND                          : C12       : gnd    :                   :         :           :                
-VCCIO7                       : C13       : power  :                   : 2.5V    : 7         :                
-ArithmeticShiftRightRegister[1] : C14       : output : 2.5 V             :         : 7         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : C15       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : C16       :        :                   :         : 6         :                
-ArithmeticShiftRightRegister[22] : D1        : output : 2.5 V             :         : 1         : N              
-~ALTERA_FLASH_nCE_nCSO~ / RESERVED_INPUT_WITH_WEAK_PULLUP : D2        : input  : 2.5 V             :         : 1         : N              
-ArithmeticShiftRightRegister[18] : D3        : output : 2.5 V             :         : 8         : N              
-VCCD_PLL3                    : D4        : power  :                   : 1.2V    :           :                
-DataIn[9]                    : D5        : input  : 2.5 V             :         : 8         : N              
-ArithmeticShiftRightRegister[13] : D6        : output : 2.5 V             :         : 8         : N              
-GND                          : D7        : gnd    :                   :         :           :                
-ArithmeticShiftRightRegister[29] : D8        : output : 2.5 V             :         : 8         : N              
-DataIn[31]                   : D9        : input  : 2.5 V             :         : 7         : N              
-GND                          : D10       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D11       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D12       :        :                   :         : 7         :                
-VCCD_PLL2                    : D13       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D14       :        :                   :         : 7         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D15       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : D16       :        :                   :         : 6         :                
-Reloj                        : E1        : input  : 2.5 V             :         : 1         : N              
+ALU_Registers[13]            : C6        : output : 2.5 V             :         : 8A        : N              
+ASRRegistero[27]             : C7        : output : 2.5 V             :         : 8A        : N              
+ALU_Registers[24]            : C8        : output : 2.5 V             :         : 8A        : N              
+ALU_Registers[5]             : C9        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : C10       : power  :                   : 2.5V    : 8A        :                
+LSRRegistero[20]             : C11       : output : 2.5 V             :         : 8A        : N              
+LSRegistero[12]              : C12       : output : 2.5 V             :         : 8A        : N              
+PC_ALU[27]                   : C13       : input  : 2.5 V             :         : 8A        : N              
+ALU_MAR[25]                  : C14       : output : 2.5 V             :         : 8A        : N              
+GND                          : C15       : gnd    :                   :         :           :                
+IR_ALU[11]                   : C16       : input  : 2.5 V             :         : 8A        : N              
+ALU_PC[17]                   : C17       : output : 2.5 V             :         : 8A        : N              
+ALU_PC[5]                    : C18       : output : 2.5 V             :         : 8A        : N              
+NC                           : C19       :        :                   :         :           :                
+VCCIO7A                      : C20       : power  :                   : 2.5V    : 7A        :                
+ALU_MAR[10]                  : C21       : output : 2.5 V             :         : 7A        : N              
+LSRRegistero[18]             : C22       : output : 2.5 V             :         : 7A        : N              
+LSRRegistero[8]              : C23       : output : 2.5 V             :         : 7A        : N              
+ALU_Registers[4]             : C24       : output : 2.5 V             :         : 7A        : N              
+GND                          : C25       : gnd    :                   :         :           :                
+AdderResulto[1]              : C26       : output : 2.5 V             :         : 7A        : N              
+ASRRegistero[25]             : C27       : output : 2.5 V             :         : 7A        : N              
+CSR_ALU[7]                   : C28       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[11]                  : C29       : input  : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : C30       : power  :                   : 2.5V    : 7A        :                
+MulResulto[21]               : C31       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : C32       :        :                   :         : 7A        :                
+NC                           : C33       :        :                   :         :           :                
+NC                           : C34       :        :                   :         :           :                
+GND                          : D1        : gnd    :                   :         :           :                
+GND                          : D2        : gnd    :                   :         :           :                
+DNU                          : D3        :        :                   :         :           :                
+DNU                          : D4        :        :                   :         :           :                
+GND                          : D5        : gnd    :                   :         :           :                
+NC                           : D6        :        :                   :         :           :                
+MulResulto[2]                : D7        : output : 2.5 V             :         : 8A        : N              
+GND                          : D8        : gnd    :                   :         :           :                
+ALU_Registers[3]             : D9        : output : 2.5 V             :         : 8A        : N              
+LSRegistero[17]              : D10       : output : 2.5 V             :         : 8A        : N              
+LSRegistero[4]               : D11       : output : 2.5 V             :         : 8A        : N              
+CSR_ALU[17]                  : D12       : input  : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : D13       : power  :                   : 2.5V    : 8A        :                
+ALU_CSR[12]                  : D14       : output : 2.5 V             :         : 8A        : N              
+ALU_CSR[3]                   : D15       : output : 2.5 V             :         : 8A        : N              
+IR_ALU[27]                   : D16       : input  : 2.5 V             :         : 8A        : N              
+PC_ALU[8]                    : D17       : input  : 2.5 V             :         : 8A        : N              
+GND                          : D18       : gnd    :                   :         :           :                
+ALU_MAR[28]                  : D19       : output : 2.5 V             :         : 7A        : N              
+ALU_Control[2]               : D20       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[5]               : D21       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[5]               : D22       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : D23       : power  :                   : 2.5V    : 7A        :                
+AddrMode34o[6]               : D24       : output : 2.5 V             :         : 7A        : N              
+ALU_PC[31]                   : D25       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[6]               : D26       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[31]              : D27       : output : 2.5 V             :         : 7A        : N              
+GND                          : D28       : gnd    :                   :         :           :                
+AddrMode34o[7]               : D29       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : D30       :        :                   :         : 7A        :                
+NC                           : D31       :        :                   :         :           :                
+NC                           : D32       :        :                   :         :           :                
+GND                          : D33       : gnd    :                   :         :           :                
+NC                           : D34       :        :                   :         :           :                
+RREF                         : E1        :        :                   :         :           :                
 GND                          : E2        : gnd    :                   :         :           :                
-VCCIO1                       : E3        : power  :                   : 2.5V    : 1         :                
+GND                          : E3        : gnd    :                   :         :           :                
 GND                          : E4        : gnd    :                   :         :           :                
-GNDA3                        : E5        : gnd    :                   :         :           :                
-ArithmeticShiftRightRegister[28] : E6        : output : 2.5 V             :         : 8         : N              
-ArithmeticShiftRightRegister[8] : E7        : output : 2.5 V             :         : 8         : N              
-DataIn[30]                   : E8        : input  : 2.5 V             :         : 8         : N              
-ArithmeticShiftRightRegister[20] : E9        : output : 2.5 V             :         : 7         : N              
-ArithmeticShiftRightRegister[6] : E10       : output : 2.5 V             :         : 7         : N              
-DataIn[28]                   : E11       : input  : 2.5 V             :         : 7         : N              
-GNDA2                        : E12       : gnd    :                   :         :           :                
-GND                          : E13       : gnd    :                   :         :           :                
-VCCIO6                       : E14       : power  :                   : 2.5V    : 6         :                
-GND+                         : E15       :        :                   :         : 6         :                
-GND+                         : E16       :        :                   :         : 6         :                
-DataIn[19]                   : F1        : input  : 2.5 V             :         : 1         : N              
-DataIn[13]                   : F2        : input  : 2.5 V             :         : 1         : N              
-DataIn[15]                   : F3        : input  : 2.5 V             :         : 1         : N              
-nSTATUS                      : F4        :        :                   :         : 1         :                
-VCCA3                        : F5        : power  :                   : 2.5V    :           :                
-GND                          : F6        : gnd    :                   :         :           :                
-VCCINT                       : F7        : power  :                   : 1.2V    :           :                
-DataIn[11]                   : F8        : input  : 2.5 V             :         : 8         : N              
-DataIn[23]                   : F9        : input  : 2.5 V             :         : 7         : N              
-GND                          : F10       : gnd    :                   :         :           :                
-VCCINT                       : F11       : power  :                   : 1.2V    :           :                
-VCCA2                        : F12       : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F13       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F14       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : F15       :        :                   :         : 6         :                
-~ALTERA_nCEO~ / RESERVED_OUTPUT_OPEN_DRAIN : F16       : output : 2.5 V             :         : 6         : N              
-ArithmeticShiftRightRegister[16] : G1        : output : 2.5 V             :         : 1         : N              
-DataIn[16]                   : G2        : input  : 2.5 V             :         : 1         : N              
-VCCIO1                       : G3        : power  :                   : 2.5V    : 1         :                
+GND                          : E5        : gnd    :                   :         :           :                
+VCCIO8A                      : E6        : power  :                   : 2.5V    : 8A        :                
+AddrMode32o[13]              : E7        : output : 2.5 V             :         : 8A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : E8        :        :                   :         : 8A        :                
+LSRRegistero[13]             : E9        : output : 2.5 V             :         : 8A        : N              
+LSRRegistero[30]             : E10       : output : 2.5 V             :         : 8A        : N              
+GND                          : E11       : gnd    :                   :         :           :                
+LSRRegistero[4]              : E12       : output : 2.5 V             :         : 8A        : N              
+ALU_CSR[25]                  : E13       : output : 2.5 V             :         : 8A        : N              
+ALU_Registers[27]            : E14       : output : 2.5 V             :         : 8A        : N              
+Control_ALU[20]              : E15       : input  : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : E16       : power  :                   : 2.5V    : 8A        :                
+PC_ALU[7]                    : E17       : input  : 2.5 V             :         : 8A        : N              
+AddrMode34o[21]              : E18       : output : 2.5 V             :         : 8A        : N              
+PC_ALU[2]                    : E19       : input  : 2.5 V             :         : 7A        : N              
+AddrMode32o[0]               : E20       : output : 2.5 V             :         : 7A        : N              
+GND                          : E21       : gnd    :                   :         :           :                
+AddrMode34o[28]              : E22       : output : 2.5 V             :         : 7A        : N              
+LSRRegistero[31]             : E23       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[20]              : E24       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[23]              : E25       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : E26       : power  :                   : 2.5V    : 7A        :                
+CSR_ALU[10]                  : E27       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[18]                  : E28       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[31]                  : E29       : input  : 2.5 V             :         : 7A        : N              
+AddrMode34o[22]              : E30       : output : 2.5 V             :         : 7A        : N              
+GND                          : E31       : gnd    :                   :         :           :                
+NC                           : E32       :        :                   :         :           :                
+NC                           : E33       :        :                   :         :           :                
+NC                           : E34       :        :                   :         :           :                
+GND                          : F1        : gnd    :                   :         :           :                
+GND                          : F2        : gnd    :                   :         :           :                
+GXB_NC                       : F3        :        :                   :         : B3L       :                
+GXB_NC                       : F4        :        :                   :         : B3L       :                
+GND                          : F5        : gnd    :                   :         :           :                
+MSEL2                        : F6        :        :                   :         : 9A        :                
+nCE                          : F7        :        :                   :         : 9A        :                
+AddrMode32o[30]              : F8        : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : F9        : power  :                   : 2.5V    : 8A        :                
+AddrMode32o[22]              : F10       : output : 2.5 V             :         : 8A        : N              
+AddrMode34o[11]              : F11       : output : 2.5 V             :         : 8A        : N              
+AddrMode34o[10]              : F12       : output : 2.5 V             :         : 8A        : N              
+IR_ALU[2]                    : F13       : input  : 2.5 V             :         : 8A        : N              
+GND                          : F14       : gnd    :                   :         :           :                
+IR_ALU[22]                   : F15       : input  : 2.5 V             :         : 8A        : N              
+PC_ALU[16]                   : F16       : input  : 2.5 V             :         : 8A        : N              
+LSRRegistero[24]             : F17       : output : 2.5 V             :         : 8A        : N              
+ALU_PC[20]                   : F18       : output : 2.5 V             :         : 8A        : N              
+VCCIO7A                      : F19       : power  :                   : 2.5V    : 7A        :                
+AddrMode32o[7]               : F20       : output : 2.5 V             :         : 7A        : N              
+CSR_ALU[2]                   : F21       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[23]                  : F22       : input  : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F23       :        :                   :         : 7A        :                
+GND                          : F24       : gnd    :                   :         :           :                
+CSR_ALU[20]                  : F25       : input  : 2.5 V             :         : 7A        : N              
+MulResulto[12]               : F26       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[26]              : F27       : output : 2.5 V             :         : 7A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : F28       :        :                   :         : 7A        :                
+VCCIO7A                      : F29       : power  :                   : 2.5V    : 7A        :                
+AddrMode32o[21]              : F30       : output : 2.5 V             :         : 7A        : N              
+NC                           : F31       :        :                   :         :           :                
+NC                           : F32       :        :                   :         :           :                
+NC                           : F33       :        :                   :         :           :                
+GND                          : F34       : gnd    :                   :         :           :                
+GND                          : G1        :        :                   :         : B3L       :                
+GND                          : G2        :        :                   :         : B3L       :                
+GND                          : G3        : gnd    :                   :         :           :                
 GND                          : G4        : gnd    :                   :         :           :                
-ArithmeticShiftRightRegister[23] : G5        : output : 2.5 V             :         : 1         : N              
-VCCINT                       : G6        : power  :                   : 1.2V    :           :                
-VCCINT                       : G7        : power  :                   : 1.2V    :           :                
-VCCINT                       : G8        : power  :                   : 1.2V    :           :                
-VCCINT                       : G9        : power  :                   : 1.2V    :           :                
-VCCINT                       : G10       : power  :                   : 1.2V    :           :                
-GND                          : G11       : gnd    :                   :         :           :                
-MSEL2                        : G12       :        :                   :         : 6         :                
-GND                          : G13       : gnd    :                   :         :           :                
-VCCIO6                       : G14       : power  :                   : 2.5V    : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G15       :        :                   :         : 6         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : G16       :        :                   :         : 6         :                
-~ALTERA_DCLK~                : H1        : output : 2.5 V             :         : 1         : N              
-~ALTERA_DATA0~ / RESERVED_INPUT_WITH_WEAK_PULLUP : H2        : input  : 2.5 V             :         : 1         : N              
-TCK                          : H3        : input  :                   :         : 1         :                
-TDI                          : H4        : input  :                   :         : 1         :                
-nCONFIG                      : H5        :        :                   :         : 1         :                
-VCCINT                       : H6        : power  :                   : 1.2V    :           :                
-GND                          : H7        : gnd    :                   :         :           :                
-GND                          : H8        : gnd    :                   :         :           :                
-GND                          : H9        : gnd    :                   :         :           :                
+GND                          : G5        : gnd    :                   :         :           :                
+NC                           : G6        :        :                   :         :           :                
+GND                          : G7        : gnd    :                   :         :           :                
+nCONFIG                      : G8        :        :                   :         : 9A        :                
+nSTATUS                      : G9        :        :                   :         : 9A        :                
+CONF_DONE                    : G10       :        :                   :         : 9A        :                
+CSR_ALU[3]                   : G11       : input  : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : G12       : power  :                   : 2.5V    : 8A        :                
+ALU_CSR[23]                  : G13       : output : 2.5 V             :         : 8A        : N              
+LSRRegistero[11]             : G14       : output : 2.5 V             :         : 8A        : N              
+AdderResulto[15]             : G15       : output : 2.5 V             :         : 8A        : N              
+VREFB8AN0                    : G16       : power  :                   :         : 8A        :                
+GND                          : G17       : gnd    :                   :         :           :                
+ALU_MAR[4]                   : G18       : output : 2.5 V             :         : 8A        : N              
+VREFB7AN0                    : G19       : power  :                   :         : 7A        :                
+AddrMode32o[16]              : G20       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[25]              : G21       : output : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : G22       : power  :                   : 2.5V    : 7A        :                
+AddrMode32o[27]              : G23       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[15]              : G24       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[17]              : G25       : output : 2.5 V             :         : 7A        : N              
+CSR_ALU[26]                  : G26       : input  : 2.5 V             :         : 7A        : N              
+GND                          : G27       : gnd    :                   :         :           :                
+CSR_ALU[14]                  : G28       : input  : 2.5 V             :         : 7A        : N              
+MulResulto[1]                : G29       : output : 2.5 V             :         : 7A        : N              
+Control_ALU[32]              : G30       : input  : 2.5 V             :         : 6A        : N              
+AddrMode32o[1]               : G31       : output : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : G32       : power  :                   : 2.5V    : 6A        :                
+ALU_PC[0]                    : G33       : output : 2.5 V             :         : 6A        : N              
+MulResulto[15]               : G34       : output : 2.5 V             :         : 6A        : N              
+GND                          : H1        : gnd    :                   :         :           :                
+GND                          : H2        : gnd    :                   :         :           :                
+GXB_NC                       : H3        :        :                   :         : B3L       :                
+GXB_NC                       : H4        :        :                   :         : B3L       :                
+GND                          : H5        : gnd    :                   :         :           :                
+NC                           : H6        :        :                   :         :           :                
+MSEL4                        : H7        :        :                   :         : 9A        :                
+GND                          : H8        :        :                   :         : 9A        :                
+VCCBAT                       : H9        : power  :                   : 1.2V    :           :                
 GND                          : H10       : gnd    :                   :         :           :                
-VCCINT                       : H11       : power  :                   : 1.2V    :           :                
-MSEL1                        : H12       :        :                   :         : 6         :                
-MSEL0                        : H13       :        :                   :         : 6         :                
-CONF_DONE                    : H14       :        :                   :         : 6         :                
-GND                          : H15       : gnd    :                   :         :           :                
-GND                          : H16       : gnd    :                   :         :           :                
-ArithmeticShiftRightRegister[26] : J1        : output : 2.5 V             :         : 2         : N              
-DataIn[4]                    : J2        : input  : 2.5 V             :         : 2         : N              
-nCE                          : J3        :        :                   :         : 1         :                
-TDO                          : J4        : output :                   :         : 1         :                
-TMS                          : J5        : input  :                   :         : 1         :                
-VCCINT                       : J6        : power  :                   : 1.2V    :           :                
-GND                          : J7        : gnd    :                   :         :           :                
-GND                          : J8        : gnd    :                   :         :           :                
-GND                          : J9        : gnd    :                   :         :           :                
-GND                          : J10       : gnd    :                   :         :           :                
-GND                          : J11       : gnd    :                   :         :           :                
-VCCINT                       : J12       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J13       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : J16       :        :                   :         : 5         :                
-ArithmeticShiftRightRegister[27] : K1        : output : 2.5 V             :         : 2         : N              
-ArithmeticShiftRightRegister[17] : K2        : output : 2.5 V             :         : 2         : N              
-VCCIO2                       : K3        : power  :                   : 2.5V    : 2         :                
-GND                          : K4        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K5        :        :                   :         : 2         :                
+VCCPGM                       : H11       : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
+CSR_ALU[24]                  : H12       : input  : 2.5 V             :         : 8A        : N              
+LSRegistero[5]               : H13       : output : 2.5 V             :         : 8A        : N              
+ALU_CSR[5]                   : H14       : output : 2.5 V             :         : 8A        : N              
+VCCIO8A                      : H15       : power  :                   : 2.5V    : 8A        :                
+PC_ALU[20]                   : H16       : input  : 2.5 V             :         : 8A        : N              
+ALU_PC[9]                    : H17       : output : 2.5 V             :         : 8A        : N              
+ALU_Registers[26]            : H18       : output : 2.5 V             :         : 7A        : N              
+AdderResulto[31]             : H19       : output : 2.5 V             :         : 7A        : N              
+GND                          : H20       : gnd    :                   :         :           :                
+AddrMode32o[29]              : H21       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[8]               : H22       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[15]              : H23       : output : 2.5 V             :         : 7A        : N              
+CSR_ALU[4]                   : H24       : input  : 2.5 V             :         : 7A        : N              
+VCCIO7A                      : H25       : power  :                   : 2.5V    : 7A        :                
+AddrMode34o[18]              : H26       : output : 2.5 V             :         : 7A        : N              
+CSR_ALU[13]                  : H27       : input  : 2.5 V             :         : 7A        : N              
+ALU_MAR[17]                  : H28       : output : 2.5 V             :         : 6A        : N              
+ALU_Registers[21]            : H29       : output : 2.5 V             :         : 6A        : N              
+GND                          : H30       : gnd    :                   :         :           :                
+LSRegistero[21]              : H31       : output : 2.5 V             :         : 6A        : N              
+LSRRegistero[15]             : H32       : output : 2.5 V             :         : 6A        : N              
+AdderResulto[6]              : H33       : output : 2.5 V             :         : 6A        : N              
+LSRRegistero[17]             : H34       : output : 2.5 V             :         : 6A        : N              
+GND                          : J1        :        :                   :         : B3L       :                
+GND                          : J2        :        :                   :         : B3L       :                
+GND                          : J3        : gnd    :                   :         :           :                
+GND                          : J4        : gnd    :                   :         :           :                
+GND                          : J5        : gnd    :                   :         :           :                
+NC                           : J6        :        :                   :         :           :                
+NC                           : J7        :        :                   :         :           :                
+NC                           : J8        :        :                   :         :           :                
+NC                           : J9        :        :                   :         :           :                
+VCC_AUX                      : J10       : power  :                   : 2.5V    :           :                
+MSEL1                        : J11       :        :                   :         : 9A        :                
+MSEL0                        : J12       :        :                   :         : 9A        :                
+GND                          : J13       : gnd    :                   :         :           :                
+VCCPD7A8A                    : J14       : power  :                   : 2.5V    : 7A, 8A    :                
+ALU_Registers[14]            : J15       : output : 2.5 V             :         : 8A        : N              
+VCCPD7A8A                    : J16       : power  :                   : 2.5V    : 7A, 8A    :                
+DNU                          : J17       :        :                   :         :           :                
+VCCIO7A                      : J18       : power  :                   : 2.5V    : 7A        :                
+VCCPD7A8A                    : J19       : power  :                   : 2.5V    : 7A, 8A    :                
+Control_ALU[22]              : J20       : input  : 2.5 V             :         : 7A        : N              
+VCCPD7A8A                    : J21       : power  :                   : 2.5V    : 7A, 8A    :                
+VCCPD7A8A                    : J22       : power  :                   : 2.5V    : 7A, 8A    :                
+GND                          : J23       : gnd    :                   :         :           :                
+DNU                          : J24       :        :                   :         :           :                
+AddrMode34o[26]              : J25       : output : 2.5 V             :         : 7A        : N              
+GND                          : J26       :        :                   :         : 7A        :                
+NC                           : J27       :        :                   :         :           :                
+VCCIO6A                      : J28       : power  :                   : 2.5V    : 6A        :                
+MulResulto[28]               : J29       : output : 2.5 V             :         : 6A        : N              
+AddrMode34o[29]              : J30       : output : 2.5 V             :         : 6A        : N              
+IR_ALU[25]                   : J31       : input  : 2.5 V             :         : 6A        : N              
+ALU_MAR[15]                  : J32       : output : 2.5 V             :         : 6A        : N              
+GND                          : J33       : gnd    :                   :         :           :                
+MulResulto[14]               : J34       : output : 2.5 V             :         : 6A        : N              
+GND                          : K1        : gnd    :                   :         :           :                
+GND                          : K2        : gnd    :                   :         :           :                
+GXB_NC                       : K3        :        :                   :         : B3L       :                
+GXB_NC                       : K4        :        :                   :         : B3L       :                
+GND                          : K5        : gnd    :                   :         :           :                
 GND                          : K6        : gnd    :                   :         :           :                
-VCCINT                       : K7        : power  :                   : 1.2V    :           :                
+GND                          : K7        : gnd    :                   :         :           :                
 GND                          : K8        : gnd    :                   :         :           :                
-VCCINT                       : K9        : power  :                   : 1.2V    :           :                
-VCCINT                       : K10       : power  :                   : 1.2V    :           :                
-VCCINT                       : K11       : power  :                   : 1.2V    :           :                
-GND                          : K12       : gnd    :                   :         :           :                
-GND                          : K13       : gnd    :                   :         :           :                
-VCCIO5                       : K14       : power  :                   : 2.5V    : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : K16       :        :                   :         : 5         :                
-ArithmeticShiftRightRegister[21] : L1        : output : 2.5 V             :         : 2         : N              
-ArithmeticShiftRightRegister[14] : L2        : output : 2.5 V             :         : 2         : N              
-DataIn[12]                   : L3        : input  : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : L4        :        :                   :         : 2         :                
-VCCA1                        : L5        : power  :                   : 2.5V    :           :                
-VCCINT                       : L6        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L7        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L8        :        :                   :         : 3         :                
+NC                           : K9        :        :                   :         :           :                
+MSEL3                        : K10       :        :                   :         : 9A        :                
+VCCIO8A                      : K11       : power  :                   : 2.5V    : 8A        :                
+ASRRegistero[14]             : K12       : output : 2.5 V             :         : 8A        : N              
+ASRRegistero[30]             : K13       : output : 2.5 V             :         : 8A        : N              
+ALU_CSR[15]                  : K14       : output : 2.5 V             :         : 8A        : N              
+VCCPD7A8A                    : K15       : power  :                   : 2.5V    : 7A, 8A    :                
+GND                          : K16       : gnd    :                   :         :           :                
+VCCPD7A8A                    : K17       : power  :                   : 2.5V    : 7A, 8A    :                
+VCC_AUX                      : K18       : power  :                   : 2.5V    :           :                
+ALU_PC[16]                   : K19       : output : 2.5 V             :         : 7A        : N              
+VCCPD7A8A                    : K20       : power  :                   : 2.5V    : 7A, 8A    :                
+VCCIO7A                      : K21       : power  :                   : 2.5V    : 7A        :                
+CSR_ALU[29]                  : K22       : input  : 2.5 V             :         : 7A        : N              
+CSR_ALU[8]                   : K23       : input  : 2.5 V             :         : 7A        : N              
+VCC_AUX                      : K24       : power  :                   : 2.5V    :           :                
+CSR_ALU[9]                   : K25       : input  : 2.5 V             :         : 7A        : N              
+GND                          : K26       : gnd    :                   :         :           :                
+NC                           : K27       :        :                   :         :           :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : K28       :        :                   :         : 6A        :                
+ALU_PC[19]                   : K29       : output : 2.5 V             :         : 6A        : N              
+PC_ALU[4]                    : K30       : input  : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : K31       : power  :                   : 2.5V    : 6A        :                
+AdderResulto[2]              : K32       : output : 2.5 V             :         : 6A        : N              
+MulResulto[19]               : K33       : output : 2.5 V             :         : 6A        : N              
+MulResulto[10]               : K34       : output : 2.5 V             :         : 6A        : N              
+GND                          : L1        :        :                   :         : B3L       :                
+GND                          : L2        :        :                   :         : B3L       :                
+GND                          : L3        : gnd    :                   :         :           :                
+GND                          : L4        : gnd    :                   :         :           :                
+GND                          : L5        : gnd    :                   :         :           :                
+GND                          : L6        : gnd    :                   :         :           :                
+GND                          : L7        : gnd    :                   :         :           :                
+GND                          : L8        : gnd    :                   :         :           :                
 GND                          : L9        : gnd    :                   :         :           :                
-GND                          : L10       : gnd    :                   :         :           :                
-GND                          : L11       : gnd    :                   :         :           :                
-VCCA4                        : L12       : power  :                   : 2.5V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L13       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : L16       :        :                   :         : 5         :                
-GND+                         : M1        :        :                   :         : 2         :                
-Reset                        : M2        : input  : 2.5 V             :         : 2         : N              
-VCCIO2                       : M3        : power  :                   : 2.5V    : 2         :                
-GND                          : M4        : gnd    :                   :         :           :                
-GNDA1                        : M5        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M6        :        :                   :         : 3         :                
-DataIn[5]                    : M7        : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : M8        :        :                   :         : 3         :                
-VCCINT                       : M9        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : M10       :        :                   :         : 4         :                
-VCCINT                       : M11       : power  :                   : 1.2V    :           :                
-GNDA4                        : M12       : gnd    :                   :         :           :                
-GND                          : M13       : gnd    :                   :         :           :                
-VCCIO5                       : M14       : power  :                   : 2.5V    : 5         :                
-GND+                         : M15       :        :                   :         : 5         :                
-GND+                         : M16       :        :                   :         : 5         :                
-ArithmeticShiftRightRegister[24] : N1        : output : 2.5 V             :         : 2         : N              
-DataIn[24]                   : N2        : input  : 2.5 V             :         : 2         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : N3        :        :                   :         : 3         :                
-VCCD_PLL1                    : N4        : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N5        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N6        :        :                   :         : 3         :                
-GND                          : N7        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N8        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N9        :        :                   :         : 4         :                
+NC                           : L10       :        :                   :         :           :                
+LSRRegistero[5]              : L11       : output : 2.5 V             :         : 8A        : N              
+CSR_ALU[16]                  : L12       : input  : 2.5 V             :         : 8A        : N              
+ALU_CSR[8]                   : L13       : output : 2.5 V             :         : 8A        : N              
+GND                          : L14       : gnd    :                   :         :           :                
+ASRRegistero[17]             : L15       : output : 2.5 V             :         : 8A        : N              
+AdderResulto[27]             : L16       : output : 2.5 V             :         : 8A        : N              
+IR_ALU[9]                    : L17       : input  : 2.5 V             :         : 8A        : N              
+ALU_CSR[9]                   : L18       : output : 2.5 V             :         : 7A        : N              
+GND                          : L19       : gnd    :                   :         :           :                
+CSR_ALU[15]                  : L20       : input  : 2.5 V             :         : 7A        : N              
+AddrMode34o[14]              : L21       : output : 2.5 V             :         : 7A        : N              
+MulResulto[27]               : L22       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[24]              : L23       : output : 2.5 V             :         : 7A        : N              
+GND                          : L24       : gnd    :                   :         :           :                
+AddrMode32o[18]              : L25       : output : 2.5 V             :         : 7A        : N              
+NC                           : L26       :        :                   :         :           :                
+AddrMode32o[9]               : L27       : output : 2.5 V             :         : 6A        : N              
+AddrMode32o[14]              : L28       : output : 2.5 V             :         : 6A        : N              
+GND                          : L29       : gnd    :                   :         :           :                
+LSRegistero[6]               : L30       : output : 2.5 V             :         : 6A        : N              
+ALU_MAR[29]                  : L31       : output : 2.5 V             :         : 6A        : N              
+MulResulto[30]               : L32       : output : 2.5 V             :         : 6A        : N              
+ALU_MAR[0]                   : L33       : output : 2.5 V             :         : 6A        : N              
+GND                          : L34       : gnd    :                   :         :           :                
+GND                          : M1        : gnd    :                   :         :           :                
+GND                          : M2        : gnd    :                   :         :           :                
+GXB_NC                       : M3        :        :                   :         : B2L       :                
+GXB_NC                       : M4        :        :                   :         : B2L       :                
+GND                          : M5        : gnd    :                   :         :           :                
+GND                          : M6        : gnd    :                   :         :           :                
+GND                          : M7        : gnd    :                   :         :           :                
+VCCE_GXBL                    : M8        : power  :                   : 1.1V    :           :                
+GND                          : M9        : gnd    :                   :         :           :                
+GND                          : M10       : gnd    :                   :         :           :                
+VCCA_FPLL                    : M11       : power  :                   : 2.5V    :           :                
+GND                          : M12       : gnd    :                   :         :           :                
+ASRRegistero[24]             : M13       : output : 2.5 V             :         : 8A        : N              
+LSRRegistero[9]              : M14       : output : 2.5 V             :         : 8A        : N              
+ALU_Registers[23]            : M15       : output : 2.5 V             :         : 8A        : N              
+ALU_MAR[27]                  : M16       : output : 2.5 V             :         : 8A        : N              
+GND                          : M17       : gnd    :                   :         :           :                
+IR_ALU[7]                    : M18       : input  : 2.5 V             :         : 7A        : N              
+ALU_PC[21]                   : M19       : output : 2.5 V             :         : 7A        : N              
+ALU_PC[25]                   : M20       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[11]              : M21       : output : 2.5 V             :         : 7A        : N              
+GND                          : M22       : gnd    :                   :         :           :                
+AdderResulto[9]              : M23       : output : 2.5 V             :         : 7A        : N              
+AddrMode34o[20]              : M24       : output : 2.5 V             :         : 7A        : N              
+ASRRegistero[2]              : M25       : output : 2.5 V             :         : 7A        : N              
+VCCA_FPLL                    : M26       : power  :                   : 2.5V    :           :                
+VCCIO6A                      : M27       : power  :                   : 2.5V    : 6A        :                
+MulResulto[9]                : M28       : output : 2.5 V             :         : 6A        : N              
+AddrMode32o[28]              : M29       : output : 2.5 V             :         : 6A        : N              
+AddrMode34o[30]              : M30       : output : 2.5 V             :         : 6A        : N              
+LSRegistero[8]               : M31       : output : 2.5 V             :         : 6A        : N              
+GND                          : M32       : gnd    :                   :         :           :                
+ALU_MAR[6]                   : M33       : output : 2.5 V             :         : 6A        : N              
+ASRRegistero[26]             : M34       : output : 2.5 V             :         : 6A        : N              
+GND                          : N1        :        :                   :         : B2L       :                
+GND                          : N2        :        :                   :         : B2L       :                
+GND                          : N3        : gnd    :                   :         :           :                
+GND                          : N4        : gnd    :                   :         :           :                
+GND                          : N5        : gnd    :                   :         :           :                
+GND                          : N6        : gnd    :                   :         :           :                
+VCCL_GXBL                    : N7        : power  :                   : 1.1V    :           :                
+GND                          : N8        : gnd    :                   :         :           :                
+VCCH_GXBL                    : N9        : power  :                   : 2.5V    :           :                
 GND                          : N10       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N12       :        :                   :         : 4         :                
-VCCD_PLL4                    : N13       : power  :                   : 1.2V    :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N14       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : N16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P1        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P2        :        :                   :         : 2         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P3        :        :                   :         : 3         :                
-VCCIO3                       : P4        : power  :                   : 2.5V    : 3         :                
+GND                          : N11       : gnd    :                   :         :           :                
+ALU_CSR[16]                  : N12       : output : 2.5 V             :         : 8A        : N              
+AddrMode32o[8]               : N13       : output : 2.5 V             :         : 8A        : N              
+ALU_CSR[10]                  : N14       : output : 2.5 V             :         : 8A        : N              
+VCC                          : N15       : power  :                   : 1.1V    :           :                
+GND                          : N16       : gnd    :                   :         :           :                
+VCC                          : N17       : power  :                   : 1.1V    :           :                
+GND                          : N18       : gnd    :                   :         :           :                
+VCC                          : N19       : power  :                   : 1.1V    :           :                
+GND                          : N20       : gnd    :                   :         :           :                
+VCC                          : N21       : power  :                   : 1.1V    :           :                
+AddrMode32o[12]              : N22       : output : 2.5 V             :         : 7A        : N              
+ALU_Control[0]               : N23       : output : 2.5 V             :         : 7A        : N              
+AddrMode32o[23]              : N24       : output : 2.5 V             :         : 7A        : N              
+GND                          : N25       : gnd    :                   :         :           :                
+VCCPD6A                      : N26       : power  :                   : 2.5V    : 6A        :                
+LSRRegistero[27]             : N27       : output : 2.5 V             :         : 6A        : N              
+MulResulto[6]                : N28       : output : 2.5 V             :         : 6A        : N              
+MulResulto[8]                : N29       : output : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : N30       : power  :                   : 2.5V    : 6A        :                
+MulResulto[18]               : N31       : output : 2.5 V             :         : 6A        : N              
+MulResulto[17]               : N32       : output : 2.5 V             :         : 6A        : N              
+ALU_PC[18]                   : N33       : output : 2.5 V             :         : 6A        : N              
+AdderResulto[19]             : N34       : output : 2.5 V             :         : 6A        : N              
+GND                          : P1        : gnd    :                   :         :           :                
+GND                          : P2        : gnd    :                   :         :           :                
+GXB_NC                       : P3        :        :                   :         : B2L       :                
+GXB_NC                       : P4        :        :                   :         : B2L       :                
 GND                          : P5        : gnd    :                   :         :           :                
-DataIn[26]                   : P6        : input  : 2.5 V             :         : 3         : N              
-VCCIO3                       : P7        : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P8        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P9        :        :                   :         : 4         :                
-VCCIO4                       : P10       : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P11       :        :                   :         : 4         :                
-GND                          : P12       : gnd    :                   :         :           :                
-VCCIO4                       : P13       : power  :                   : 2.5V    : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P14       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P15       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : P16       :        :                   :         : 5         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R1        :        :                   :         : 2         :                
-GND                          : R2        : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R3        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R4        :        :                   :         : 3         :                
-ArithmeticShiftRightRegister[10] : R5        : output : 2.5 V             :         : 3         : N              
-DataIn[10]                   : R6        : input  : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R7        :        :                   :         : 3         :                
-GND+                         : R8        :        :                   :         : 3         :                
-DataIn[0]                    : R9        : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : R10       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R13       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R14       :        :                   :         : 4         :                
-GND                          : R15       : gnd    :                   :         :           :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : R16       :        :                   :         : 5         :                
-VCCIO3                       : T1        : power  :                   : 2.5V    : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T2        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T3        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T4        :        :                   :         : 3         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T5        :        :                   :         : 3         :                
-ArithmeticShiftRightRegister[3] : T6        : output : 2.5 V             :         : 3         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T7        :        :                   :         : 3         :                
-GND+                         : T8        :        :                   :         : 3         :                
-Replace                      : T9        : input  : 2.5 V             :         : 4         : N              
-RESERVED_INPUT_WITH_WEAK_PULLUP : T10       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T11       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T12       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T13       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T14       :        :                   :         : 4         :                
-RESERVED_INPUT_WITH_WEAK_PULLUP : T15       :        :                   :         : 4         :                
-VCCIO4                       : T16       : power  :                   : 2.5V    : 4         :                
+GND                          : P6        : gnd    :                   :         :           :                
+GND                          : P7        : gnd    :                   :         :           :                
+VCCE_GXBL                    : P8        : power  :                   : 1.1V    :           :                
+GND                          : P9        : gnd    :                   :         :           :                
+GND                          : P10       :        :                   :         : B3L       :                
+GND                          : P11       : gnd    :                   :         :           :                
+VCC                          : P12       : power  :                   : 1.1V    :           :                
+GND                          : P13       : gnd    :                   :         :           :                
+AddrMode32o[2]               : P14       : output : 2.5 V             :         : 8A        : N              
+GND                          : P15       : gnd    :                   :         :           :                
+VCC                          : P16       : power  :                   : 1.1V    :           :                
+GND                          : P17       : gnd    :                   :         :           :                
+VCC                          : P18       : power  :                   : 1.1V    :           :                
+GND                          : P19       : gnd    :                   :         :           :                
+VCC                          : P20       : power  :                   : 1.1V    :           :                
+GND                          : P21       : gnd    :                   :         :           :                
+VCC                          : P22       : power  :                   : 1.1V    :           :                
+VCCIO6A                      : P23       : power  :                   : 2.5V    : 6A        :                
+AddrMode34o[17]              : P24       : output : 2.5 V             :         : 6A        : N              
+IR_ALU[6]                    : P25       : input  : 2.5 V             :         : 6A        : N              
+VCCPD6A                      : P26       : power  :                   : 2.5V    : 6A        :                
+IR_ALU[1]                    : P27       : input  : 2.5 V             :         : 6A        : N              
+GND                          : P28       : gnd    :                   :         :           :                
+VREFB6AN0                    : P29       : power  :                   :         : 6A        :                
+Control_ALU[3]               : P30       : input  : 2.5 V             :         : 6A        : N              
+ALU_CSR[26]                  : P31       : output : 2.5 V             :         : 6A        : N              
+AddrMode34o[0]               : P32       : output : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : P33       : power  :                   : 2.5V    : 6A        :                
+IR_ALU[19]                   : P34       : input  : 2.5 V             :         : 6A        : N              
+GND                          : R1        :        :                   :         : B2L       :                
+GND                          : R2        :        :                   :         : B2L       :                
+GND                          : R3        : gnd    :                   :         :           :                
+GND                          : R4        : gnd    :                   :         :           :                
+GND                          : R5        : gnd    :                   :         :           :                
+GND                          : R6        : gnd    :                   :         :           :                
+VCCL_GXBL                    : R7        : power  :                   : 1.1V    :           :                
+GND                          : R8        : gnd    :                   :         :           :                
+VCCE_GXBL                    : R9        : power  :                   : 1.1V    :           :                
+GND                          : R10       : gnd    :                   :         :           :                
+GND                          : R11       :        :                   :         : B3L       :                
+GND                          : R12       : gnd    :                   :         :           :                
+VCC                          : R13       : power  :                   : 1.1V    :           :                
+GND                          : R14       : gnd    :                   :         :           :                
+VCC                          : R15       : power  :                   : 1.1V    :           :                
+GND                          : R16       : gnd    :                   :         :           :                
+VCC                          : R17       : power  :                   : 1.1V    :           :                
+GND                          : R18       : gnd    :                   :         :           :                
+VCC                          : R19       : power  :                   : 1.1V    :           :                
+GND                          : R20       : gnd    :                   :         :           :                
+VCC                          : R21       : power  :                   : 1.1V    :           :                
+GND                          : R22       : gnd    :                   :         :           :                
+LSRRegistero[1]              : R23       : output : 2.5 V             :         : 6A        : N              
+ASRRegistero[13]             : R24       : output : 2.5 V             :         : 6A        : N              
+MulResulto[13]               : R25       : output : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : R26       : power  :                   : 2.5V    : 6A        :                
+ALU_CSR[24]                  : R27       : output : 2.5 V             :         : 6A        : N              
+ALU_CSR[2]                   : R28       : output : 2.5 V             :         : 6A        : N              
+MulResulto[11]               : R29       : output : 2.5 V             :         : 6A        : N              
+AddrMode34o[12]              : R30       : output : 2.5 V             :         : 6A        : N              
+GND                          : R31       : gnd    :                   :         :           :                
+Registers_ALU[16]            : R32       : input  : 2.5 V             :         : 6A        : N              
+ALU_MAR[5]                   : R33       : output : 2.5 V             :         : 6A        : N              
+ALU_Registers[2]             : R34       : output : 2.5 V             :         : 6A        : N              
+GND                          : T1        : gnd    :                   :         :           :                
+GND                          : T2        : gnd    :                   :         :           :                
+GXB_NC                       : T3        :        :                   :         : B2L       :                
+GXB_NC                       : T4        :        :                   :         : B2L       :                
+GND                          : T5        : gnd    :                   :         :           :                
+GND                          : T6        : gnd    :                   :         :           :                
+GND                          : T7        : gnd    :                   :         :           :                
+VCCH_GXBL                    : T8        : power  :                   : 2.5V    :           :                
+GND                          : T9        : gnd    :                   :         :           :                
+GND                          : T10       :        :                   :         : B2L       :                
+GND                          : T11       : gnd    :                   :         :           :                
+VCC                          : T12       : power  :                   : 1.1V    :           :                
+GND                          : T13       : gnd    :                   :         :           :                
+VCC                          : T14       : power  :                   : 1.1V    :           :                
+GND                          : T15       : gnd    :                   :         :           :                
+VCC                          : T16       : power  :                   : 1.1V    :           :                
+GND                          : T17       : gnd    :                   :         :           :                
+VCC                          : T18       : power  :                   : 1.1V    :           :                
+GND                          : T19       : gnd    :                   :         :           :                
+VCC                          : T20       : power  :                   : 1.1V    :           :                
+GND                          : T21       : gnd    :                   :         :           :                
+VCC                          : T22       : power  :                   : 1.1V    :           :                
+AdderResulto[29]             : T23       : output : 2.5 V             :         : 6A        : N              
+GND                          : T24       : gnd    :                   :         :           :                
+LSRegistero[28]              : T25       : output : 2.5 V             :         : 6A        : N              
+VCCPD6A                      : T26       : power  :                   : 2.5V    : 6A        :                
+MulResulto[7]                : T27       : output : 2.5 V             :         : 6A        : N              
+Registers_ALU[28]            : T28       : input  : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : T29       : power  :                   : 2.5V    : 6A        :                
+LSRRegistero[29]             : T30       : output : 2.5 V             :         : 6A        : N              
+AdderResulto[23]             : T31       : output : 2.5 V             :         : 6A        : N              
+ASRRegistero[6]              : T32       : output : 2.5 V             :         : 6A        : N              
+LSRegistero[16]              : T33       : output : 2.5 V             :         : 6A        : N              
+GND                          : T34       : gnd    :                   :         :           :                
+GND                          : U1        :        :                   :         : B2L       :                
+GND                          : U2        :        :                   :         : B2L       :                
+GND                          : U3        : gnd    :                   :         :           :                
+GND                          : U4        : gnd    :                   :         :           :                
+GND                          : U5        : gnd    :                   :         :           :                
+GND                          : U6        : gnd    :                   :         :           :                
+VCCL_GXBL                    : U7        : power  :                   : 1.1V    :           :                
+GND                          : U8        : gnd    :                   :         :           :                
+VCCE_GXBL                    : U9        : power  :                   : 1.1V    :           :                
+GND                          : U10       : gnd    :                   :         :           :                
+GND                          : U11       :        :                   :         : B2L       :                
+GND                          : U12       : gnd    :                   :         :           :                
+VCC                          : U13       : power  :                   : 1.1V    :           :                
+GND                          : U14       : gnd    :                   :         :           :                
+VCC                          : U15       : power  :                   : 1.1V    :           :                
+GND                          : U16       : gnd    :                   :         :           :                
+VCC                          : U17       : power  :                   : 1.1V    :           :                
+GND                          : U18       : gnd    :                   :         :           :                
+VCC                          : U19       : power  :                   : 1.1V    :           :                
+GND                          : U20       : gnd    :                   :         :           :                
+VCC                          : U21       : power  :                   : 1.1V    :           :                
+GND                          : U22       : gnd    :                   :         :           :                
+MulResulto[26]               : U23       : output : 2.5 V             :         : 6A        : N              
+IR_ALU[15]                   : U24       : input  : 2.5 V             :         : 6A        : N              
+IR_ALU[23]                   : U25       : input  : 2.5 V             :         : 6A        : N              
+VCCPD6A                      : U26       : power  :                   : 2.5V    : 6A        :                
+GND                          : U27       : gnd    :                   :         :           :                
+AdderResulto[3]              : U28       : output : 2.5 V             :         : 6A        : N              
+ALU_CSR[17]                  : U29       : output : 2.5 V             :         : 6A        : N              
+Registers_ALU[40]            : U30       : input  : 2.5 V             :         : 6A        : N              
+Registers_ALU[47]            : U31       : input  : 2.5 V             :         : 6A        : N              
+VCCIO6A                      : U32       : power  :                   : 2.5V    : 6A        :                
+Control_ALU[5]               : U33       : input  : 2.5 V             :         : 6A        : N              
+AdderResulto[11]             : U34       : output : 2.5 V             :         : 6A        : N              
+GND                          : V1        : gnd    :                   :         :           :                
+GND                          : V2        : gnd    :                   :         :           :                
+GXB_NC                       : V3        :        :                   :         : B1L       :                
+GXB_NC                       : V4        :        :                   :         : B1L       :                
+GND                          : V5        : gnd    :                   :         :           :                
+GND                          : V6        : gnd    :                   :         :           :                
+GND                          : V7        : gnd    :                   :         :           :                
+VCCE_GXBL                    : V8        : power  :                   : 1.1V    :           :                
+GND                          : V9        : gnd    :                   :         :           :                
+GND                          : V10       :        :                   :         : B1L       :                
+GND                          : V11       : gnd    :                   :         :           :                
+VCC                          : V12       : power  :                   : 1.1V    :           :                
+GND                          : V13       : gnd    :                   :         :           :                
+VCC                          : V14       : power  :                   : 1.1V    :           :                
+GND                          : V15       : gnd    :                   :         :           :                
+VCC                          : V16       : power  :                   : 1.1V    :           :                
+GND                          : V17       : gnd    :                   :         :           :                
+VCC                          : V18       : power  :                   : 1.1V    :           :                
+GND                          : V19       : gnd    :                   :         :           :                
+VCC                          : V20       : power  :                   : 1.1V    :           :                
+GND                          : V21       : gnd    :                   :         :           :                
+VCC                          : V22       : power  :                   : 1.1V    :           :                
+Registers_ALU[58]            : V23       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[14]            : V24       : input  : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : V25       : power  :                   : 2.5V    : 5B        :                
+VCCPD5B                      : V26       : power  :                   : 2.5V    : 5B        :                
+Registers_ALU[1]             : V27       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[43]            : V28       : input  : 2.5 V             :         : 5B        : N              
+VREFB5BN0                    : V29       : power  :                   :         : 5B        :                
+GND                          : V30       : gnd    :                   :         :           :                
+Control_ALU[31]              : V31       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[15]            : V32       : input  : 2.5 V             :         : 5B        : N              
+MulResulto[25]               : V33       : output : 2.5 V             :         : 6A        : N              
+LSRRegistero[12]             : V34       : output : 2.5 V             :         : 6A        : N              
+GND                          : W1        :        :                   :         : B1L       :                
+GND                          : W2        :        :                   :         : B1L       :                
+GND                          : W3        : gnd    :                   :         :           :                
+GND                          : W4        : gnd    :                   :         :           :                
+GND                          : W5        : gnd    :                   :         :           :                
+GND                          : W6        : gnd    :                   :         :           :                
+VCCL_GXBL                    : W7        : power  :                   : 1.1V    :           :                
+GND                          : W8        : gnd    :                   :         :           :                
+VCCH_GXBL                    : W9        : power  :                   : 2.5V    :           :                
+GND                          : W10       : gnd    :                   :         :           :                
+GND                          : W11       :        :                   :         : B1L       :                
+GND                          : W12       : gnd    :                   :         :           :                
+VCC                          : W13       : power  :                   : 1.1V    :           :                
+GND                          : W14       : gnd    :                   :         :           :                
+VCC                          : W15       : power  :                   : 1.1V    :           :                
+GND                          : W16       : gnd    :                   :         :           :                
+VCC                          : W17       : power  :                   : 1.1V    :           :                
+GND                          : W18       : gnd    :                   :         :           :                
+VCC                          : W19       : power  :                   : 1.1V    :           :                
+GND                          : W20       : gnd    :                   :         :           :                
+VCC                          : W21       : power  :                   : 1.1V    :           :                
+GND                          : W22       : gnd    :                   :         :           :                
+GND                          : W23       : gnd    :                   :         :           :                
+Registers_ALU[53]            : W24       : input  : 2.5 V             :         : 5A        : N              
+VCCPD5B                      : W25       : power  :                   : 2.5V    : 5B        :                
+Control_ALU[24]              : W26       : input  : 2.5 V             :         : 5B        : N              
+Reloj                        : W27       : input  : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : W28       : power  :                   : 2.5V    : 5B        :                
+Control_ALU[12]              : W29       : input  : 2.5 V             :         : 5B        : N              
+Control_ALU[10]              : W30       : input  : 2.5 V             :         : 5B        : N              
+Control_ALU[23]              : W31       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[46]            : W32       : input  : 2.5 V             :         : 5B        : N              
+GND                          : W33       : gnd    :                   :         :           :                
+Registers_ALU[12]            : W34       : input  : 2.5 V             :         : 6A        : N              
+GND                          : Y1        : gnd    :                   :         :           :                
+GND                          : Y2        : gnd    :                   :         :           :                
+GXB_NC                       : Y3        :        :                   :         : B1L       :                
+GXB_NC                       : Y4        :        :                   :         : B1L       :                
+GND                          : Y5        : gnd    :                   :         :           :                
+GND                          : Y6        : gnd    :                   :         :           :                
+GND                          : Y7        : gnd    :                   :         :           :                
+VCCE_GXBL                    : Y8        : power  :                   : 1.1V    :           :                
+GND                          : Y9        : gnd    :                   :         :           :                
+GND                          : Y10       : gnd    :                   :         :           :                
+GND                          : Y11       : gnd    :                   :         :           :                
+VCC                          : Y12       : power  :                   : 1.1V    :           :                
+GND                          : Y13       : gnd    :                   :         :           :                
+VCC                          : Y14       : power  :                   : 1.1V    :           :                
+GND                          : Y15       : gnd    :                   :         :           :                
+VCC                          : Y16       : power  :                   : 1.1V    :           :                
+GND                          : Y17       : gnd    :                   :         :           :                
+VCC                          : Y18       : power  :                   : 1.1V    :           :                
+GND                          : Y19       : gnd    :                   :         :           :                
+AdderResulto[4]              : Y20       : output : 2.5 V             :         : 4A        : N              
+GND                          : Y21       : gnd    :                   :         :           :                
+AdderResulto[0]              : Y22       : output : 2.5 V             :         : 5A        : N              
+IR_ALU[17]                   : Y23       : input  : 2.5 V             :         : 5A        : N              
+MulResulto[29]               : Y24       : output : 2.5 V             :         : 5A        : N              
+MulResulto[20]               : Y25       : output : 2.5 V             :         : 5A        : N              
+VCCIO5A                      : Y26       : power  :                   : 2.5V    : 5A        :                
+Registers_ALU[55]            : Y27       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[7]             : Y28       : input  : 2.5 V             :         : 5B        : N              
+IR_ALU[12]                   : Y29       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[11]            : Y30       : input  : 2.5 V             :         : 5B        : N              
+VCCIO5B                      : Y31       : power  :                   : 2.5V    : 5B        :                
+Registers_ALU[44]            : Y32       : input  : 2.5 V             :         : 5B        : N              
+Registers_ALU[19]            : Y33       : input  : 2.5 V             :         : 6A        : N              
+LSRegistero[13]              : Y34       : output : 2.5 V             :         : 6A        : N              
