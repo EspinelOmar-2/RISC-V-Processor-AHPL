@@ -19,7 +19,7 @@
 // the top level entity of the current Quartus project .The user can use this   
 // testbench to simulate his design using a third-party simulation tool .       
 // *****************************************************************************
-// Generated on "05/25/2020 18:58:52"
+// Generated on "06/22/2020 18:50:23"
                                                                                 
 // Verilog Test Bench (with test vectors) for design :                          Multiplier32Bits
 // 
@@ -50,321 +50,465 @@ end
 initial
 begin
 	Multiplicand[31] = 1'b0;
+	Multiplicand[31] = #160000 1'b1;
+	Multiplicand[31] = #560000 1'b0;
 end 
 // Multiplicand[ 30 ]
 initial
 begin
 	Multiplicand[30] = 1'b0;
+	Multiplicand[30] = #160000 1'b1;
+	Multiplicand[30] = #560000 1'b0;
 end 
 // Multiplicand[ 29 ]
 initial
 begin
 	Multiplicand[29] = 1'b0;
+	Multiplicand[29] = #160000 1'b1;
+	Multiplicand[29] = #560000 1'b0;
 end 
 // Multiplicand[ 28 ]
 initial
 begin
 	Multiplicand[28] = 1'b0;
+	Multiplicand[28] = #160000 1'b1;
+	Multiplicand[28] = #560000 1'b0;
 end 
 // Multiplicand[ 27 ]
 initial
 begin
 	Multiplicand[27] = 1'b0;
+	Multiplicand[27] = #160000 1'b1;
+	Multiplicand[27] = #560000 1'b0;
 end 
 // Multiplicand[ 26 ]
 initial
 begin
 	Multiplicand[26] = 1'b0;
+	Multiplicand[26] = #160000 1'b1;
+	Multiplicand[26] = #560000 1'b0;
 end 
 // Multiplicand[ 25 ]
 initial
 begin
 	Multiplicand[25] = 1'b0;
+	Multiplicand[25] = #160000 1'b1;
+	Multiplicand[25] = #560000 1'b0;
 end 
 // Multiplicand[ 24 ]
 initial
 begin
 	Multiplicand[24] = 1'b0;
+	Multiplicand[24] = #160000 1'b1;
+	Multiplicand[24] = #560000 1'b0;
 end 
 // Multiplicand[ 23 ]
 initial
 begin
 	Multiplicand[23] = 1'b0;
+	Multiplicand[23] = #160000 1'b1;
+	Multiplicand[23] = #560000 1'b0;
 end 
 // Multiplicand[ 22 ]
 initial
 begin
 	Multiplicand[22] = 1'b0;
+	Multiplicand[22] = #160000 1'b1;
+	Multiplicand[22] = #560000 1'b0;
 end 
 // Multiplicand[ 21 ]
 initial
 begin
 	Multiplicand[21] = 1'b0;
+	Multiplicand[21] = #160000 1'b1;
+	Multiplicand[21] = #560000 1'b0;
 end 
 // Multiplicand[ 20 ]
 initial
 begin
 	Multiplicand[20] = 1'b0;
+	Multiplicand[20] = #160000 1'b1;
+	Multiplicand[20] = #560000 1'b0;
 end 
 // Multiplicand[ 19 ]
 initial
 begin
 	Multiplicand[19] = 1'b0;
+	Multiplicand[19] = #160000 1'b1;
+	Multiplicand[19] = #560000 1'b0;
 end 
 // Multiplicand[ 18 ]
 initial
 begin
 	Multiplicand[18] = 1'b0;
+	Multiplicand[18] = #160000 1'b1;
+	Multiplicand[18] = #560000 1'b0;
 end 
 // Multiplicand[ 17 ]
 initial
 begin
 	Multiplicand[17] = 1'b0;
+	Multiplicand[17] = #160000 1'b1;
+	Multiplicand[17] = #560000 1'b0;
 end 
 // Multiplicand[ 16 ]
 initial
 begin
 	Multiplicand[16] = 1'b0;
+	Multiplicand[16] = #160000 1'b1;
+	Multiplicand[16] = #560000 1'b0;
 end 
 // Multiplicand[ 15 ]
 initial
 begin
 	Multiplicand[15] = 1'b0;
+	Multiplicand[15] = #160000 1'b1;
+	Multiplicand[15] = #560000 1'b0;
 end 
 // Multiplicand[ 14 ]
 initial
 begin
 	Multiplicand[14] = 1'b0;
+	Multiplicand[14] = #160000 1'b1;
+	Multiplicand[14] = #560000 1'b0;
 end 
 // Multiplicand[ 13 ]
 initial
 begin
 	Multiplicand[13] = 1'b0;
+	Multiplicand[13] = #160000 1'b1;
+	Multiplicand[13] = #560000 1'b0;
 end 
 // Multiplicand[ 12 ]
 initial
 begin
 	Multiplicand[12] = 1'b0;
+	Multiplicand[12] = #160000 1'b1;
+	Multiplicand[12] = #560000 1'b0;
 end 
 // Multiplicand[ 11 ]
 initial
 begin
 	Multiplicand[11] = 1'b0;
+	Multiplicand[11] = #160000 1'b1;
+	Multiplicand[11] = #560000 1'b0;
 end 
 // Multiplicand[ 10 ]
 initial
 begin
 	Multiplicand[10] = 1'b0;
+	Multiplicand[10] = #160000 1'b1;
+	Multiplicand[10] = #560000 1'b0;
 end 
 // Multiplicand[ 9 ]
 initial
 begin
 	Multiplicand[9] = 1'b0;
+	Multiplicand[9] = #160000 1'b1;
+	Multiplicand[9] = #560000 1'b0;
 end 
 // Multiplicand[ 8 ]
 initial
 begin
 	Multiplicand[8] = 1'b0;
+	Multiplicand[8] = #160000 1'b1;
+	Multiplicand[8] = #560000 1'b0;
 end 
 // Multiplicand[ 7 ]
 initial
 begin
 	Multiplicand[7] = 1'b0;
+	Multiplicand[7] = #160000 1'b1;
+	Multiplicand[7] = #560000 1'b0;
 end 
 // Multiplicand[ 6 ]
 initial
 begin
 	Multiplicand[6] = 1'b1;
+	Multiplicand[6] = #80000 1'b0;
+	Multiplicand[6] = #80000 1'b1;
 end 
 // Multiplicand[ 5 ]
 initial
 begin
 	Multiplicand[5] = 1'b1;
+	Multiplicand[5] = #80000 1'b0;
+	Multiplicand[5] = #80000 1'b1;
 end 
 // Multiplicand[ 4 ]
 initial
 begin
 	Multiplicand[4] = 1'b1;
+	Multiplicand[4] = #80000 1'b0;
+	Multiplicand[4] = #80000 1'b1;
 end 
 // Multiplicand[ 3 ]
 initial
 begin
 	Multiplicand[3] = 1'b1;
+	Multiplicand[3] = #80000 1'b0;
+	Multiplicand[3] = #80000 1'b1;
+	Multiplicand[3] = #80000 1'b0;
+	Multiplicand[3] = #160000 1'b1;
 end 
 // Multiplicand[ 2 ]
 initial
 begin
 	Multiplicand[2] = 1'b1;
+	Multiplicand[2] = #80000 1'b0;
+	Multiplicand[2] = #80000 1'b1;
 end 
 // Multiplicand[ 1 ]
 initial
 begin
 	Multiplicand[1] = 1'b1;
+	Multiplicand[1] = #80000 1'b0;
+	Multiplicand[1] = #80000 1'b1;
+	Multiplicand[1] = #240000 1'b0;
+	Multiplicand[1] = #160000 1'b1;
 end 
 // Multiplicand[ 0 ]
 initial
 begin
 	Multiplicand[0] = 1'b0;
+	Multiplicand[0] = #160000 1'b1;
+	Multiplicand[0] = #80000 1'b0;
+	Multiplicand[0] = #320000 1'b1;
+	Multiplicand[0] = #160000 1'b0;
 end 
 // Multiplier[ 31 ]
 initial
 begin
 	Multiplier[31] = 1'b0;
+	Multiplier[31] = #400000 1'b1;
+	Multiplier[31] = #240000 1'b0;
 end 
 // Multiplier[ 30 ]
 initial
 begin
 	Multiplier[30] = 1'b0;
+	Multiplier[30] = #400000 1'b1;
+	Multiplier[30] = #240000 1'b0;
 end 
 // Multiplier[ 29 ]
 initial
 begin
 	Multiplier[29] = 1'b0;
+	Multiplier[29] = #400000 1'b1;
+	Multiplier[29] = #240000 1'b0;
 end 
 // Multiplier[ 28 ]
 initial
 begin
 	Multiplier[28] = 1'b0;
+	Multiplier[28] = #400000 1'b1;
+	Multiplier[28] = #240000 1'b0;
 end 
 // Multiplier[ 27 ]
 initial
 begin
 	Multiplier[27] = 1'b0;
+	Multiplier[27] = #400000 1'b1;
+	Multiplier[27] = #240000 1'b0;
 end 
 // Multiplier[ 26 ]
 initial
 begin
 	Multiplier[26] = 1'b0;
+	Multiplier[26] = #400000 1'b1;
+	Multiplier[26] = #240000 1'b0;
 end 
 // Multiplier[ 25 ]
 initial
 begin
 	Multiplier[25] = 1'b0;
+	Multiplier[25] = #400000 1'b1;
+	Multiplier[25] = #240000 1'b0;
 end 
 // Multiplier[ 24 ]
 initial
 begin
 	Multiplier[24] = 1'b0;
+	Multiplier[24] = #400000 1'b1;
+	Multiplier[24] = #240000 1'b0;
 end 
 // Multiplier[ 23 ]
 initial
 begin
 	Multiplier[23] = 1'b0;
+	Multiplier[23] = #400000 1'b1;
+	Multiplier[23] = #240000 1'b0;
 end 
 // Multiplier[ 22 ]
 initial
 begin
 	Multiplier[22] = 1'b0;
+	Multiplier[22] = #400000 1'b1;
+	Multiplier[22] = #240000 1'b0;
 end 
 // Multiplier[ 21 ]
 initial
 begin
 	Multiplier[21] = 1'b0;
+	Multiplier[21] = #400000 1'b1;
+	Multiplier[21] = #240000 1'b0;
 end 
 // Multiplier[ 20 ]
 initial
 begin
 	Multiplier[20] = 1'b0;
+	Multiplier[20] = #400000 1'b1;
+	Multiplier[20] = #240000 1'b0;
 end 
 // Multiplier[ 19 ]
 initial
 begin
 	Multiplier[19] = 1'b0;
+	Multiplier[19] = #400000 1'b1;
+	Multiplier[19] = #240000 1'b0;
 end 
 // Multiplier[ 18 ]
 initial
 begin
 	Multiplier[18] = 1'b0;
+	Multiplier[18] = #400000 1'b1;
+	Multiplier[18] = #240000 1'b0;
 end 
 // Multiplier[ 17 ]
 initial
 begin
 	Multiplier[17] = 1'b0;
+	Multiplier[17] = #400000 1'b1;
+	Multiplier[17] = #240000 1'b0;
 end 
 // Multiplier[ 16 ]
 initial
 begin
 	Multiplier[16] = 1'b0;
+	Multiplier[16] = #400000 1'b1;
+	Multiplier[16] = #240000 1'b0;
 end 
 // Multiplier[ 15 ]
 initial
 begin
 	Multiplier[15] = 1'b0;
+	Multiplier[15] = #400000 1'b1;
+	Multiplier[15] = #240000 1'b0;
 end 
 // Multiplier[ 14 ]
 initial
 begin
 	Multiplier[14] = 1'b0;
+	Multiplier[14] = #400000 1'b1;
+	Multiplier[14] = #240000 1'b0;
 end 
 // Multiplier[ 13 ]
 initial
 begin
 	Multiplier[13] = 1'b0;
+	Multiplier[13] = #400000 1'b1;
+	Multiplier[13] = #240000 1'b0;
 end 
 // Multiplier[ 12 ]
 initial
 begin
 	Multiplier[12] = 1'b0;
+	Multiplier[12] = #400000 1'b1;
+	Multiplier[12] = #240000 1'b0;
 end 
 // Multiplier[ 11 ]
 initial
 begin
 	Multiplier[11] = 1'b0;
+	Multiplier[11] = #400000 1'b1;
+	Multiplier[11] = #240000 1'b0;
 end 
 // Multiplier[ 10 ]
 initial
 begin
 	Multiplier[10] = 1'b0;
+	Multiplier[10] = #400000 1'b1;
+	Multiplier[10] = #240000 1'b0;
 end 
 // Multiplier[ 9 ]
 initial
 begin
 	Multiplier[9] = 1'b0;
+	Multiplier[9] = #400000 1'b1;
+	Multiplier[9] = #240000 1'b0;
 end 
 // Multiplier[ 8 ]
 initial
 begin
 	Multiplier[8] = 1'b0;
+	Multiplier[8] = #400000 1'b1;
+	Multiplier[8] = #240000 1'b0;
 end 
 // Multiplier[ 7 ]
 initial
 begin
 	Multiplier[7] = 1'b0;
+	Multiplier[7] = #400000 1'b1;
+	Multiplier[7] = #240000 1'b0;
 end 
 // Multiplier[ 6 ]
 initial
 begin
 	Multiplier[6] = 1'b0;
+	Multiplier[6] = #400000 1'b1;
+	Multiplier[6] = #240000 1'b0;
 end 
 // Multiplier[ 5 ]
 initial
 begin
 	Multiplier[5] = 1'b0;
+	Multiplier[5] = #400000 1'b1;
+	Multiplier[5] = #240000 1'b0;
 end 
 // Multiplier[ 4 ]
 initial
 begin
 	Multiplier[4] = 1'b1;
+	Multiplier[4] = #80000 1'b0;
+	Multiplier[4] = #320000 1'b1;
+	Multiplier[4] = #240000 1'b0;
+	Multiplier[4] = #80000 1'b1;
 end 
 // Multiplier[ 3 ]
 initial
 begin
 	Multiplier[3] = 1'b0;
+	Multiplier[3] = #400000 1'b1;
+	Multiplier[3] = #240000 1'b0;
 end 
 // Multiplier[ 2 ]
 initial
 begin
 	Multiplier[2] = 1'b1;
+	Multiplier[2] = #80000 1'b0;
+	Multiplier[2] = #320000 1'b1;
+	Multiplier[2] = #80000 1'b0;
+	Multiplier[2] = #80000 1'b1;
+	Multiplier[2] = #80000 1'b0;
+	Multiplier[2] = #80000 1'b1;
 end 
 // Multiplier[ 1 ]
 initial
 begin
 	Multiplier[1] = 1'b0;
+	Multiplier[1] = #320000 1'b1;
+	Multiplier[1] = #80000 1'b0;
+	Multiplier[1] = #160000 1'b1;
+	Multiplier[1] = #80000 1'b0;
 end 
 // Multiplier[ 0 ]
 initial
 begin
 	Multiplier[0] = 1'b0;
+	Multiplier[0] = #160000 1'b1;
+	Multiplier[0] = #80000 1'b0;
+	Multiplier[0] = #320000 1'b1;
+	Multiplier[0] = #80000 1'b0;
 end 
 endmodule
 

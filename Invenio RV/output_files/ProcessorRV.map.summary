@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Fri Jun 12 10:53:39 2020
+Analysis & Synthesis Status : Successful - Mon Jun 22 16:55:43 2020
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : ProcessorRV
-Top-level Entity Name : ALU
+Top-level Entity Name : Multiplier32Bits
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 96
-Total pins : 553
+Total registers : 0
+Total pins : 96
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
