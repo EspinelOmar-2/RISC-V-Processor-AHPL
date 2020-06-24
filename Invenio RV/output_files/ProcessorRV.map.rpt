@@ -1,5 +1,5 @@
 Analysis & Synthesis report for ProcessorRV
-Mon Jun 22 16:55:43 2020
+Wed Jun 24 12:41:14 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -14,56 +14,42 @@ Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "CRAAdder32:Add32D"
- 10. Port Connectivity Checks: "CRAAdder18:Add18C"
- 11. Port Connectivity Checks: "CRAAdder32:Add32C"
- 12. Port Connectivity Checks: "CRAAdder10:Add10B"
- 13. Port Connectivity Checks: "CRAAdder18:Add18B"
- 14. Port Connectivity Checks: "CRAAdder26:Add26B"
- 15. Port Connectivity Checks: "CRAAdder32:Add32B"
- 16. Port Connectivity Checks: "CRAAdder6:Add6"
- 17. Port Connectivity Checks: "CRAAdder10:Add10A"
- 18. Port Connectivity Checks: "CRAAdder14:Add14"
- 19. Port Connectivity Checks: "CRAAdder18:Add18A"
- 20. Port Connectivity Checks: "CRAAdder22:Add22"
- 21. Port Connectivity Checks: "CRAAdder26:Add26A"
- 22. Port Connectivity Checks: "CRAAdder30:Add30"
- 23. Port Connectivity Checks: "CRAAdder32:Add32A"
- 24. Port Connectivity Checks: "FullPartialProduct:FPP15"
- 25. Port Connectivity Checks: "FullPartialProduct:FPP14"
- 26. Port Connectivity Checks: "FullPartialProduct:FPP13"
- 27. Port Connectivity Checks: "FullPartialProduct:FPP12"
- 28. Port Connectivity Checks: "FullPartialProduct:FPP11"
- 29. Port Connectivity Checks: "FullPartialProduct:FPP10"
- 30. Port Connectivity Checks: "FullPartialProduct:FPP9"
- 31. Port Connectivity Checks: "FullPartialProduct:FPP8"
- 32. Port Connectivity Checks: "FullPartialProduct:FPP7"
- 33. Port Connectivity Checks: "FullPartialProduct:FPP6"
- 34. Port Connectivity Checks: "FullPartialProduct:FPP5"
- 35. Port Connectivity Checks: "FullPartialProduct:FPP4"
- 36. Port Connectivity Checks: "FullPartialProduct:FPP3"
- 37. Port Connectivity Checks: "FullPartialProduct:FPP2"
- 38. Port Connectivity Checks: "FullPartialProduct:FPP1"
- 39. Port Connectivity Checks: "FullPartialProduct:FPP0"
- 40. Port Connectivity Checks: "BoothDecoder:BD15"
- 41. Port Connectivity Checks: "BoothDecoder:BD14"
- 42. Port Connectivity Checks: "BoothDecoder:BD13"
- 43. Port Connectivity Checks: "BoothDecoder:BD12"
- 44. Port Connectivity Checks: "BoothDecoder:BD11"
- 45. Port Connectivity Checks: "BoothDecoder:BD10"
- 46. Port Connectivity Checks: "BoothDecoder:BD9"
- 47. Port Connectivity Checks: "BoothDecoder:BD8"
- 48. Port Connectivity Checks: "BoothDecoder:BD7"
- 49. Port Connectivity Checks: "BoothDecoder:BD6"
- 50. Port Connectivity Checks: "BoothDecoder:BD5"
- 51. Port Connectivity Checks: "BoothDecoder:BD4"
- 52. Port Connectivity Checks: "BoothDecoder:BD3"
- 53. Port Connectivity Checks: "BoothDecoder:BD2"
- 54. Port Connectivity Checks: "BoothDecoder:BD1"
- 55. Port Connectivity Checks: "BoothDecoder:BD0"
- 56. Post-Synthesis Netlist Statistics for Top Partition
- 57. Elapsed Time Per Partition
- 58. Analysis & Synthesis Messages
+  9. Inverted Register Statistics
+ 10. Port Connectivity Checks: "FlipFlop:FF31"
+ 11. Port Connectivity Checks: "FlipFlop:FF30"
+ 12. Port Connectivity Checks: "FlipFlop:FF29"
+ 13. Port Connectivity Checks: "FlipFlop:FF28"
+ 14. Port Connectivity Checks: "FlipFlop:FF27"
+ 15. Port Connectivity Checks: "FlipFlop:FF26"
+ 16. Port Connectivity Checks: "FlipFlop:FF25"
+ 17. Port Connectivity Checks: "FlipFlop:FF24"
+ 18. Port Connectivity Checks: "FlipFlop:FF23"
+ 19. Port Connectivity Checks: "FlipFlop:FF22"
+ 20. Port Connectivity Checks: "FlipFlop:FF21"
+ 21. Port Connectivity Checks: "FlipFlop:FF20"
+ 22. Port Connectivity Checks: "FlipFlop:FF19"
+ 23. Port Connectivity Checks: "FlipFlop:FF18"
+ 24. Port Connectivity Checks: "FlipFlop:FF17"
+ 25. Port Connectivity Checks: "FlipFlop:FF16"
+ 26. Port Connectivity Checks: "FlipFlop:FF15"
+ 27. Port Connectivity Checks: "FlipFlop:FF14"
+ 28. Port Connectivity Checks: "FlipFlop:FF13"
+ 29. Port Connectivity Checks: "FlipFlop:FF12"
+ 30. Port Connectivity Checks: "FlipFlop:FF11"
+ 31. Port Connectivity Checks: "FlipFlop:FF10"
+ 32. Port Connectivity Checks: "FlipFlop:FF9"
+ 33. Port Connectivity Checks: "FlipFlop:FF8"
+ 34. Port Connectivity Checks: "FlipFlop:FF7"
+ 35. Port Connectivity Checks: "FlipFlop:FF6"
+ 36. Port Connectivity Checks: "FlipFlop:FF5"
+ 37. Port Connectivity Checks: "FlipFlop:FF4"
+ 38. Port Connectivity Checks: "FlipFlop:FF3"
+ 39. Port Connectivity Checks: "FlipFlop:FF2"
+ 40. Port Connectivity Checks: "FlipFlop:FF1"
+ 41. Port Connectivity Checks: "FlipFlop:FF0"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
@@ -90,14 +76,14 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Jun 22 16:55:43 2020       ;
+; Analysis & Synthesis Status     ; Successful - Wed Jun 24 12:41:14 2020       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; ProcessorRV                                 ;
-; Top-level Entity Name           ; Multiplier32Bits                            ;
+; Top-level Entity Name           ; Counter                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 96                                          ;
+; Total registers                 ; 32                                          ;
+; Total pins                      ; 76                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -116,7 +102,7 @@ agreement for further details.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CGXFC9E7F35C8     ;                    ;
-; Top-level entity name                                                           ; Multiplier32Bits   ; ProcessorRV        ;
+; Top-level entity name                                                           ; Counter            ; ProcessorRV        ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation      ; On                 ; On                 ;
@@ -209,346 +195,82 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                            ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                                     ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
-; VHDL/SinglePartialProduct.vhd    ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/SinglePartialProduct.vhd ;         ;
-; VHDL/FullPartialProduct.vhd      ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd   ;         ;
-; VHDL/BoothDecoder.vhd            ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/BoothDecoder.vhd         ;         ;
-; VHDL/CRAAdder32.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder32.vhd           ;         ;
-; VHDL/CRAAdder30.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder30.vhd           ;         ;
-; VHDL/CRAAdder26.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder26.vhd           ;         ;
-; VHDL/CRAAdder22.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder22.vhd           ;         ;
-; VHDL/CRAAdder18.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder18.vhd           ;         ;
-; VHDL/CRAAdder14.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder14.vhd           ;         ;
-; VHDL/CRAAdder10.vhd              ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder10.vhd           ;         ;
-; VHDL/CRAAdder6.vhd               ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/CRAAdder6.vhd            ;         ;
-; VHDL/Multiplier32Bits.vhd        ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd     ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                         ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
+; VHDL/FlipFlop.vhd                ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FlipFlop.vhd ;         ;
+; VHDL/Counter.vhd                 ; yes             ; User VHDL File  ; C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Counter.vhd  ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------------+---------+
 
 
-+-------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                       ;
-+---------------------------------------------+---------------------+
-; Resource                                    ; Usage               ;
-+---------------------------------------------+---------------------+
-; Estimate of Logic utilization (ALMs needed) ; 381                 ;
-;                                             ;                     ;
-; Combinational ALUT usage for logic          ; 676                 ;
-;     -- 7 input functions                    ; 0                   ;
-;     -- 6 input functions                    ; 85                  ;
-;     -- 5 input functions                    ; 376                 ;
-;     -- 4 input functions                    ; 54                  ;
-;     -- <=3 input functions                  ; 161                 ;
-;                                             ;                     ;
-; Dedicated logic registers                   ; 0                   ;
-;                                             ;                     ;
-; I/O pins                                    ; 96                  ;
-;                                             ;                     ;
-; Total DSP Blocks                            ; 0                   ;
-;                                             ;                     ;
-; Maximum fan-out node                        ; Multiplier[1]~input ;
-; Maximum fan-out                             ; 64                  ;
-; Total fan-out                               ; 3177                ;
-; Average fan-out                             ; 3.66                ;
-+---------------------------------------------+---------------------+
++------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                            ;
++---------------------------------------------+--------------------------+
+; Resource                                    ; Usage                    ;
++---------------------------------------------+--------------------------+
+; Estimate of Logic utilization (ALMs needed) ; 54                       ;
+;                                             ;                          ;
+; Combinational ALUT usage for logic          ; 66                       ;
+;     -- 7 input functions                    ; 8                        ;
+;     -- 6 input functions                    ; 33                       ;
+;     -- 5 input functions                    ; 13                       ;
+;     -- 4 input functions                    ; 1                        ;
+;     -- <=3 input functions                  ; 11                       ;
+;                                             ;                          ;
+; Dedicated logic registers                   ; 32                       ;
+;                                             ;                          ;
+; I/O pins                                    ; 76                       ;
+;                                             ;                          ;
+; Total DSP Blocks                            ; 0                        ;
+;                                             ;                          ;
+; Maximum fan-out node                        ; Control_Counter[1]~input ;
+; Maximum fan-out                             ; 34                       ;
+; Total fan-out                               ; 543                      ;
+; Average fan-out                             ; 2.17                     ;
++---------------------------------------------+--------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
-+------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+--------------+
-; Compilation Hierarchy Node         ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                   ; Library Name ;
-+------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+--------------+
-; |Multiplier32Bits                  ; 676 (0)           ; 0 (0)        ; 0                 ; 0          ; 96   ; 0            ; |Multiplier32Bits                                                     ; work         ;
-;    |BoothDecoder:BD11|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|BoothDecoder:BD11                                   ; work         ;
-;    |BoothDecoder:BD5|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|BoothDecoder:BD5                                    ; work         ;
-;    |BoothDecoder:BD7|              ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|BoothDecoder:BD7                                    ; work         ;
-;    |CRAAdder10:Add10A|             ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder10:Add10A                                   ; work         ;
-;    |CRAAdder10:Add10B|             ; 8 (8)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder10:Add10B                                   ; work         ;
-;    |CRAAdder14:Add14|              ; 19 (19)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder14:Add14                                    ; work         ;
-;    |CRAAdder18:Add18A|             ; 24 (24)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder18:Add18A                                   ; work         ;
-;    |CRAAdder18:Add18B|             ; 21 (21)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder18:Add18B                                   ; work         ;
-;    |CRAAdder18:Add18C|             ; 15 (15)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder18:Add18C                                   ; work         ;
-;    |CRAAdder22:Add22|              ; 29 (29)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder22:Add22                                    ; work         ;
-;    |CRAAdder26:Add26A|             ; 35 (35)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder26:Add26A                                   ; work         ;
-;    |CRAAdder26:Add26B|             ; 35 (35)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder26:Add26B                                   ; work         ;
-;    |CRAAdder30:Add30|              ; 42 (42)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder30:Add30                                    ; work         ;
-;    |CRAAdder32:Add32A|             ; 54 (54)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder32:Add32A                                   ; work         ;
-;    |CRAAdder32:Add32B|             ; 46 (46)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder32:Add32B                                   ; work         ;
-;    |CRAAdder32:Add32C|             ; 36 (36)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder32:Add32C                                   ; work         ;
-;    |CRAAdder32:Add32D|             ; 44 (44)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder32:Add32D                                   ; work         ;
-;    |CRAAdder6:Add6|                ; 4 (4)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|CRAAdder6:Add6                                      ; work         ;
-;    |FullPartialProduct:FPP0|       ; 29 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0                             ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP20| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP20  ; work         ;
-;       |SinglePartialProduct:BPP21| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP21  ; work         ;
-;       |SinglePartialProduct:BPP22| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP22  ; work         ;
-;       |SinglePartialProduct:BPP23| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP23  ; work         ;
-;       |SinglePartialProduct:BPP24| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP24  ; work         ;
-;       |SinglePartialProduct:BPP25| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP25  ; work         ;
-;       |SinglePartialProduct:BPP26| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP26  ; work         ;
-;       |SinglePartialProduct:BPP27| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP27  ; work         ;
-;       |SinglePartialProduct:BPP28| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP28  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP30| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP30  ; work         ;
-;       |SinglePartialProduct:BPP31| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP31  ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP0|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP10|      ; 10 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10                            ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP10 ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP11 ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP2  ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP3  ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP4  ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP5  ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP6  ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP7  ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP8  ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP10|SinglePartialProduct:BPP9  ; work         ;
-;    |FullPartialProduct:FPP11|      ; 9 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11                            ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP1  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP2  ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP3  ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP4  ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP5  ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP6  ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP7  ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP8  ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP11|SinglePartialProduct:BPP9  ; work         ;
-;    |FullPartialProduct:FPP12|      ; 6 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12                            ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12|SinglePartialProduct:BPP0  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12|SinglePartialProduct:BPP2  ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12|SinglePartialProduct:BPP3  ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12|SinglePartialProduct:BPP4  ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12|SinglePartialProduct:BPP5  ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP12|SinglePartialProduct:BPP6  ; work         ;
-;    |FullPartialProduct:FPP13|      ; 5 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP13                            ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP13|SinglePartialProduct:BPP0  ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP13|SinglePartialProduct:BPP1  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP13|SinglePartialProduct:BPP2  ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP13|SinglePartialProduct:BPP3  ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP13|SinglePartialProduct:BPP4  ; work         ;
-;    |FullPartialProduct:FPP14|      ; 2 (0)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP14                            ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP14|SinglePartialProduct:BPP2  ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP14|SinglePartialProduct:BPP3  ; work         ;
-;    |FullPartialProduct:FPP1|       ; 30 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP1   ; work         ;
-;       |SinglePartialProduct:BPP20| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP20  ; work         ;
-;       |SinglePartialProduct:BPP21| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP21  ; work         ;
-;       |SinglePartialProduct:BPP22| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP22  ; work         ;
-;       |SinglePartialProduct:BPP23| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP23  ; work         ;
-;       |SinglePartialProduct:BPP24| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP24  ; work         ;
-;       |SinglePartialProduct:BPP25| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP25  ; work         ;
-;       |SinglePartialProduct:BPP26| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP26  ; work         ;
-;       |SinglePartialProduct:BPP27| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP27  ; work         ;
-;       |SinglePartialProduct:BPP28| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP28  ; work         ;
-;       |SinglePartialProduct:BPP29| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP29  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP1|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP2|       ; 27 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP20| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP20  ; work         ;
-;       |SinglePartialProduct:BPP21| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP21  ; work         ;
-;       |SinglePartialProduct:BPP22| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP22  ; work         ;
-;       |SinglePartialProduct:BPP23| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP23  ; work         ;
-;       |SinglePartialProduct:BPP24| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP24  ; work         ;
-;       |SinglePartialProduct:BPP25| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP25  ; work         ;
-;       |SinglePartialProduct:BPP26| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP26  ; work         ;
-;       |SinglePartialProduct:BPP27| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP27  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP2|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP3|       ; 26 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP1   ; work         ;
-;       |SinglePartialProduct:BPP20| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP20  ; work         ;
-;       |SinglePartialProduct:BPP21| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP21  ; work         ;
-;       |SinglePartialProduct:BPP22| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP22  ; work         ;
-;       |SinglePartialProduct:BPP23| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP23  ; work         ;
-;       |SinglePartialProduct:BPP24| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP24  ; work         ;
-;       |SinglePartialProduct:BPP25| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP25  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP3|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP4|       ; 23 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP20| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP20  ; work         ;
-;       |SinglePartialProduct:BPP21| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP21  ; work         ;
-;       |SinglePartialProduct:BPP22| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP22  ; work         ;
-;       |SinglePartialProduct:BPP23| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP23  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP4|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP5|       ; 21 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5                             ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP1   ; work         ;
-;       |SinglePartialProduct:BPP20| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP20  ; work         ;
-;       |SinglePartialProduct:BPP21| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP21  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP5|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP6|       ; 19 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP18| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP18  ; work         ;
-;       |SinglePartialProduct:BPP19| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP19  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP6|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP7|       ; 17 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7                             ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP16| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP16  ; work         ;
-;       |SinglePartialProduct:BPP17| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP17  ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP1   ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP7|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP8|       ; 15 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP14| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP14  ; work         ;
-;       |SinglePartialProduct:BPP15| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP15  ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP8|SinglePartialProduct:BPP9   ; work         ;
-;    |FullPartialProduct:FPP9|       ; 14 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9                             ; work         ;
-;       |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP0   ; work         ;
-;       |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP10  ; work         ;
-;       |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP11  ; work         ;
-;       |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP12  ; work         ;
-;       |SinglePartialProduct:BPP13| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP13  ; work         ;
-;       |SinglePartialProduct:BPP1|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP1   ; work         ;
-;       |SinglePartialProduct:BPP2|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP2   ; work         ;
-;       |SinglePartialProduct:BPP3|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP3   ; work         ;
-;       |SinglePartialProduct:BPP4|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP4   ; work         ;
-;       |SinglePartialProduct:BPP5|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP5   ; work         ;
-;       |SinglePartialProduct:BPP6|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP6   ; work         ;
-;       |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP7   ; work         ;
-;       |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP8   ; work         ;
-;       |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |Multiplier32Bits|FullPartialProduct:FPP9|SinglePartialProduct:BPP9   ; work         ;
-+------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                          ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name    ; Library Name ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------+--------------+
+; |Counter                   ; 66 (24)           ; 32 (0)       ; 0                 ; 0          ; 76   ; 0            ; |Counter               ; work         ;
+;    |FlipFlop:FF0|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF0  ; work         ;
+;    |FlipFlop:FF10|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF10 ; work         ;
+;    |FlipFlop:FF11|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF11 ; work         ;
+;    |FlipFlop:FF12|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF12 ; work         ;
+;    |FlipFlop:FF13|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF13 ; work         ;
+;    |FlipFlop:FF14|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF14 ; work         ;
+;    |FlipFlop:FF15|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF15 ; work         ;
+;    |FlipFlop:FF16|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF16 ; work         ;
+;    |FlipFlop:FF17|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF17 ; work         ;
+;    |FlipFlop:FF18|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF18 ; work         ;
+;    |FlipFlop:FF19|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF19 ; work         ;
+;    |FlipFlop:FF1|          ; 3 (3)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF1  ; work         ;
+;    |FlipFlop:FF20|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF20 ; work         ;
+;    |FlipFlop:FF21|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF21 ; work         ;
+;    |FlipFlop:FF22|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF22 ; work         ;
+;    |FlipFlop:FF23|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF23 ; work         ;
+;    |FlipFlop:FF24|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF24 ; work         ;
+;    |FlipFlop:FF25|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF25 ; work         ;
+;    |FlipFlop:FF26|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF26 ; work         ;
+;    |FlipFlop:FF27|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF27 ; work         ;
+;    |FlipFlop:FF28|         ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF28 ; work         ;
+;    |FlipFlop:FF29|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF29 ; work         ;
+;    |FlipFlop:FF2|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF2  ; work         ;
+;    |FlipFlop:FF30|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF30 ; work         ;
+;    |FlipFlop:FF31|         ; 2 (2)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF31 ; work         ;
+;    |FlipFlop:FF3|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF3  ; work         ;
+;    |FlipFlop:FF4|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF4  ; work         ;
+;    |FlipFlop:FF5|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF5  ; work         ;
+;    |FlipFlop:FF6|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF6  ; work         ;
+;    |FlipFlop:FF7|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF7  ; work         ;
+;    |FlipFlop:FF8|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF8  ; work         ;
+;    |FlipFlop:FF9|          ; 1 (1)             ; 1 (1)        ; 0                 ; 0          ; 0    ; 0            ; |Counter|FlipFlop:FF9  ; work         ;
++----------------------------+-------------------+--------------+-------------------+------------+------+--------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -557,482 +279,343 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 32    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder32:Add32D"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[13..0] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder18:Add18C"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[7..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder32:Add32C"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[5..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder10:Add10B"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder18:Add18B"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder26:Add26B"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[3..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder32:Add32B"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder6:Add6"                                                                         ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder10:Add10A"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder14:Add14"                                                                       ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder18:Add18A"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder22:Add22"                                                                       ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder26:Add26A"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder30:Add30"                                                                       ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; a[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[1..0]  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; b[3]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "CRAAdder32:Add32A"                                                                      ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port     ; Type   ; Severity ; Details                                                                             ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-; b[1]     ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryin  ; Input  ; Info     ; Stuck at GND                                                                        ;
-; carryout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP15"                                                                                  ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                        ; Type   ; Severity ; Details                                                                             ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..2] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP14"                                                                                  ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                        ; Type   ; Severity ; Details                                                                             ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP13"                                                                                  ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                        ; Type   ; Severity ; Details                                                                             ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..6] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP12"                                                                                  ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                        ; Type   ; Severity ; Details                                                                             ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..8] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP11"                                                                                   ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP10"                                                                                   ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..12] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP9"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..14] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP8"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..16] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP7"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..18] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP6"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..20] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP5"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..22] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP4"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..24] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP3"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..26] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP2"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..28] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP1"                                                                                    ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                         ; Type   ; Severity ; Details                                                                             ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32..30] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FullPartialProduct:FPP0"                                                                                ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                     ; Type   ; Severity ; Details                                                                             ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-; partialproduct32bits[32] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD15"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD14"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD13"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD12"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD11"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD10"                                                                  ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD9"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD8"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD7"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD6"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD5"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD4"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD3"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD2"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD1"                                                                   ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nots ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "BoothDecoder:BD0"                                                                              ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                             ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
-; multiplierin[0] ; Input  ; Info     ; Stuck at GND                                                                        ;
-; nots            ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------------+--------+----------+-------------------------------------------------------------------------------------+
++---------------------------------------------------+
+; Inverted Register Statistics                      ;
++-----------------------------------------+---------+
+; Inverted Register                       ; Fan out ;
++-----------------------------------------+---------+
+; FlipFlop:FF0|Q                          ; 7       ;
+; FlipFlop:FF1|Q                          ; 6       ;
+; FlipFlop:FF2|Q                          ; 5       ;
+; FlipFlop:FF3|Q                          ; 5       ;
+; FlipFlop:FF4|Q                          ; 6       ;
+; FlipFlop:FF5|Q                          ; 6       ;
+; FlipFlop:FF6|Q                          ; 5       ;
+; FlipFlop:FF7|Q                          ; 5       ;
+; FlipFlop:FF8|Q                          ; 7       ;
+; FlipFlop:FF9|Q                          ; 6       ;
+; FlipFlop:FF10|Q                         ; 5       ;
+; FlipFlop:FF11|Q                         ; 5       ;
+; FlipFlop:FF12|Q                         ; 7       ;
+; FlipFlop:FF13|Q                         ; 6       ;
+; FlipFlop:FF14|Q                         ; 5       ;
+; FlipFlop:FF15|Q                         ; 5       ;
+; FlipFlop:FF16|Q                         ; 7       ;
+; FlipFlop:FF17|Q                         ; 6       ;
+; FlipFlop:FF18|Q                         ; 5       ;
+; FlipFlop:FF19|Q                         ; 6       ;
+; FlipFlop:FF20|Q                         ; 7       ;
+; FlipFlop:FF21|Q                         ; 6       ;
+; FlipFlop:FF22|Q                         ; 5       ;
+; FlipFlop:FF23|Q                         ; 7       ;
+; FlipFlop:FF24|Q                         ; 7       ;
+; FlipFlop:FF25|Q                         ; 6       ;
+; FlipFlop:FF26|Q                         ; 5       ;
+; FlipFlop:FF27|Q                         ; 7       ;
+; FlipFlop:FF28|Q                         ; 6       ;
+; FlipFlop:FF29|Q                         ; 5       ;
+; FlipFlop:FF30|Q                         ; 4       ;
+; FlipFlop:FF31|Q                         ; 3       ;
+; Total number of inverted registers = 32 ;         ;
++-----------------------------------------+---------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF31" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF30" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF29" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF28" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF27" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF26" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF25" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF24" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF23" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF22" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF21" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF20" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF19" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF18" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF17" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF16" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF15" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF14" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF13" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF12" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF11" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF10" ;
++------+-------+----------+-----------------+
+; Port ; Type  ; Severity ; Details         ;
++------+-------+----------+-----------------+
+; set  ; Input ; Info     ; Stuck at VCC    ;
++------+-------+----------+-----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF9" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF8" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF7" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF6" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF5" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF4" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF3" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF2" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF1" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
+
+
++------------------------------------------+
+; Port Connectivity Checks: "FlipFlop:FF0" ;
++------+-------+----------+----------------+
+; Port ; Type  ; Severity ; Details        ;
++------+-------+----------+----------------+
+; set  ; Input ; Info     ; Stuck at VCC   ;
++------+-------+----------+----------------+
 
 
 +-----------------------------------------------------+
@@ -1040,18 +623,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_lcell_comb     ; 684                         ;
-;     normal            ; 684                         ;
-;         1 data inputs ; 8                           ;
-;         2 data inputs ; 40                          ;
-;         3 data inputs ; 121                         ;
-;         4 data inputs ; 54                          ;
-;         5 data inputs ; 376                         ;
-;         6 data inputs ; 85                          ;
-; boundary_port         ; 96                          ;
+; arriav_ff             ; 32                          ;
+;     CLR               ; 32                          ;
+; arriav_lcell_comb     ; 99                          ;
+;     extend            ; 8                           ;
+;         7 data inputs ; 8                           ;
+;     normal            ; 91                          ;
+;         1 data inputs ; 41                          ;
+;         2 data inputs ; 2                           ;
+;         3 data inputs ; 1                           ;
+;         4 data inputs ; 1                           ;
+;         5 data inputs ; 13                          ;
+;         6 data inputs ; 33                          ;
+; boundary_port         ; 76                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 18.00                       ;
-; Average LUT depth     ; 14.69                       ;
+; Max LUT depth         ; 10.00                       ;
+; Average LUT depth     ; 4.11                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1060,7 +647,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:06     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -1070,7 +657,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
-    Info: Processing started: Mon Jun 22 16:55:12 2020
+    Info: Processing started: Wed Jun 24 12:41:04 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ProcessorRV -c ProcessorRV
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/logicalshiftright.vhd
@@ -1139,31 +726,32 @@ Info (12021): Found 2 design units, including 1 entities, in source file vhdl/ar
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/alu.vhd
     Info (12022): Found design unit 1: ALU-ALUArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ALU.vhd Line: 81
     Info (12023): Found entity 1: ALU File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/ALU.vhd Line: 10
-Info (12127): Elaborating entity "Multiplier32Bits" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at Multiplier32Bits.vhd(133): object "NotSaux" assigned a value but never read File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 133
-Warning (10036): Verilog HDL or VHDL warning at Multiplier32Bits.vhd(218): object "CarryOut" assigned a value but never read File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 218
-Info (12128): Elaborating entity "BoothDecoder" for hierarchy "BoothDecoder:BD0" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 418
-Info (12128): Elaborating entity "FullPartialProduct" for hierarchy "FullPartialProduct:FPP0" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 436
-Info (12128): Elaborating entity "SinglePartialProduct" for hierarchy "FullPartialProduct:FPP0|SinglePartialProduct:BPP0" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FullPartialProduct.vhd Line: 57
-Info (12128): Elaborating entity "CRAAdder32" for hierarchy "CRAAdder32:Add32A" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 454
-Info (12128): Elaborating entity "CRAAdder30" for hierarchy "CRAAdder30:Add30" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 457
-Info (12128): Elaborating entity "CRAAdder26" for hierarchy "CRAAdder26:Add26A" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 460
-Info (12128): Elaborating entity "CRAAdder22" for hierarchy "CRAAdder22:Add22" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 463
-Info (12128): Elaborating entity "CRAAdder18" for hierarchy "CRAAdder18:Add18A" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 466
-Info (12128): Elaborating entity "CRAAdder14" for hierarchy "CRAAdder14:Add14" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 469
-Info (12128): Elaborating entity "CRAAdder10" for hierarchy "CRAAdder10:Add10A" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 472
-Info (12128): Elaborating entity "CRAAdder6" for hierarchy "CRAAdder6:Add6" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Multiplier32Bits.vhd Line: 475
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/flipflop.vhd
+    Info (12022): Found design unit 1: FlipFlop-FlipFlopArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FlipFlop.vhd Line: 26
+    Info (12023): Found entity 1: FlipFlop File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FlipFlop.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/counter.vhd
+    Info (12022): Found design unit 1: Counter-CounterArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Counter.vhd Line: 34
+    Info (12023): Found entity 1: Counter File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Counter.vhd Line: 11
+Info (12021): Found 2 design units, including 1 entities, in source file vhdl/mar.vhd
+    Info (12022): Found design unit 1: MAR-MARArch File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/MAR.vhd Line: 42
+    Info (12023): Found entity 1: MAR File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/MAR.vhd Line: 11
+Info (12127): Elaborating entity "Counter" for the top level hierarchy
+Info (12128): Elaborating entity "FlipFlop" for hierarchy "FlipFlop:FF0" File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/Counter.vhd Line: 124
+Warning (10492): VHDL Process Statement warning at FlipFlop.vhd(42): signal "Set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FlipFlop.vhd Line: 42
+Warning (10492): VHDL Process Statement warning at FlipFlop.vhd(46): signal "Set" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FlipFlop.vhd Line: 46
+Info (13000): Registers with preset signals will power-up high File: C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/VHDL/FlipFlop.vhd Line: 17
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 772 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 64 input pins
-    Info (21059): Implemented 32 output pins
-    Info (21061): Implemented 676 logic cells
+Info (21057): Implemented 142 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 43 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 66 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 5036 megabytes
-    Info: Processing ended: Mon Jun 22 16:55:43 2020
-    Info: Elapsed time: 00:00:31
-    Info: Total CPU time (on all processors): 00:00:51
+    Info: Peak virtual memory: 5025 megabytes
+    Info: Processing ended: Wed Jun 24 12:41:14 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:22
 
 

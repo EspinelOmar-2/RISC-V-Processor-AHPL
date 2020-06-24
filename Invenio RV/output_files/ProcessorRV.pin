@@ -121,10 +121,10 @@ GND                          : AA11      :        :                   :         
 GND                          : AA12      : gnd    :                   :         :           :                
 VCC                          : AA13      : power  :                   : 1.1V    :           :                
 GND                          : AA14      : gnd    :                   :         :           :                
-Multiplicand[5]              : AA15      : input  : 2.5 V             :         : 3A        : N              
-Multiplier[11]               : AA16      : input  : 2.5 V             :         : 3B        : N              
-Multiplier[19]               : AA17      : input  : 2.5 V             :         : 3B        : N              
-Result[18]                   : AA18      : output : 2.5 V             :         : 3B        : N              
+Control_Counter[1]           : AA15      : input  : 2.5 V             :         : 3A        : N              
+Counter_Control              : AA16      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[1]         : AA17      : input  : 2.5 V             :         : 3B        : N              
+IR_Counter[0]                : AA18      : input  : 2.5 V             :         : 3B        : N              
 GND                          : AA19      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AA21      :        :                   :         : 5A        :                
@@ -153,13 +153,13 @@ GND                          : AB9       : gnd    :                   :         
 GND                          : AB10      :        :                   :         : B0L       :                
 GND                          : AB11      : gnd    :                   :         :           :                
 GND                          : AB12      : gnd    :                   :         :           :                
-Result[9]                    : AB13      : output : 2.5 V             :         : 3A        : N              
-Multiplicand[17]             : AB14      : input  : 2.5 V             :         : 3A        : N              
-Multiplicand[26]             : AB15      : input  : 2.5 V             :         : 3A        : N              
-Multiplier[24]               : AB16      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[23]        : AB13      : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[31]        : AB14      : input  : 2.5 V             :         : 3A        : N              
+Conteo[12]                   : AB15      : output : 2.5 V             :         : 3A        : N              
+IR_Counter[5]                : AB16      : input  : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AB17      : power  :                   : 2.5V    : 3B        :                
-Multiplicand[6]              : AB18      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[27]             : AB19      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB18      :        :                   :         : 3B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AB19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AB21      :        :                   :         : 4A        :                
 GND                          : AB22      : gnd    :                   :         :           :                
@@ -186,13 +186,13 @@ GND                          : AC8       : gnd    :                   :         
 VCCE_GXBL                    : AC9       : power  :                   : 1.1V    :           :                
 GND                          : AC10      : gnd    :                   :         :           :                
 VCCA_FPLL                    : AC11      : power  :                   : 2.5V    :           :                
-Multiplier[22]               : AC12      : input  : 2.5 V             :         : 3A        : N              
-Multiplier[31]               : AC13      : input  : 2.5 V             :         : 3A        : N              
-Result[3]                    : AC14      : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC12      :        :                   :         : 3A        :                
+Registers_Counter[10]        : AC13      : input  : 2.5 V             :         : 3A        : N              
+Conteo[13]                   : AC14      : output : 2.5 V             :         : 3A        : N              
 GND                          : AC15      : gnd    :                   :         :           :                
-Multiplier[6]                : AC16      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[9]              : AC17      : input  : 2.5 V             :         : 3B        : N              
-Multiplier[14]               : AC18      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[12]        : AC16      : input  : 2.5 V             :         : 3B        : N              
+Reloj                        : AC17      : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AC18      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC19      :        :                   :         : 4A        :                
 VCCIO4A                      : AC20      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AC21      :        :                   :         : 4A        :                
@@ -219,15 +219,15 @@ GND                          : AD7       : gnd    :                   :         
 VCCE_GXBL                    : AD8       : power  :                   : 1.1V    :           :                
 GND                          : AD9       : gnd    :                   :         :           :                
 GND                          : AD10      : gnd    :                   :         :           :                
-Result[5]                    : AD11      : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD11      :        :                   :         : 3A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD12      :        :                   :         : 3A        :                
 VCCIO3A                      : AD13      : power  :                   : 2.5V    : 3A        :                
-Result[27]                   : AD14      : output : 2.5 V             :         : 3A        : N              
-Result[24]                   : AD15      : output : 2.5 V             :         : 3A        : N              
-Multiplicand[3]              : AD16      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[30]             : AD17      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[24]        : AD14      : input  : 2.5 V             :         : 3A        : N              
+Conteo[20]                   : AD15      : output : 2.5 V             :         : 3A        : N              
+Conteo[19]                   : AD16      : output : 2.5 V             :         : 3B        : N              
+Conteo[22]                   : AD17      : output : 2.5 V             :         : 3B        : N              
 GND                          : AD18      : gnd    :                   :         :           :                
-Multiplicand[24]             : AD19      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AD19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD21      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AD22      :        :                   :         : 4A        :                
@@ -256,7 +256,7 @@ TDI                          : AE10      : input  :                   :         
 GND                          : AE11      : gnd    :                   :         :           :                
 VCC_AUX                      : AE12      : power  :                   : 2.5V    :           :                
 VCCPD3A                      : AE13      : power  :                   : 2.5V    : 3A        :                
-Multiplicand[15]             : AE14      : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[25]        : AE14      : input  : 2.5 V             :         : 3A        : N              
 VCCPD3A                      : AE15      : power  :                   : 2.5V    : 3A        :                
 VCCIO3B                      : AE16      : power  :                   : 2.5V    : 3B        :                
 VCCPD3B4A                    : AE17      : power  :                   : 2.5V    : 3B, 4A    :                
@@ -289,7 +289,7 @@ VCCIO3A                      : AF9       : power  :                   : 2.5V    
 DCLK                         : AF10      :        :                   :         : 3A        :                
 TDO                          : AF11      : output :                   :         : 3A        :                
 VCCPGM                       : AF12      : power  :                   : 1.8V/2.5V/3.0V/3.3V :           :                
-Result[19]                   : AF13      : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AF13      :        :                   :         : 3A        :                
 GND                          : AF14      : gnd    :                   :         :           :                
 VCCPD3B4A                    : AF15      : power  :                   : 2.5V    : 3B, 4A    :                
 VCCPD3B4A                    : AF16      : power  :                   : 2.5V    : 3B, 4A    :                
@@ -323,10 +323,10 @@ DNU                          : AG9       :        :                   :         
 nCSO, DATA4                  : AG10      :        :                   :         : 3A        :                
 TMS                          : AG11      : input  :                   :         : 3A        :                
 VCCIO3A                      : AG12      : power  :                   : 2.5V    : 3A        :                
-Multiplier[26]               : AG13      : input  : 2.5 V             :         : 3A        : N              
-Result[10]                   : AG14      : output : 2.5 V             :         : 3A        : N              
-Multiplicand[0]              : AG15      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[23]             : AG16      : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AG13      :        :                   :         : 3A        :                
+Conteo[28]                   : AG14      : output : 2.5 V             :         : 3A        : N              
+Conteo[10]                   : AG15      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[22]        : AG16      : input  : 2.5 V             :         : 3B        : N              
 GND                          : AG17      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG18      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AG19      :        :                   :         : 4A        :                
@@ -356,12 +356,12 @@ AS_DATA2, DATA2              : AH8       :        :                   :         
 AS_DATA0, ASDO, DATA0        : AH9       :        :                   :         : 3A        :                
 GND                          : AH10      : gnd    :                   :         :           :                
 VREFB3AN0                    : AH11      : power  :                   :         : 3A        :                
-Result[30]                   : AH12      : output : 2.5 V             :         : 3A        : N              
-Result[14]                   : AH13      : output : 2.5 V             :         : 3A        : N              
-Result[4]                    : AH14      : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AH12      :        :                   :         : 3A        :                
+Registers_Counter[16]        : AH13      : input  : 2.5 V             :         : 3A        : N              
+Conteo[15]                   : AH14      : output : 2.5 V             :         : 3A        : N              
 VCCIO3B                      : AH15      : power  :                   : 2.5V    : 3B        :                
-Multiplier[18]               : AH16      : input  : 2.5 V             :         : 3B        : N              
-Result[12]                   : AH17      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[9]         : AH16      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[14]        : AH17      : input  : 2.5 V             :         : 3B        : N              
 VREFB3BN0                    : AH18      : power  :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AH19      :        :                   :         : 4A        :                
 GND                          : AH20      : gnd    :                   :         :           :                
@@ -387,17 +387,17 @@ GND                          : AJ5       : gnd    :                   :         
 AS_DATA3, DATA3              : AJ6       :        :                   :         : 3A        :                
 AS_DATA1, DATA1              : AJ7       :        :                   :         : 3A        :                
 VCCIO3A                      : AJ8       : power  :                   : 2.5V    : 3A        :                
-Multiplier[23]               : AJ9       : input  : 2.5 V             :         : 3A        : N              
-Multiplier[1]                : AJ10      : input  : 2.5 V             :         : 3A        : N              
-Result[31]                   : AJ11      : output : 2.5 V             :         : 3A        : N              
-Multiplicand[16]             : AJ12      : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[27]        : AJ9       : input  : 2.5 V             :         : 3A        : N              
+Conteo[31]                   : AJ10      : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ11      :        :                   :         : 3A        :                
+Conteo[30]                   : AJ12      : output : 2.5 V             :         : 3A        : N              
 GND                          : AJ13      : gnd    :                   :         :           :                
-Multiplier[28]               : AJ14      : input  : 2.5 V             :         : 3A        : N              
-Multiplicand[10]             : AJ15      : input  : 2.5 V             :         : 3B        : N              
-Result[16]                   : AJ16      : output : 2.5 V             :         : 3B        : N              
+Control_Counter[2]           : AJ14      : input  : 2.5 V             :         : 3A        : N              
+IR_Counter[4]                : AJ15      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[3]         : AJ16      : input  : 2.5 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ17      :        :                   :         : 3B        :                
 VCCIO4A                      : AJ18      : power  :                   : 2.5V    : 4A        :                
-Multiplier[12]               : AJ19      : input  : 2.5 V             :         : 4A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AJ19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ21      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AJ22      :        :                   :         : 4A        :                
@@ -419,18 +419,18 @@ GND                          : AK3       : gnd    :                   :         
 NC                           : AK4       :        :                   :         :           :                
 TCK                          : AK5       : input  :                   :         : 3A        :                
 GND                          : AK6       : gnd    :                   :         :           :                
-Multiplicand[12]             : AK7       : input  : 2.5 V             :         : 3A        : N              
-Result[7]                    : AK8       : output : 2.5 V             :         : 3A        : N              
-Multiplier[25]               : AK9       : input  : 2.5 V             :         : 3A        : N              
-Multiplicand[25]             : AK10      : input  : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK7       :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK8       :        :                   :         : 3A        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK9       :        :                   :         : 3A        :                
+Registers_Counter[28]        : AK10      : input  : 2.5 V             :         : 3A        : N              
 VCCIO3A                      : AK11      : power  :                   : 2.5V    : 3A        :                
-Multiplier[5]                : AK12      : input  : 2.5 V             :         : 3A        : N              
-Result[26]                   : AK13      : output : 2.5 V             :         : 3A        : N              
-Multiplier[15]               : AK14      : input  : 2.5 V             :         : 3A        : N              
-Multiplier[17]               : AK15      : input  : 2.5 V             :         : 3B        : N              
+Reset                        : AK12      : input  : 2.5 V             :         : 3A        : N              
+Conteo[7]                    : AK13      : output : 2.5 V             :         : 3A        : N              
+Conteo[18]                   : AK14      : output : 2.5 V             :         : 3A        : N              
+Registers_Counter[0]         : AK15      : input  : 2.5 V             :         : 3B        : N              
 GND                          : AK16      : gnd    :                   :         :           :                
-Multiplicand[14]             : AK17      : input  : 2.5 V             :         : 3B        : N              
-Result[22]                   : AK18      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[11]        : AK17      : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AK18      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AK20      :        :                   :         : 4A        :                
 VCCIO4A                      : AK21      : power  :                   : 2.5V    : 4A        :                
@@ -452,19 +452,19 @@ NC                           : AL2       :        :                   :         
 NC                           : AL3       :        :                   :         :           :                
 NC                           : AL4       :        :                   :         :           :                
 GND                          : AL5       : gnd    :                   :         :           :                
-Multiplier[0]                : AL6       : input  : 2.5 V             :         : 3A        : N              
-Multiplier[27]               : AL7       : input  : 2.5 V             :         : 3A        : N              
-Multiplicand[22]             : AL8       : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[30]        : AL6       : input  : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AL7       :        :                   :         : 3A        :                
+Conteo[29]                   : AL8       : output : 2.5 V             :         : 3A        : N              
 GND                          : AL9       : gnd    :                   :         :           :                
-Multiplier[3]                : AL10      : input  : 2.5 V             :         : 3A        : N              
-Multiplier[9]                : AL11      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[28]             : AL12      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[18]             : AL13      : input  : 2.5 V             :         : 3B        : N              
+Conteo[17]                   : AL10      : output : 2.5 V             :         : 3A        : N              
+Conteo[6]                    : AL11      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[7]         : AL12      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[17]        : AL13      : input  : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AL14      : power  :                   : 2.5V    : 3B        :                
-Multiplier[21]               : AL15      : input  : 2.5 V             :         : 3B        : N              
-Multiplier[10]               : AL16      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[29]             : AL17      : input  : 2.5 V             :         : 3B        : N              
-Result[17]                   : AL18      : output : 2.5 V             :         : 3B        : N              
+Conteo[8]                    : AL15      : output : 2.5 V             :         : 3B        : N              
+IR_Counter[1]                : AL16      : input  : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AL17      :        :                   :         : 3B        :                
+RESERVED_INPUT_WITH_WEAK_PULLUP : AL18      :        :                   :         : 3B        :                
 GND                          : AL19      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AL20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AL21      :        :                   :         : 4A        :                
@@ -485,20 +485,20 @@ NC                           : AM1       :        :                   :         
 NC                           : AM2       :        :                   :         :           :                
 GND                          : AM3       : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AM4       :        :                   :         : 3A        :                
-Result[25]                   : AM5       : output : 2.5 V             :         : 3A        : N              
-Result[2]                    : AM6       : output : 2.5 V             :         : 3A        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AM5       :        :                   :         : 3A        :                
+Registers_Counter[26]        : AM6       : input  : 2.5 V             :         : 3A        : N              
 VCCIO3A                      : AM7       : power  :                   : 2.5V    : 3A        :                
-Multiplier[4]                : AM8       : input  : 2.5 V             :         : 3A        : N              
-Multiplicand[4]              : AM9       : input  : 2.5 V             :         : 3A        : N              
-Result[6]                    : AM10      : output : 2.5 V             :         : 3A        : N              
-Multiplicand[21]             : AM11      : input  : 2.5 V             :         : 3B        : N              
+Conteo[24]                   : AM8       : output : 2.5 V             :         : 3A        : N              
+Conteo[23]                   : AM9       : output : 2.5 V             :         : 3A        : N              
+Conteo[16]                   : AM10      : output : 2.5 V             :         : 3A        : N              
+Conteo[5]                    : AM11      : output : 2.5 V             :         : 3B        : N              
 GND                          : AM12      : gnd    :                   :         :           :                
-Multiplicand[11]             : AM13      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[7]              : AM14      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[20]             : AM15      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[19]             : AM16      : input  : 2.5 V             :         : 3B        : N              
+IR_Counter[2]                : AM13      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[15]        : AM14      : input  : 2.5 V             :         : 3B        : N              
+Conteo[4]                    : AM15      : output : 2.5 V             :         : 3B        : N              
+IR_Counter[3]                : AM16      : input  : 2.5 V             :         : 3B        : N              
 VCCIO3B                      : AM17      : power  :                   : 2.5V    : 3B        :                
-Result[13]                   : AM18      : output : 2.5 V             :         : 3B        : N              
+RESERVED_INPUT_WITH_WEAK_PULLUP : AM18      :        :                   :         : 3B        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AM19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AM20      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AM21      :        :                   :         : 4A        :                
@@ -518,21 +518,21 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AM34      :        :                   :      
 NC                           : AN1       :        :                   :         :           :                
 NC                           : AN2       :        :                   :         :           :                
 NC                           : AN3       :        :                   :         :           :                
-Multiplicand[31]             : AN4       : input  : 2.5 V             :         : 3A        : N              
-Multiplier[7]                : AN5       : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[18]        : AN4       : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[29]        : AN5       : input  : 2.5 V             :         : 3A        : N              
 GND                          : AN6       : gnd    :                   :         :           :                
-Result[28]                   : AN7       : output : 2.5 V             :         : 3A        : N              
-Result[1]                    : AN8       : output : 2.5 V             :         : 3A        : N              
-Result[0]                    : AN9       : output : 2.5 V             :         : 3A        : N              
+Conteo[27]                   : AN7       : output : 2.5 V             :         : 3A        : N              
+Conteo[14]                   : AN8       : output : 2.5 V             :         : 3A        : N              
+Conteo[21]                   : AN9       : output : 2.5 V             :         : 3A        : N              
 VCCIO3B                      : AN10      : power  :                   : 2.5V    : 3B        :                
-Multiplicand[1]              : AN11      : input  : 2.5 V             :         : 3B        : N              
-Result[23]                   : AN12      : output : 2.5 V             :         : 3B        : N              
-Multiplicand[8]              : AN13      : input  : 2.5 V             :         : 3B        : N              
-Multiplicand[13]             : AN14      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[4]         : AN11      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[2]         : AN12      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[19]        : AN13      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[21]        : AN14      : input  : 2.5 V             :         : 3B        : N              
 GND                          : AN15      : gnd    :                   :         :           :                
-Multiplier[13]               : AN16      : input  : 2.5 V             :         : 3B        : N              
-Result[29]                   : AN17      : output : 2.5 V             :         : 3B        : N              
-Multiplier[8]                : AN18      : input  : 2.5 V             :         : 3B        : N              
+Conteo[0]                    : AN16      : output : 2.5 V             :         : 3B        : N              
+Conteo[3]                    : AN17      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[5]         : AN18      : input  : 2.5 V             :         : 3B        : N              
 RESERVED_INPUT_WITH_WEAK_PULLUP : AN19      :        :                   :         : 4A        :                
 VCCIO4A                      : AN20      : power  :                   : 2.5V    : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AN21      :        :                   :         : 4A        :                
@@ -552,19 +552,19 @@ RESERVED_INPUT_WITH_WEAK_PULLUP : AN34      :        :                   :      
 GND                          : AP2       : gnd    :                   :         :           :                
 NC                           : AP3       :        :                   :         :           :                
 GND                          : AP4       : gnd    :                   :         :           :                
-Multiplier[2]                : AP5       : input  : 2.5 V             :         : 3A        : N              
-Multiplier[29]               : AP6       : input  : 2.5 V             :         : 3A        : N              
-Multiplier[20]               : AP7       : input  : 2.5 V             :         : 3A        : N              
+Registers_Counter[20]        : AP5       : input  : 2.5 V             :         : 3A        : N              
+Conteo[26]                   : AP6       : output : 2.5 V             :         : 3A        : N              
+Conteo[25]                   : AP7       : output : 2.5 V             :         : 3A        : N              
 GND                          : AP8       : gnd    :                   :         :           :                
-Multiplicand[2]              : AP9       : input  : 2.5 V             :         : 3B        : N              
-Result[11]                   : AP10      : output : 2.5 V             :         : 3B        : N              
-Multiplier[30]               : AP11      : input  : 2.5 V             :         : 3B        : N              
-Multiplier[16]               : AP12      : input  : 2.5 V             :         : 3B        : N              
+Registers_Counter[13]        : AP9       : input  : 2.5 V             :         : 3B        : N              
+Conteo[9]                    : AP10      : output : 2.5 V             :         : 3B        : N              
+Conteo[11]                   : AP11      : output : 2.5 V             :         : 3B        : N              
+Conteo[2]                    : AP12      : output : 2.5 V             :         : 3B        : N              
 GND                          : AP13      : gnd    :                   :         :           :                
-Result[21]                   : AP14      : output : 2.5 V             :         : 3B        : N              
-Result[15]                   : AP15      : output : 2.5 V             :         : 3B        : N              
-Result[8]                    : AP16      : output : 2.5 V             :         : 3B        : N              
-Result[20]                   : AP17      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[8]         : AP14      : input  : 2.5 V             :         : 3B        : N              
+Control_Counter[0]           : AP15      : input  : 2.5 V             :         : 3B        : N              
+Conteo[1]                    : AP16      : output : 2.5 V             :         : 3B        : N              
+Registers_Counter[6]         : AP17      : input  : 2.5 V             :         : 3B        : N              
 GND                          : AP18      : gnd    :                   :         :           :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AP19      :        :                   :         : 4A        :                
 RESERVED_INPUT_WITH_WEAK_PULLUP : AP20      :        :                   :         : 4A        :                

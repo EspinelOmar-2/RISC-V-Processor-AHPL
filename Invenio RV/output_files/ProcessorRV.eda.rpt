@@ -1,5 +1,5 @@
 EDA Netlist Writer report for ProcessorRV
-Mon Jun 22 18:50:29 2020
+Wed Jun 24 12:53:17 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -37,9 +37,9 @@ agreement for further details.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Mon Jun 22 18:50:29 2020 ;
+; EDA Netlist Writer Status ; Successful - Wed Jun 24 12:53:17 2020 ;
 ; Revision Name             ; ProcessorRV                           ;
-; Top-level Entity Name     ; Multiplier32Bits                      ;
+; Top-level Entity Name     ; Counter                               ;
 ; Family                    ; Cyclone V                             ;
 ; Simulation Files Creation ; Successful                            ;
 +---------------------------+---------------------------------------+
@@ -96,14 +96,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: devices manufactured by Altera and sold by Altera or its 
     Info: authorized distributors.  Please refer to the applicable 
     Info: agreement for further details.
-    Info: Processing started: Mon Jun 22 18:50:28 2020
+    Info: Processing started: Wed Jun 24 12:53:16 2020
 Info: Command: quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/" ProcessorRV -c ProcessorRV
 Warning (10905): Generated the EDA functional simulation files although EDA timing simulation option is chosen.
 Info (204019): Generated file ProcessorRV.vo in folder "C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4933 megabytes
-    Info: Processing ended: Mon Jun 22 18:50:30 2020
-    Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Peak virtual memory: 4930 megabytes
+    Info: Processing ended: Wed Jun 24 12:53:17 2020
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
 
 

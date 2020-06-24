@@ -218,8 +218,50 @@ R19
 !i113 1
 R10
 n@booth@partial@product_vlg_vec_tst
+vCounter
+!s110 1593021198
+!i10b 1
+!s100 L=8lbk175TPDT6h=ZKkG41
+IMa9@;E^o6oC1OmOWR=DK_1
+R2
+R3
+w1593021197
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z20 !s108 1593021198.000000
+R8
+R9
+!i113 1
+R10
+n@counter
+vCounter_vlg_vec_tst
+!s110 1593021199
+!i10b 1
+!s100 ^6MCKKYKiBgAk>O^T`jze1
+IaFV[jhb[V699:dcUkA<Ge1
+R2
+R3
+w1593021192
+8CounterSim.vwf.vt
+FCounterSim.vwf.vt
+R11
+R7
+r1
+!s85 0
+31
+R20
+!s107 CounterSim.vwf.vt|
+!s90 -work|work|CounterSim.vwf.vt|
+!i113 1
+R10
+n@counter_vlg_vec_tst
 vCRAAdder30
-Z20 !s110 1590370165
+Z21 !s110 1590370165
 !i10b 1
 !s100 mX6e`C`kd>@YJ=6<3z8Rh0
 I5e7:GO:jQMP=W8>llE[;81
@@ -233,14 +275,14 @@ R7
 r1
 !s85 0
 31
-Z21 !s108 1590370165.000000
+Z22 !s108 1590370165.000000
 R8
 R9
 !i113 1
 R10
 n@c@r@a@adder30
 vCRAAdder30_vlg_vec_tst
-R20
+R21
 !i10b 1
 !s100 Bl6R<T9S0Aij=9z^=<8F=2
 I`[97ST_go6Xm0]H6mZGUN1
@@ -254,14 +296,14 @@ R7
 r1
 !s85 0
 31
-R21
+R22
 !s107 CRAAdder30.vwf.vt|
 !s90 -work|work|CRAAdder30.vwf.vt|
 !i113 1
 R10
 n@c@r@a@adder30_vlg_vec_tst
 vFullPartialProduct
-Z22 !s110 1590208394
+Z23 !s110 1590208394
 !i10b 1
 !s100 ]H9en7=ajgW8oaVF?^jIc3
 Ia^0YT7cEk4`kaOFaC@OZe3
@@ -275,14 +317,14 @@ R7
 r1
 !s85 0
 31
-Z23 !s108 1590208394.000000
+Z24 !s108 1590208394.000000
 R8
 R9
 !i113 1
 R10
 n@full@partial@product
 vFullPartialProduct_vlg_vec_tst
-R22
+R23
 !i10b 1
 !s100 ]XK]7X]YC5m0CB[obSX;m3
 IN]?>FVG5Y`[iQCVbigXC33
@@ -296,14 +338,14 @@ R7
 r1
 !s85 0
 31
-R23
+R24
 !s107 FullPartialProductSim.vwf.vt|
 !s90 -work|work|FullPartialProductSim.vwf.vt|
 !i113 1
 R10
 n@full@partial@product_vlg_vec_tst
 vIR
-Z24 !s110 1585198434
+Z25 !s110 1585198434
 !i10b 1
 !s100 _:g@ij?^IHjNc]nBkmgoV3
 INjO0NnmZCFPgVjK<XCUS12
@@ -317,14 +359,14 @@ R7
 r1
 !s85 0
 31
-Z25 !s108 1585198434.000000
+Z26 !s108 1585198434.000000
 R8
 R9
 !i113 1
 R10
 n@i@r
 vIR_vlg_vec_tst
-R24
+R25
 !i10b 1
 !s100 5R?]kb]YCjj7i31YP5N:g2
 I=G]G7F;5IAgCOQhmC3gMN2
@@ -338,14 +380,14 @@ R7
 r1
 !s85 0
 31
-R25
+R26
 !s107 IRSim.vwf.vt|
 !s90 -work|work|IRSim.vwf.vt|
 !i113 1
 R10
 n@i@r_vlg_vec_tst
 vLeftShift
-Z26 !s110 1590594596
+Z27 !s110 1590594596
 !i10b 1
 !s100 =1N=@:=:_l[N:g]glO8Sz2
 IL5VZnE:jLbEXg^obGL]N?3
@@ -359,14 +401,14 @@ R7
 r1
 !s85 0
 31
-Z27 !s108 1590594596.000000
+Z28 !s108 1590594596.000000
 R8
 R9
 !i113 1
 R10
 n@left@shift
 vLeftShift_vlg_vec_tst
-R26
+R27
 !i10b 1
 !s100 1hEDNbdd9S^z=nGX5K>Da3
 IXg4T@@PdhDjXc5HC8TNj:3
@@ -380,14 +422,14 @@ R7
 r1
 !s85 0
 31
-R27
+R28
 !s107 LeftShiftSim.vwf.vt|
 !s90 -work|work|LeftShiftSim.vwf.vt|
 !i113 1
 R10
 n@left@shift_vlg_vec_tst
 vLogicalShiftRight
-Z28 !s110 1590601459
+Z29 !s110 1590601459
 !i10b 1
 !s100 7CN?c2=[^EFFKV^XbJF=S0
 IlCgkbjeh?E4]fNmX:Z[5O1
@@ -401,14 +443,14 @@ R7
 r1
 !s85 0
 31
-Z29 !s108 1590601459.000000
+Z30 !s108 1590601459.000000
 R8
 R9
 !i113 1
 R10
 n@logical@shift@right
 vLogicalShiftRight_vlg_vec_tst
-R28
+R29
 !i10b 1
 !s100 J5_T7LYg5F69KQFICm9OS1
 I00VN7J^k0b:H_n^To22^F0
@@ -422,14 +464,56 @@ R7
 r1
 !s85 0
 31
-R29
+R30
 !s107 LogicalShiftRightSim.vwf.vt|
 !s90 -work|work|LogicalShiftRightSim.vwf.vt|
 !i113 1
 R10
 n@logical@shift@right_vlg_vec_tst
+vMAR
+Z31 !s110 1592968827
+!i10b 1
+!s100 LhFO5VzP8LdZkb14Flk5g2
+I^MD0moAhVJHZZhGkcKMSW1
+R2
+R3
+w1592968826
+R4
+R5
+R6
+R7
+r1
+!s85 0
+31
+Z32 !s108 1592968827.000000
+R8
+R9
+!i113 1
+R10
+n@m@a@r
+vMAR_vlg_vec_tst
+R31
+!i10b 1
+!s100 20D;Q`NMPV85Tj9Ej_;ZS0
+IkI>c6RmS8S6Df:RNlFag81
+R2
+R3
+w1592968821
+8MARSim.vwf.vt
+FMARSim.vwf.vt
+R11
+R7
+r1
+!s85 0
+31
+R32
+!s107 MARSim.vwf.vt|
+!s90 -work|work|MARSim.vwf.vt|
+!i113 1
+R10
+n@m@a@r_vlg_vec_tst
 vMultiplier32Bits
-Z30 !s110 1592869832
+Z33 !s110 1592869832
 !i10b 1
 !s100 GkHj3O9QgVSkWSP2:H;oB1
 I6485j8eR>6:BF@CeF@Q]>0
@@ -450,7 +534,7 @@ R9
 R10
 n@multiplier32@bits
 vMultiplier32Bits_vlg_vec_tst
-R30
+R33
 !i10b 1
 !s100 6LAShOT9e?jYG31:Kn6>Z1
 IJWd?l5d?b1`eChJT?CW[63
@@ -471,7 +555,7 @@ r1
 R10
 n@multiplier32@bits_vlg_vec_tst
 vPC
-Z31 !s110 1585109993
+Z34 !s110 1585109993
 !i10b 1
 !s100 78Ff?AzDQMdV@H1_L50hR2
 IO4df8Tam>1QDHzSQ;<<e]2
@@ -485,14 +569,14 @@ R7
 r1
 !s85 0
 31
-Z32 !s108 1585109993.000000
+Z35 !s108 1585109993.000000
 R8
 R9
 !i113 1
 R10
 n@p@c
 vPC_vlg_vec_tst
-R31
+R34
 !i10b 1
 !s100 Vclgcl^B6a4b:LzJ2_;8l1
 Ibe8DzN?S1P;fzz1T0AXZd0
@@ -506,7 +590,7 @@ R7
 r1
 !s85 0
 31
-R32
+R35
 !s107 PCSim.vwf.vt|
 !s90 -work|work|PCSim.vwf.vt|
 !i113 1

@@ -1,13 +1,13 @@
-Fitter Status : Successful - Mon Jun 22 16:58:26 2020
+Fitter Status : Successful - Wed Jun 24 12:42:26 2020
 Quartus Prime Version : 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 Revision Name : ProcessorRV
-Top-level Entity Name : Multiplier32Bits
+Top-level Entity Name : Counter
 Family : Cyclone V
 Device : 5CGXFC9E7F35C8
 Timing Models : Final
-Logic utilization (in ALMs) : 381 / 113,560 ( < 1 % )
-Total registers : 0
-Total pins : 96 / 616 ( 16 % )
+Logic utilization (in ALMs) : 52 / 113,560 ( < 1 % )
+Total registers : 32
+Total pins : 76 / 616 ( 12 % )
 Total virtual pins : 0
 Total block memory bits : 0 / 12,492,800 ( 0 % )
 Total RAM Blocks : 0 / 1,220 ( 0 % )

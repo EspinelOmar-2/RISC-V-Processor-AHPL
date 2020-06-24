@@ -1,0 +1,67 @@
+
+--Definicion de las bibliotecas 
+library IEEE; 
+use IEEE.std_logic_1164.all;
+library ALTERA;
+use ALTERA.altera_primitives_components.all;
+
+
+
+--Declaracion de entradas y salidas del bloque--
+Entity MAR is
+	port(
+		--Entradas
+			
+			Reset: 					in std_logic;
+			--Señal para reiniciar el sistema
+				
+			Reloj: 					in std_logic;
+			--señal de reloj para elfuncionamiento d elos bloques
+			
+			PC_MAR: 					in 	std_logic_vector(31 downto 0);
+			--Señal que envía la dirección desde el PC al MAR para obtener la instrucción de memoria.
+				
+			ALU_MAR: 				in 	std_logic_vector(31 downto 0); 
+			--señal que envía el resultado de una operación de la ALU al MAR
+			
+			Registers_MAR:			in		std_logic_vector(31 downto 0);
+			--Señal del banco de registros para almacenar valor de registros, en especifico SP al MAR
+			
+			Control_MAR:			in		std_logic_vector(2  downto 0);
+		--Salidas
+		
+			MemoryAddress: 		out	std_logic_vector(31 downto 0)
+			--señal que envía la dirección almacenada en MAR a la memoria.
+		
+		 );
+end Entity MAR;
+
+
+
+architecture MARArch of MAR is
+
+
+-- Definicion del flip flop como componente con todas sus entradas
+
+Component FlipFlop	
+	port	 (
+				D,Ena,Clk,Rst,Set    : in  std_logic;
+				Q    						: out std_logic
+			 );
+			 
+end component; 
+
+
+	signal auxQ: std_logic_vector (31 downto 0); 
+	signal auxD: std_logic_vector (31 downto 0);
+	signal auxE: std_logic_vector (31 downto 0);
+	
+begin
+
+	--Se reciben todos los datos del registro
+	FF0:	FlipFlop	port map (auxD(0),auxE(0),Reloj,Reset,'1',auxQ(0));
+
+	--se envian los datos obtenidos al comparador	
+	memoria_Comparador <= auxQ;
+
+End MARArch;

@@ -1,5 +1,5 @@
 Flow report for ProcessorRV
-Mon Jun 22 18:50:29 2020
+Wed Jun 24 12:53:17 2020
 Quartus Prime Version 15.1.0 Build 185 10/21/2015 SJ Lite Edition
 
 
@@ -41,16 +41,16 @@ agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Mon Jun 22 18:50:29 2020       ;
+; Flow Status                     ; Successful - Wed Jun 24 12:53:17 2020       ;
 ; Quartus Prime Version           ; 15.1.0 Build 185 10/21/2015 SJ Lite Edition ;
 ; Revision Name                   ; ProcessorRV                                 ;
-; Top-level Entity Name           ; Multiplier32Bits                            ;
+; Top-level Entity Name           ; Counter                                     ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CGXFC9E7F35C8                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 381 / 113,560 ( < 1 % )                     ;
-; Total registers                 ; 0                                           ;
-; Total pins                      ; 96 / 616 ( 16 % )                           ;
+; Logic utilization (in ALMs)     ; 52 / 113,560 ( < 1 % )                      ;
+; Total registers                 ; 32                                          ;
+; Total pins                      ; 76 / 616 ( 12 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0 / 12,492,800 ( 0 % )                      ;
 ; Total DSP Blocks                ; 0 / 342 ( 0 % )                             ;
@@ -68,30 +68,30 @@ agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 06/22/2020 16:55:14 ;
+; Start date & time ; 06/24/2020 12:41:04 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; ProcessorRV         ;
 +-------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                ;
-+-------------------------------------+---------------------------------------+---------------+------------------+----------------+
-; Assignment Name                     ; Value                                 ; Default Value ; Entity Name      ; Section Id     ;
-+-------------------------------------+---------------------------------------+---------------+------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 18431773495348.159286291407388        ; --            ; --               ; --             ;
-; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --               ; eda_simulation ;
-; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --               ; --             ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --               ; --             ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --               ; --             ;
-; PARTITION_COLOR                     ; 16764057                              ; --            ; Multiplier32Bits ; Top            ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; Multiplier32Bits ; Top            ;
-; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; Multiplier32Bits ; Top            ;
-; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --               ; --             ;
-; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --               ; --             ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --               ; --             ;
-; TOP_LEVEL_ENTITY                    ; Multiplier32Bits                      ; ProcessorRV   ; --               ; --             ;
-+-------------------------------------+---------------------------------------+---------------+------------------+----------------+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; Assignment Name                     ; Value                                 ; Default Value ; Entity Name ; Section Id     ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 18431773495348.159302046403952        ; --            ; --          ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                  ; --            ; --          ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                ; <None>        ; --          ; --             ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                    ; --            ; --          ; --             ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                     ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; 16764057                              ; --            ; Counter     ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING                 ; --            ; Counter     ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                                ; --            ; Counter     ; Top            ;
+; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                   ; --            ; --          ; --             ;
+; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW ; --            ; --          ; --             ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                          ; --            ; --          ; --             ;
+; TOP_LEVEL_ENTITY                    ; Counter                               ; ProcessorRV   ; --          ; --             ;
++-------------------------------------+---------------------------------------+---------------+-------------+----------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------+
@@ -99,20 +99,18 @@ agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:29     ; 1.0                     ; 5036 MB             ; 00:00:51                           ;
-; Fitter                    ; 00:02:38     ; 1.0                     ; 6582 MB             ; 00:03:35                           ;
-; Assembler                 ; 00:00:37     ; 1.0                     ; 5013 MB             ; 00:00:34                           ;
-; TimeQuest Timing Analyzer ; 00:00:15     ; 1.0                     ; 5413 MB             ; 00:00:14                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4928 MB             ; 00:00:03                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4898 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 4933 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4899 MB             ; 00:00:01                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4934 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4899 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4933 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4899 MB             ; 00:00:02                           ;
-; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4933 MB             ; 00:00:02                           ;
-; Total                     ; 00:04:15     ; --                      ; --                  ; 00:05:32                           ;
+; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 5025 MB             ; 00:00:22                           ;
+; Fitter                    ; 00:01:06     ; 1.0                     ; 6590 MB             ; 00:01:21                           ;
+; Assembler                 ; 00:00:19     ; 1.0                     ; 5002 MB             ; 00:00:18                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 5414 MB             ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4919 MB             ; 00:00:02                           ;
+; EDA Netlist Writer        ; 00:00:02     ; 1.0                     ; 4897 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4930 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4896 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4930 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4896 MB             ; 00:00:01                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 4930 MB             ; 00:00:01                           ;
+; Total                     ; 00:01:51     ; --                      ; --                  ; 00:02:16                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -132,8 +130,6 @@ agreement for further details.
 ; EDA Netlist Writer        ; usuario-PC       ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; usuario-PC       ; Windows 8 ; 6.2        ; x86_64         ;
 ; EDA Netlist Writer        ; usuario-PC       ; Windows 8 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; usuario-PC       ; Windows 8 ; 6.2        ; x86_64         ;
-; EDA Netlist Writer        ; usuario-PC       ; Windows 8 ; 6.2        ; x86_64         ;
 +---------------------------+------------------+-----------+------------+----------------+
 
 
@@ -145,13 +141,11 @@ quartus_fit --read_settings_files=off --write_settings_files=off ProcessorRV -c 
 quartus_asm --read_settings_files=off --write_settings_files=off ProcessorRV -c ProcessorRV
 quartus_sta ProcessorRV -c ProcessorRV
 quartus_eda --read_settings_files=off --write_settings_files=off ProcessorRV -c ProcessorRV
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/Multiplier32BitsSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/Multiplier32BitsSim.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/CounterSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/CounterSim.vwf.vt"
 quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/" ProcessorRV -c ProcessorRV
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/Multiplier32BitsSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/Multiplier32BitsSim.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/CounterSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/CounterSim.vwf.vt"
 quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/" ProcessorRV -c ProcessorRV
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/Multiplier32BitsSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/Multiplier32BitsSim.vwf.vt"
-quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/" ProcessorRV -c ProcessorRV
-quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/Multiplier32BitsSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/Multiplier32BitsSim.vwf.vt"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off ProcessorRV -c ProcessorRV --vector_source="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/Simulaciones/CounterSim.vwf" --testbench_file="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/CounterSim.vwf.vt"
 quartus_eda --write_settings_files=off --functional=off --flatten_buses=off --timescale=1ps --simulation=on --tool=modelsim_oem --format=verilog --output_directory="C:/Users/usuario/Documents/GitHub/RISC-V-Processor-AHPL/Invenio RV/simulation/qsim/" ProcessorRV -c ProcessorRV
 
 
