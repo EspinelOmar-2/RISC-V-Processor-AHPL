@@ -1,0 +1,57 @@
+--******************************************************--
+--        PONTIFICIA UNIVERSIDAD JAVERIANA              --
+--                Disegno Digital                       --
+--          Seccion de Tecnicas Digitales               --
+-- 													              --
+-- Titulo :                                             --
+-- Fecha  :  	D:XX M:XX Y:20XX                         --
+--******************************************************--
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+--******************************************************--
+-- Comentarios:
+-- 
+-- 
+--******************************************************--
+
+ENTITY SoC IS
+	
+	PORT	 (
+				BitX1_In : IN  STD_LOGIC;
+				BitY1_In : IN  STD_LOGIC;
+				BitZ1_In : IN  STD_LOGIC;
+				SP1_Out  : OUT STD_LOGIC
+			 );
+	
+END ENTITY SoC;
+
+ARCHITECTURE SoCArch OF SoC IS
+
+BEGIN
+
+--******************************************************--
+-- 
+-- 
+-- 
+--******************************************************--
+
+
+
+--******************************************************--
+-- 
+-- Summon This Block:
+-- 
+--******************************************************--
+--BlockN: ENTITY WORK.SoC 
+--GENERIC MAP(GenericVar => #
+--			  )
+--PORT MAP	  (Sig => SLV,
+--				Sig => SLV,
+--				Sig => SLV,
+--				Sig => SLV
+--			  );
+--******************************************************--
+
+END SoCArch;
