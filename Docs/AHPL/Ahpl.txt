@@ -242,31 +242,31 @@
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 32. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
-    MemoryIn( 7: 0) = Registers[IR(24:20)]( 7: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 7
-    MemoryIn(31: 8) = Registers[IR(24:20)](    7);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  7
+    MemoryIn( 7: 0) = Registers[IR(11:7)]( 7: 0);                                                                        -- Se envia los datos de Registers direccion IR(24:20) del 0 al 7
+    MemoryIn(31: 8) = Registers[IR(11:7)](    7);                                                                        -- Se envia el  dato  de Registers direccion IR(24:20) solo el  7
     -> (33)
 
 33. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 2 de Write
-    MemoryIn( 7: 0) = Registers[IR(24:20)]( 7: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 7
-    MemoryIn(31: 8) = Registers[IR(24:20)](    7);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  7
+    MemoryIn( 7: 0) = Registers[IR(11:7)]( 7: 0);                                                                        -- Se envia los datos de Registers direccion IR(24:20) del 0 al 7
+    MemoryIn(31: 8) = Registers[IR(11:7)](    7);                                                                        -- Se envia el  dato  de Registers direccion IR(24:20) solo el  7
     -> (89)
 
 34. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
-    MemoryIn(15: 0) = Registers[IR(24:20)](15: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 15
-    MemoryIn(31:16) = Registers[IR(24:20)](   15);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  15
+    MemoryIn(15: 0) = Registers[IR(11:7)](15: 0);                                                                        -- Se envia los datos de Registers direccion IR(24:20) del 0 al 15
+    MemoryIn(31:16) = Registers[IR(11:7)](   15);                                                                        -- Se envia el  dato  de Registers direccion IR(24:20) solo el  15
     -> (35)
 
 35. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 2 de Write
-    MemoryIn(15: 0) = Registers[IR(24:20)](15: 0);                                                                       -- Se envia los datos de Registers direccion IR(24:20) del 0 al 15
-    MemoryIn(31:16) = Registers[IR(24:20)](   15);                                                                       -- Se envia el  dato  de Registers direccion IR(24:20) solo el  15    -> X 1.
+    MemoryIn(15: 0) = Registers[IR(11:7)](15: 0);                                                                        -- Se envia los datos de Registers direccion IR(24:20) del 0 al 15
+    MemoryIn(31:16) = Registers[IR(11:7)](   15);                                                                        -- Se envia el  dato  de Registers direccion IR(24:20) solo el  15    -> X 1.
     -> (89)
 
 36. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Read = 0;                                                                                                            -- Ciclo 1 de Write
-    MemoryIn = Registers[IR(24:20)];                                                                                     -- Se envia los datos de Registers direccion IR(24:20)
+    MemoryIn = Registers[IR(11:7)];                                                                                      -- Se envia los datos de Registers direccion IR(24:20)
     -> (37)
 
 37. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato

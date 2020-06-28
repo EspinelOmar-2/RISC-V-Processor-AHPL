@@ -1,0 +1,389 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -24.992
+TNS   : -1038.790
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -24.037
+TNS   : -1379.432
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -23.156
+TNS   : -958.167
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -14.261
+TNS   : -1064.579
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -13.447
+TNS   : -815.566
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -13.361
+TNS   : -732.293
+
+Type  : Slow 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : -12.461
+TNS   : -374.765
+
+Type  : Slow 1100mV 85C Model Setup 'Clk'
+Slack : -12.165
+TNS   : -28769.165
+
+Type  : Slow 1100mV 85C Model Hold 'Clk'
+Slack : -3.279
+TNS   : -108.550
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -1.882
+TNS   : -6.793
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -1.372
+TNS   : -7.585
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -0.813
+TNS   : -1.420
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.120
+TNS   : -0.120
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.090
+TNS   : -0.090
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : 0.312
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : 0.834
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'Clk'
+Slack : -2.174
+TNS   : -7432.273
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -0.226
+TNS   : -5.806
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -0.122
+TNS   : -1.191
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.106
+TNS   : -0.406
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.103
+TNS   : -0.238
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -0.040
+TNS   : -0.159
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : 0.044
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : 0.140
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -24.690
+TNS   : -1025.677
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -23.739
+TNS   : -1364.333
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -22.934
+TNS   : -948.775
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -14.125
+TNS   : -1059.639
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -13.347
+TNS   : -811.940
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -13.228
+TNS   : -730.106
+
+Type  : Slow 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : -12.307
+TNS   : -373.020
+
+Type  : Slow 1100mV 0C Model Setup 'Clk'
+Slack : -11.788
+TNS   : -27862.209
+
+Type  : Slow 1100mV 0C Model Hold 'Clk'
+Slack : -3.314
+TNS   : -135.316
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -1.828
+TNS   : -6.908
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -1.327
+TNS   : -7.152
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -0.709
+TNS   : -1.469
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.268
+TNS   : -0.268
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.058
+TNS   : -0.058
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : 0.251
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : 0.768
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'Clk'
+Slack : -2.174
+TNS   : -7499.450
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -0.271
+TNS   : -7.033
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.099
+TNS   : -0.522
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -0.084
+TNS   : -0.528
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.069
+TNS   : -0.082
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -0.051
+TNS   : -0.119
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : 0.038
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : 0.144
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -14.604
+TNS   : -598.207
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -14.026
+TNS   : -803.317
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -13.311
+TNS   : -541.590
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -8.121
+TNS   : -607.033
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -7.787
+TNS   : -470.228
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -7.670
+TNS   : -410.975
+
+Type  : Fast 1100mV 85C Model Setup 'Clk'
+Slack : -7.354
+TNS   : -16995.374
+
+Type  : Fast 1100mV 85C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : -7.160
+TNS   : -210.610
+
+Type  : Fast 1100mV 85C Model Hold 'Clk'
+Slack : -1.858
+TNS   : -44.379
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -1.221
+TNS   : -5.072
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -1.037
+TNS   : -7.664
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -0.594
+TNS   : -0.983
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.301
+TNS   : -0.328
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.159
+TNS   : -0.159
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : -0.037
+TNS   : -0.037
+
+Type  : Fast 1100mV 85C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : 0.507
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'Clk'
+Slack : -2.174
+TNS   : -6641.360
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -0.242
+TNS   : -8.205
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.091
+TNS   : -0.565
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -0.031
+TNS   : -0.116
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.027
+TNS   : -0.027
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -0.015
+TNS   : -0.015
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : 0.153
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : 0.158
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : -13.265
+TNS   : -544.000
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -12.738
+TNS   : -728.200
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -12.127
+TNS   : -494.356
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -7.348
+TNS   : -555.990
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -7.020
+TNS   : -428.724
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -6.962
+TNS   : -376.830
+
+Type  : Fast 1100mV 0C Model Setup 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : -6.523
+TNS   : -192.725
+
+Type  : Fast 1100mV 0C Model Setup 'Clk'
+Slack : -6.453
+TNS   : -14732.117
+
+Type  : Fast 1100mV 0C Model Hold 'Clk'
+Slack : -1.826
+TNS   : -65.926
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : -1.085
+TNS   : -4.376
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -0.884
+TNS   : -6.026
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : -0.504
+TNS   : -0.871
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : -0.267
+TNS   : -0.267
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.122
+TNS   : -0.122
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : -0.026
+TNS   : -0.026
+
+Type  : Fast 1100mV 0C Model Hold 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : 0.459
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'Clk'
+Slack : -2.174
+TNS   : -6644.274
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[46]'
+Slack : -0.140
+TNS   : -2.777
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[12]'
+Slack : -0.005
+TNS   : -0.007
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[24]'
+Slack : 0.071
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[69]'
+Slack : 0.079
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[48]'
+Slack : 0.083
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[49]'
+Slack : 0.203
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'RiscV:CpuRiscV|ControlUnit:Control|Q[10]'
+Slack : 0.208
+TNS   : 0.000
+
+------------------------------------------------------------

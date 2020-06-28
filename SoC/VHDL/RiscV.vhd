@@ -10,6 +10,8 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
+USE WORK.OutputControlPackage.ALL;
+
 --******************************************************--
 -- Comentarios:
 -- 
@@ -28,7 +30,8 @@ ENTITY RiscV IS
 				MemoryRead    : OUT STD_LOGIC;
 				Qs            : OUT STD_LOGIC_VECTOR( 6 DOWNTO 0);
 				Error         : OUT STD_LOGIC;
-				ACK           : OUT STD_LOGIC_VECTOR( 3 DOWNTO 0)
+				ACK           : OUT STD_LOGIC_VECTOR( 3 DOWNTO 0);
+				RiscVSpy      : OUT RiscVSpy
 			 );
 	
 END ENTITY RiscV;
@@ -223,7 +226,8 @@ PORT MAP	  (Registers_Alu  => RegistersAlu,
 --				MemoryRead    => SLV,
 --				Qs            => SLV,
 --				Error         => SLV,
---				ACK           => SLV
+--				ACK           => SLV,
+--				RiscVSpy      => SLV
 --			  );
 --******************************************************--
 

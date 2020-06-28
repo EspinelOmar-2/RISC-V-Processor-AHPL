@@ -135,6 +135,8 @@ end component ArithmeticShiftRight;
 --Segnales de conexion
 --******************************************************
 
+CONSTANT Zero : STD_LOGIC_VECTOR(31 DOWNTO 0) := x"00000000";
+
 --Segnales de ADDER
 signal	AdderInputA,AdderInputB,AdderResult: 	std_logic_vector (31 downto 0);
 signal	AdderCarryIn: 									std_logic;
@@ -197,11 +199,28 @@ signal AluMARSelector: std_logic;
 --Segnal Alu shift register para salida
 signal 	AluShiftRegister:								std_logic_vector (31 downto 0);
 
+SIGNAL   ZeroRegisters : STD_LOGIC;
+SIGNAL   ZeroMar       : STD_LOGIC;
+SIGNAL   ZeroPc        : STD_LOGIC;
+SIGNAL   ZeroCsr       : STD_LOGIC;
+
+SIGNAL   Alu_Registers_Temp : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL   Alu_Csr_Temp       : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL   Alu_Pc_Temp        : STD_LOGIC_VECTOR(31 DOWNTO 0);
+SIGNAL   Alu_Mar_Temp       : STD_LOGIC_VECTOR(31 DOWNTO 0);
+
 --******************************************************
 --Instancias y Conectividad
 --******************************************************
 begin
- 
+	
+	
+Counter: ENTITY WORK.MulCounter 
+PORT MAP	  (Reloj      => Reloj,
+				Reset      => Reset,
+				Enable     => Control_Alu(31),
+				EndOfCount => Alu_Control( 0)
+			  );
 		
 	--Segnales de los modos de direccionamiento
 		AddrMode0(11 downto 0 )<="000000000000";
@@ -527,55 +546,106 @@ begin
 --Process para asignar salidas
 	
 		--Process para asignar segnales de entrada a bloques con decodificacion
-		assigoutput: PROCESS(AluRegSelector,AluPCSelector,AluCSRSelector,AluMARSelector)
-			BEGIN
-			--Seleccion de las salidas Alu registers
-			
-				if AluRegSelector(0) = '1' then
-					Alu_Registers<= AdderResult;
-				end if;
-				if AluRegSelector(1) = '1' then
-					Alu_Registers<=ResultXOR;
-				end if;
-				if AluRegSelector(2) = '1' then
-					Alu_Registers<=ResultOR;
-				end if;
-				if AluRegSelector(3) = '1' then
-					Alu_Registers<=ResultAND;
-				end if;
-				if AluRegSelector(4) = '1' then
-					Alu_Registers<=AluShiftRegister;
-				end if;
-				if AluRegSelector(5) = '1' then
-					Alu_Registers<=MulResult;
-				end if;
-				
-			--seleccion salida Alu pc	
-				if AluPCSelector = '1' then
-					Alu_PC<=AdderResult;
-				end if;
-				
-			--seleccion de las salidas Alu csr
-				if AluCSRSelector(0) = '1' then
-					Alu_CSR<=ResultOR;
-				end if;
-				if AluCSRSelector(1) = '1' then
-					Alu_CSR<=ResultAND;
-				end if;
-				
-			--seleccion de las salidas Alu mar				
-				if AluMARSelector = '1' then
-					Alu_MAR<=AdderResult;
-				end if;
-				
-		END PROCESS;	
+--				assigoutput: PROCESS(AluRegSelector,AluPCSelector,AluCSRSelector,AluMARSelector)
+--			BEGIN
+--			--Seleccion de las salidas Alu registers
+--			
+--				if AluRegSelector(0) = '1' then
+--					Alu_Registers_Temp <= AdderResult;
+--				end if;
+--				if AluRegSelector(1) = '1' then
+--					Alu_Registers_Temp <=ResultXOR;
+--				end if;
+--				if AluRegSelector(2) = '1' then
+--					Alu_Registers_Temp <=ResultOR;
+--				end if;
+--				if AluRegSelector(3) = '1' then
+--					Alu_Registers_Temp <=ResultAND;
+--				end if;
+--				if AluRegSelector(4) = '1' then
+--					Alu_Registers_Temp <=AluShiftRegister;
+--				end if;
+--				if AluRegSelector(5) = '1' then
+--					Alu_Registers_Temp <=MulResult;
+--				end if;
+--				
+--			--seleccion salida Alu pc	
+--				if AluPCSelector = '1' then
+--					Alu_PC_Temp <=AdderResult;
+--				end if;
+--				
+--			--seleccion de las salidas Alu csr
+--				if AluCSRSelector(0) = '1' then
+--					Alu_CSR_Temp <=ResultOR;
+--				end if;
+--				if AluCSRSelector(1) = '1' then
+--					Alu_CSR_Temp <=ResultAND;
+--				end if;
+--				
+--			--seleccion de las salidas Alu mar				
+--				if AluMARSelector = '1' then
+--					Alu_MAR_Temp <=AdderResult;
+--				end if;
+--				
+--		END PROCESS;	
 
-			Alu_Control(0)<='0';
-			
---NOTA: cuando confirmen tarjeta, cambiar la salida creando el counter
-			
-			Alu_Control(1)<='0';
-			Alu_Control(2)<=AdderResult(31);
+WITH AluRegSelector SELECT
+Alu_Registers_Temp <= AdderResult      WHEN "000001",
+							 ResultXOR        WHEN "000010",
+							 ResultOR         WHEN "000100",
+							 ResultAND        WHEN "001000",
+							 AluShiftRegister WHEN "010000",
+							 MulResult        WHEN "100000",
+							 Zero             WHEN OTHERS;
+
+WITH AluPcSelector SELECT
+Alu_Pc_Temp <= AdderResult WHEN '1',
+					Zero        WHEN OTHERS;
+
+WITH AluCsrSelector SELECT
+Alu_Csr_Temp <= ResultOR  WHEN "01",
+					 ResultAND WHEN "10",
+					 Zero      WHEN OTHERS;
+
+WITH AluMarSelector SELECT
+Alu_Mar_Temp <= AdderResult WHEN '1',
+					 Zero        WHEN OTHERS;
+
+Alu_Registers <= Alu_Registers_Temp;
+Alu_PC        <= Alu_PC_Temp;
+Alu_CSR       <= Alu_CSR_Temp;
+Alu_MAR       <= Alu_MAR_Temp;
+		
+WITH Alu_Registers_Temp SELECT
+ZeroRegisters <= '1' WHEN x"00000000",
+					  '0' WHEN OTHERS;
+
+WITH Alu_Pc_Temp SELECT
+ZeroMar       <= '1' WHEN x"00000000",
+					  '0' WHEN OTHERS;
+
+WITH Alu_Csr_Temp SELECT
+ZeroPc        <= '1' WHEN x"00000000",
+					  '0' WHEN OTHERS;
+
+WITH Alu_MAR_Temp SELECT
+ZeroCsr       <= '1' WHEN x"00000000",
+					  '0' WHEN OTHERS;
+
+WITH (AluMARSelector & AluCSRSelector & AluPCSelector & AluRegSelector) SELECT
+Alu_Control(1) <= ZeroRegisters WHEN "0000000001",
+						ZeroRegisters WHEN "0000000010",
+						ZeroRegisters WHEN "0000000100",
+						ZeroRegisters WHEN "0000001000",
+						ZeroRegisters WHEN "0000010000",
+						ZeroRegisters WHEN "0000100000",
+						ZeroPc        WHEN "0001000000",
+						ZeroCsr       WHEN "0010000000",
+						ZeroCsr       WHEN "0100000000",
+						ZeroMar       WHEN "1000000000",
+						'0'           WHEN OTHERS;
+
+Alu_Control(2) <= AdderResult(31);
 			
 --Salidas para pruebas
 			SpyResultAND   <= ResultAND;

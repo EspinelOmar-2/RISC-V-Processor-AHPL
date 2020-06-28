@@ -10,6 +10,8 @@
 LIBRARY IEEE;
 USE IEEE.STD_LOGIC_1164.ALL;
 
+USE WORK.OutputControlPackage.ALL;
+
 --******************************************************--
 -- Comentarios:
 -- 
@@ -23,7 +25,7 @@ ENTITY SoC IS
 				Reset            : IN  STD_LOGIC;
 				Clk              : IN  STD_LOGIC;
 				PeripheralStatus : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-				Spy              : OUT STD_LOGIC_VECTOR(6 DOWNTO 0)
+				SpySignal        : OUT Spy
 			 );
 	
 END ENTITY SoC;
@@ -35,6 +37,8 @@ SIGNAL MemoryOut     : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL MemoryAddress : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL Address       : STD_LOGIC_VECTOR(13 DOWNTO 0);
 SIGNAL MemoryRead    : STD_LOGIC;
+SIGNAL Irq           : STD_LOGIC_VECTOR( 3 DOWNTO 0);
+SIGNAL Ack           : STD_LOGIC_VECTOR( 3 DOWNTO 0);
 
 BEGIN
 
@@ -48,15 +52,16 @@ Address <= MemoryAddress(13 DOWNTO 0);
 
 CpuRiscV: ENTITY WORK.RiscV 
 PORT MAP	  (MemoryOut     => MemoryOut,
-				IRQ           => PeripheralPort,
+				IRQ           => Irq,
 				Reset         => Reset,
 				Clk           => Clk,
 				MemoryIn      => MemoryIn,
 				MemoryAddress => MemoryAddress,
 				MemoryRead    => MemoryRead,
-				Qs            => Spy,
-				Error         => OPEN,
-				ACK           => PeripheralStatus
+				Qs            => SpySignal.Qs,
+				Error         => SpySignal.Error,
+				ACK           => Ack,
+				RiscVSpy      => SpySignal.CpuSpy
 			  );
 
 SummonMemory: ENTITY WORK.MyMemory
@@ -65,6 +70,15 @@ PORT MAP	  (Address => Address,
 				Data    => MemoryIn,
 				WrEn    => MemoryRead,
 				Q       => MemoryOut
+			  );
+
+PeriphericControl: ENTITY WORK.PeriphericCircuit 
+PORT MAP	  (PeripheralPort   => PeripheralPort,
+				Ack              => Ack,
+				Reset            => Reset,
+				Clk              => Clk,
+				PeripheralStatus => PeripheralStatus,
+				Irq              => Irq
 			  );
 
 --******************************************************--
