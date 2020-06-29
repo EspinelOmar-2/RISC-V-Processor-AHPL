@@ -146,10 +146,10 @@
 (IR[12] . ALU_Control[1]  X89) +                                                                                         -- Si se desea que sean diferentes, y son iguales    va al estado  1
 (IR[12] . ALU_Control[1]' X17)                                                                                           -- Si se desea que sean diferentes, y son diferentes va al estado 17
 
-17. Salida_ALU = Suma(PC, ((20 T IR(12)) ,IR(31), IR(7), IR(30:25), IR(11:8)));                                          -- Se suma PC con un arreglo de valores del IR
+17. Salida_ALU = Suma(PC, ((IR(31)) T (IR(31)), IR(7), IR(30:25), IR(11:8)));                                            -- Se suma PC con un arreglo de valores del IR
     ->  (18)
 
-18. PC        <= Suma(PC, ((20 T IR(12)) ,IR(31), IR(7), IR(30:25), IR(11:8)));                                          -- Se repite la accion del estado 17, mientras la suma se efectua
+18. PC        <= Suma(PC, ((IR(31)) T (IR(31)), IR(7), IR(30:25), IR(11:8)));                                            -- Se repite la accion del estado 17, mientras la suma se efectua
     -> (89)
 
 19. Salida_ALU = Suma( Registers[IR(19:15)], Registers[IR(24:20)]', 1 );                                                 -- Se compara el valor de Registers direccion IR(24:20) con Registers
