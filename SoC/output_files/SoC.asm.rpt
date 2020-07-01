@@ -1,5 +1,5 @@
 Assembler report for SoC
-Fri Jun 26 16:11:05 2020
+Tue Jun 30 00:48:43 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -38,7 +38,7 @@ agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Fri Jun 26 16:11:05 2020 ;
+; Assembler Status      ; Successful - Tue Jun 30 00:48:43 2020 ;
 ; Revision Name         ; SoC                                   ;
 ; Top-level Entity Name ; SoC                                   ;
 ; Family                ; Cyclone V                             ;
@@ -68,8 +68,8 @@ agreement for further details.
 ; Option         ; Setting                                                                                ;
 +----------------+----------------------------------------------------------------------------------------+
 ; Device         ; 5CSEMA5F31C6                                                                           ;
-; JTAG usercode  ; 0x025F81A7                                                                             ;
-; Checksum       ; 0x025F81A7                                                                             ;
+; JTAG usercode  ; 0x01677EB1                                                                             ;
+; Checksum       ; 0x01677EB1                                                                             ;
 +----------------+----------------------------------------------------------------------------------------+
 
 
@@ -79,13 +79,13 @@ agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Fri Jun 26 16:10:50 2020
+    Info: Processing started: Tue Jun 30 00:48:28 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SoC -c SoC
 Info (115030): Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4949 megabytes
-    Info: Processing ended: Fri Jun 26 16:11:05 2020
+    Info: Peak virtual memory: 4925 megabytes
+    Info: Processing ended: Tue Jun 30 00:48:43 2020
     Info: Elapsed time: 00:00:15
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Total CPU time (on all processors): 00:00:11
 
 

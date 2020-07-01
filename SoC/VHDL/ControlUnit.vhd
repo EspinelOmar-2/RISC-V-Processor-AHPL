@@ -33,7 +33,7 @@ ENTITY ControlUnit IS
 				ControlPc         : OUT STD_LOGIC_VECTOR( 2 DOWNTO 0);
 				ControlAlu        : OUT STD_LOGIC_VECTOR(36 DOWNTO 0);
 				ControlMar        : OUT STD_LOGIC_VECTOR( 2 DOWNTO 0);
-				ControlMemoryRead : OUT STD_LOGIC;
+				ControlMemoryRdWr : OUT STD_LOGIC_VECTOR( 1 DOWNTO 0);
 				ControlQs         : OUT STD_LOGIC_VECTOR( 6 DOWNTO 0);
 				ControlError      : OUT STD_LOGIC;
 				ACK               : OUT STD_LOGIC_VECTOR( 3 DOWNTO 0);
@@ -503,20 +503,23 @@ END PROCESS;
 
 --*******************************************************************************************************--
 --
--- ControlPc(0)      <= Inc(Pc)
--- ControlPc(1)      <= Pc  <= Alu
--- ControlPc(2)      <= Pc  <= CSR
+-- ControlPc(0)         <= Inc(Pc)
+-- ControlPc(1)         <= Pc  <= Alu
+-- ControlPc(2)         <= Pc  <= CSR
 --
--- ControlMar(0)     <= Mar <= Pc
--- ControlMar(1)     <= Mar <= Alu
--- ControlMar(2)     <= Mar <= Registers
+-- ControlMar(0)        <= Mar <= Pc
+-- ControlMar(1)        <= Mar <= Alu
+-- ControlMar(2)        <= Mar <= Registers
 --
--- ControlSp(0)      <= Inc(SP)
--- COntrolSp(1)      <= Dec(SP)
+-- ControlMemoryRdWr(0) <= Read  enable
+-- ControlMemoryRdWr(1) <= Write enable
 --
--- ControlCounter(0) <= Inc(Counter)
--- ControlCounter(1) <= IR
--- ControlCounter(2) <= Registers
+-- ControlSp(0)         <= Inc(SP)
+-- COntrolSp(1)         <= Dec(SP)
+--
+-- ControlCounter(0)    <= Inc(Counter)
+-- ControlCounter(1)    <= IR
+-- ControlCounter(2)    <= Registers
 --
 --*******************************************************************************************************--
 
@@ -528,8 +531,11 @@ ControlMar(0)        <= Q(  1);
 ControlMar(1)        <= Q( 24) OR Q( 76) OR Q( 80);
 ControlMar(2)        <= Q( 85) OR Q( 95);
 
-ControlMemoryRead    <= Q(  2) OR Q(  3) OR Q(  4) OR Q( 25) OR Q( 26) OR Q( 27) OR
+ControlMemoryRdWr(0) <= Q(  2) OR Q(  3) OR Q(  4) OR Q( 25) OR Q( 26) OR Q( 27) OR
 							   Q( 28) OR Q( 29) OR Q( 30) OR Q( 31) OR Q( 81) OR Q( 82) OR Q( 83);
+
+ControlMemoryRdWr(1) <= Q( 32) OR Q( 33) OR Q( 34) OR Q( 35) OR
+								Q( 36) OR Q( 37) OR Q( 77) OR Q( 78);
 
 ControlError         <= Q( 84);
 
@@ -759,7 +765,7 @@ ControlQs <= "0000000" WHEN "000000000000000000000000000000000000000000000000000
 --				ControlPc         => SLV,
 --				ControlAlu        => SLV,
 --				ControlMar        => SLV,
---				ControlMemoryRead => SLV,
+--				ControlMemoryRdWr => SLV,
 --				ControlQs         => SLV,
 --				ControlError      => SLV,
 --				Ack               => SLV,

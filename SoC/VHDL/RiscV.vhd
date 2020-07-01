@@ -27,7 +27,7 @@ ENTITY RiscV IS
 				Clk           : IN  STD_LOGIC;
 				MemoryIn      : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
 				MemoryAddress : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-				MemoryRead    : OUT STD_LOGIC;
+				MemoryRdWr    : OUT STD_LOGIC_VECTOR( 1 DOWNTO 0);
 				Qs            : OUT STD_LOGIC_VECTOR( 6 DOWNTO 0);
 				Error         : OUT STD_LOGIC;
 				ACK           : OUT STD_LOGIC_VECTOR( 3 DOWNTO 0);
@@ -97,7 +97,7 @@ PORT MAP	  (IrControl         => IrControl,
 				ControlPc         => ControlPc,
 				ControlAlu        => ControlAlu,
 				ControlMar        => ControlMar,
-				ControlMemoryRead => MemoryRead,
+				ControlMemoryRdWr => MemoryRdWr,
 				ControlQs         => Qs,
 				ControlError      => Error,
 				Ack               => Ack,
@@ -165,7 +165,7 @@ PORT MAP	  (Registers_Counter => RegistersCounter,
 				Ir_Counter        => IrCounter,
 				Reset             => Reset,
 				Reloj             => Clk,
-				Conteo            => OPEN,
+				Conteo            => RiscVSpy.CounterCount,
 				Counter_Control   => CounterControl
 			  );
 
@@ -223,7 +223,7 @@ PORT MAP	  (Registers_Alu  => RegistersAlu,
 --				Clk           => SLV,
 --				MemoryIn      => SLV,
 --				MemoryAddress => SLV,
---				MemoryRead    => SLV,
+--				MemoryRdWr    => SLV,
 --				Qs            => SLV,
 --				Error         => SLV,
 --				ACK           => SLV,

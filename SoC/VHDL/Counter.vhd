@@ -145,7 +145,8 @@ FfGenerator: FOR I IN 0 TO 31 GENERATE
 	
 END GENERATE FfGenerator;
 
---Conteo<=auxQ;
+Conteo<=auxQ;
+
 Counter_Control<= NOT(auxQ( 0) OR auxQ( 1) OR auxQ( 2) OR auxQ( 3) OR
 						    auxQ( 4) OR auxQ( 5) OR auxQ( 6) OR auxQ( 7) OR
 							 auxQ( 8) OR auxQ( 9) OR auxQ(10) OR auxQ(11) OR

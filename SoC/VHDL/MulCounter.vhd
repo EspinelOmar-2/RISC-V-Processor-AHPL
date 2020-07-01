@@ -12,42 +12,58 @@ Entity MulCounter is
 port(
 		--Entradas
 	
-		reloj: in std_logic;
-		reset: in std_logic;
-		enable:in std_logic;
+		reloj      : IN  STD_LOGIC;
+		reset      : IN  STD_LOGIC;
+		enable     : IN  STD_LOGIC;
 		--Salidas
-		endOfCount: out	std_logic	
+		endOfCount : OUT STD_LOGIC
 	  );
 end Entity MulCounter;    
 
 architecture MulCounterArch of MulCounter is
-	component dffe is
-	port(
-		d, clk, clrn, prn, ena: IN std_logic;
-		q:OUT std_logic
-	);
-end component dffe;
 
-
-signal q: std_logic_vector(1 downto 0);
-signal auxSalida: std_logic;
-signal auxEnable: std_logic_vector (1 downto 0);
-
+SIGNAL D         : STD_LOGIC_VECTOR(1 DOWNTO 0);
+signal q         : STD_LOGIC_VECTOR(1 DOWNTO 0);
+signal auxSalida : STD_LOGIC;
+signal auxEnable : STD_LOGIC_VECTOR(1 DOWNTO 0);
 
 begin
 
+PROCESS(Reloj, Reset, D)
 
-	--flips para contar de 0 a 3
-	flip1: dffe port map(NOT q(0), reloj,not reset,'1',auxEnable (0), q(0));--Declaracion de los flipflops
-	flip2: dffe port map(NOT q(1), reloj,not reset,'1',auxEnable (1), q(1));
-
+BEGIN
 	
-	--Asigna los enable 
-	auxEnable (0) <= enable;
-	auxEnable (1) <= q(0) and enable;
+	IF(Reset = '1')THEN
+		
+		Q <= "00";
+		
+	ELSIF(Rising_Edge(Reloj))THEN
+		
+		IF   (AuxEnable(0) = '1')THEN
+			
+			Q(0) <= D(0);
+			
+		ELSIF(AuxEnable(1) = '1')THEN
+			
+			Q(1) <= D(1);
+			
+		END IF;
+		
+	END IF;
+	
+END PROCESS;
 
-	auxSalida<= (q(0) and q(1) );
-	endOfCount <= auxSalida;
+-- Asigna los Data
+
+D(0) <= NOT(Q(0));
+D(1) <= NOT(Q(1));
+
+--Asigna los enable 
+auxEnable (0) <= enable;
+auxEnable (1) <= q(0) and enable;
+
+auxSalida  <= (q(0) and q(1) );
+endOfCount <= auxSalida;
 
 --******************************************************--
 -- 

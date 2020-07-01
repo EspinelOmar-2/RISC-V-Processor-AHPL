@@ -35,8 +35,8 @@ ARCHITECTURE SoCArch OF SoC IS
 SIGNAL MemoryIn      : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL MemoryOut     : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL MemoryAddress : STD_LOGIC_VECTOR(31 DOWNTO 0);
-SIGNAL Address       : STD_LOGIC_VECTOR(13 DOWNTO 0);
-SIGNAL MemoryRead    : STD_LOGIC;
+SIGNAL Address       : STD_LOGIC_VECTOR(11 DOWNTO 0);
+SIGNAL MemoryRdWr    : STD_LOGIC_VECTOR( 1 DOWNTO 0);
 SIGNAL Irq           : STD_LOGIC_VECTOR( 3 DOWNTO 0);
 SIGNAL Ack           : STD_LOGIC_VECTOR( 3 DOWNTO 0);
 
@@ -48,7 +48,7 @@ BEGIN
 -- 
 --******************************************************--
 
-Address <= MemoryAddress(13 DOWNTO 0);
+Address <= MemoryAddress(11 DOWNTO 0);
 
 CpuRiscV: ENTITY WORK.RiscV 
 PORT MAP	  (MemoryOut     => MemoryOut,
@@ -57,7 +57,7 @@ PORT MAP	  (MemoryOut     => MemoryOut,
 				Clk           => Clk,
 				MemoryIn      => MemoryIn,
 				MemoryAddress => MemoryAddress,
-				MemoryRead    => MemoryRead,
+				MemoryRdWr    => MemoryRdWr,
 				Qs            => SpySignal.Qs,
 				Error         => SpySignal.Error,
 				ACK           => Ack,
@@ -68,7 +68,8 @@ SummonMemory: ENTITY WORK.MyMemory
 PORT MAP	  (Address => Address,
 				Clock   => Clk,
 				Data    => MemoryIn,
-				WrEn    => MemoryRead,
+				--RdEn    => MemoryRdWr(0),
+				WrEn    => MemoryRdWr(1),
 				Q       => MemoryOut
 			  );
 
@@ -87,10 +88,11 @@ PORT MAP	  (PeripheralPort   => PeripheralPort,
 -- 
 --******************************************************--
 --BlockN: ENTITY WORK.SoC 
---PORT MAP	  (Sig => SLV,
---				Sig => SLV,
---				Sig => SLV,
---				Sig => SLV
+--PORT MAP	  (PeripheralPort   => SLV,
+--				Reset            => SLV,
+--				Clk              => SLV,
+--				PeripheralStatus => SLV,
+--				SpySignal        => SLV
 --			  );
 --******************************************************--
 

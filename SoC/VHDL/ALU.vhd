@@ -190,11 +190,12 @@ signal 	AddrMode34: 									std_logic_vector (31 downto 0);
 
 
 --Se;ales de salidas
-signal AluRegSelector: std_logic_vector(5 downto 0) ;
-signal AluPCSelector: std_logic;
-signal AluCSRSelector: std_logic_vector(1 downto 0);
-signal AluMARSelector: std_logic;
+signal AluRegSelector  : std_logic_vector(5 downto 0) ;
+signal AluPCSelector   : std_logic;
+signal AluCSRSelector  : std_logic_vector(1 downto 0);
+signal AluMARSelector  : std_logic;
 
+SIGNAL ALuGralSelector : STD_LOGIC_VECTOR(9 DOWNTO 0);
 
 --Segnal Alu shift register para salida
 signal 	AluShiftRegister:								std_logic_vector (31 downto 0);
@@ -632,7 +633,9 @@ WITH Alu_MAR_Temp SELECT
 ZeroCsr       <= '1' WHEN x"00000000",
 					  '0' WHEN OTHERS;
 
-WITH (AluMARSelector & AluCSRSelector & AluPCSelector & AluRegSelector) SELECT
+AluGralSelector <= (AluMARSelector & AluCSRSelector & AluPCSelector & AluRegSelector);
+
+WITH AluGralSelector SELECT
 Alu_Control(1) <= ZeroRegisters WHEN "0000000001",
 						ZeroRegisters WHEN "0000000010",
 						ZeroRegisters WHEN "0000000100",
