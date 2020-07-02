@@ -51,9 +51,8 @@ SIGNAL   UsgMemory07 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL   UsgMemory15 : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL   SpecialIr   : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
-SIGNAL   Address     : STD_LOGIC_VECTOR( 6 DOWNTO 0);
+SIGNAL   Address     : STD_LOGIC_VECTOR( 5 DOWNTO 0);
 SIGNAL   NoInput     : STD_LOGIC;
-SIGNAL   EnaInput    : STD_LOGIC;
 
 BEGIN
 
@@ -106,50 +105,46 @@ DataIn <= AluInput    WHEN "0000000001",
 			 Zeros       WHEN "1000000000",
 			 Zeros       WHEN OTHERS;
 
-NoInput  <= Ctrl( 2) OR Ctrl( 3) OR Ctrl( 4) OR Ctrl(10) OR Ctrl(11) OR
-			   Ctrl(12) OR Ctrl(13) OR Ctrl(20) OR Ctrl(21) OR Ctrl(22) OR
-			   Ctrl(23) OR Ctrl(24) OR Ctrl(25) OR Ctrl(26);
+NoInput <= Ctrl( 2) OR Ctrl( 3) OR Ctrl( 4) OR Ctrl(10) OR Ctrl(11) OR
+			  Ctrl(12) OR Ctrl(13) OR Ctrl(20) OR Ctrl(21) OR Ctrl(22) OR
+			  Ctrl(23) OR Ctrl(24) OR Ctrl(25) OR Ctrl(26);
 
-EnaInput <= Ctrl( 1) OR Ctrl( 5) OR Ctrl( 6) OR Ctrl( 7) OR Ctrl( 8) OR
-				Ctrl( 9) OR Ctrl( 0) OR Ctrl(19) OR Ctrl(14) OR Ctrl(17) OR
-				Ctrl(18) OR Ctrl(15) OR Ctrl(16);
-
-Address <=EnaInput &  NoInput & IrInput(11 DOWNTO 7);
+Address <= NoInput & IrInput(11 DOWNTO 7);
 
 WITH Address SELECT
-Enable <= x"00000001" WHEN "1000000", -- 00
-			 x"00000002" WHEN "1000001", -- 01
-			 x"00000004" WHEN "1000010", -- 02
-			 x"00000008" WHEN "1000011", -- 03
-			 x"00000010" WHEN "1000100", -- 04
-			 x"00000020" WHEN "1000101", -- 05
-			 x"00000040" WHEN "1000110", -- 06
-			 x"00000080" WHEN "1000111", -- 07
-			 x"00000100" WHEN "1001000", -- 08
-			 x"00000200" WHEN "1001001", -- 09
-			 x"00000400" WHEN "1001010", -- 10
-			 x"00000800" WHEN "1001011", -- 11
-			 x"00001000" WHEN "1001100", -- 12
-			 x"00002000" WHEN "1001101", -- 13
-			 x"00004000" WHEN "1001110", -- 14
-			 x"00008000" WHEN "1001111", -- 15
-			 x"00010000" WHEN "1010000", -- 16
-			 x"00020000" WHEN "1010001", -- 17
-			 x"00040000" WHEN "1010010", -- 18
-			 x"00080000" WHEN "1010011", -- 19
-			 x"00100000" WHEN "1010100", -- 20
-			 x"00200000" WHEN "1010101", -- 21
-			 x"00400000" WHEN "1010110", -- 22
-			 x"00800000" WHEN "1010111", -- 23
-			 x"01000000" WHEN "1011000", -- 24
-			 x"02000000" WHEN "1011001", -- 25
-			 x"04000000" WHEN "1011010", -- 26
-			 x"08000000" WHEN "1011011", -- 27
-			 x"10000000" WHEN "1011100", -- 28
-			 x"20000000" WHEN "1011101", -- 29
-			 x"40000000" WHEN "1011110", -- 30
-			 x"80000000" WHEN "1011111", -- 31
-			 x"00000000" WHEN "0100000", -- No Input
+Enable <= x"00000001" WHEN "000000", -- 00
+			 x"00000002" WHEN "000001", -- 01
+			 x"00000004" WHEN "000010", -- 02
+			 x"00000008" WHEN "000011", -- 03
+			 x"00000010" WHEN "000100", -- 04
+			 x"00000020" WHEN "000101", -- 05
+			 x"00000040" WHEN "000110", -- 06
+			 x"00000080" WHEN "000111", -- 07
+			 x"00000100" WHEN "001000", -- 08
+			 x"00000200" WHEN "001001", -- 09
+			 x"00000400" WHEN "001010", -- 10
+			 x"00000800" WHEN "001011", -- 11
+			 x"00001000" WHEN "001100", -- 12
+			 x"00002000" WHEN "001101", -- 13
+			 x"00004000" WHEN "001110", -- 14
+			 x"00008000" WHEN "001111", -- 15
+			 x"00010000" WHEN "010000", -- 16
+			 x"00020000" WHEN "010001", -- 17
+			 x"00040000" WHEN "010010", -- 18
+			 x"00080000" WHEN "010011", -- 19
+			 x"00100000" WHEN "010100", -- 20
+			 x"00200000" WHEN "010101", -- 21
+			 x"00400000" WHEN "010110", -- 22
+			 x"00800000" WHEN "010111", -- 23
+			 x"01000000" WHEN "011000", -- 24
+			 x"02000000" WHEN "011001", -- 25
+			 x"04000000" WHEN "011010", -- 26
+			 x"08000000" WHEN "011011", -- 27
+			 x"10000000" WHEN "011100", -- 28
+			 x"20000000" WHEN "011101", -- 29
+			 x"40000000" WHEN "011110", -- 30
+			 x"80000000" WHEN "011111", -- 31
+			 x"00000000" WHEN "100000", -- No Input
 			 x"00000000" WHEN OTHERS;
 
 DataGenerator: FOR I IN 0 TO 31 GENERATE

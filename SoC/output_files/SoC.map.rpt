@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SoC
-Wed Jul 01 14:28:21 2020
+Thu Jul 02 00:53:10 2020
 Quartus II 64-Bit Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
 
 
@@ -103,7 +103,7 @@ agreement for further details.
 +------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                 ;
 +---------------------------------+--------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Jul 01 14:28:21 2020      ;
+; Analysis & Synthesis Status     ; Successful - Thu Jul 02 00:53:10 2020      ;
 ; Quartus II 64-Bit Version       ; 15.0.0 Build 145 04/22/2015 SJ Web Edition ;
 ; Revision Name                   ; SoC                                        ;
 ; Top-level Entity Name           ; SoC                                        ;
@@ -291,14 +291,14 @@ agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 2489      ;
+; Estimate of Logic utilization (ALMs needed) ; 2494      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 3491      ;
-;     -- 7 input functions                    ; 72        ;
-;     -- 6 input functions                    ; 1210      ;
-;     -- 5 input functions                    ; 986       ;
-;     -- 4 input functions                    ; 465       ;
-;     -- <=3 input functions                  ; 758       ;
+; Combinational ALUT usage for logic          ; 3511      ;
+;     -- 7 input functions                    ; 83        ;
+;     -- 6 input functions                    ; 1189      ;
+;     -- 5 input functions                    ; 1002      ;
+;     -- 4 input functions                    ; 471       ;
+;     -- <=3 input functions                  ; 766       ;
 ;                                             ;           ;
 ; Dedicated logic registers                   ; 1622      ;
 ;                                             ;           ;
@@ -310,7 +310,7 @@ agreement for further details.
 ;                                             ;           ;
 ; Maximum fan-out node                        ; Clk~input ;
 ; Maximum fan-out                             ; 1654      ;
-; Total fan-out                               ; 23751     ;
+; Total fan-out                               ; 23827     ;
 ; Average fan-out                             ; 4.53      ;
 +---------------------------------------------+-----------+
 
@@ -320,18 +320,18 @@ agreement for further details.
 +---------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                   ; Library Name ;
 +---------------------------------------------+-------------------+--------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------+--------------+
-; |SoC                                        ; 3491 (183)        ; 1622 (0)     ; 131072            ; 0          ; 50   ; 0            ; |SoC                                                                                                                  ; work         ;
+; |SoC                                        ; 3511 (182)        ; 1622 (0)     ; 131072            ; 0          ; 50   ; 0            ; |SoC                                                                                                                  ; work         ;
 ;    |MyMemory:SummonMemory|                  ; 0 (0)             ; 0 (0)        ; 131072            ; 0          ; 0    ; 0            ; |SoC|MyMemory:SummonMemory                                                                                            ; work         ;
 ;       |altsyncram:altsyncram_component|     ; 0 (0)             ; 0 (0)        ; 131072            ; 0          ; 0    ; 0            ; |SoC|MyMemory:SummonMemory|altsyncram:altsyncram_component                                                            ; work         ;
 ;          |altsyncram_tk24:auto_generated|   ; 0 (0)             ; 0 (0)        ; 131072            ; 0          ; 0    ; 0            ; |SoC|MyMemory:SummonMemory|altsyncram:altsyncram_component|altsyncram_tk24:auto_generated                             ; work         ;
 ;    |PeriphericCircuit:PeriphericControl|    ; 4 (4)             ; 4 (4)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|PeriphericCircuit:PeriphericControl                                                                              ; work         ;
-;    |RiscV:CpuRiscV|                         ; 3304 (0)          ; 1618 (0)     ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV                                                                                                   ; work         ;
-;       |Alu:AlgorithmicLogicUnit|            ; 1517 (679)        ; 96 (0)       ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit                                                                          ; work         ;
+;    |RiscV:CpuRiscV|                         ; 3325 (0)          ; 1618 (0)     ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV                                                                                                   ; work         ;
+;       |Alu:AlgorithmicLogicUnit|            ; 1519 (674)        ; 96 (0)       ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit                                                                          ; work         ;
 ;          |ArithmeticShiftRight:ASR|         ; 1 (1)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|ArithmeticShiftRight:ASR                                                 ; work         ;
-;          |CRAAdder32:CRAA32|                ; 66 (66)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|CRAAdder32:CRAA32                                                        ; work         ;
+;          |CRAAdder32:CRAA32|                ; 60 (60)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|CRAAdder32:CRAA32                                                        ; work         ;
 ;          |LeftShift:LS|                     ; 1 (1)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|LeftShift:LS                                                             ; work         ;
 ;          |LogicalShiftRight:LSR|            ; 1 (1)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|LogicalShiftRight:LSR                                                    ; work         ;
-;          |Multiplier32Bits:Mul|             ; 769 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul                                                     ; work         ;
+;          |Multiplier32Bits:Mul|             ; 782 (0)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul                                                     ; work         ;
 ;             |BoothDecoder:BD10|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|BoothDecoder:BD10                                   ; work         ;
 ;             |BoothDecoder:BD11|             ; 2 (2)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|BoothDecoder:BD11                                   ; work         ;
 ;             |BoothDecoder:BD12|             ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|BoothDecoder:BD12                                   ; work         ;
@@ -352,13 +352,13 @@ agreement for further details.
 ;             |CRAAdder18:Add18B|             ; 19 (19)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder18:Add18B                                   ; work         ;
 ;             |CRAAdder18:Add18C|             ; 14 (14)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder18:Add18C                                   ; work         ;
 ;             |CRAAdder22:Add22|              ; 30 (30)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder22:Add22                                    ; work         ;
-;             |CRAAdder26:Add26A|             ; 34 (34)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder26:Add26A                                   ; work         ;
-;             |CRAAdder26:Add26B|             ; 34 (34)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder26:Add26B                                   ; work         ;
+;             |CRAAdder26:Add26A|             ; 39 (39)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder26:Add26A                                   ; work         ;
+;             |CRAAdder26:Add26B|             ; 33 (33)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder26:Add26B                                   ; work         ;
 ;             |CRAAdder30:Add30|              ; 70 (70)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder30:Add30                                    ; work         ;
-;             |CRAAdder32:Add32A|             ; 74 (74)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32A                                   ; work         ;
+;             |CRAAdder32:Add32A|             ; 75 (75)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32A                                   ; work         ;
 ;             |CRAAdder32:Add32B|             ; 63 (63)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32B                                   ; work         ;
-;             |CRAAdder32:Add32C|             ; 44 (44)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32C                                   ; work         ;
-;             |CRAAdder32:Add32D|             ; 49 (49)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32D                                   ; work         ;
+;             |CRAAdder32:Add32C|             ; 46 (46)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32C                                   ; work         ;
+;             |CRAAdder32:Add32D|             ; 54 (54)           ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder32:Add32D                                   ; work         ;
 ;             |CRAAdder6:Add6|                ; 3 (3)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|CRAAdder6:Add6                                      ; work         ;
 ;             |FullPartialProduct:FPP0|       ; 33 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP0                             ; work         ;
 ;                |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP0|SinglePartialProduct:BPP10  ; work         ;
@@ -595,7 +595,8 @@ agreement for further details.
 ;                |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP7|SinglePartialProduct:BPP7   ; work         ;
 ;                |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP7|SinglePartialProduct:BPP8   ; work         ;
 ;                |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP7|SinglePartialProduct:BPP9   ; work         ;
-;             |FullPartialProduct:FPP8|       ; 13 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP8                             ; work         ;
+;             |FullPartialProduct:FPP8|       ; 14 (0)            ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP8                             ; work         ;
+;                |SinglePartialProduct:BPP0|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP8|SinglePartialProduct:BPP0   ; work         ;
 ;                |SinglePartialProduct:BPP10| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP8|SinglePartialProduct:BPP10  ; work         ;
 ;                |SinglePartialProduct:BPP11| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP8|SinglePartialProduct:BPP11  ; work         ;
 ;                |SinglePartialProduct:BPP12| ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP8|SinglePartialProduct:BPP12  ; work         ;
@@ -624,15 +625,15 @@ agreement for further details.
 ;                |SinglePartialProduct:BPP7|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP9|SinglePartialProduct:BPP7   ; work         ;
 ;                |SinglePartialProduct:BPP8|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP9|SinglePartialProduct:BPP8   ; work         ;
 ;                |SinglePartialProduct:BPP9|  ; 1 (1)             ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Alu:AlgorithmicLogicUnit|Multiplier32Bits:Mul|FullPartialProduct:FPP9|SinglePartialProduct:BPP9   ; work         ;
-;       |CSR:ControlStatusRegisters|          ; 251 (251)         ; 320 (320)    ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|CSR:ControlStatusRegisters                                                                        ; work         ;
-;       |ControlUnit:Control|                 ; 401 (401)         ; 102 (102)    ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|ControlUnit:Control                                                                               ; work         ;
+;       |CSR:ControlStatusRegisters|          ; 254 (254)         ; 320 (320)    ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|CSR:ControlStatusRegisters                                                                        ; work         ;
+;       |ControlUnit:Control|                 ; 421 (421)         ; 102 (102)    ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|ControlUnit:Control                                                                               ; work         ;
 ;       |Counter:C|                           ; 65 (65)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Counter:C                                                                                         ; work         ;
 ;       |Ir:IntructionRegister|               ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Ir:IntructionRegister                                                                             ; work         ;
 ;       |Mar:MemoryAddressRegister|           ; 14 (14)           ; 12 (12)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Mar:MemoryAddressRegister                                                                         ; work         ;
 ;       |PC:ProgramCounter|                   ; 51 (51)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|PC:ProgramCounter                                                                                 ; work         ;
-;       |Registers:Rpg|                       ; 1005 (0)          ; 992 (0)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg                                                                                     ; work         ;
-;          |InputManager:IManager|            ; 143 (143)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|InputManager:IManager                                                               ; work         ;
-;          |OutputManager:OManager|           ; 828 (828)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|OutputManager:OManager                                                              ; work         ;
+;       |Registers:Rpg|                       ; 1001 (0)          ; 992 (0)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg                                                                                     ; work         ;
+;          |InputManager:IManager|            ; 140 (140)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|InputManager:IManager                                                               ; work         ;
+;          |OutputManager:OManager|           ; 827 (827)         ; 0 (0)        ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|OutputManager:OManager                                                              ; work         ;
 ;          |RegistersBlock:Xn|                ; 34 (0)            ; 992 (0)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|RegistersBlock:Xn                                                                   ; work         ;
 ;             |Sp:X2|                         ; 34 (34)           ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|RegistersBlock:Xn|Sp:X2                                                             ; work         ;
 ;             |Word:X1|                       ; 0 (0)             ; 32 (32)      ; 0                 ; 0          ; 0    ; 0            ; |SoC|RiscV:CpuRiscV|Registers:Rpg|RegistersBlock:Xn|Word:X1                                                           ; work         ;
@@ -849,7 +850,7 @@ Note: All cells listed above may not be present at the end of synthesis due to v
 +------------------------------------------------------+---------+
 ; Inverted Register                                    ; Fan out ;
 +------------------------------------------------------+---------+
-; RiscV:CpuRiscV|ControlUnit:Control|Q[0]              ; 9       ;
+; RiscV:CpuRiscV|ControlUnit:Control|Q[0]              ; 10      ;
 ; RiscV:CpuRiscV|CSR:ControlStatusRegisters|Mstatus[3] ; 1       ;
 ; RiscV:CpuRiscV|CSR:ControlStatusRegisters|Misa[8]    ; 1       ;
 ; RiscV:CpuRiscV|CSR:ControlStatusRegisters|Misa[12]   ; 1       ;
@@ -1497,24 +1498,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     CLR SCLR          ; 1                           ;
 ;     ENA CLR           ; 1330                        ;
 ;     ENA CLR SLD       ; 125                         ;
-; arriav_lcell_comb     ; 3495                        ;
+; arriav_lcell_comb     ; 3515                        ;
 ;     arith             ; 32                          ;
 ;         1 data inputs ; 1                           ;
 ;         2 data inputs ; 31                          ;
-;     extend            ; 72                          ;
-;         7 data inputs ; 72                          ;
-;     normal            ; 3391                        ;
+;     extend            ; 83                          ;
+;         7 data inputs ; 83                          ;
+;     normal            ; 3400                        ;
 ;         1 data inputs ; 8                           ;
-;         2 data inputs ; 212                         ;
-;         3 data inputs ; 510                         ;
-;         4 data inputs ; 465                         ;
-;         5 data inputs ; 986                         ;
-;         6 data inputs ; 1210                        ;
+;         2 data inputs ; 215                         ;
+;         3 data inputs ; 515                         ;
+;         4 data inputs ; 471                         ;
+;         5 data inputs ; 1002                        ;
+;         6 data inputs ; 1189                        ;
 ; boundary_port         ; 50                          ;
 ; stratixv_ram_block    ; 32                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 26.00                       ;
-; Average LUT depth     ; 15.77                       ;
+; Max LUT depth         ; 27.00                       ;
+; Average LUT depth     ; 16.10                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1523,7 +1524,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:39     ;
+; Top            ; 00:00:42     ;
 +----------------+--------------+
 
 
@@ -1533,7 +1534,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 15.0.0 Build 145 04/22/2015 SJ Web Edition
-    Info: Processing started: Wed Jul 01 14:27:28 2020
+    Info: Processing started: Thu Jul 02 00:52:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SoC -c SoC
 Info (11104): Parallel Compilation has detected 8 hyper-threaded processors. However, the extra hyper-threaded processors will not be used by default. Parallel Compilation will use 4 of the 4 physical processors detected instead.
 Info (12021): Found 2 design units, including 1 entities, in source file vhdl/mymemory.vhd
@@ -2424,15 +2425,15 @@ Info (286030): Timing-Driven Synthesis is running
 Info (17049): 1 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5022 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5042 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 44 output pins
-    Info (21061): Implemented 4940 logic cells
+    Info (21061): Implemented 4960 logic cells
     Info (21064): Implemented 32 RAM segments
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 354 warnings
-    Info: Peak virtual memory: 4977 megabytes
-    Info: Processing ended: Wed Jul 01 14:28:21 2020
-    Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:08
+    Info: Peak virtual memory: 4981 megabytes
+    Info: Processing ended: Thu Jul 02 00:53:10 2020
+    Info: Elapsed time: 00:00:57
+    Info: Total CPU time (on all processors): 00:01:13
 
 
