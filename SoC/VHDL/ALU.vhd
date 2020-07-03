@@ -403,95 +403,56 @@ ASRReplace <=		Control_Alu(36) OR Control_Alu(19) OR Control_Alu(18);
 MulInputA <=		Registers_Alu(31 downto  0);
 MulInputB <=		Registers_Alu(63 downto 32);
 
---Process para asignar segnales de entrada a bloques con decodificacion
-assignsignals: PROCESS(AddrASelector,AddrBSelector,Control_Alu,AndBselector,OrBselector,XorBselector)
-	BEGIN
-	--Seleccion de las entradas del sumador segun los estados de acuerdo al decodificador
-		if AddrASelector(0) = '1' then
-			AdderInputA<=PC_Alu;
-		end if;
-				if AddrASelector(1) = '1' then
-					AdderInputA<=Registers_Alu(31 downto 0);
-				end if;
-					
-		
-				if AddrBSelector(0) = '1' then
-					AdderInputB<=AddrMode0;
-				end if;
-				if AddrBSelector(1) = '1' then
-					AdderInputB<=AddrMode2;
-				end if;
-				if AddrBSelector(2) = '1' then
-					AdderInputB<=AddrMode4;
-				end if;
-				if AddrBSelector(3) = '1' then
-					AdderInputB<=AddrMode6;
-				end if;
-				if AddrBSelector(4) = '1' then
-					AdderInputB<=AddrMode8;
-				end if;
-				if AddrBSelector(5) = '1' then
-					AdderInputB<=AddrMode9;
-				end if;
-				if AddrBSelector(6) = '1' then
-					AdderInputB<=AddrMode11;
-				end if;
-				if AddrBSelector(7) = '1' then
-					AdderInputB<=AddrMode32;
-				end if;
-				if AddrBSelector(8) = '1' then
-					AdderInputB<=AddrMode34;
-				end if;
-				if AddrBSelector(9) = '1' then
-					AdderInputB<=(NOT AddrMode11);
-				end if;
-				if AddrBSelector(10) = '1' then
-					AdderInputB<=Registers_Alu(63 downto 32);
-				end if;
-							
-			--Seleccion de segunda entrada para AND
-			
-				if AndBselector(0) = '1' then
-					InputANDB <=AddrMode11 ;
-				end if;
-				if AndBselector(1) = '1' then
-					InputANDB <=Registers_Alu(63 downto 32) ;
-				end if;
-				if AndBselector(2) = '1' then
-					InputANDB <=AddrMode29 ;
-				end if;
-				
-	
-			--Seleccion de segunda entrada para OR
-				if OrBselector(0) = '1' then
-					InputORB <=AddrMode11 ;
-				end if;
-				if OrBselector(1) = '1' then
-					InputORB <=Registers_Alu(63 downto 32) ;
-				end if;
-				if OrBselector(2) = '1' then
-					InputORB <=AddrMode29 ;
-				end if;
-				
-			--Seleccion de segunda entrada para XOR
-			
-				if XorBselector(0) = '1' then
-					InputXORB <=AddrMode11 ;
-				end if;
-				if XorBselector(1) = '1' then
-					InputXORB <=Registers_Alu(63 downto 32) ;
-				end if;
+--Proceso para asignar segnales de entrada a bloques con decodificacion
 
-			-- Seleccion de entradas para bloques shift
-				if Control_Alu(36) = '1' then
-				LSRDataIn  <=	Registers_Alu(31 downto 0);
-				LSDataIn   <=	Registers_Alu(31 downto 0);
-				ASRDataIn  <=	Registers_Alu(31 downto 0);
-				end if;
-				
-		END PROCESS;
+WITH AddrASelector SELECT
+AdderInputA <= Pc_Alu                     WHEN "01",
+					Registers_Alu(31 DOWNTO 0) WHEN "10",
+					Zero                       WHEN OTHERS;
 
-						
+WITH AddrBSelector SELECT
+AdderInputB <=      AddrMode0              WHEN "00000000001",
+					     AddrMode2              WHEN "00000000010",
+					     AddrMode4              WHEN "00000000100",
+					     AddrMode6              WHEN "00000001000",
+					     AddrMode8              WHEN "00000010000",
+					     AddrMode9              WHEN "00000100000",
+					     AddrMode11             WHEN "00001000000",
+					     AddrMode32             WHEN "00010000000",
+					     AddrMode34             WHEN "00100000000",
+					NOT (AddrMode11)            WHEN "01000000000",
+					Registers_Alu(63 DOWNTO 32) WHEN "10000000000",
+					Zero                        WHEN OTHERS;
+
+WITH AndBselector SELECT
+InputAndB <= AddrMode11                  WHEN "001",
+				 Registers_Alu(63 DOWNTO 32) WHEN "010",
+				 AddrMode29                  WHEN "100",
+				 Zero                        WHEN OTHERS;
+
+WITH OrBselector SELECT
+InputOrB <= AddrMode11                  WHEN "001",
+				Registers_Alu(63 DOWNTO 32) WHEN "010",
+				AddrMode29                  WHEN "100",
+				Zero                        WHEN OTHERS;
+
+WITH XorBselector SELECT
+InputXorB <= AddrMode11                  WHEN "01",
+				 Registers_Alu(63 DOWNTO 32) WHEN "10",
+				 Zero                        WHEN OTHERS;
+
+WITH Control_Alu(36) SELECT
+LSRDataIn  <= Registers_Alu(31 DOWNTO 0) WHEN '1',
+				  Zero                       WHEN OTHERS;
+
+WITH Control_Alu(36) SELECT
+LSDataIn   <= Registers_Alu(31 DOWNTO 0) WHEN '1',
+				  Zero                       WHEN OTHERS;
+
+WITH Control_Alu(36) SELECT
+ASRDataIn  <= Registers_Alu(31 DOWNTO 0) WHEN '1',
+				  Zero                       WHEN OTHERS;
+
 --*********************************************************************--
 --		INSTANCIACION DE COMPONENTES
 --*********************************************************************--
@@ -598,25 +559,26 @@ Alu_Control(1) <= ZeroRegisters WHEN "0000000001",
 Alu_Control(2) <= AdderResult(31);
 			
 --Salidas para pruebas
-			SpyResultAND   <= ResultAND;
-			SpyResultOR    <= ResultOR;
-			SpyResultXOR   <= ResultXOR;
-			SpyLSRRegister <= LSRRegister;
-			SpyLSRegister  <= LSRegister;
-			SpyASRRegister <= ASRRegister;
-			SpyMulResult   <= MulResult;
 
-			SpyAddrMode0   <= AddrMode0;
-			SpyAddrMode2   <= AddrMode2;
-			SpyAddrMode4   <= AddrMode4;
-			SpyAddrMode6   <= AddrMode6;
-			SpyAddrMode8   <= AddrMode8;
-			SpyAddrMode9   <= AddrMode9;
-			SpyAddrMode11  <= AddrMode11;
-			SpyAddrMode29  <= AddrMode29;
-			SpyAddrMode32  <= AddrMode32;
-			SpyAddrMode34  <= AddrMode34;
-			SpyAdderResult <= AdderResult;
+SpyResultAND   <= ResultAND;
+SpyResultOR    <= ResultOR;
+SpyResultXOR   <= ResultXOR;
+SpyLSRRegister <= LSRRegister;
+SpyLSRegister  <= LSRegister;
+SpyASRRegister <= ASRRegister;
+SpyMulResult   <= MulResult;
+
+SpyAddrMode0   <= AddrMode0;
+SpyAddrMode2   <= AddrMode2;
+SpyAddrMode4   <= AddrMode4;
+SpyAddrMode6   <= AddrMode6;
+SpyAddrMode8   <= AddrMode8;
+SpyAddrMode9   <= AddrMode9;
+SpyAddrMode11  <= AddrMode11;
+SpyAddrMode29  <= AddrMode29;
+SpyAddrMode32  <= AddrMode32;
+SpyAddrMode34  <= AddrMode34;
+SpyAdderResult <= AdderResult;
 
 --******************************************************--
 -- 
@@ -657,5 +619,3 @@ Alu_Control(2) <= AdderResult(31);
 --******************************************************--
 
 End  AluArch;
-
-

@@ -39,19 +39,11 @@ architecture BlockAndArch of BlockAnd is
 --******************************************************
 begin
 
+Generator: FOR I IN 0 TO 31 GENERATE
 	
+	Result(i) <= A(i) AND B(i);
 	
-	process (A,B)
-	begin
-	
-		for i in 0 to 31 loop
-			Result(i  )		<=A(i) AND B(i) ;
-
-		end loop;
-		
-	end process;
-	
-
+END GENERATE Generator;
 
 End  BlockAndArch;
 
