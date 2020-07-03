@@ -47,15 +47,23 @@ begin
 	Carry(0) <= CarryIn;
 	
 	
-	process (A,B,Carry)
-	begin
+--	process (A,B,Carry)
+--	begin
+--	
+--		for i in 0 to 29 loop
+--			Result(i  )		<=  A(i) XOR B(i) XOR  Carry(i);
+--			Carry (i+1) 	<= (A(i) AND B(i)) OR (Carry(i) AND (A(i) XOR B(i)) );
+--		end loop;
+--		
+--	end process;
 	
-		for i in 0 to 29 loop
-			Result(i  )		<=  A(i) XOR B(i) XOR  Carry(i);
-			Carry (i+1) 	<= (A(i) AND B(i)) OR (Carry(i) AND (A(i) XOR B(i)) );
-		end loop;
-		
-	end process;
+	CarryGenerator: FOR I IN 0 TO 29 GENERATE
+	
+		Result(i  )		<=  A(i) XOR B(i) XOR Carry(i);
+		Carry (i+1) 	<= (A(i) AND B(i)) OR (Carry(i) AND (A(i) XOR B(i)) );
+	
+	END GENERATE CarryGenerator;
+	
 	
 	CarryOut <=Carry(30);
 
