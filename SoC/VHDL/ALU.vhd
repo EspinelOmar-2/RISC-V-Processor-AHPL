@@ -613,7 +613,7 @@ Alu_Mar_Temp <= AdderResult WHEN '1',
 					 Zero        WHEN OTHERS;
 
 Alu_Registers <= Alu_Registers_Temp;
-Alu_PC        <= Alu_PC_Temp;
+Alu_PC        <= Alu_Pc_Temp;
 Alu_CSR       <= Alu_CSR_Temp;
 Alu_MAR       <= Alu_MAR_Temp;
 		

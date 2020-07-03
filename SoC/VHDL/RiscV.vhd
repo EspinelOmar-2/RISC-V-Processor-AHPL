@@ -148,14 +148,14 @@ PORT MAP	  (MemoryOut    => MemoryOut,
 				Ir_Counter   => IrCounter
 			  );
 
-ProgramCounter : ENTITY WORK.Pc
-PORT MAP	  (Control_Pc  => ControlPc,
-				Alu_Pc      => AluPc,
-				Csr_Pc      => CsrPc,
+ProgramCounter: ENTITY WORK.Pc 
+PORT MAP	  (ControlPc   => ControlPc,
+				AluPc       => AluPc,
+				CsrPc       => CsrPc,
 				Reset       => Reset,
-				Reloj       => Clk,
-				Pc_Mar      => PcMar,
-				Pc_Alu      => PcAlu,
+				Clk         => Clk,
+				PcMar       => PcMar,
+				PcAlu       => PcAlu,
 				PcRegisters => PcRegisters
 			  );
 
