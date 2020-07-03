@@ -214,210 +214,202 @@ SIGNAL   Alu_Mar_Temp       : STD_LOGIC_VECTOR(31 DOWNTO 0);
 --Instancias y Conectividad
 --******************************************************
 begin
-	
-	
+
 Counter: ENTITY WORK.MulCounter 
 PORT MAP	  (Reloj      => Reloj,
 				Reset      => Reset,
 				Enable     => Control_Alu(31),
 				EndOfCount => Alu_Control( 0)
 			  );
-		
-	--Segnales de los modos de direccionamiento
-		AddrMode0(11 downto 0 )<="000000000000";
-		AddrMode0(31 downto 12)<= IR_Alu(24 downto 5);
-		
-		AddrMode2				  <="00000000000000000000000000000100";
-		
-		AddrMode4(9  downto 0 )<= IR_Alu(23 downto 14);
-		AddrMode4(10)			  <= IR_Alu(13);
-		AddrMode4(18 downto 11)<= IR_Alu(12 downto 5);
-		AddrMode4(19)			  <= IR_Alu(24);
-		AddrMode4(20)			  <= IR_Alu(24);
-		AddrMode4(21)			  <= IR_Alu(24);
-		AddrMode4(22)			  <= IR_Alu(24);
-		AddrMode4(23)			  <= IR_Alu(24);
-		AddrMode4(24)			  <= IR_Alu(24);
-		AddrMode4(25)			  <= IR_Alu(24);
-		AddrMode4(26)			  <= IR_Alu(24);
-		AddrMode4(27)			  <= IR_Alu(24);
-		AddrMode4(28)			  <= IR_Alu(24);
-		AddrMode4(29)			  <= IR_Alu(24);
-		AddrMode4(30)			  <= IR_Alu(24);
-		AddrMode4(31)			  <= IR_Alu(24);
-		
-		AddrMode6(19 downto 0 )<= IR_Alu(24 downto 5);
-		AddrMode6(20)			  <= IR_Alu(24);
-		AddrMode6(21)			  <= IR_Alu(24);
-		AddrMode6(22)			  <= IR_Alu(24);
-		AddrMode6(23)			  <= IR_Alu(24);
-		AddrMode6(24)			  <= IR_Alu(24);
-		AddrMode6(25)			  <= IR_Alu(24);
-		AddrMode6(26)			  <= IR_Alu(24);
-		AddrMode6(27)			  <= IR_Alu(24);
-		AddrMode6(28)			  <= IR_Alu(24);
-		AddrMode6(29)			  <= IR_Alu(24);
-		AddrMode6(30)			  <= IR_Alu(24);
-		AddrMode6(31)			  <= IR_Alu(24);
-		
-		AddrMode8				  <= NOT Registers_Alu(63 downto 32);
-		
-		AddrMode9(3 downto 0)  <= IR_Alu(4 downto 1);
-		AddrMode9(9 downto 4)  <= IR_Alu(23 downto 18);
-		AddrMode9(10)			  <= IR_Alu(0);
-		AddrMode9(11)			  <= IR_Alu(24);
-		AddrMode9(12)			  <= IR_Alu(24);
-		AddrMode9(13)			  <= IR_Alu(24);
-		AddrMode9(14)			  <= IR_Alu(24);
-		AddrMode9(15)			  <= IR_Alu(24);
-		AddrMode9(16)			  <= IR_Alu(24);
-		AddrMode9(17)			  <= IR_Alu(24);
-		AddrMode9(18)			  <= IR_Alu(24);
-		AddrMode9(19)			  <= IR_Alu(24);
-		AddrMode9(20)			  <= IR_Alu(24);
-		AddrMode9(21)			  <= IR_Alu(24);
-		AddrMode9(22)			  <= IR_Alu(24);
-		AddrMode9(23)			  <= IR_Alu(24);
-		AddrMode9(24)			  <= IR_Alu(24);
-		AddrMode9(25)			  <= IR_Alu(24);
-		AddrMode9(26)			  <= IR_Alu(24);
-		AddrMode9(27)			  <= IR_Alu(24);
-		AddrMode9(28)			  <= IR_Alu(24);
-		AddrMode9(29)			  <= IR_Alu(24);
-		AddrMode9(30)			  <= IR_Alu(24);
-		AddrMode9(31)			  <= IR_Alu(24);
+
+--Segnales de los modos de direccionamiento
+AddrMode0(11 downto 0 )<="000000000000";
+AddrMode0(31 downto 12)<= IR_Alu(24 downto 5);
+
+AddrMode2				  <="00000000000000000000000000000100";
+
+AddrMode4(9  downto 0 )<= IR_Alu(23 downto 14);
+AddrMode4(10)			  <= IR_Alu(13);
+AddrMode4(18 downto 11)<= IR_Alu(12 downto 5);
+AddrMode4(19)			  <= IR_Alu(24);
+AddrMode4(20)			  <= IR_Alu(24);
+AddrMode4(21)			  <= IR_Alu(24);
+AddrMode4(22)			  <= IR_Alu(24);
+AddrMode4(23)			  <= IR_Alu(24);
+AddrMode4(24)			  <= IR_Alu(24);
+AddrMode4(25)			  <= IR_Alu(24);
+AddrMode4(26)			  <= IR_Alu(24);
+AddrMode4(27)			  <= IR_Alu(24);
+AddrMode4(28)			  <= IR_Alu(24);
+AddrMode4(29)			  <= IR_Alu(24);
+AddrMode4(30)			  <= IR_Alu(24);
+AddrMode4(31)			  <= IR_Alu(24);
+
+AddrMode6(19 downto 0 )<= IR_Alu(24 downto 5);
+AddrMode6(20)			  <= IR_Alu(24);
+AddrMode6(21)			  <= IR_Alu(24);
+AddrMode6(22)			  <= IR_Alu(24);
+AddrMode6(23)			  <= IR_Alu(24);
+AddrMode6(24)			  <= IR_Alu(24);
+AddrMode6(25)			  <= IR_Alu(24);
+AddrMode6(26)			  <= IR_Alu(24);
+AddrMode6(27)			  <= IR_Alu(24);
+AddrMode6(28)			  <= IR_Alu(24);
+AddrMode6(29)			  <= IR_Alu(24);
+AddrMode6(30)			  <= IR_Alu(24);
+AddrMode6(31)			  <= IR_Alu(24);
+
+AddrMode8				  <= NOT Registers_Alu(63 downto 32);
+
+AddrMode9(3 downto 0)  <= IR_Alu(4 downto 1);
+AddrMode9(9 downto 4)  <= IR_Alu(23 downto 18);
+AddrMode9(10)			  <= IR_Alu(0);
+AddrMode9(11)			  <= IR_Alu(24);
+AddrMode9(12)			  <= IR_Alu(24);
+AddrMode9(13)			  <= IR_Alu(24);
+AddrMode9(14)			  <= IR_Alu(24);
+AddrMode9(15)			  <= IR_Alu(24);
+AddrMode9(16)			  <= IR_Alu(24);
+AddrMode9(17)			  <= IR_Alu(24);
+AddrMode9(18)			  <= IR_Alu(24);
+AddrMode9(19)			  <= IR_Alu(24);
+AddrMode9(20)			  <= IR_Alu(24);
+AddrMode9(21)			  <= IR_Alu(24);
+AddrMode9(22)			  <= IR_Alu(24);
+AddrMode9(23)			  <= IR_Alu(24);
+AddrMode9(24)			  <= IR_Alu(24);
+AddrMode9(25)			  <= IR_Alu(24);
+AddrMode9(26)			  <= IR_Alu(24);
+AddrMode9(27)			  <= IR_Alu(24);
+AddrMode9(28)			  <= IR_Alu(24);
+AddrMode9(29)			  <= IR_Alu(24);
+AddrMode9(30)			  <= IR_Alu(24);
+AddrMode9(31)			  <= IR_Alu(24);
+
+AddrMode11(11 downto 0)<= IR_Alu(24 downto 13);
+AddrMode11(12)			  <= IR_Alu(24);
+AddrMode11(13)			  <= IR_Alu(24);
+AddrMode11(14)			  <= IR_Alu(24);
+AddrMode11(15)			  <= IR_Alu(24);
+AddrMode11(16)			  <= IR_Alu(24);
+AddrMode11(17)			  <= IR_Alu(24);
+AddrMode11(18)			  <= IR_Alu(24);
+AddrMode11(19)			  <= IR_Alu(24);
+AddrMode11(20)			  <= IR_Alu(24);
+AddrMode11(21)			  <= IR_Alu(24);
+AddrMode11(22)			  <= IR_Alu(24);
+AddrMode11(23)			  <= IR_Alu(24);
+AddrMode11(24)			  <= IR_Alu(24);
+AddrMode11(25)			  <= IR_Alu(24);
+AddrMode11(26)			  <= IR_Alu(24);
+AddrMode11(27)			  <= IR_Alu(24);
+AddrMode11(28)			  <= IR_Alu(24);
+AddrMode11(29)			  <= IR_Alu(24);
+AddrMode11(30)			  <= IR_Alu(24);
+AddrMode11(31)			  <= IR_Alu(24);
+
+AddrMode32(5 downto 0) <= IR_Alu(5 downto 0);
+AddrMode32(31 downto 6)	<="00000000000000000000000000";
+
+AddrMode34(4  downto 0) <= IR_Alu(29 downto 25);
+AddrMode34(5) 				<= IR_Alu(5);
+AddrMode34(31 downto 6)	<="00000000000000000000000000";
+
+
+AddrMode29(4  downto 0)<= IR_Alu(12 downto 8);
+AddrMode29(5 )			  <= IR_Alu(12);
+AddrMode29(6 )			  <= IR_Alu(12);
+AddrMode29(7 )			  <= IR_Alu(12);
+AddrMode29(8 )			  <= IR_Alu(12);
+AddrMode29(9 )			  <= IR_Alu(12);
+AddrMode29(10)			  <= IR_Alu(12);
+AddrMode29(11)			  <= IR_Alu(12);
+AddrMode29(12)			  <= IR_Alu(12);
+AddrMode29(13)			  <= IR_Alu(12);
+AddrMode29(14)			  <= IR_Alu(12);
+AddrMode29(15)			  <= IR_Alu(12);
+AddrMode29(16)			  <= IR_Alu(12);
+AddrMode29(17)			  <= IR_Alu(12);
+AddrMode29(18)			  <= IR_Alu(12);
+AddrMode29(19)			  <= IR_Alu(12);
+AddrMode29(20)			  <= IR_Alu(12);
+AddrMode29(21)			  <= IR_Alu(12);
+AddrMode29(22)			  <= IR_Alu(12);
+AddrMode29(23)			  <= IR_Alu(12);
+AddrMode29(24)			  <= IR_Alu(12);
+AddrMode29(25)			  <= IR_Alu(12);
+AddrMode29(26)			  <= IR_Alu(12);
+AddrMode29(27)			  <= IR_Alu(12);
+AddrMode29(28)			  <= IR_Alu(12);
+AddrMode29(29)			  <= IR_Alu(12);
+AddrMode29(30)			  <= IR_Alu(12);
+AddrMode29(31)			  <= IR_Alu(12);
+--Fin de segnales de modos de sireccionamiento
+
+--Segnal de seleccion para el primer termino de la suma
+AddrASelector(0) <= ( Control_Alu(0 ) OR Control_Alu(1 ) OR Control_Alu(2 ) OR Control_Alu(3 ) OR Control_Alu(4 ) OR Control_Alu(5 ) OR Control_Alu(9 ) OR Control_Alu(10) );
+AddrASelector(1) <= ( Control_Alu(6 ) OR Control_Alu(7 ) OR Control_Alu(8 ) OR Control_Alu(11) OR Control_Alu(12) OR Control_Alu(13) OR Control_Alu(14) OR Control_Alu(21) OR Control_Alu(22) OR Control_Alu(32) OR Control_Alu(33) OR Control_Alu(34) OR Control_Alu(35));
+
+--Segnal de seleccion para el segundo termino de la suma
+AddrBSelector(0)<=( Control_Alu(0 ) OR Control_Alu(1 ) );
+AddrBSelector(1)<=( Control_Alu(2 ) OR Control_Alu(3 ) );
+AddrBSelector(2)<=( Control_Alu(4 ) OR Control_Alu(5 ) );
+AddrBSelector(3)<=( Control_Alu(6 ) OR Control_Alu(7 ) );
+AddrBSelector(4)<=( Control_Alu(8 ) OR Control_Alu(22) );
+AddrBSelector(5)<=( Control_Alu(9 ) OR Control_Alu(10) );
+AddrBSelector(6)<=( Control_Alu(11) OR Control_Alu(12) OR Control_Alu(13));
+AddrBSelector(7)<=( Control_Alu(32) OR Control_Alu(33) );
+AddrBSelector(8)<=( Control_Alu(34) OR Control_Alu(35) );	
+AddrBSelector(9)<=  Control_Alu(14);
+AddrBSelector(10)<=  Control_Alu(21);
+--Segnal de carry de entrada
+AdderCarryIn<=Control_Alu(8) OR Control_Alu(14) OR Control_Alu(22);
+
+--AND
+InputANDA <=		Registers_Alu(31 downto  0);
+--Segnal de  seleccion de segundo termino de AND
+AndBselector(0)<=Control_Alu(17);
+AndBselector(1)<=Control_Alu(28) OR Control_Alu(26);
+AndBselector(2)<=Control_Alu(30);
+
+--OR
+InputORA <=			Registers_Alu(31 downto  0);
+--Segnal de  seleccion de segundo termino de OR
+OrBselector(0)<=  Control_Alu(16);
+OrBselector(1)<=( Control_Alu(25) OR Control_Alu(27) );
+OrBselector(2)<=  Control_Alu(29);
+
+--XOR
+InputXORA <=		Registers_Alu(31 downto  0);	
+--Segnal de  seleccion de segundo termino de XOR
+XorBselector(0)<=   Control_Alu(15);
+XorBselector(1)<=   Control_Alu(24);
+
+--Segnales de bloques shift
 	
-		AddrMode11(11 downto 0)<= IR_Alu(24 downto 13);
-		AddrMode11(12)			  <= IR_Alu(24);
-		AddrMode11(13)			  <= IR_Alu(24);
-		AddrMode11(14)			  <= IR_Alu(24);
-		AddrMode11(15)			  <= IR_Alu(24);
-		AddrMode11(16)			  <= IR_Alu(24);
-		AddrMode11(17)			  <= IR_Alu(24);
-		AddrMode11(18)			  <= IR_Alu(24);
-		AddrMode11(19)			  <= IR_Alu(24);
-		AddrMode11(20)			  <= IR_Alu(24);
-		AddrMode11(21)			  <= IR_Alu(24);
-		AddrMode11(22)			  <= IR_Alu(24);
-		AddrMode11(23)			  <= IR_Alu(24);
-		AddrMode11(24)			  <= IR_Alu(24);
-		AddrMode11(25)			  <= IR_Alu(24);
-		AddrMode11(26)			  <= IR_Alu(24);
-		AddrMode11(27)			  <= IR_Alu(24);
-		AddrMode11(28)			  <= IR_Alu(24);
-		AddrMode11(29)			  <= IR_Alu(24);
-		AddrMode11(30)			  <= IR_Alu(24);
-		AddrMode11(31)			  <= IR_Alu(24);
-		
-		AddrMode32(5 downto 0) <= IR_Alu(5 downto 0);
-		AddrMode32(31 downto 6)	<="00000000000000000000000000";
+--Segnales LogicalShiftRight	  
+LSREnable  <=		Control_Alu(19);
+LSRReplace <= 		Control_Alu(36) OR Control_Alu(18) OR Control_Alu(20);
 
-		AddrMode34(4  downto 0) <= IR_Alu(29 downto 25);
-		AddrMode34(5) 				<= IR_Alu(5);
-		AddrMode34(31 downto 6)	<="00000000000000000000000000";
-	
+--Segnales left shift
+LSEnable  <=		Control_Alu(18);
+LSReplace <=		Control_Alu(36) OR Control_Alu(19) OR Control_Alu(20);
 
-		AddrMode29(4  downto 0)<= IR_Alu(12 downto 8);
-		AddrMode29(5 )			  <= IR_Alu(12);
-		AddrMode29(6 )			  <= IR_Alu(12);
-		AddrMode29(7 )			  <= IR_Alu(12);
-		AddrMode29(8 )			  <= IR_Alu(12);
-		AddrMode29(9 )			  <= IR_Alu(12);
-		AddrMode29(10)			  <= IR_Alu(12);
-		AddrMode29(11)			  <= IR_Alu(12);
-		AddrMode29(12)			  <= IR_Alu(12);
-		AddrMode29(13)			  <= IR_Alu(12);
-		AddrMode29(14)			  <= IR_Alu(12);
-		AddrMode29(15)			  <= IR_Alu(12);
-		AddrMode29(16)			  <= IR_Alu(12);
-		AddrMode29(17)			  <= IR_Alu(12);
-		AddrMode29(18)			  <= IR_Alu(12);
-		AddrMode29(19)			  <= IR_Alu(12);
-		AddrMode29(20)			  <= IR_Alu(12);
-		AddrMode29(21)			  <= IR_Alu(12);
-		AddrMode29(22)			  <= IR_Alu(12);
-		AddrMode29(23)			  <= IR_Alu(12);
-		AddrMode29(24)			  <= IR_Alu(12);
-		AddrMode29(25)			  <= IR_Alu(12);
-		AddrMode29(26)			  <= IR_Alu(12);
-		AddrMode29(27)			  <= IR_Alu(12);
-		AddrMode29(28)			  <= IR_Alu(12);
-		AddrMode29(29)			  <= IR_Alu(12);
-		AddrMode29(30)			  <= IR_Alu(12);
-		AddrMode29(31)			  <= IR_Alu(12);
-	--Fin de se;ales de modos de sireccionamiento
+--Segnales ArithmeticShiftRight
+ASREnable  <=		Control_Alu(20);
+ASRReplace <=		Control_Alu(36) OR Control_Alu(19) OR Control_Alu(18);
 
-		--Segnal de seleccion para el primer termino de la suma
-		AddrASelector(0) <= ( Control_Alu(0 ) OR Control_Alu(1 ) OR Control_Alu(2 ) OR Control_Alu(3 ) OR Control_Alu(4 ) OR Control_Alu(5 ) OR Control_Alu(9 ) OR Control_Alu(10) );
-		AddrASelector(1) <= ( Control_Alu(6 ) OR Control_Alu(7 ) OR Control_Alu(8 ) OR Control_Alu(11) OR Control_Alu(12) OR Control_Alu(13) OR Control_Alu(14) OR Control_Alu(21) OR Control_Alu(22) OR Control_Alu(32) OR Control_Alu(33) OR Control_Alu(34) OR Control_Alu(35));
+--Segnales Multiplicador
+MulInputA <=		Registers_Alu(31 downto  0);
+MulInputB <=		Registers_Alu(63 downto 32);
 
-		--Segnal de seleccion para el segundo termino de la suma
-		AddrBSelector(0)<=( Control_Alu(0 ) OR Control_Alu(1 ) );
-		AddrBSelector(1)<=( Control_Alu(2 ) OR Control_Alu(3 ) );
-		AddrBSelector(2)<=( Control_Alu(4 ) OR Control_Alu(5 ) );
-		AddrBSelector(3)<=( Control_Alu(6 ) OR Control_Alu(7 ) );
-		AddrBSelector(4)<=( Control_Alu(8 ) OR Control_Alu(22) );
-		AddrBSelector(5)<=( Control_Alu(9 ) OR Control_Alu(10) );
-		AddrBSelector(6)<=( Control_Alu(11) OR Control_Alu(12) OR Control_Alu(13));
-		AddrBSelector(7)<=( Control_Alu(32) OR Control_Alu(33) );
-		AddrBSelector(8)<=( Control_Alu(34) OR Control_Alu(35) );	
-		AddrBSelector(9)<=  Control_Alu(14);
-		AddrBSelector(10)<=  Control_Alu(21);
-		--Segnal de carry de entrada
-		AdderCarryIn<=Control_Alu(8) OR Control_Alu(14) OR Control_Alu(22);
-
-		--AND
-		InputANDA <=		Registers_Alu(31 downto  0);
-			--Segnal de  seleccion de segundo termino de AND
-		AndBselector(0)<=Control_Alu(17);
-		AndBselector(1)<=Control_Alu(28) OR Control_Alu(26);
-		AndBselector(2)<=Control_Alu(30);
-
-		--OR
-		InputORA <=			Registers_Alu(31 downto  0);
-			--Segnal de  seleccion de segundo termino de OR
-		OrBselector(0)<=  Control_Alu(16);
-		OrBselector(1)<=( Control_Alu(25) OR Control_Alu(27) );
-		OrBselector(2)<=  Control_Alu(29);
-
-		--XOR
-		InputXORA <=		Registers_Alu(31 downto  0);	
-			--Segnal de  seleccion de segundo termino de XOR
-		XorBselector(0)<=   Control_Alu(15);
-		XorBselector(1)<=   Control_Alu(24);
-
-		--Segnales de bloques shift
-			
-		--Segnales LogicalShiftRight	  
-		LSREnable  <=		Control_Alu(19);
-		LSRReplace <= 		Control_Alu(36) OR Control_Alu(18) OR Control_Alu(20);
-
-		--Segnales left shift
-		LSEnable  <=		Control_Alu(18);
-		LSReplace <=		Control_Alu(36) OR Control_Alu(19) OR Control_Alu(20);
-
-		--Segnales ArithmeticShiftRight
-		ASREnable  <=		Control_Alu(20);
-		ASRReplace <=		Control_Alu(36) OR Control_Alu(19) OR Control_Alu(18);
-
-
-		--Segnales Multiplicador
-		MulInputA <=		Registers_Alu(31 downto  0);
-		MulInputB <=		Registers_Alu(63 downto 32);
-
-
-
-
-
-		
-		
-		--Process para asignar segnales de entrada a bloques con decodificacion
-		assignsignals: PROCESS(AddrASelector,AddrBSelector,Control_Alu,AndBselector,OrBselector,XorBselector)
-			BEGIN
-			--Seleccion de las entradas del sumador segun los estados de acuerdo al decodificador
-				if AddrASelector(0) = '1' then
-					AdderInputA<=PC_Alu;
-				end if;
+--Process para asignar segnales de entrada a bloques con decodificacion
+assignsignals: PROCESS(AddrASelector,AddrBSelector,Control_Alu,AndBselector,OrBselector,XorBselector)
+	BEGIN
+	--Seleccion de las entradas del sumador segun los estados de acuerdo al decodificador
+		if AddrASelector(0) = '1' then
+			AdderInputA<=PC_Alu;
+		end if;
 				if AddrASelector(1) = '1' then
 					AdderInputA<=Registers_Alu(31 downto 0);
 				end if;
@@ -504,91 +496,46 @@ PORT MAP	  (Reloj      => Reloj,
 --		INSTANCIACION DE COMPONENTES
 --*********************************************************************--
 
-	CRAA32: CRAAdder32 port map(AdderInputA,AdderInputB,AdderCarryIn,AdderResult,Alu_Control(3));
+CRAA32 : CRAAdder32 port map(AdderInputA,AdderInputB,AdderCarryIn,AdderResult,Alu_Control(3));
 
-	LSR: LogicalShiftRight port map(Reloj,Reset,LSREnable,LSRReplace,LSRDataIn,LSRRegister);
+LSR    : LogicalShiftRight port map(Reloj,Reset,LSREnable,LSRReplace,LSRDataIn,LSRRegister);
 
-	LS: LeftShift port map(	Reloj,Reset,LSEnable,LSReplace,LSDataIn,LSRegister);
-	
-	ASR: ArithmeticShiftRight port map(	Reloj,Reset,ASREnable,ASRReplace,ASRDataIn,ASRRegister);
-	
-	Mul: Multiplier32Bits port map(MulInputA,MulInputB,MulResult);
-		  
-	OpAND: BlockAnd port map(InputANDA,InputANDB,ResultAND);
-	
-	OpOR: BlockOr port map(InputORA,InputORB,ResultOR);
-	
-	OpXOR: BlockXor port map(InputXORA,InputXORB,ResultXOR);
-		
+LS     : LeftShift port map(	Reloj,Reset,LSEnable,LSReplace,LSDataIn,LSRegister);
+
+ASR    : ArithmeticShiftRight port map(	Reloj,Reset,ASREnable,ASRReplace,ASRDataIn,ASRRegister);
+
+Mul    : Multiplier32Bits port map(MulInputA,MulInputB,MulResult);
+ 
+OpAND  : BlockAnd port map(InputANDA,InputANDB,ResultAND);
+
+OpOR   : BlockOr port map(InputORA,InputORB,ResultOR);
+
+OpXOR  : BlockXor port map(InputXORA,InputXORB,ResultXOR);
+
 --****************************************************--
 --Asignar Salidas
 --****************************************************--
 			
-			AluShiftRegister<=LSRRegister OR LSRegister OR ASRRegister;
-			--Se;ales de seleccion de salida Alu registers
-			AluRegSelector(0)<=( Control_Alu(1 ) OR Control_Alu(3 ) OR Control_Alu(13) OR Control_Alu(22)  );
-			AluRegSelector(1)<=( Control_Alu(15) OR Control_Alu(24) );
-			AluRegSelector(2)<=( Control_Alu(16) OR Control_Alu(25) );
-			AluRegSelector(3)<=( Control_Alu(17) OR Control_Alu(26) );
-			AluRegSelector(4)<=  Control_Alu(23);
-			AluRegSelector(5)<=  Control_Alu(31);
+AluShiftRegister<=LSRRegister OR LSRegister OR ASRRegister;
+--Se;ales de seleccion de salida Alu registers
+AluRegSelector(0) <=( Control_Alu(1 ) OR Control_Alu(3 ) OR Control_Alu(13) OR Control_Alu(22)  );
+AluRegSelector(1) <=( Control_Alu(15) OR Control_Alu(24) );
+AluRegSelector(2) <=( Control_Alu(16) OR Control_Alu(25) );
+AluRegSelector(3) <=( Control_Alu(17) OR Control_Alu(26) );
+AluRegSelector(4) <=  Control_Alu(23);
+AluRegSelector(5) <=  Control_Alu(31);
 			
-			--Segnal de seleccion de salida Alu pc
-			AluPCSelector<=( Control_Alu(5 ) OR Control_Alu(7 ) OR Control_Alu(10));
+--Segnal de seleccion de salida Alu pc
+AluPCSelector <=( Control_Alu(5 ) OR Control_Alu(7 ) OR Control_Alu(10));
 			
-			--Segnal de seleccion de salida Alu csr
-			AluCSRSelector(0)<=( Control_Alu(27) OR Control_Alu(29) );
-			AluCSRSelector(1)<=( Control_Alu(28) OR Control_Alu(30) );
+--Segnal de seleccion de salida Alu csr
+AluCSRSelector(0) <=( Control_Alu(27) OR Control_Alu(29) );
+AluCSRSelector(1) <=( Control_Alu(28) OR Control_Alu(30) );
 			
-			--Segnal de seleccion de salida Alu mar
-			AluMARSelector<=( Control_Alu(12) OR Control_Alu(33) OR Control_Alu(25)  );
+--Segnal de seleccion de salida Alu mar
+AluMARSelector <=( Control_Alu(12) OR Control_Alu(33) OR Control_Alu(25)  );
 
-
---Process para asignar salidas
-	
-		--Process para asignar segnales de entrada a bloques con decodificacion
---				assigoutput: PROCESS(AluRegSelector,AluPCSelector,AluCSRSelector,AluMARSelector)
---			BEGIN
---			--Seleccion de las salidas Alu registers
---			
---				if AluRegSelector(0) = '1' then
---					Alu_Registers_Temp <= AdderResult;
---				end if;
---				if AluRegSelector(1) = '1' then
---					Alu_Registers_Temp <=ResultXOR;
---				end if;
---				if AluRegSelector(2) = '1' then
---					Alu_Registers_Temp <=ResultOR;
---				end if;
---				if AluRegSelector(3) = '1' then
---					Alu_Registers_Temp <=ResultAND;
---				end if;
---				if AluRegSelector(4) = '1' then
---					Alu_Registers_Temp <=AluShiftRegister;
---				end if;
---				if AluRegSelector(5) = '1' then
---					Alu_Registers_Temp <=MulResult;
---				end if;
---				
---			--seleccion salida Alu pc	
---				if AluPCSelector = '1' then
---					Alu_PC_Temp <=AdderResult;
---				end if;
---				
---			--seleccion de las salidas Alu csr
---				if AluCSRSelector(0) = '1' then
---					Alu_CSR_Temp <=ResultOR;
---				end if;
---				if AluCSRSelector(1) = '1' then
---					Alu_CSR_Temp <=ResultAND;
---				end if;
---				
---			--seleccion de las salidas Alu mar				
---				if AluMARSelector = '1' then
---					Alu_MAR_Temp <=AdderResult;
---				end if;
---				
---		END PROCESS;	
+-- Asignar salidas
 
 WITH AluRegSelector SELECT
 Alu_Registers_Temp <= AdderResult      WHEN "000001",
