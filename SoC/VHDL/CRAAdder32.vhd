@@ -49,11 +49,25 @@ Carry(0) <= CarryIn;
 
 CarryGenerator: FOR I IN 0 TO 31 GENERATE
 	
-		Result(i  )		<=  A(i) XOR B(i) XOR Carry(i);
-		Carry (i+1) 	<= (A(i) AND B(i)) OR (Carry(i) AND (A(i) XOR B(i)) );
+		Result(I  )		<=  A(I) XOR B(I) XOR Carry(I);
+		Carry (I+1) 	<= (A(I) AND B(I)) OR (Carry(I) AND (A(I) XOR B(I)) );
 	
 END GENERATE CarryGenerator;
 
 CarryOut <=Carry(32);
+
+--******************************************************--
+-- 
+-- Summon This Block:
+-- 
+--******************************************************--
+--BlockN: ENTITY WORK.CRAAdder32
+--PORT MAP	  (A        => SLV,
+--				B        => SLV,
+--				CarryIn  => SLV,
+--				Result   => SLV,
+--				CarryOut => SLV
+--			  );
+--******************************************************--
 
 End  CRAAdder32Arch;

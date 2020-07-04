@@ -496,6 +496,13 @@ begin
 	Add32D: CRAAdder32 port map(ResultAdder32C, SecondAdder32D,'0',ResultAdder32D,CarryOut(14 ));
 	
 	Result<=ResultAdder32D;
+
+--BlockN: ENTITY WORK.Multiplier32Bits
+--PORT MAP	  (Multiplicand => SLV,
+--				Multiplier   => SLV,
+--				Result       => SLV
+--			  );
+
 End  Multiplier32BitsArch;
 
 

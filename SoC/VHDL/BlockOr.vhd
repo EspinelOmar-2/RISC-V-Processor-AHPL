@@ -47,6 +47,16 @@ Generator: FOR I IN 0 TO 31 GENERATE
 	
 END GENERATE Generator;
 
+--******************************************************--
+-- 
+-- Summon This Block:
+-- 
+--******************************************************--
+--BlockN: ENTITY WORK.BlockOr
+--PORT MAP	  (A        => SLV,
+--				B        => SLV,
+--				Result   => SLV
+--			  );
+--******************************************************--
+
 End  BlockOrArch;
-
-
