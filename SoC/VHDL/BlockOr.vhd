@@ -41,20 +41,22 @@ architecture BlockOrArch of BlockOr is
 --******************************************************
 begin
 
+Generator: FOR I IN 0 TO 31 GENERATE
 	
+	Result(i) <= A(i) OR B(i);
 	
-	process (A,B)
-	begin
-	
-		for i in 0 to 31 loop
-			Result(i  )		<=A(i) OR B(i) ;
+END GENERATE Generator;
 
-		end loop;
-		
-	end process;
-	
-
+--******************************************************--
+-- 
+-- Summon This Block:
+-- 
+--******************************************************--
+--BlockN: ENTITY WORK.BlockOr
+--PORT MAP	  (A        => SLV,
+--				B        => SLV,
+--				Result   => SLV
+--			  );
+--******************************************************--
 
 End  BlockOrArch;
-
-

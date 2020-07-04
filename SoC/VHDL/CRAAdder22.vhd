@@ -57,7 +57,7 @@ begin
 --		
 --	end process;
 	
-	CarryGenerator: FOR I IN 0 TO 21 GENERATE
+CarryGenerator: FOR I IN 0 TO 21 GENERATE
 	
 		Result(i  )		<=  A(i) XOR B(i) XOR Carry(i);
 		Carry (i+1) 	<= (A(i) AND B(i)) OR (Carry(i) AND (A(i) XOR B(i)) );
