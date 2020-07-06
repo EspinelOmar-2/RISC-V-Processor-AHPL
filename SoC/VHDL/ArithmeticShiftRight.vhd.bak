@@ -6,7 +6,7 @@ use IEEE.std_logic_1164.all;
 -- DEFINICIÓN DE ENTIDAD                                --
 --******************************************************--
      
-entity LogicalShiftRight is
+entity ArithmeticShiftRight is
 port(
 		--Entradas		
 			Reloj: 								in		std_logic;
@@ -23,19 +23,19 @@ port(
 			--contiene el nuevo PC para ser almacenado.
 			
 		--Salidas		
-			LogicalShiftRightRegister: 	out	std_logic_vector(31 downto 0)
+			ArithmeticShiftRightRegister: 	out	std_logic_vector(31 downto 0)
 			--Señal que envía el contenido de LogicalShiftRightRegister 
 			
 
 	  );
-end entity LogicalShiftRight;
+end entity ArithmeticShiftRight;
 
 
 --******************************************************--
 --DEFINICIÓN DE ARQUITECTURA                                        --
 --******************************************************--
 
-architecture LogicalShiftRightArch of LogicalShiftRight is
+architecture ArithmeticShiftRightArch of ArithmeticShiftRight is
 
 --******************************************************--
 --DEFINICIÓN DE COMPONENTES Y SEÑALES DE CONEXIÓN                                        
@@ -61,11 +61,7 @@ BEGIN
 		
 	ELSIF(Rising_Edge(Reloj))THEN
 		
-		IF   (Enable = '1')THEN
-			
-			Q <= D;
-			
-		ELSIF(Replace = '1')THEN
+		IF(Enable ='1')THEN
 			
 			Q <= D;
 			
@@ -106,26 +102,25 @@ D(27)<=(Replace AND DataIn(27)) OR (Q(28) AND NOT Replace);
 D(28)<=(Replace AND DataIn(28)) OR (Q(29) AND NOT Replace);
 D(29)<=(Replace AND DataIn(29)) OR (Q(30) AND NOT Replace);
 D(30)<=(Replace AND DataIn(30)) OR (Q(31) AND NOT Replace);
-D(31)<= Replace AND DataIn(31);
-	
+D(31)<=(Replace AND DataIn(31)) OR (Q(31) AND NOT Replace);
 
-LogicalShiftRightRegister<= Q;
+ArithmeticShiftRightRegister<= Q;
 
 --******************************************************--
 -- 
 -- Summon This Block:
 -- 
 --******************************************************--
---BlockN: ENTITY WORK.LogicalShiftRight
---PORT MAP	  (Enable                    => SLV,
---				Replace                   => SLV,
---				DataIn                    => SLV,
---				Reset                     => SLV,
---				Reloj                     => SLV,
---				LogicalShiftRightRegister => SLV
+--BlockN: ENTITY WORK.ArithmeticShiftRight
+--PORT MAP	  (Enable                       => SLV,
+--				Replace                      => SLV,
+--				DataIn                       => SLV,
+--				Reset                        => SLV,
+--				Reloj                        => SLV,
+--				ArithmeticShiftRightRegister => SLV
 --			  );
 --******************************************************--
 
-End  LogicalShiftRightArch;
+End  ArithmeticShiftRightArch;
 
 

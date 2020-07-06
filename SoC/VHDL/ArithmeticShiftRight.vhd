@@ -61,7 +61,11 @@ BEGIN
 		
 	ELSIF(Rising_Edge(Reloj))THEN
 		
-		IF(Enable ='1')THEN
+		IF   (Enable = '1')THEN
+			
+			Q <= D;
+			
+		ELSIF(Replace = '1')THEN
 			
 			Q <= D;
 			

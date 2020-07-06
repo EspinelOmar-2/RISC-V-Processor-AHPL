@@ -534,8 +534,8 @@ ControlMar(2)        <= Q( 85) OR Q( 95);
 ControlMemoryRdWr(0) <= Q(  2) OR Q(  3) OR Q(  4) OR Q( 25) OR Q( 26) OR Q( 27) OR
 							   Q( 28) OR Q( 29) OR Q( 30) OR Q( 31) OR Q( 81) OR Q( 82) OR Q( 83);
 
-ControlMemoryRdWr(1) <= Q( 32) OR Q( 33) OR Q( 34) OR Q( 35) OR
-								Q( 36) OR Q( 37) OR Q( 77) OR Q( 78);
+ControlMemoryRdWr(1) <= Q( 32) OR Q( 33) OR Q( 34) OR Q( 35) OR Q( 36) OR Q( 37) OR 
+								Q( 77) OR Q( 78) OR Q( 86) OR Q( 87) OR Q( 96) OR Q( 97);
 
 ControlError         <= Q( 84);
 
@@ -547,7 +547,7 @@ ACK(3)               <= Q(101);
 ControlIr            <= Q(  4);
 
 ControlSp(0)         <= Q( 78) OR Q( 87) OR Q( 97);
-ControlSp(1)         <= Q( 83) OR Q( 84);
+ControlSp(1)         <= Q( 79);
 
 ControlCounter(0)    <= Q( 50) OR Q( 51) OR Q( 52);
 ControlCounter(1)    <= Q( 49);
