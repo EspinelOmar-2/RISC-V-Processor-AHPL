@@ -347,7 +347,6 @@ CSR:
 SP:
 	78.SP<=Inc(SP);
 	83.SP<=Dec(SP);
-	84.SP<=Dec(SP);
 	87.SP <= Inc(SP)
 	97.SP <= Inc(SP)
 	DevNote: dos cables, bit 0 aumenta, bit 1 disminuye

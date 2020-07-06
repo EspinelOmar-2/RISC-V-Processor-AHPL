@@ -66,71 +66,6 @@ end entity Alu;
 
 architecture AluArch of Alu is
 
---******************************************************--
---DEFINICIÓN DE COMPONENTES                                    
---******************************************************--
-
---component CraAdder32
---port(
---		A,B: 									in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		CarryIn: 							in	 STD_LOGIC;
---		Result:								out STD_LOGIC_VECTOR(31 DOWNTO 0);
---		Carryout: 							out STD_LOGIC
---);
---end component CraAdder32;
---
---component LogicalShiftRight
---port(
---		Reloj,Reset,Enable,Replace:	in  STD_LOGIC;
---		DataIn: 								in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		LogicalShiftRightRegister: 	out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component LogicalShiftRight;
---
---component Multiplier32Bits
---port(
---		Multiplicand,Multiplier:		in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		Result:								out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component Multiplier32Bits;
---
---component BlockAnd
---port(
---		A,B: 									in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		Result:								out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component BlockAnd;
---
---component BlockOr
---port(
---		A,B: 									in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		Result:								out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component BlockOr;
---
---component BlockXor
---port(
---		A,B: 									in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		Result:								out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component BlockXor;
---
---component LeftShift
---port(
---		Reloj,Reset,Enable,Replace:	in  STD_LOGIC;
---		DataIn: 								in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		LeftShiftRegister: 				out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component LeftShift;
---
---component ArithmeticShiftRight 
---port(
---		Reloj,Reset,Enable,Replace:	in  STD_LOGIC;
---		DataIn: 								in  STD_LOGIC_VECTOR(31 DOWNTO 0);
---		ArithmeticShiftRightRegister: out STD_LOGIC_VECTOR(31 DOWNTO 0)
---);
---end component ArithmeticShiftRight;
-
 --******************************************************
 --Segnales de conexion
 --******************************************************
@@ -475,11 +410,11 @@ LsrDataIn  <= Registers_Alu(31 DOWNTO 0) WHEN '1',
 				  Zero                       WHEN OTHERS;
 
 WITH Control_Alu(36) SELECT
-LSDataIn   <= Registers_Alu(31 DOWNTO 0) WHEN '1',
+LsDataIn   <= Registers_Alu(31 DOWNTO 0) WHEN '1',
 				  Zero                       WHEN OTHERS;
 
 WITH Control_Alu(36) SELECT
-ASRDataIn  <= Registers_Alu(31 DOWNTO 0) WHEN '1',
+AsrDataIn  <= Registers_Alu(31 DOWNTO 0) WHEN '1',
 				  Zero                       WHEN OTHERS;
 
 --*********************************************************************--
@@ -551,22 +486,22 @@ PORT MAP	  (A        => InputXorA,
 
 AluShiftRegister<=LsrRegister OR Lsregister OR ASRRegister;
 --Se;ales de seleccion de salida Alu registers
-AluRegSelector(0) <=( Control_Alu(1 ) OR Control_Alu(3 ) OR Control_Alu(13) OR Control_Alu(22)  );
-AluRegSelector(1) <=( Control_Alu(15) OR Control_Alu(24) );
-AluRegSelector(2) <=( Control_Alu(16) OR Control_Alu(25) );
-AluRegSelector(3) <=( Control_Alu(17) OR Control_Alu(26) );
+AluRegSelector(0) <= (Control_Alu( 1) OR Control_Alu( 3) OR Control_Alu(13) OR Control_Alu(22)  );
+AluRegSelector(1) <= (Control_Alu(15) OR Control_Alu(24) );
+AluRegSelector(2) <= (Control_Alu(16) OR Control_Alu(25) );
+AluRegSelector(3) <= (Control_Alu(17) OR Control_Alu(26) );
 AluRegSelector(4) <=  Control_Alu(23);
 AluRegSelector(5) <=  Control_Alu(31);
 
 --Segnal de seleccion de salida Alu pc
-AluPCSelector <=( Control_Alu(5 ) OR Control_Alu(7 ) OR Control_Alu(10));
+AluPcSelector     <= (Control_Alu( 5) OR Control_Alu( 7) OR Control_Alu(10));
 
 --Segnal de seleccion de salida Alu csr
-AluCSRSelector(0) <=( Control_Alu(27) OR Control_Alu(29) );
-AluCSRSelector(1) <=( Control_Alu(28) OR Control_Alu(30) );
+AluCsrSelector(0) <= (Control_Alu(27) OR Control_Alu(29) );
+AluCsrSelector(1) <= (Control_Alu(28) OR Control_Alu(30) );
 
 --Segnal de seleccion de salida Alu mar
-AluMARSelector <=( Control_Alu(12) OR Control_Alu(33) OR Control_Alu(25)  );
+AluMarSelector    <= (Control_Alu(12) OR Control_Alu(33) OR Control_Alu(35));
 
 -- Asignar salidas
 
@@ -593,9 +528,9 @@ Alu_Mar_Temp <= AdderResult WHEN '1',
 					 Zero        WHEN OTHERS;
 
 Alu_Registers <= Alu_Registers_Temp;
-Alu_PC        <= Alu_Pc_Temp;
-Alu_CSR       <= Alu_CSR_Temp;
-Alu_MAR       <= Alu_MAR_Temp;
+Alu_Pc        <= Alu_Pc_Temp;
+Alu_Csr       <= Alu_Csr_Temp;
+Alu_Mar       <= Alu_Mar_Temp;
 		
 WITH Alu_Registers_Temp SELECT
 ZeroRegisters <= '1' WHEN x"00000000",
@@ -609,7 +544,7 @@ WITH Alu_Csr_Temp SELECT
 ZeroPc        <= '1' WHEN x"00000000",
 					  '0' WHEN OTHERS;
 
-WITH Alu_MAR_Temp SELECT
+WITH Alu_Mar_Temp SELECT
 ZeroCsr       <= '1' WHEN x"00000000",
 					  '0' WHEN OTHERS;
 
