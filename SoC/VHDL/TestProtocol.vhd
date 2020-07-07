@@ -30,7 +30,7 @@ SIGNAL SpySignal        : Spy;
 
 BEGIN
 
-Irq3SpOpTest: ENTITY WORK.SoC
+Irq2ShiftTest: ENTITY WORK.SoC
 PORT MAP	  (PeripheralPort   => PeripheralPort,
 				Reset            => Reset,
 				Clk              => Clk,
@@ -42,7 +42,7 @@ Clk            <= NOT Clk AFTER  10 ns;
 
 Reset          <= '0'     AFTER  20 ns;
 
-PeripheralPort <= "1000"  AFTER  20 ns,
+PeripheralPort <= "0100"  AFTER  20 ns,
 						"0000"  AFTER 500 ns;
 
 END TestProtocolArch;

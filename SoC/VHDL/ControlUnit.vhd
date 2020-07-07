@@ -575,7 +575,7 @@ ControlCsr(18)       <= Q(101);
 
 ControlRegisters( 0) <= Q(  7) OR Q( 10) OR Q( 59);
 ControlRegisters( 1) <= Q(  8);
-ControlRegisters( 2) <= Q( 13) OR Q( 14) OR Q( 23) OR Q( 24) OR Q( 40) OR Q( 41) OR
+ControlRegisters( 2) <= Q( 13) OR Q( 14) OR Q( 23) OR Q( 24) OR Q( 38) OR Q( 40) OR Q( 41) OR
 								Q( 44) OR Q( 45) OR Q( 49) OR Q( 50) OR Q( 51) OR Q( 52);
 ControlRegisters( 3) <= Q( 15) OR Q( 16);
 ControlRegisters( 4) <= Q( 19) OR Q( 20) OR Q( 21) OR Q( 22) OR Q( 53) OR Q( 54) OR
@@ -588,7 +588,7 @@ ControlRegisters( 9) <= Q( 31);
 ControlRegisters(10) <= Q( 32) OR Q( 33);
 ControlRegisters(11) <= Q( 34) OR Q( 35);
 ControlRegisters(12) <= Q( 36) OR Q( 37);
-ControlRegisters(13) <= Q( 38) OR Q( 72) OR Q( 73);
+ControlRegisters(13) <= Q( 72) OR Q( 73);
 ControlRegisters(14) <= Q( 39);
 ControlRegisters(15) <= Q( 42);
 ControlRegisters(16) <= Q( 43);

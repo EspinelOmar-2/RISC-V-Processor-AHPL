@@ -12,9 +12,81 @@
 # ** Warning: Copied C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini.
 #          Updated modelsim.ini.
 # 
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:03:59 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Sp
+# -- Compiling architecture SpArch of Sp
+# End time: 19:04:00 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:00 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity SinglePartialProduct
+# -- Compiling architecture SinglePartialProductArch of SinglePartialProduct
+# End time: 19:04:00 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:00 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package RegistersPackage
+# -- Compiling package body RegistersPackage
+# -- Loading package RegistersPackage
+# End time: 19:04:00 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:00 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity PeriphericCircuit
+# -- Compiling architecture PeriphericCircuitArch of PeriphericCircuit
+# End time: 19:04:01 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:01 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling entity Pc
+# -- Compiling architecture PcArch of Pc
+# End time: 19:04:02 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:02 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Compiling package OutputControlPackage
+# -- Compiling package body OutputControlPackage
+# -- Loading package OutputControlPackage
+# End time: 19:04:02 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:03 on Jul 06,2020
+# Start time: 19:04:02 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -22,11 +94,22 @@
 # -- Loading package altera_mf_components
 # -- Compiling entity MyMemory
 # -- Compiling architecture SYN of mymemory
-# End time: 13:21:03 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:04:02 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:02 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Multiplier32Bits
+# -- Compiling architecture Multiplier32BitsArch of Multiplier32Bits
+# End time: 19:04:03 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:03 on Jul 06,2020
+# Start time: 19:04:03 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -37,233 +120,11 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity MulCounter
 # -- Compiling architecture MulCounterArch of MulCounter
-# End time: 13:21:04 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:04 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PeriphericCircuit
-# -- Compiling architecture PeriphericCircuitArch of PeriphericCircuit
-# End time: 13:21:04 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:04 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package OutputControlPackage
-# -- Compiling package body OutputControlPackage
-# -- Loading package OutputControlPackage
-# End time: 13:21:05 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:05 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity SinglePartialProduct
-# -- Compiling architecture SinglePartialProductArch of SinglePartialProduct
-# End time: 13:21:05 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:05 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Multiplier32Bits
-# -- Compiling architecture Multiplier32BitsArch of Multiplier32Bits
-# End time: 13:21:06 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:06 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity LogicalShiftRight
-# -- Compiling architecture LogicalShiftRightArch of LogicalShiftRight
-# End time: 13:21:06 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:06 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity LeftShift
-# -- Compiling architecture LeftShiftArch of LeftShift
-# End time: 13:21:07 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:07 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FullPartialProduct
-# -- Compiling architecture FullPartialProductArch of FullPartialProduct
-# End time: 13:21:07 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:07 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder32
-# -- Compiling architecture CRAAdder32Arch of CRAAdder32
-# End time: 13:21:08 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:08 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder30
-# -- Compiling architecture CRAAdder30Arch of CRAAdder30
-# End time: 13:21:08 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:08 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder26
-# -- Compiling architecture CRAAdder26Arch of CRAAdder26
-# End time: 13:21:09 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:09 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder22
-# -- Compiling architecture CRAAdder22Arch of CRAAdder22
-# End time: 13:21:09 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:09 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder18
-# -- Compiling architecture CRAAdder18Arch of CRAAdder18
-# End time: 13:21:10 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:10 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder14
-# -- Compiling architecture CRAAdder14Arch of CRAAdder14
-# End time: 13:21:10 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:10 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder10
-# -- Compiling architecture CRAAdder10Arch of CRAAdder10
-# End time: 13:21:11 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:11 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder6
-# -- Compiling architecture CRAAdder6Arch of CRAAdder6
-# End time: 13:21:11 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:11 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BoothDecoder
-# -- Compiling architecture BoothDecoderArch of BoothDecoder
-# End time: 13:21:12 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:12 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BlockXor
-# -- Compiling architecture BlockXorArch of BlockXor
-# End time: 13:21:12 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:13 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BlockOr
-# -- Compiling architecture BlockOrArch of BlockOr
-# End time: 13:21:13 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:13 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BlockAnd
-# -- Compiling architecture BlockAndArch of BlockAnd
-# End time: 13:21:14 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:14 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ArithmeticShiftRight
-# -- Compiling architecture ArithmeticShiftRightArch of ArithmeticShiftRight
-# End time: 13:21:14 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:04:03 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:14 on Jul 06,2020
+# Start time: 19:04:03 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -274,85 +135,55 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity Mar
 # -- Compiling architecture MarArch of Mar
-# End time: 13:21:15 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:04:04 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd}
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:15 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd 
+# Start time: 19:04:04 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity Counter
-# -- Compiling architecture CounterArch of Counter
-# End time: 13:21:15 on Jul 06,2020, Elapsed time: 0:00:00
+# -- Compiling entity LogicalShiftRight
+# -- Compiling architecture LogicalShiftRightArch of LogicalShiftRight
+# End time: 19:04:04 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd}
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:15 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd 
+# Start time: 19:04:04 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
-# -- Compiling entity Word
-# -- Compiling architecture WordArch of Word
-# End time: 13:21:16 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:16 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Sp
-# -- Compiling architecture SpArch of Sp
-# End time: 13:21:16 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:16 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package RegistersPackage
-# -- Compiling package body RegistersPackage
-# -- Loading package RegistersPackage
-# End time: 13:21:16 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:16 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Pc
-# -- Compiling architecture PcArch of Pc
-# End time: 13:21:17 on Jul 06,2020, Elapsed time: 0:00:01
+# -- Compiling entity LeftShift
+# -- Compiling architecture LeftShiftArch of LeftShift
+# End time: 19:04:05 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:17 on Jul 06,2020
+# Start time: 19:04:05 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Ir
 # -- Compiling architecture IrArch of Ir
-# End time: 13:21:17 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:04:05 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:05 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity FullPartialProduct
+# -- Compiling architecture FullPartialProductArch of FullPartialProduct
+# End time: 19:04:06 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:18 on Jul 06,2020
+# Start time: 19:04:06 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -363,11 +194,114 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity CSR
 # -- Compiling architecture CSRArch of CSR
-# End time: 13:21:18 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:04:06 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:06 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder32
+# -- Compiling architecture CRAAdder32Arch of CRAAdder32
+# End time: 19:04:07 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:07 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder30
+# -- Compiling architecture CRAAdder30Arch of CRAAdder30
+# End time: 19:04:07 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:07 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder26
+# -- Compiling architecture CRAAdder26Arch of CRAAdder26
+# End time: 19:04:08 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:08 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder22
+# -- Compiling architecture CRAAdder22Arch of CRAAdder22
+# End time: 19:04:08 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:08 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder18
+# -- Compiling architecture CRAAdder18Arch of CRAAdder18
+# End time: 19:04:09 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:09 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder14
+# -- Compiling architecture CRAAdder14Arch of CRAAdder14
+# End time: 19:04:09 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:09 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder10
+# -- Compiling architecture CRAAdder10Arch of CRAAdder10
+# End time: 19:04:10 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:10 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity CRAAdder6
+# -- Compiling architecture CRAAdder6Arch of CRAAdder6
+# End time: 19:04:10 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:10 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity Counter
+# -- Compiling architecture CounterArch of Counter
+# End time: 19:04:11 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:18 on Jul 06,2020
+# Start time: 19:04:11 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -378,11 +312,118 @@
 # -- Loading package altera_primitives_components
 # -- Compiling entity ControlUnit
 # -- Compiling architecture ControlUnitArch of ControlUnit
-# End time: 13:21:19 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:04:11 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:11 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BoothDecoder
+# -- Compiling architecture BoothDecoderArch of BoothDecoder
+# End time: 19:04:12 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:12 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BlockXor
+# -- Compiling architecture BlockXorArch of BlockXor
+# End time: 19:04:12 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:12 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BlockOr
+# -- Compiling architecture BlockOrArch of BlockOr
+# End time: 19:04:13 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:13 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity BlockAnd
+# -- Compiling architecture BlockAndArch of BlockAnd
+# End time: 19:04:13 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:13 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ArithmeticShiftRight
+# -- Compiling architecture ArithmeticShiftRightArch of ArithmeticShiftRight
+# End time: 19:04:14 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:14 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity Word
+# -- Compiling architecture WordArch of Word
+# End time: 19:04:14 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:14 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RegistersPackage
+# -- Compiling entity RegistersBlock
+# -- Compiling architecture RegistersBlockArch of RegistersBlock
+# -- Loading entity Word
+# -- Loading entity Sp
+# End time: 19:04:15 on Jul 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:15 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RegistersPackage
+# -- Compiling entity OutputManager
+# -- Compiling architecture OutputManagerArch of OutputManager
+# End time: 19:04:15 on Jul 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd}
+# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
+# Start time: 19:04:15 on Jul 06,2020
+# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package NUMERIC_STD
+# -- Loading package RegistersPackage
+# -- Compiling entity InputManager
+# -- Compiling architecture InputManagerArch of InputManager
+# End time: 19:04:16 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:19 on Jul 06,2020
+# Start time: 19:04:16 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -402,52 +443,11 @@
 # -- Loading entity BlockAnd
 # -- Loading entity BlockOr
 # -- Loading entity BlockXor
-# End time: 13:21:19 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:19 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity RegistersBlock
-# -- Compiling architecture RegistersBlockArch of RegistersBlock
-# -- Loading entity Word
-# -- Loading entity Sp
-# End time: 13:21:20 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:20 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity OutputManager
-# -- Compiling architecture OutputManagerArch of OutputManager
-# End time: 13:21:20 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd}
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:20 on Jul 06,2020
-# vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity InputManager
-# -- Compiling architecture InputManagerArch of InputManager
-# End time: 13:21:21 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:04:16 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:21 on Jul 06,2020
+# Start time: 19:04:16 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -459,11 +459,11 @@
 # -- Loading entity InputManager
 # -- Loading entity RegistersBlock
 # -- Loading entity OutputManager
-# End time: 13:21:22 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:04:17 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:22 on Jul 06,2020
+# Start time: 19:04:17 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -485,11 +485,11 @@
 # -- Loading entity Counter
 # -- Loading entity Mar
 # -- Loading entity Alu
-# End time: 13:21:22 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:04:17 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vcom -93 -work work {C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd}
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:21:22 on Jul 06,2020
+# Start time: 19:04:17 on Jul 06,2020
 # vcom -reportprogress 300 -93 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -502,14 +502,14 @@
 # -- Loading package altera_mf_components
 # -- Loading entity MyMemory
 # -- Loading entity PeriphericCircuit
-# End time: 13:21:23 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:04:18 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 cd C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC
 # reading C:/altera/15.0/modelsim_ase/win32aloem/../modelsim.ini
 vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:24 on Jul 06,2020
+# Start time: 19:05:09 on Jul 06,2020
 # vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -529,66 +529,66 @@ vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Proces
 # -- Loading entity BlockAnd
 # -- Loading entity BlockOr
 # -- Loading entity BlockXor
-# End time: 13:22:24 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:10 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:24 on Jul 06,2020
+# Start time: 19:05:10 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ArithmeticShiftRight
 # -- Compiling architecture ArithmeticShiftRightArch of ArithmeticShiftRight
-# End time: 13:22:25 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:10 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:25 on Jul 06,2020
+# Start time: 19:05:11 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BlockAnd
 # -- Compiling architecture BlockAndArch of BlockAnd
-# End time: 13:22:25 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:11 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:25 on Jul 06,2020
+# Start time: 19:05:11 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BlockOr
 # -- Compiling architecture BlockOrArch of BlockOr
-# End time: 13:22:26 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:11 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:26 on Jul 06,2020
+# Start time: 19:05:12 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BlockXor
 # -- Compiling architecture BlockXorArch of BlockXor
-# End time: 13:22:26 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:12 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:27 on Jul 06,2020
+# Start time: 19:05:12 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BoothDecoder
 # -- Compiling architecture BoothDecoderArch of BoothDecoder
-# End time: 13:22:27 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:12 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:27 on Jul 06,2020
+# Start time: 19:05:13 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -599,11 +599,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity ControlUnit
 # -- Compiling architecture ControlUnitArch of ControlUnit
-# End time: 13:22:28 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:13 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:28 on Jul 06,2020
+# Start time: 19:05:13 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -614,99 +614,99 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity Counter
 # -- Compiling architecture CounterArch of Counter
-# End time: 13:22:28 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:14 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:28 on Jul 06,2020
+# Start time: 19:05:14 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder6
 # -- Compiling architecture CRAAdder6Arch of CRAAdder6
-# End time: 13:22:29 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:14 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:29 on Jul 06,2020
+# Start time: 19:05:14 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder10
 # -- Compiling architecture CRAAdder10Arch of CRAAdder10
-# End time: 13:22:29 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:15 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:29 on Jul 06,2020
+# Start time: 19:05:15 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder14
 # -- Compiling architecture CRAAdder14Arch of CRAAdder14
-# End time: 13:22:30 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:15 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:30 on Jul 06,2020
+# Start time: 19:05:15 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder18
 # -- Compiling architecture CRAAdder18Arch of CRAAdder18
-# End time: 13:22:31 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:16 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:31 on Jul 06,2020
+# Start time: 19:05:16 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder22
 # -- Compiling architecture CRAAdder22Arch of CRAAdder22
-# End time: 13:22:31 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:16 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:31 on Jul 06,2020
+# Start time: 19:05:16 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder26
 # -- Compiling architecture CRAAdder26Arch of CRAAdder26
-# End time: 13:22:32 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:17 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:32 on Jul 06,2020
+# Start time: 19:05:17 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder30
 # -- Compiling architecture CRAAdder30Arch of CRAAdder30
-# End time: 13:22:32 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:17 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:32 on Jul 06,2020
+# Start time: 19:05:17 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder32
 # -- Compiling architecture CRAAdder32Arch of CRAAdder32
-# End time: 13:22:33 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:18 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:33 on Jul 06,2020
+# Start time: 19:05:18 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -717,22 +717,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity CSR
 # -- Compiling architecture CSRArch of CSR
-# End time: 13:22:33 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:18 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:33 on Jul 06,2020
+# Start time: 19:05:18 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FullPartialProduct
 # -- Compiling architecture FullPartialProductArch of FullPartialProduct
-# End time: 13:22:34 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:19 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:34 on Jul 06,2020
+# Start time: 19:05:19 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -741,44 +741,44 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package RegistersPackage
 # -- Compiling entity InputManager
 # -- Compiling architecture InputManagerArch of InputManager
-# End time: 13:22:35 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:19 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:35 on Jul 06,2020
+# Start time: 19:05:20 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Ir
 # -- Compiling architecture IrArch of Ir
-# End time: 13:22:35 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:20 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:35 on Jul 06,2020
+# Start time: 19:05:20 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity LeftShift
 # -- Compiling architecture LeftShiftArch of LeftShift
-# End time: 13:22:36 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:21 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:36 on Jul 06,2020
+# Start time: 19:05:21 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity LogicalShiftRight
 # -- Compiling architecture LogicalShiftRightArch of LogicalShiftRight
-# End time: 13:22:36 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:21 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:36 on Jul 06,2020
+# Start time: 19:05:21 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -789,11 +789,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity Mar
 # -- Compiling architecture MarArch of Mar
-# End time: 13:22:37 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:22 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:37 on Jul 06,2020
+# Start time: 19:05:22 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -804,22 +804,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity MulCounter
 # -- Compiling architecture MulCounterArch of MulCounter
-# End time: 13:22:37 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:22 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:37 on Jul 06,2020
+# Start time: 19:05:22 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Multiplier32Bits
 # -- Compiling architecture Multiplier32BitsArch of Multiplier32Bits
-# End time: 13:22:38 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:23 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:38 on Jul 06,2020
+# Start time: 19:05:23 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -827,11 +827,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_mf_components
 # -- Compiling entity MyMemory
 # -- Compiling architecture SYN of mymemory
-# End time: 13:22:39 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:23 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:39 on Jul 06,2020
+# Start time: 19:05:23 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -840,11 +840,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling package OutputControlPackage
 # -- Compiling package body OutputControlPackage
 # -- Loading package OutputControlPackage
-# End time: 13:22:39 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:24 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:39 on Jul 06,2020
+# Start time: 19:05:24 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -853,11 +853,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package RegistersPackage
 # -- Compiling entity OutputManager
 # -- Compiling architecture OutputManagerArch of OutputManager
-# End time: 13:22:39 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:24 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:39 on Jul 06,2020
+# Start time: 19:05:24 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -865,22 +865,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Pc
 # -- Compiling architecture PcArch of Pc
-# End time: 13:22:40 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:25 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:40 on Jul 06,2020
+# Start time: 19:05:25 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PeriphericCircuit
 # -- Compiling architecture PeriphericCircuitArch of PeriphericCircuit
-# End time: 13:22:40 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:25 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:41 on Jul 06,2020
+# Start time: 19:05:25 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -892,11 +892,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading entity InputManager
 # -- Loading entity RegistersBlock
 # -- Loading entity OutputManager
-# End time: 13:22:41 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:26 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:41 on Jul 06,2020
+# Start time: 19:05:26 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -907,11 +907,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling architecture RegistersBlockArch of RegistersBlock
 # -- Loading entity Word
 # -- Loading entity Sp
-# End time: 13:22:42 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:26 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:42 on Jul 06,2020
+# Start time: 19:05:26 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -920,11 +920,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling package RegistersPackage
 # -- Compiling package body RegistersPackage
 # -- Loading package RegistersPackage
-# End time: 13:22:42 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:27 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:42 on Jul 06,2020
+# Start time: 19:05:27 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -946,22 +946,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading entity Counter
 # -- Loading entity Mar
 # -- Loading entity Alu
-# End time: 13:22:42 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:27 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:42 on Jul 06,2020
+# Start time: 19:05:27 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SinglePartialProduct
 # -- Compiling architecture SinglePartialProductArch of SinglePartialProduct
-# End time: 13:22:43 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:28 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:43 on Jul 06,2020
+# Start time: 19:05:28 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -974,11 +974,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_mf_components
 # -- Loading entity MyMemory
 # -- Loading entity PeriphericCircuit
-# End time: 13:22:44 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:28 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:44 on Jul 06,2020
+# Start time: 19:05:28 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -986,11 +986,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Sp
 # -- Compiling architecture SpArch of Sp
-# End time: 13:22:44 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:29 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/TestProtocol.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:44 on Jul 06,2020
+# Start time: 19:05:29 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/TestProtocol.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1000,22 +1000,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling entity TestProtocol
 # -- Compiling architecture TestProtocolArch of TestProtocol
 # -- Loading entity SoC
-# End time: 13:22:45 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:05:29 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:22:45 on Jul 06,2020
+# Start time: 19:05:29 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Word
 # -- Compiling architecture WordArch of Word
-# End time: 13:22:45 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:05:30 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vsim work.testprotocol
 # vsim -gui "+altera" -l msim_transcript -do "SoC_run_msim_rtl_vhdl.do" 
-# Start time: 13:22:55 on Jul 06,2020
+# Start time: 19:05:46 on Jul 06,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -1072,32 +1072,56 @@ vsim work.testprotocol
 # ** Warning: Design size of 18017 statements exceeds ModelSim Altera Starter recommended capacity.
 # Expect performance to be adversely affected.
 do wave.do
-add wave -position insertpoint  \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/Q(11) \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/Q(12) \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/Q(13) \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/Q(14) \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/Q(15)
-add wave -position insertpoint  \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/MemoryAddressRegister/MemoryAddress
 run 10us
 add wave -position insertpoint  \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/IManager/Enable
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(11) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(12) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(13) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(14) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(15) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(16)
 add wave -position insertpoint  \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/IManager/D
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(21) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(22) \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(23)
 add wave -position insertpoint  \
-sim:/testprotocol/MemRwRdTest/CpuRiscV/Rpg/IManager/Address
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(2)
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/IntructionRegister/Q
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(20)
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/ControlStatusRegisters/Mstatus \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/ControlStatusRegisters/MEPC \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/ControlStatusRegisters/MIE \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/ControlStatusRegisters/MIP \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/ControlStatusRegisters/MIAd2
 restart
 # ** Warning: Design size of 16706 statements exceeds ModelSim Altera Starter recommended capacity.
 # Expect performance to be adversely affected.
-run 5us
+run 10us
 # GetModuleFileName: The specified module could not be found.
 # 
 # 
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Lsr/Enable \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Lsr/Replace \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Lsr/DataIn \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Lsr/LogicalShiftRightRegister
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Ls/Enable \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Ls/Replace \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Ls/DataIn \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Ls/LeftShiftRegister
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Asr/Enable \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Asr/Replace \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Asr/DataIn \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Asr/ArithmeticShiftRightRegister
 write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/wave.do
 vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:52 on Jul 06,2020
+# Start time: 19:26:27 on Jul 06,2020
 # vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1117,66 +1141,66 @@ vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Proces
 # -- Loading entity BlockAnd
 # -- Loading entity BlockOr
 # -- Loading entity BlockXor
-# End time: 13:37:53 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:28 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:53 on Jul 06,2020
+# Start time: 19:26:28 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity ArithmeticShiftRight
 # -- Compiling architecture ArithmeticShiftRightArch of ArithmeticShiftRight
-# End time: 13:37:53 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:28 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:54 on Jul 06,2020
+# Start time: 19:26:29 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BlockAnd
 # -- Compiling architecture BlockAndArch of BlockAnd
-# End time: 13:37:54 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:29 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:54 on Jul 06,2020
+# Start time: 19:26:29 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BlockOr
 # -- Compiling architecture BlockOrArch of BlockOr
-# End time: 13:37:54 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:30 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:55 on Jul 06,2020
+# Start time: 19:26:30 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BlockXor
 # -- Compiling architecture BlockXorArch of BlockXor
-# End time: 13:37:55 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:30 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:55 on Jul 06,2020
+# Start time: 19:26:30 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity BoothDecoder
 # -- Compiling architecture BoothDecoderArch of BoothDecoder
-# End time: 13:37:56 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:31 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:56 on Jul 06,2020
+# Start time: 19:26:31 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1187,11 +1211,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity ControlUnit
 # -- Compiling architecture ControlUnitArch of ControlUnit
-# End time: 13:37:56 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:31 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:56 on Jul 06,2020
+# Start time: 19:26:31 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1202,99 +1226,99 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity Counter
 # -- Compiling architecture CounterArch of Counter
-# End time: 13:37:57 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:32 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:57 on Jul 06,2020
+# Start time: 19:26:32 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder6
 # -- Compiling architecture CRAAdder6Arch of CRAAdder6
-# End time: 13:37:57 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:32 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:57 on Jul 06,2020
+# Start time: 19:26:33 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder10
 # -- Compiling architecture CRAAdder10Arch of CRAAdder10
-# End time: 13:37:58 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:33 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:58 on Jul 06,2020
+# Start time: 19:26:33 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder14
 # -- Compiling architecture CRAAdder14Arch of CRAAdder14
-# End time: 13:37:58 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:34 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:58 on Jul 06,2020
+# Start time: 19:26:34 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder18
 # -- Compiling architecture CRAAdder18Arch of CRAAdder18
-# End time: 13:37:59 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:34 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:37:59 on Jul 06,2020
+# Start time: 19:26:34 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder22
 # -- Compiling architecture CRAAdder22Arch of CRAAdder22
-# End time: 13:37:59 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:35 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:00 on Jul 06,2020
+# Start time: 19:26:35 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder26
 # -- Compiling architecture CRAAdder26Arch of CRAAdder26
-# End time: 13:38:00 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:35 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:00 on Jul 06,2020
+# Start time: 19:26:35 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder30
 # -- Compiling architecture CRAAdder30Arch of CRAAdder30
-# End time: 13:38:01 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:36 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:01 on Jul 06,2020
+# Start time: 19:26:36 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity CRAAdder32
 # -- Compiling architecture CRAAdder32Arch of CRAAdder32
-# End time: 13:38:01 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:36 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:01 on Jul 06,2020
+# Start time: 19:26:36 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1305,22 +1329,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity CSR
 # -- Compiling architecture CSRArch of CSR
-# End time: 13:38:02 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:37 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:02 on Jul 06,2020
+# Start time: 19:26:37 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity FullPartialProduct
 # -- Compiling architecture FullPartialProductArch of FullPartialProduct
-# End time: 13:38:02 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:37 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:02 on Jul 06,2020
+# Start time: 19:26:38 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1329,44 +1353,44 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package RegistersPackage
 # -- Compiling entity InputManager
 # -- Compiling architecture InputManagerArch of InputManager
-# End time: 13:38:03 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:38 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:03 on Jul 06,2020
+# Start time: 19:26:38 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Ir
 # -- Compiling architecture IrArch of Ir
-# End time: 13:38:03 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:39 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:03 on Jul 06,2020
+# Start time: 19:26:39 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity LeftShift
 # -- Compiling architecture LeftShiftArch of LeftShift
-# End time: 13:38:04 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:39 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:04 on Jul 06,2020
+# Start time: 19:26:39 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity LogicalShiftRight
 # -- Compiling architecture LogicalShiftRightArch of LogicalShiftRight
-# End time: 13:38:04 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:40 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:04 on Jul 06,2020
+# Start time: 19:26:40 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1377,11 +1401,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity Mar
 # -- Compiling architecture MarArch of Mar
-# End time: 13:38:05 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:40 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:05 on Jul 06,2020
+# Start time: 19:26:40 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1392,22 +1416,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_primitives_components
 # -- Compiling entity MulCounter
 # -- Compiling architecture MulCounterArch of MulCounter
-# End time: 13:38:05 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:41 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:06 on Jul 06,2020
+# Start time: 19:26:41 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Multiplier32Bits
 # -- Compiling architecture Multiplier32BitsArch of Multiplier32Bits
-# End time: 13:38:06 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:41 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:06 on Jul 06,2020
+# Start time: 19:26:41 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1415,11 +1439,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_mf_components
 # -- Compiling entity MyMemory
 # -- Compiling architecture SYN of mymemory
-# End time: 13:38:07 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:42 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:07 on Jul 06,2020
+# Start time: 19:26:42 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1428,11 +1452,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling package OutputControlPackage
 # -- Compiling package body OutputControlPackage
 # -- Loading package OutputControlPackage
-# End time: 13:38:07 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:42 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:07 on Jul 06,2020
+# Start time: 19:26:42 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1441,11 +1465,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package RegistersPackage
 # -- Compiling entity OutputManager
 # -- Compiling architecture OutputManagerArch of OutputManager
-# End time: 13:38:07 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:43 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:07 on Jul 06,2020
+# Start time: 19:26:43 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1453,22 +1477,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Pc
 # -- Compiling architecture PcArch of Pc
-# End time: 13:38:08 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:43 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:08 on Jul 06,2020
+# Start time: 19:26:43 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity PeriphericCircuit
 # -- Compiling architecture PeriphericCircuitArch of PeriphericCircuit
-# End time: 13:38:08 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:44 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:08 on Jul 06,2020
+# Start time: 19:26:44 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1480,11 +1504,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading entity InputManager
 # -- Loading entity RegistersBlock
 # -- Loading entity OutputManager
-# End time: 13:38:09 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:44 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:09 on Jul 06,2020
+# Start time: 19:26:44 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1495,11 +1519,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling architecture RegistersBlockArch of RegistersBlock
 # -- Loading entity Word
 # -- Loading entity Sp
-# End time: 13:38:09 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:45 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:10 on Jul 06,2020
+# Start time: 19:26:45 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1508,11 +1532,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling package RegistersPackage
 # -- Compiling package body RegistersPackage
 # -- Loading package RegistersPackage
-# End time: 13:38:10 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:45 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:10 on Jul 06,2020
+# Start time: 19:26:45 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1534,22 +1558,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading entity Counter
 # -- Loading entity Mar
 # -- Loading entity Alu
-# End time: 13:38:10 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:46 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:10 on Jul 06,2020
+# Start time: 19:26:46 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity SinglePartialProduct
 # -- Compiling architecture SinglePartialProductArch of SinglePartialProduct
-# End time: 13:38:11 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:46 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:11 on Jul 06,2020
+# Start time: 19:26:46 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1562,11 +1586,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package altera_mf_components
 # -- Loading entity MyMemory
 # -- Loading entity PeriphericCircuit
-# End time: 13:38:11 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:47 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:11 on Jul 06,2020
+# Start time: 19:26:47 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1574,11 +1598,11 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Loading package NUMERIC_STD
 # -- Compiling entity Sp
 # -- Compiling architecture SpArch of Sp
-# End time: 13:38:12 on Jul 06,2020, Elapsed time: 0:00:01
+# End time: 19:26:47 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/TestProtocol.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:12 on Jul 06,2020
+# Start time: 19:26:47 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/TestProtocol.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -1588,528 +1612,22 @@ vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Process
 # -- Compiling entity TestProtocol
 # -- Compiling architecture TestProtocolArch of TestProtocol
 # -- Loading entity SoC
-# End time: 13:38:12 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:48 on Jul 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
 # Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:13 on Jul 06,2020
+# Start time: 19:26:48 on Jul 06,2020
 # vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity Word
 # -- Compiling architecture WordArch of Word
-# End time: 13:38:13 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:15 on Jul 06,2020
-# vcom -reportprogress 300 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Alu
-# -- Compiling architecture AluArch of Alu
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Loading entity MulCounter
-# -- Loading entity CRAAdder32
-# -- Loading entity LogicalShiftRight
-# -- Loading entity LeftShift
-# -- Loading entity ArithmeticShiftRight
-# -- Loading entity Multiplier32Bits
-# -- Loading entity BlockAnd
-# -- Loading entity BlockOr
-# -- Loading entity BlockXor
-# End time: 13:38:16 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:16 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity ArithmeticShiftRight
-# -- Compiling architecture ArithmeticShiftRightArch of ArithmeticShiftRight
-# End time: 13:38:16 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:16 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BlockAnd
-# -- Compiling architecture BlockAndArch of BlockAnd
-# End time: 13:38:17 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:17 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BlockOr
-# -- Compiling architecture BlockOrArch of BlockOr
-# End time: 13:38:18 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:18 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BlockXor
-# -- Compiling architecture BlockXorArch of BlockXor
-# End time: 13:38:18 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:18 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity BoothDecoder
-# -- Compiling architecture BoothDecoderArch of BoothDecoder
-# End time: 13:38:19 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:19 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity ControlUnit
-# -- Compiling architecture ControlUnitArch of ControlUnit
-# End time: 13:38:19 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:19 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity Counter
-# -- Compiling architecture CounterArch of Counter
-# End time: 13:38:20 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:20 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder6
-# -- Compiling architecture CRAAdder6Arch of CRAAdder6
-# End time: 13:38:20 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:20 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder10
-# -- Compiling architecture CRAAdder10Arch of CRAAdder10
-# End time: 13:38:21 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:21 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder14
-# -- Compiling architecture CRAAdder14Arch of CRAAdder14
-# End time: 13:38:21 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:22 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder18
-# -- Compiling architecture CRAAdder18Arch of CRAAdder18
-# End time: 13:38:22 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:22 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder22
-# -- Compiling architecture CRAAdder22Arch of CRAAdder22
-# End time: 13:38:23 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:23 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder26
-# -- Compiling architecture CRAAdder26Arch of CRAAdder26
-# End time: 13:38:23 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:23 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder30
-# -- Compiling architecture CRAAdder30Arch of CRAAdder30
-# End time: 13:38:24 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:24 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity CRAAdder32
-# -- Compiling architecture CRAAdder32Arch of CRAAdder32
-# End time: 13:38:25 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:25 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity CSR
-# -- Compiling architecture CSRArch of CSR
-# End time: 13:38:25 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:26 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity FullPartialProduct
-# -- Compiling architecture FullPartialProductArch of FullPartialProduct
-# End time: 13:38:26 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:26 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity InputManager
-# -- Compiling architecture InputManagerArch of InputManager
-# End time: 13:38:27 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:27 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Ir
-# -- Compiling architecture IrArch of Ir
-# End time: 13:38:27 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:27 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity LeftShift
-# -- Compiling architecture LeftShiftArch of LeftShift
-# End time: 13:38:28 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:28 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity LogicalShiftRight
-# -- Compiling architecture LogicalShiftRightArch of LogicalShiftRight
-# End time: 13:38:28 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:28 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity Mar
-# -- Compiling architecture MarArch of Mar
-# End time: 13:38:29 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:29 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Compiling entity MulCounter
-# -- Compiling architecture MulCounterArch of MulCounter
-# End time: 13:38:29 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:29 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Multiplier32Bits
-# -- Compiling architecture Multiplier32BitsArch of Multiplier32Bits
-# End time: 13:38:30 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:30 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package altera_mf_components
-# -- Compiling entity MyMemory
-# -- Compiling architecture SYN of mymemory
-# End time: 13:38:31 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:31 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package OutputControlPackage
-# -- Compiling package body OutputControlPackage
-# -- Loading package OutputControlPackage
-# End time: 13:38:31 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:31 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity OutputManager
-# -- Compiling architecture OutputManagerArch of OutputManager
-# End time: 13:38:31 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:31 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Pc
-# -- Compiling architecture PcArch of Pc
-# End time: 13:38:32 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:32 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity PeriphericCircuit
-# -- Compiling architecture PeriphericCircuitArch of PeriphericCircuit
-# End time: 13:38:32 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:32 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity Registers
-# -- Compiling architecture RegistersArch of Registers
-# -- Loading entity InputManager
-# -- Loading entity RegistersBlock
-# -- Loading entity OutputManager
-# End time: 13:38:33 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:33 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package RegistersPackage
-# -- Compiling entity RegistersBlock
-# -- Compiling architecture RegistersBlockArch of RegistersBlock
-# -- Loading entity Word
-# -- Loading entity Sp
-# End time: 13:38:33 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:33 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling package RegistersPackage
-# -- Compiling package body RegistersPackage
-# -- Loading package RegistersPackage
-# End time: 13:38:33 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:34 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package OutputControlPackage
-# -- Compiling entity RiscV
-# -- Compiling architecture RiscVArch of RiscV
-# -- Loading package VITAL_Timing
-# -- Loading package VITAL_Primitives
-# -- Loading package dffeas_pack
-# -- Loading package altera_primitives_components
-# -- Loading entity ControlUnit
-# -- Loading package RegistersPackage
-# -- Loading entity Registers
-# -- Loading entity CSR
-# -- Loading entity Ir
-# -- Loading entity Pc
-# -- Loading entity Counter
-# -- Loading entity Mar
-# -- Loading entity Alu
-# End time: 13:38:34 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:34 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity SinglePartialProduct
-# -- Compiling architecture SinglePartialProductArch of SinglePartialProduct
-# End time: 13:38:35 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:35 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package OutputControlPackage
-# -- Compiling entity SoC
-# -- Compiling architecture SoCArch of SoC
-# -- Loading entity RiscV
-# -- Loading package altera_mf_components
-# -- Loading entity MyMemory
-# -- Loading entity PeriphericCircuit
-# End time: 13:38:35 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:35 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Compiling entity Sp
-# -- Compiling architecture SpArch of Sp
-# End time: 13:38:36 on Jul 06,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/TestProtocol.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:36 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/TestProtocol.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Loading package NUMERIC_STD
-# -- Loading package OutputControlPackage
-# -- Compiling entity TestProtocol
-# -- Compiling architecture TestProtocolArch of TestProtocol
-# -- Loading entity SoC
-# End time: 13:38:36 on Jul 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
-# Model Technology ModelSim ALTERA vcom 10.3d Compiler 2014.10 Oct  7 2014
-# Start time: 13:38:37 on Jul 06,2020
-# vcom -reportprogress 30 -work work C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd 
-# -- Loading package STANDARD
-# -- Loading package TEXTIO
-# -- Loading package std_logic_1164
-# -- Compiling entity Word
-# -- Compiling architecture WordArch of Word
-# End time: 13:38:37 on Jul 06,2020, Elapsed time: 0:00:00
+# End time: 19:26:48 on Jul 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vsim work.testprotocol
 # vsim 
-# Start time: 13:38:45 on Jul 06,2020
+# Start time: 19:27:12 on Jul 06,2020
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -2165,10 +1683,16 @@ vsim work.testprotocol
 # Loading work.periphericcircuit(periphericcircuitarch)
 # ** Warning: Design size of 18017 statements exceeds ModelSim Altera Starter recommended capacity.
 # Expect performance to be adversely affected.
-do w
-# Cannot open macro file: w
 do wave.do
-run 5us
-write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/wave.do
-# End time: 13:59:22 on Jul 06,2020, Elapsed time: 0:20:37
-# Errors: 1, Warnings: 1
+run 10us
+add wave -position insertpoint  \
+sim:/testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/RegistersAlu
+restart
+# ** Warning: Design size of 16706 statements exceeds ModelSim Altera Starter recommended capacity.
+# Expect performance to be adversely affected.
+run 10us
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# End time: 19:32:06 on Jul 06,2020, Elapsed time: 0:04:54
+# Errors: 0, Warnings: 2
