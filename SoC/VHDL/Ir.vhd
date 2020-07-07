@@ -94,7 +94,7 @@ Ir_Registers <= Q;
 			
 Ir_Control( 6 DOWNTO 0) <= Q( 6 DOWNTO  0);
 Ir_Control( 9 DOWNTO 7) <= Q(14 DOWNTO 12);
-Ir_Control(10)          <= Q(20);
+Ir_Control(10)          <= Q(15);
 Ir_Control(11)          <= Q(30);
 Ir_Control(12)          <= Q(25);
 --envia al control los opcodes de la instrucción para poder determinar los saltos de las instrucciones.

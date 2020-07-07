@@ -5,7 +5,7 @@
 ║                                                                                                                       ║
 ║                                                    Estado Inicial                                                     ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
-   
+
  0. PC <= 0;                                                                                                             -- Se inicializa PC en 0
     -> ( 1)
 
@@ -285,10 +285,10 @@
 ║                              49. SLLI /SRLI /SRAI                                                                     ║
 ╚═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
-38. Salida_ALU           = Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Suma Registers direccion IR(11:7) con los datos en IR(31:20)
+38. Salida_ALU           = Suma( Registers[IR(19:15)],IR(31:20) );                                                       -- Suma Registers direccion IR(11:7) con los datos en IR(31:20)
     -> ( 39)                                                                                                             -- el resultado se guarda en Registers direccion IR(11:7)
 
-39. Registers[IR(11:7)] <= Suma( Registers[IR(11:7)],IR(31:20) );                                                        -- Se repite la accion del estado 38, mientras la suma se efectua
+39. Registers[IR(11:7)] <= Suma( Registers[IR(19:15)],IR(31:20) );                                                       -- Se repite la accion del estado 38, mientras la suma se efectua
     -> (89)
 
 40. Salida_ALU = Suma( Registers[IR(19:15)], IR[31:20]', 1 );                                                            -- Compara el dato en Registers direccion IR(19:15) con el dato
@@ -476,11 +476,11 @@ AluShiftRegister<=Registers[IR(19:15)];
 78. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
     Write = 1;                                                                                                           -- Ciclo 2 de Write
     MemoryIn = Registers[IR(6:2)];                                                                                       -- Se envia el  dato  de Registers direccion IR(6:2) a memoria
-    SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
+    SP<=Inc(SP)                                                                                                          -- Incrementa el stack pointer
     -> (89)
 
 79. Salida_ALU = Suma(Registers[0 τ 010],IR[12 , 6:2]);                                                                  --POP: Se suma Registers direccion IR(12| 6:2) con el SP, revisar direccoinamiento
-    SP <= Dec(SP)                                                                                                        -- Decrementa el stack pointer
+      SP<=Dec(SP)                                                                                                          -- Decrementa el stack pointer
     -> (80)
 
 80. MAR       <= Suma(Registers[0 τ 010],IR[12 , 6:2]);                                                                  -- Se repite la accion del estado 79, mientras la suma se efectua
@@ -511,12 +511,12 @@ AluShiftRegister<=Registers[IR(19:15)];
     -> (86)
 
 86. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
-    Write = 1;                                                                                                           -- Ciclo 1 de Write
+    Read = 0;                                                                                                            -- Ciclo 1 de Write
     MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
     -> (87)
 
 87. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
-    Write = 1;                                                                                                           -- Ciclo 2 de Write
+    Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
     SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
     -> (88)
@@ -569,12 +569,12 @@ AluShiftRegister<=Registers[IR(19:15)];
     -> (96)
 
 96. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
-    Write = 1;                                                                                                            -- Ciclo 1 de Write
+    Read = 0;                                                                                                            -- Ciclo 1 de Write
     MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
     -> (97)
 
 97. MemoryAddress = MAR;                                                                                                 -- Se especifica la direccion en la que se va a escribir un dato
-    Write = 1;                                                                                                           -- Ciclo 2 de Write
+    Read = 0;                                                                                                            -- Ciclo 2 de Write
     MemoryIn = PC;                                                                                                       -- Se envia el  dato  del PC a memoria
     SP <= Inc(SP)                                                                                                        -- Incrementa el stack pointer
     ->

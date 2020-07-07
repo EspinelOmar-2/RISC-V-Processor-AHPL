@@ -114,7 +114,7 @@ EnaInput <= Ctrl( 1) OR Ctrl( 5) OR Ctrl( 6) OR Ctrl( 7) OR Ctrl( 8) OR
 				Ctrl( 9) OR Ctrl( 0) OR Ctrl(19) OR Ctrl(14) OR Ctrl(17) OR
 				Ctrl(18) OR Ctrl(15) OR Ctrl(16);
 
-Address <=EnaInput &  NoInput & IrInput(11 DOWNTO 7);
+Address  <= EnaInput &  NoInput & IrInput(11 DOWNTO 7);
 
 WITH Address SELECT
 Enable <= x"00000001" WHEN "1000000", -- 00

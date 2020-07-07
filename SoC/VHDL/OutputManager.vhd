@@ -60,9 +60,9 @@ BEGIN
 -- 
 --******************************************************--
 
-Out1Selector(0) <= Ctrl( 2) OR Ctrl( 4) OR Ctrl(17) OR Ctrl(18) OR Ctrl(20);
+Out1Selector(0) <= Ctrl( 2) OR Ctrl( 4) OR Ctrl(17) OR Ctrl(18) OR Ctrl(20) OR Ctrl(14);
 Out1Selector(1) <= Ctrl( 3) OR Ctrl(26);
-Out1Selector(2) <= Ctrl(10) OR Ctrl(11) OR Ctrl(12) OR Ctrl(13) OR Ctrl(14) OR Ctrl(21);
+Out1Selector(2) <= Ctrl(10) OR Ctrl(11) OR Ctrl(12) OR Ctrl(13) OR Ctrl(21);
 Out1Selector(3) <= Ctrl(22) OR Ctrl(24);
 Out1Selector(4) <= Ctrl(23);
 
