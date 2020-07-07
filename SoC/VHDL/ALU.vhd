@@ -486,7 +486,7 @@ PORT MAP	  (A        => InputXorA,
 
 AluShiftRegister<=LsrRegister OR Lsregister OR ASRRegister;
 --Se;ales de seleccion de salida Alu registers
-AluRegSelector(0) <= (Control_Alu( 1) OR Control_Alu( 3) OR Control_Alu(13) OR Control_Alu(22)  );
+AluRegSelector(0) <= (Control_Alu( 1) OR Control_Alu( 3) OR Control_Alu(13) OR Control_Alu(22) OR Control_Alu(21)  );
 AluRegSelector(1) <= (Control_Alu(15) OR Control_Alu(24) );
 AluRegSelector(2) <= (Control_Alu(16) OR Control_Alu(25) );
 AluRegSelector(3) <= (Control_Alu(17) OR Control_Alu(26) );
