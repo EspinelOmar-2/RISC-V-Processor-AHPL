@@ -144,11 +144,13 @@ SIGNAL   LogicMode1         : STD_LOGIC_VECTOR(31 DOWNTO 0);
 
 --Se;ales de salidas
 SIGNAL   AluRegSelector     : STD_LOGIC_VECTOR( 5 DOWNTO 0) ;
-SIGNAL   AluPCSelector      : STD_LOGIC;
-SIGNAL   AluCSRSelector     : STD_LOGIC_VECTOR( 1 DOWNTO 0);
-SIGNAL   AluMARSelector     : STD_LOGIC;
+SIGNAL   AluPcSelector      : STD_LOGIC;
+SIGNAL   AluCsrSelector     : STD_LOGIC_VECTOR( 1 DOWNTO 0);
+SIGNAL   AluMarSelector     : STD_LOGIC;
+SIGNAL   SignalSelector     : STD_LOGIC_VECTOR( 9 DOWNTO 0);
+SIGNAL   NoSignalSelector   : STD_LOGIC;
 
-SIGNAL   AluGralSelector    : STD_LOGIC_VECTOR( 9 DOWNTO 0);
+SIGNAL   AluGralSelector    : STD_LOGIC_VECTOR(10 DOWNTO 0);
 
 --Segnal Alu shift register para salida
 SIGNAL 	AluShiftRegister   : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -157,6 +159,7 @@ SIGNAL   ZeroRegisters      : STD_LOGIC;
 SIGNAL   ZeroMar            : STD_LOGIC;
 SIGNAL   ZeroPc             : STD_LOGIC;
 SIGNAL   ZeroCsr            : STD_LOGIC;
+SIGNAL   ZeroCompare        : STD_LOGIC;
 
 SIGNAL   Alu_Registers_Temp : STD_LOGIC_VECTOR(31 DOWNTO 0);
 SIGNAL   Alu_Csr_Temp       : STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -503,6 +506,22 @@ AluCsrSelector(1) <= (Control_Alu(28) OR Control_Alu(30) );
 --Segnal de seleccion de salida Alu mar
 AluMarSelector    <= (Control_Alu(12) OR Control_Alu(33) OR Control_Alu(35));
 
+SignalSelector    <= (AluMarSelector & AluCsrSelector & AluPcSelector & AluRegSelector);
+
+WITH SignalSelector SELECT
+NoSignalSelector  <= '1' WHEN "0000000000",
+							'0' WHEN "0000000001",
+							'0' WHEN "0000000010",
+							'0' WHEN "0000000100",
+							'0' WHEN "0000001000",
+							'0' WHEN "0000010000",
+							'0' WHEN "0000100000",
+							'0' WHEN "0001000000",
+							'0' WHEN "0010000000",
+							'0' WHEN "0100000000",
+							'0' WHEN "1000000000",
+							'0' WHEN OTHERS;
+
 -- Asignar salidas
 
 WITH AluRegSelector SELECT
@@ -548,19 +567,24 @@ WITH Alu_Mar_Temp SELECT
 ZeroCsr       <= '1' WHEN x"00000000",
 					  '0' WHEN OTHERS;
 
-AluGralSelector <= (AluMARSelector & AluCSRSelector & AluPCSelector & AluRegSelector);
+WITH AdderResult SELECT
+ZeroCompare   <= '1' WHEN x"00000000",
+					  '0' WHEN OTHERS;
+
+AluGralSelector <= (NoSignalSelector & SignalSelector);
 
 WITH AluGralSelector SELECT
-Alu_Control(1) <= ZeroRegisters WHEN "0000000001",
-						ZeroRegisters WHEN "0000000010",
-						ZeroRegisters WHEN "0000000100",
-						ZeroRegisters WHEN "0000001000",
-						ZeroRegisters WHEN "0000010000",
-						ZeroRegisters WHEN "0000100000",
-						ZeroPc        WHEN "0001000000",
-						ZeroCsr       WHEN "0010000000",
-						ZeroCsr       WHEN "0100000000",
-						ZeroMar       WHEN "1000000000",
+Alu_Control(1) <= ZeroRegisters WHEN "00000000001",
+						ZeroRegisters WHEN "00000000010",
+						ZeroRegisters WHEN "00000000100",
+						ZeroRegisters WHEN "00000001000",
+						ZeroRegisters WHEN "00000010000",
+						ZeroRegisters WHEN "00000100000",
+						ZeroPc        WHEN "00001000000",
+						ZeroCsr       WHEN "00010000000",
+						ZeroCsr       WHEN "00100000000",
+						ZeroMar       WHEN "01000000000",
+						ZeroCompare   WHEN "10000000000",
 						'0'           WHEN OTHERS;
 
 Alu_Control(2) <= AdderResult(31);
