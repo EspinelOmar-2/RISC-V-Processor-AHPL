@@ -48,10 +48,9 @@
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X46) +             -- 0010011     100            xori
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]'           X47) +             -- 0010011     110            ori
 (IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]  . IR[12]            X48) +             -- 0010011     111            andi
-(IR[6]' . IR[5]' . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X49) +             -- 0010011     C01    C       slli/srli/srai
+(IR[6]' .        . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X49) +             -- 0010011     C01    C       slli/srli/srai / sll/srl/sra
 (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]' X53) +             -- 0110011     000    0   0   add
 (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]' . IR[12]' . IR[30]  X55) +             -- 0110011     000    1       sub
-(IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]            . IR[13]' . IR[12]            X58) +             -- 0110011     C01    C       sll/srl/sra
 (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]'           X60) +             -- 0110011     010            slt
 (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]' . IR[13]  . IR[12]            X62) +             -- 0110011     011            sltu
 (IR[6]' . IR[5]  . IR[4]  . IR[3]' . IR[2]' . IR[1]  . IR[0]  . IR[14]  . IR[13]' . IR[12]'           X64) +             -- 0110011     100            xor
@@ -325,11 +324,12 @@
     -> (89)                                                                                                              -- almacenado en IR(31:20)
 
 49. Counter <= IR(25:20);                                                                                                -- Se carga al Counter el valor de IR(25:20)
-AluShiftRegister<=Registers[IR(19:15)];
+    AluShiftRegister <= Registers[IR(19:15)];
     ->
-(IR[30]'.IR[14]' X50) +                                                                                                  -- SLLI
-(IR[30]'.IR[14]  X51) +                                                                                                  -- SRLI
-(IR[30]          X52)                                                                                                    -- SRAI
+(IR[30]' . IR[14]' . IR[5]' X50) +                                                                                       -- SLLI
+(IR[30]' . IR[14]  . IR[5]' X51) +                                                                                       -- SRLI
+(IR[30]            . IR[5]' X52) +                                                                                       -- SRAI
+(                    IR[5]  x58)                                                                                         -- SLL/SRL/SRA
 
 50. LogicShiftLeft(Registers[IR(19:15)];                                                                                 -- Se hace El corrimiento a izquierda 1 vez del dato Registers[IR(19:15)]
     Counter <= Inc(Counter);                                                                                             -- Se incrementa el conteo de corrimientos realizados

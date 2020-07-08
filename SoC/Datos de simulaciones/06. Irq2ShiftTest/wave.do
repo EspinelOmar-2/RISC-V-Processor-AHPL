@@ -6,8 +6,9 @@ add wave -noupdate -color {Cornflower Blue} -label Reset /testprotocol/Reset
 add wave -noupdate -color {Cornflower Blue} -label Clk /testprotocol/Clk
 add wave -noupdate -divider Output
 add wave -noupdate -color Orange -label PeripheralStatus /testprotocol/PeripheralStatus
-add wave -noupdate -color Orange -label SpySignal -childformat {{/testprotocol/SpySignal.Qs -radix unsigned}} -expand -subitemconfig {/testprotocol/SpySignal.Qs {-color Orange -height 15 -radix unsigned} /testprotocol/SpySignal.Error {-color Orange -height 15} /testprotocol/SpySignal.CpuSpy {-color Orange -height 15}} /testprotocol/SpySignal
+add wave -noupdate -color Orange -label SpySignal -childformat {{/testprotocol/SpySignal.Qs -radix unsigned}} -expand -subitemconfig {/testprotocol/SpySignal.Qs {-color Orange -height 15 -radix unsigned} /testprotocol/SpySignal.Error {-color Orange -height 15} /testprotocol/SpySignal.CpuSpy {-color Orange -height 15 -childformat {{/testprotocol/SpySignal.CpuSpy.CounterCount -radix hexadecimal}} -expand} /testprotocol/SpySignal.CpuSpy.CounterCount {-color Orange -height 15 -radix hexadecimal}} /testprotocol/SpySignal
 add wave -noupdate -divider Extra
+add wave -noupdate -color olive -label Pc -radix hexadecimal -radixshowbase 0 /testprotocol/Irq2ShiftTest/CpuRiscV/ProgramCounter/Q
 add wave -noupdate -color olive -label Sp -radix hexadecimal -radixshowbase 0 /testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(2)
 add wave -noupdate -color olive -label Ir -radix hexadecimal -radixshowbase 0 /testprotocol/Irq2ShiftTest/CpuRiscV/IntructionRegister/Q
 add wave -noupdate -color Plum -label x11 -radix hexadecimal -radixshowbase 0 /testprotocol/Irq2ShiftTest/CpuRiscV/Rpg/Q(11)
@@ -47,7 +48,7 @@ add wave -noupdate -color Cyan -label Replace -radix hexadecimal -radixshowbase 
 add wave -noupdate -color Cyan -label DataIn -radix hexadecimal -radixshowbase 0 /testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Asr/DataIn
 add wave -noupdate -color Cyan -label Result -radix hexadecimal -radixshowbase 0 /testprotocol/Irq2ShiftTest/CpuRiscV/AlgorithmicLogicUnit/Asr/ArithmeticShiftRightRegister
 TreeUpdate [SetDefaultTree]
-WaveRestoreCursors {{Cursor 1} {1660000 ps} 0}
+WaveRestoreCursors {{Cursor 1} {2220000 ps} 0}
 quietly wave cursor active 1
 configure wave -namecolwidth 129
 configure wave -valuecolwidth 100
@@ -63,4 +64,6 @@ configure wave -griddelta 40
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-WaveRestoreZoom {1540957 ps} {2086957 ps}
+WaveRestoreZoom {1962384 ps} {2782968 ps}
+
+run 4220ns

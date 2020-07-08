@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/simulation/modelsim
 Ealu
-Z1 w1593905476
+Z1 w1594146048
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
 R0
@@ -21,9 +21,9 @@ V@4oj>IgEgEZKe]?jVkDn70
 !s100 <cJEA:5:SA2CPR?PR>hM<3
 Z6 OV;C;10.3d;59
 31
-Z7 !s110 1594145192
+Z7 !s110 1594233622
 !i10b 1
-Z8 !s108 1594145192.021000
+Z8 !s108 1594233622.388000
 Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd|
 Z10 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ALU.vhd|
 !i113 1
@@ -48,8 +48,8 @@ R3
 Z26 DEx4 work 3 alu 0 22 @4oj>IgEgEZKe]?jVkDn70
 l169
 L67
-Vmzm_6VSM^;hgRBdT9ez>k2
-!s100 aNGf5_TXZ>QD_XIYH3m1?0
+VJjnko71`kndcYZSeDKUE91
+!s100 OB_<nDGBkknbJX?2E@LLk0
 R6
 31
 R7
@@ -73,9 +73,9 @@ VFghBZ<bh6UTE`NFU]Wk4N3
 !s100 1;LVfA3`G1IoUOVKdhHgM1
 R6
 31
-Z30 !s110 1594145188
+Z30 !s110 1594233617
 !i10b 1
-Z31 !s108 1594145188.431000
+Z31 !s108 1594233617.518000
 Z32 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd|
 Z33 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ArithmeticShiftRight.vhd|
 !i113 1
@@ -112,11 +112,11 @@ V94XKZA43fzlW[3;A7hO?G0
 !s100 a]C;aJ>Ja5ZPJ95@kWcMd3
 R6
 31
-Z37 !s110 1594145187
+R30
 !i10b 1
-Z38 !s108 1594145187.693000
-Z39 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd|
-Z40 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd|
+Z37 !s108 1594233617.010000
+Z38 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd|
+Z39 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockAnd.vhd|
 !i113 1
 R11
 R12
@@ -130,30 +130,30 @@ Vco7P4[zJC`eNNlCc^_fYC1
 !s100 a?`L@FL5HPLQhzo6MV_9M2
 R6
 31
-R37
+R30
 !i10b 1
+R37
 R38
 R39
-R40
 !i113 1
 R11
 R12
 Eblockor
-Z41 w1593883546
+Z40 w1593883546
 R2
 R3
 R0
-Z42 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
-Z43 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
+Z41 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
+Z42 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd
 l0
 L9
 Vi[Bz3`jURW5<fgaO7OAIL2
 !s100 mUH[OGcXei[A==c_hCXPC3
 R6
 31
-R37
+Z43 !s110 1594233616
 !i10b 1
-Z44 !s108 1594145187.059000
+Z44 !s108 1594233616.519000
 Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd|
 Z46 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockOr.vhd|
 !i113 1
@@ -169,7 +169,7 @@ V4WKE[<hM@[z=O`8NX7^G52
 !s100 7^dN47L_E0;2LfUiLN<g91
 R6
 31
-R37
+R43
 !i10b 1
 R44
 R45
@@ -190,11 +190,11 @@ VX2T4CL;KzAOzT8ZM[;z8@2
 !s100 NXG^z3^[L[Jf5O><Kl67I2
 R6
 31
-Z50 !s110 1594145186
+R43
 !i10b 1
-Z51 !s108 1594145186.312000
-Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd|
-Z53 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd|
+Z50 !s108 1594233616.006000
+Z51 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd|
+Z52 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BlockXor.vhd|
 !i113 1
 R11
 R12
@@ -208,32 +208,32 @@ V54H>PBS5eK1Z?6CR4biDP1
 !s100 TfXNV@fVoIVf][0ELlLEU3
 R6
 31
-R50
+R43
 !i10b 1
+R50
 R51
 R52
-R53
 !i113 1
 R11
 R12
 Eboothdecoder
-Z54 w1590348989
+Z53 w1590348989
 R2
 R3
 R0
-Z55 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
-Z56 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
+Z54 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
+Z55 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd
 l0
 L9
 V`N=Q<P`UF5D?hiBna58;g2
 !s100 zl_VTgY<O3I9zzgm8Y[3n2
 R6
 31
-Z57 !s110 1594145185
+Z56 !s110 1594233615
 !i10b 1
-Z58 !s108 1594145185.559000
-Z59 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd|
-Z60 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd|
+Z57 !s108 1594233615.497000
+Z58 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd|
+Z59 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/BoothDecoder.vhd|
 !i113 1
 R11
 R12
@@ -247,16 +247,16 @@ VmLi^5M1ZGl>8^h6b:RBPZ2
 !s100 =?z^:bY0:Ubk:aL8RPD1l2
 R6
 31
-R57
+R56
 !i10b 1
+R57
 R58
 R59
-R60
 !i113 1
 R11
 R12
 Econtrolunit
-Z61 w1594077643
+Z60 w1594230400
 R21
 R22
 R23
@@ -264,19 +264,19 @@ R24
 R2
 R3
 R0
-Z62 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
-Z63 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
+Z61 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
+Z62 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd
 l0
 L21
 VM:lQfbo7RnG5XA1P5k^1R2
 !s100 >@0K33SGoCUAIKkFj_a1U3
 R6
 31
-Z64 !s110 1594145184
+Z63 !s110 1594233621
 !i10b 1
-Z65 !s108 1594145184.587000
-Z66 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd|
-Z67 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd|
+Z64 !s108 1594233621.764000
+Z65 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd|
+Z66 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/ControlUnit.vhd|
 !i113 1
 R11
 R12
@@ -287,23 +287,23 @@ R23
 R24
 R2
 R3
-Z68 DEx4 work 11 controlunit 0 22 M:lQfbo7RnG5XA1P5k^1R2
+Z67 DEx4 work 11 controlunit 0 22 M:lQfbo7RnG5XA1P5k^1R2
 l72
 L47
-V8MAjWJW;^gd:QfO]fVKDb2
-!s100 ;ociL5f0=FSAHNZNW28=L0
+VaSb_78jNFQmF[SdLW?KR20
+!s100 z2fkdkRP@h@`onUnz4ECO3
 R6
 31
-R64
+R63
 !i10b 1
+R64
 R65
 R66
-R67
 !i113 1
 R11
 R12
 Ecounter
-Z69 w1593546283
+Z68 w1593546283
 R21
 R22
 R23
@@ -311,19 +311,19 @@ R24
 R2
 R3
 R0
-Z70 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
-Z71 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
+Z69 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
+Z70 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd
 l0
 L11
 VlZD]jcdTB^RBdKk5<5Q<=0
 !s100 ihKATfgbbAzXo42IGe49c0
 R6
 31
-Z72 !s110 1594145183
+Z71 !s110 1594233618
 !i10b 1
-Z73 !s108 1594145183.729000
-Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd|
-Z75 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd|
+Z72 !s108 1594233618.578000
+Z73 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd|
+Z74 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Counter.vhd|
 !i113 1
 R11
 R12
@@ -334,39 +334,39 @@ R23
 R24
 R2
 R3
-Z76 DEx4 work 7 counter 0 22 lZD]jcdTB^RBdKk5<5Q<=0
+Z75 DEx4 work 7 counter 0 22 lZD]jcdTB^RBdKk5<5Q<=0
 l44
 L34
 VOd2@HT[zRnDZ1g<?<>^0k1
 !s100 EH<3kC[h`VbJFUfOoacJL3
 R6
 31
-R72
+R71
 !i10b 1
+R72
 R73
 R74
-R75
 !i113 1
 R11
 R12
 Ecraadder10
-Z77 w1593817383
+Z76 w1593817383
 R2
 R3
 R0
-Z78 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
-Z79 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
+Z77 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
+Z78 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd
 l0
 L9
 V]6=1QR[_OPWh`AEVQJVil1
 !s100 6>^O9>>HQh:FTm]W5zgJe2
 R6
 31
-Z80 !s110 1594145182
+Z79 !s110 1594233614
 !i10b 1
-Z81 !s108 1594145182.094000
-Z82 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd|
-Z83 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd|
+Z80 !s108 1594233614.431000
+Z81 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd|
+Z82 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder10.vhd|
 !i113 1
 R11
 R12
@@ -380,32 +380,32 @@ VkH7:ZT@VoP=3kg>USTl>03
 !s100 CYHlk]:d`5`N3GNFG2^zO2
 R6
 31
-R80
+R79
 !i10b 1
+R80
 R81
 R82
-R83
 !i113 1
 R11
 R12
 Ecraadder14
-R77
+R76
 R2
 R3
 R0
-Z84 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
-Z85 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
+Z83 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
+Z84 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd
 l0
 L9
 V9WzDkoo7;9X1HFGALP5Kj3
 !s100 c^8D7?UA2S<_1VZAKzZ3j3
 R6
 31
-Z86 !s110 1594145181
+Z85 !s110 1594233613
 !i10b 1
-Z87 !s108 1594145181.268000
-Z88 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd|
-Z89 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd|
+Z86 !s108 1594233613.938000
+Z87 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd|
+Z88 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder14.vhd|
 !i113 1
 R11
 R12
@@ -419,32 +419,32 @@ V07=[IFJTHG9m]l3GHe_oZ1
 !s100 6]ak_AX2]=NXR8[L`E0ja2
 R6
 31
-R86
+R85
 !i10b 1
+R86
 R87
 R88
-R89
 !i113 1
 R11
 R12
 Ecraadder18
-R77
+R76
 R2
 R3
 R0
-Z90 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
-Z91 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
+Z89 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
+Z90 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd
 l0
 L9
 VLl5?B>R2HoTVnK6JnL5SR1
 !s100 JlH897ZEQ?z@]de9n6fT00
 R6
 31
-Z92 !s110 1594145180
+R85
 !i10b 1
-Z93 !s108 1594145180.502000
-Z94 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd|
-Z95 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd|
+Z91 !s108 1594233613.417000
+Z92 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd|
+Z93 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder18.vhd|
 !i113 1
 R11
 R12
@@ -458,32 +458,32 @@ VhgJcFH1mGXYCCT@k^b;bU3
 !s100 DTjao?gS75:55FPT>:Rjf2
 R6
 31
-R92
+R85
 !i10b 1
+R91
+R92
 R93
-R94
-R95
 !i113 1
 R11
 R12
 Ecraadder22
-Z96 w1593817636
+Z94 w1593817636
 R2
 R3
 R0
-Z97 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
-Z98 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
+Z95 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
+Z96 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd
 l0
 L9
 VlXEPSTIz6gJ3b[=R=bnXQ2
 !s100 fm<FQIAX6HE<XkFhjnnMM0
 R6
 31
-Z99 !s110 1594145179
+Z97 !s110 1594233612
 !i10b 1
-Z100 !s108 1594145179.776000
-Z101 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd|
-Z102 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd|
+Z98 !s108 1594233612.925000
+Z99 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd|
+Z100 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder22.vhd|
 !i113 1
 R11
 R12
@@ -497,32 +497,32 @@ VQ5@L@o6QhzYmbRz`kagiT1
 !s100 bC<8DUM5CoTfXzc]famlU0
 R6
 31
-R99
+R97
 !i10b 1
+R98
+R99
 R100
-R101
-R102
 !i113 1
 R11
 R12
 Ecraadder26
-R77
+R76
 R2
 R3
 R0
-Z103 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
-Z104 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
+Z101 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
+Z102 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd
 l0
 L9
 VM1P;9E3AXig9F5mT^[]Xg2
 !s100 SAjNo]GbQXmRST_MHT`8h2
 R6
 31
-R99
+R97
 !i10b 1
-Z105 !s108 1594145179.042000
-Z106 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd|
-Z107 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd|
+Z103 !s108 1594233612.375000
+Z104 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd|
+Z105 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder26.vhd|
 !i113 1
 R11
 R12
@@ -536,32 +536,32 @@ VR:2959oDZVnOi;fF9SBm_3
 !s100 P8M<[S[@FlQ[nC];]APE13
 R6
 31
-R99
+R97
 !i10b 1
+R103
+R104
 R105
-R106
-R107
 !i113 1
 R11
 R12
 Ecraadder30
-R77
+R76
 R2
 R3
 R0
-Z108 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
-Z109 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
+Z106 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
+Z107 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd
 l0
 L9
 VPLh0mRj4XUTOKJ]XQZ0[P3
 !s100 ;C`HBg4MkQj9nmHfBOz8c3
 R6
 31
-Z110 !s110 1594145178
+Z108 !s110 1594233611
 !i10b 1
-Z111 !s108 1594145178.377000
-Z112 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd|
-Z113 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd|
+Z109 !s108 1594233611.845000
+Z110 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd|
+Z111 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder30.vhd|
 !i113 1
 R11
 R12
@@ -575,32 +575,32 @@ VNNnGXKX0Fj3:Bc5Hl>e;03
 !s100 fM82glR:[hY7fN>o?db@41
 R6
 31
-R110
+R108
 !i10b 1
+R109
+R110
 R111
-R112
-R113
 !i113 1
 R11
 R12
 Ecraadder32
-Z114 w1593883543
+Z112 w1593883543
 R2
 R3
 R0
-Z115 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
-Z116 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
+Z113 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
+Z114 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd
 l0
 L9
 V]X=`3<oefT=dK]d7Ocb6M0
 !s100 GBb]HL0NJ_nf?]e2T1Pel0
 R6
 31
-Z117 !s110 1594145177
+R108
 !i10b 1
-Z118 !s108 1594145177.708000
-Z119 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd|
-Z120 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd|
+Z115 !s108 1594233611.306000
+Z116 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd|
+Z117 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder32.vhd|
 !i113 1
 R11
 R12
@@ -614,32 +614,32 @@ Vn`S]1F>6RRDkRoQ1?g8Tg3
 !s100 2l;@afVg`8@SFSnK9j7383
 R6
 31
-R117
+R108
 !i10b 1
-R118
-R119
-R120
+R115
+R116
+R117
 !i113 1
 R11
 R12
 Ecraadder6
-R77
+R76
 R2
 R3
 R0
-Z121 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
-Z122 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
+Z118 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
+Z119 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd
 l0
 L9
 VPb5j@ha6LkF]13l]kb^0m2
 !s100 ?C9]fhFS[O7eC9nAC]ISC3
 R6
 31
-R80
+R79
 !i10b 1
-Z123 !s108 1594145182.932000
-Z124 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd|
-Z125 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd|
+Z120 !s108 1594233614.934000
+Z121 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd|
+Z122 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CRAAdder6.vhd|
 !i113 1
 R11
 R12
@@ -653,16 +653,16 @@ VUo2^khQeWhOz]OEj@SUob2
 !s100 z]gK>Ig7CH<G7NIlhPlQJ3
 R6
 31
-R80
+R79
 !i10b 1
-R123
-R124
-R125
+R120
+R121
+R122
 !i113 1
 R11
 R12
 Ecsr
-Z126 w1593891958
+Z123 w1593891958
 R21
 R22
 R23
@@ -670,19 +670,19 @@ R24
 R2
 R3
 R0
-Z127 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
-Z128 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
+Z124 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
+Z125 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd
 l0
 L36
 V5k;j<A27VZO0g^QD[@HFA2
 !s100 XO;NBF>l96AFnZ5=6`OaX2
 R6
 31
-R117
+R63
 !i10b 1
-Z129 !s108 1594145176.962000
-Z130 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd|
-Z131 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd|
+Z126 !s108 1594233621.210000
+Z127 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd|
+Z128 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/CSR.vhd|
 !i113 1
 R11
 R12
@@ -693,39 +693,39 @@ R23
 R24
 R2
 R3
-Z132 DEx4 work 3 csr 0 22 5k;j<A27VZO0g^QD[@HFA2
+Z129 DEx4 work 3 csr 0 22 5k;j<A27VZO0g^QD[@HFA2
 l96
 L53
 V6PJ4B:oi4TEzLHZioJknA0
 !s100 8a8?ZJ[U<B4XOiMPVLnY<3
 R6
 31
-R117
+R63
 !i10b 1
-R129
-R130
-R131
+R126
+R127
+R128
 !i113 1
 R11
 R12
 Efullpartialproduct
-R54
+R53
 R2
 R3
 R0
-Z133 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
-Z134 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
+Z130 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
+Z131 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd
 l0
 L9
 VSQzzoE4bKFE_C`olIhA_D2
 !s100 =_YdA>`LnhEDE:Od`PdmI3
 R6
 31
-Z135 !s110 1594145176
+Z132 !s110 1594233610
 !i10b 1
-Z136 !s108 1594145176.296000
-Z137 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd|
-Z138 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd|
+Z133 !s108 1594233610.623000
+Z134 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd|
+Z135 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/FullPartialProduct.vhd|
 !i113 1
 R11
 R12
@@ -739,114 +739,114 @@ V^UWI0cK`];ncoE[]W0i0S1
 !s100 QAmF92SKFNOPadAEKJbg30
 R6
 31
-R135
+R132
 !i10b 1
-R136
-R137
-R138
+R133
+R134
+R135
 !i113 1
 R11
 R12
 Einputmanager
-Z139 w1594060650
-Z140 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
-Z141 DPx4 work 16 registerspackage 0 22 `BO537daX:@962>1NH>0A2
+Z136 w1594060650
+Z137 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
+Z138 DPx4 work 16 registerspackage 0 22 `BO537daX:@962>1NH>0A2
 R2
 R3
 R0
-Z142 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
-Z143 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
+Z139 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
+Z140 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd
 l0
 L20
 V24Jl8;lned7cA<kdm_5Vc3
 !s100 dQ>PN9dZN_5B97GV8WcJ91
 R6
 31
-Z144 !s110 1594145191
+Z141 !s110 1594233624
 !i10b 1
-Z145 !s108 1594145191.261000
-Z146 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd|
-Z147 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd|
+Z142 !s108 1594233624.045000
+Z143 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd|
+Z144 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/InputManager.vhd|
 !i113 1
 R11
 R12
 Ainputmanagerarch
-R140
-R141
+R137
+R138
 R2
 R3
-Z148 DEx4 work 12 inputmanager 0 22 24Jl8;lned7cA<kdm_5Vc3
+Z145 DEx4 work 12 inputmanager 0 22 24Jl8;lned7cA<kdm_5Vc3
 l58
 L34
 V0h4hiELO2NPR3>YGBYac<1
 !s100 MAQeW_X>mhRBo[n=Yg;0=0
 R6
 31
-R144
+R141
 !i10b 1
-R145
-R146
-R147
+R142
+R143
+R144
 !i113 1
 R11
 R12
 Eir
-Z149 w1594066009
+Z146 w1594066009
 R2
 R3
 R0
-Z150 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
-Z151 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
+Z147 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
+Z148 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd
 l0
 L10
 VLn<d?FdC[1mbV`?CbVA7m3
 !s100 <JXTj5e185eTP437K]0Ab3
 R6
 31
-Z152 !s110 1594145175
+Z149 !s110 1594233620
 !i10b 1
-Z153 !s108 1594145175.572000
-Z154 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd|
-Z155 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd|
+Z150 !s108 1594233620.743000
+Z151 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd|
+Z152 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Ir.vhd|
 !i113 1
 R11
 R12
 Airarch
 R2
 R3
-Z156 DEx4 work 2 ir 0 22 Ln<d?FdC[1mbV`?CbVA7m3
+Z153 DEx4 work 2 ir 0 22 Ln<d?FdC[1mbV`?CbVA7m3
 l55
 L41
 V<bW4N8U06_G_lY?LCLmM31
 !s100 ]0zP5mC2h:Vbg:R=bWQnf1
 R6
 31
-R152
+R149
 !i10b 1
-R153
-R154
-R155
+R150
+R151
+R152
 !i113 1
 R11
 R12
 Eleftshift
-Z157 w1593903953
+Z154 w1593903953
 R2
 R3
 R0
-Z158 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
-Z159 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
+Z155 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
+Z156 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd
 l0
 L9
 VZXA04Sm>JDTG`PbFJNUMF0
 !s100 ;n:eTg>P12PGGD[ATZ8d@3
 R6
 31
-Z160 !s110 1594145174
+R132
 !i10b 1
-Z161 !s108 1594145174.719000
-Z162 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd|
-Z163 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd|
+Z157 !s108 1594233610.034000
+Z158 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd|
+Z159 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LeftShift.vhd|
 !i113 1
 R11
 R12
@@ -860,32 +860,32 @@ V6MT0lhMZHR3:Xg?K^==]91
 !s100 ZVLP><LQeVX<HzJe@5Dj62
 R6
 31
-R160
+R132
 !i10b 1
-R161
-R162
-R163
+R157
+R158
+R159
 !i113 1
 R11
 R12
 Elogicalshiftright
-R157
+R154
 R2
 R3
 R0
-Z164 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
-Z165 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
+Z160 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
+Z161 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd
 l0
 L9
 VA>jjm8cQUD^]4:o=ji<372
 !s100 zOCAk2=Go>2EiBWN`Y[3T2
 R6
 31
-Z166 !s110 1594145173
+Z162 !s110 1594233609
 !i10b 1
-Z167 !s108 1594145173.836000
-Z168 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd|
-Z169 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd|
+Z163 !s108 1594233609.475000
+Z164 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd|
+Z165 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/LogicalShiftRight.vhd|
 !i113 1
 R11
 R12
@@ -899,16 +899,16 @@ V=oHZzY2mFRO]dN>Ae^zC^2
 !s100 ]9]0?;5JL7EW0GQ]LONiZ1
 R6
 31
-R166
+R162
 !i10b 1
-R167
-R168
-R169
+R163
+R164
+R165
 !i113 1
 R11
 R12
 Emar
-Z170 w1593031838
+Z166 w1593031838
 R21
 R22
 R23
@@ -916,19 +916,19 @@ R24
 R2
 R3
 R0
-Z171 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
-Z172 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
+Z167 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
+Z168 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd
 l0
 L11
 VIY^1UQ2CCDAb7>Tk;O<990
 !s100 ;eT`3LKTmj[<YoG2h]Pa;2
 R6
 31
-R166
+R71
 !i10b 1
-Z173 !s108 1594145173.078000
-Z174 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd|
-Z175 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd|
+Z169 !s108 1594233618.024000
+Z170 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd|
+Z171 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MAR.vhd|
 !i113 1
 R11
 R12
@@ -939,23 +939,23 @@ R23
 R24
 R2
 R3
-Z176 DEx4 work 3 mar 0 22 IY^1UQ2CCDAb7>Tk;O<990
+Z172 DEx4 work 3 mar 0 22 IY^1UQ2CCDAb7>Tk;O<990
 l41
 L33
 VM42g73QoVE=JSF2P[Mzb^3
 !s100 <9:_1[b?:H>bnN5WW35KP0
 R6
 31
-R166
+R71
 !i10b 1
-R173
-R174
-R175
+R169
+R170
+R171
 !i113 1
 R11
 R12
 Emulcounter
-Z177 w1593539416
+Z173 w1593539416
 R21
 R22
 R23
@@ -963,19 +963,19 @@ R24
 R2
 R3
 R0
-Z178 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
-Z179 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
+Z174 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
+Z175 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd
 l0
 L11
 V6JLf1>N03^gPOI9]Y6g:j0
 !s100 2^RKnaB0D]ghS[5fodc^P3
 R6
 31
-Z180 !s110 1594145172
+Z176 !s110 1594233606
 !i10b 1
-Z181 !s108 1594145172.492000
-Z182 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd|
-Z183 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd|
+Z177 !s108 1594233606.798000
+Z178 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd|
+Z179 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MulCounter.vhd|
 !i113 1
 R11
 R12
@@ -993,32 +993,32 @@ VMFQ3:cM<_jPUR0?_U<HX81
 !s100 >DbXoZBQlemBhBCfP^^890
 R6
 31
-R180
+R176
 !i10b 1
-R181
-R182
-R183
+R177
+R178
+R179
 !i113 1
 R11
 R12
 Emultiplier32bits
-Z184 w1593884702
+Z180 w1593884702
 R2
 R3
 R0
-Z185 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
-Z186 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
+Z181 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
+Z182 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd
 l0
 L9
 VA]MS2A`lB>Wc;TNL7LZN33
 !s100 T_m@cjgYIjT>_]lGlR32V1
 R6
 31
-Z187 !s110 1594145171
+Z183 !s110 1594233608
 !i10b 1
-Z188 !s108 1594145171.939000
-Z189 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd|
-Z190 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd|
+Z184 !s108 1594233608.826000
+Z185 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd|
+Z186 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Multiplier32Bits.vhd|
 !i113 1
 R11
 R12
@@ -1032,80 +1032,80 @@ V2lLfTz^gU5Q<:W@DKl<RJ0
 !s100 `Pl^S797:T5Aa4@aRoX0<1
 R6
 31
-R187
+R183
 !i10b 1
-R188
-R189
-R190
+R184
+R185
+R186
 !i113 1
 R11
 R12
 Emymemory
-Z191 w1593630882
-Z192 DPx9 altera_mf 20 altera_mf_components 0 22 :zX8E]9f?PCk8X:Y[X97:1
+Z187 w1593630882
+Z188 DPx9 altera_mf 20 altera_mf_components 0 22 :zX8E]9f?PCk8X:Y[X97:1
 R2
 R3
 R0
-Z193 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
-Z194 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
+Z189 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
+Z190 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd
 l0
 L43
 VZBB^_Z^7Uh<WZ_P5F0MIl1
 !s100 BAf2e29eGWNG;@DZ3B>CP2
 R6
 31
-R187
+R176
 !i10b 1
-Z195 !s108 1594145171.342000
-Z196 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd|
-Z197 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd|
+Z191 !s108 1594233606.211000
+Z192 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd|
+Z193 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/MyMemory.vhd|
 !i113 1
 R11
 R12
 Asyn
-R192
+R188
 R2
 R3
-Z198 DEx4 work 8 mymemory 0 22 ZBB^_Z^7Uh<WZ_P5F0MIl1
+Z194 DEx4 work 8 mymemory 0 22 ZBB^_Z^7Uh<WZ_P5F0MIl1
 l59
 L55
 VeBmHE651_4SQ8lZ`@[5=l0
 !s100 3m^KJh[]m84_8bEF:]8[71
 R6
 31
-R187
+R176
 !i10b 1
-R195
-R196
-R197
+R191
+R192
+R193
 !i113 1
 R11
 R12
 Poutputcontrolpackage
-R140
+R137
 R2
 R3
-Z199 w1593197521
+Z195 w1593197521
 R0
-Z200 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
-Z201 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
+Z196 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
+Z197 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd
 l0
 L18
 VFnA^emdzmFe@z1[VCB4NA3
 !s100 Jc8Z53U`ToodEgbiQTD5L2
 R6
 31
-R187
+R183
 !i10b 1
-Z202 !s108 1594145171.239000
-Z203 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd|
-Z204 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd|
+Z198 !s108 1594233608.068000
+Z199 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd|
+Z200 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputControlPackage.vhd|
 !i113 1
 R11
 R12
 Bbody
-Z205 DPx4 work 20 outputcontrolpackage 0 22 FnA^emdzmFe@z1[VCB4NA3
-R140
+Z201 DPx4 work 20 outputcontrolpackage 0 22 FnA^emdzmFe@z1[VCB4NA3
+R137
 R2
 R3
 l0
@@ -1114,237 +1114,237 @@ VVJE]6E7DlK78k0QMgi2?N3
 !s100 ?3BP]VR8diM05_OgZAkc_1
 R6
 31
-R187
+R183
 !i10b 1
-R202
-R203
-R204
+R198
+R199
+R200
 !i113 1
 R11
 R12
-Z206 nbody
+Z202 nbody
 Eoutputmanager
-Z207 w1594077642
-R140
-R141
+Z203 w1594230106
+R137
+R138
 R2
 R3
 R0
-Z208 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
-Z209 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
+Z204 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
+Z205 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd
 l0
 L20
 V<`2AnL5`mRM=;5PzB[5?M1
 !s100 :H=J>@[lgW<>PkKCShIbD3
 R6
 31
-Z210 !s110 1594145190
+Z206 !s110 1594233623
 !i10b 1
-Z211 !s108 1594145190.528000
-Z212 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd|
-Z213 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd|
+Z207 !s108 1594233623.480000
+Z208 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd|
+Z209 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/OutputManager.vhd|
 !i113 1
 R11
 R12
 Aoutputmanagerarch
-R140
-R141
+R137
+R138
 R2
 R3
-Z214 DEx4 work 13 outputmanager 0 22 <`2AnL5`mRM=;5PzB[5?M1
+Z210 DEx4 work 13 outputmanager 0 22 <`2AnL5`mRM=;5PzB[5?M1
 l55
 L36
-V0XkiIkX@18>80Tze7LXDA1
-!s100 Plg7IZQl063jk61]IFShd1
+V=_=>[WLC]ejJHCQiCczJ13
+!s100 6[BY18WmaY7@dFng;gz]i3
 R6
 31
-R210
+R206
 !i10b 1
-R211
-R212
-R213
+R207
+R208
+R209
 !i113 1
 R11
 R12
 Epc
-Z215 w1593803195
-R140
+Z211 w1593803195
+R137
 R2
 R3
 R0
-Z216 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
-Z217 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
+Z212 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
+Z213 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd
 l0
 L20
 VI:8RWC8b]kd_ZJ3Yj8F^Q3
 !s100 6oc0QM=mdbX12M8YD_[6T2
 R6
 31
-Z218 !s110 1594145170
+R149
 !i10b 1
-Z219 !s108 1594145170.586000
-Z220 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd|
-Z221 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd|
+Z214 !s108 1594233620.241000
+Z215 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd|
+Z216 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PC.vhd|
 !i113 1
 R11
 R12
 Apcarch
-R140
+R137
 R2
 R3
-Z222 DEx4 work 2 pc 0 22 I:8RWC8b]kd_ZJ3Yj8F^Q3
+Z217 DEx4 work 2 pc 0 22 I:8RWC8b]kd_ZJ3Yj8F^Q3
 l46
 L35
 VQ9l3Jm[z?X;^@<`:UCU^L0
 !s100 8Y=FOVm4Q;nTlVBgDBGWB2
 R6
 31
-R218
+R149
 !i10b 1
-R219
-R220
-R221
+R214
+R215
+R216
 !i113 1
 R11
 R12
 Eperiphericcircuit
-Z223 w1593197021
+Z218 w1593197021
 R2
 R3
 R0
-Z224 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
-Z225 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
+Z219 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
+Z220 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd
 l0
 L22
 VB=5bY49iMn?EjU`BCoAjM0
 !s100 N5jBA?S2XJce=>N43H:W20
 R6
 31
-R218
+Z221 !s110 1594233607
 !i10b 1
-Z226 !s108 1594145170.037000
-Z227 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd|
-Z228 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd|
+Z222 !s108 1594233607.377000
+Z223 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd|
+Z224 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/PeriphericCircuit.vhd|
 !i113 1
 R11
 R12
 Aperiphericcircuitarch
 R2
 R3
-Z229 DEx4 work 17 periphericcircuit 0 22 B=5bY49iMn?EjU`BCoAjM0
+Z225 DEx4 work 17 periphericcircuit 0 22 B=5bY49iMn?EjU`BCoAjM0
 l49
 L36
 VoNM6oD6YCT54N@EM@aalS2
 !s100 oOXVMl>IZl`N]bbgnF>S]2
 R6
 31
-R218
+R221
 !i10b 1
-R226
-R227
-R228
+R222
+R223
+R224
 !i113 1
 R11
 R12
 Eregisters
-Z230 w1592761482
-R140
-R141
+Z226 w1592761482
+R137
+R138
 R2
 R3
 R0
-Z231 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
-Z232 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
+Z227 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
+Z228 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd
 l0
 L20
 VHCAZ0I:ccDJF>n[@f<1b00
 !s100 Jh5WjNG^^]R50[icf9_C_3
 R6
 31
-R7
+R141
 !i10b 1
-Z233 !s108 1594145192.880000
-Z234 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd|
-Z235 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd|
+Z229 !s108 1594233624.606000
+Z230 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd|
+Z231 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Registers.vhd|
 !i113 1
 R11
 R12
 Aregistersarch
-R214
-Z236 DEx4 work 14 registersblock 0 22 @zieFLof;99AH]eU<e]1i3
-R148
-R140
-R141
+R210
+Z232 DEx4 work 14 registersblock 0 22 @zieFLof;99AH]eU<e]1i3
+R145
+R137
+R138
 R2
 R3
-Z237 DEx4 work 9 registers 0 22 HCAZ0I:ccDJF>n[@f<1b00
+Z233 DEx4 work 9 registers 0 22 HCAZ0I:ccDJF>n[@f<1b00
 l49
 L41
 VHnYaiBKJI`fKjd?SKcMna1
 !s100 [l3]J^c0=Oh33NSVL66@z3
 R6
 31
-R7
+R141
 !i10b 1
-R233
-R234
-R235
+R229
+R230
+R231
 !i113 1
 R11
 R12
 Eregistersblock
-Z238 w1592598173
-R140
-R141
+Z234 w1592598173
+R137
+R138
 R2
 R3
 R0
-Z239 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
-Z240 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
+Z235 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
+Z236 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd
 l0
 L20
 V@zieFLof;99AH]eU<e]1i3
 !s100 P_VBRlKkAM]=5]n_D`bPQ0
 R6
 31
-Z241 !s110 1594145189
+R7
 !i10b 1
-Z242 !s108 1594145189.815000
-Z243 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd|
-Z244 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd|
+Z237 !s108 1594233622.964000
+Z238 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd|
+Z239 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersBlock.vhd|
 !i113 1
 R11
 R12
 Aregistersblockarch
-Z245 DEx4 work 2 sp 0 22 >Bj^z5I8X2:PnP1EY]bDB2
-Z246 DEx4 work 4 word 0 22 ?ngg7N1z:[Ub_E493>=J^0
-R140
-R141
+Z240 DEx4 work 2 sp 0 22 >Bj^z5I8X2:PnP1EY]bDB2
+Z241 DEx4 work 4 word 0 22 ?ngg7N1z:[Ub_E493>=J^0
+R137
+R138
 R2
 R3
-R236
+R232
 l37
 L33
 V8U]Dj=FX:RY2Mb;NB]XQL1
 !s100 6LG60caaVabLkJdnYlC[C1
 R6
 31
-R241
+R7
 !i10b 1
-R242
-R243
-R244
+R237
+R238
+R239
 !i113 1
 R11
 R12
 Pregisterspackage
-R140
+R137
 R2
 R3
-Z247 w1592599722
+Z242 w1592599722
 R0
-Z248 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
-Z249 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
+Z243 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
+Z244 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd
 l0
 L18
 V`BO537daX:@962>1NH>0A2
@@ -1352,17 +1352,17 @@ V`BO537daX:@962>1NH>0A2
 R6
 31
 b1
-Z250 !s110 1594145169
+R149
 !i10b 1
-Z251 !s108 1594145169.924000
-Z252 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd|
-Z253 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd|
+Z245 !s108 1594233620.125000
+Z246 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd|
+Z247 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RegistersPackage.vhd|
 !i113 1
 R11
 R12
 Bbody
-R141
-R140
+R138
+R137
 R2
 R3
 l0
@@ -1371,89 +1371,89 @@ VV`e^d;FEFDG6R?d>IKm=@0
 !s100 Z?UzTb8e9:eB<e6C78i3N2
 R6
 31
-R250
+R149
 !i10b 1
-R251
-R252
-R253
+R245
+R246
+R247
 !i113 1
 R11
 R12
-R206
+R202
 Eriscv
-Z254 w1593803194
-R140
-R205
+Z248 w1593803194
+R137
+R201
 R2
 R3
 R0
-Z255 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
-Z256 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
+Z249 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
+Z250 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd
 l0
 L21
 V2VMN8MYFkz37l2]E8XzPl3
 !s100 dX]8QNPFPK^@BnAF:faK;0
 R6
 31
-Z257 !s110 1594145193
+Z251 !s110 1594233625
 !i10b 1
-Z258 !s108 1594145193.648000
-Z259 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd|
-Z260 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd|
+Z252 !s108 1594233625.244000
+Z253 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd|
+Z254 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/RiscV.vhd|
 !i113 1
 R11
 R12
 Ariscvarch
 R26
-R176
-R76
-R222
-R156
-R132
-R141
-R237
+R172
+R75
+R217
+R153
+R129
+R138
+R233
 R21
 R22
 R23
 R24
-R68
-R140
-R205
+R67
+R137
+R201
 R2
 R3
-Z261 DEx4 work 5 riscv 0 22 2VMN8MYFkz37l2]E8XzPl3
+Z255 DEx4 work 5 riscv 0 22 2VMN8MYFkz37l2]E8XzPl3
 l77
 L39
 V`>01U7KN7g@@Z<>ac@4CX2
 !s100 SU7d?oANEQ[[0=DCBYVgG2
 R6
 31
-R257
+R251
 !i10b 1
-R258
-R259
-R260
+R252
+R253
+R254
 !i113 1
 R11
 R12
 Esinglepartialproduct
-R54
+R53
 R2
 R3
 R0
-Z262 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
-Z263 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
+Z256 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
+Z257 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd
 l0
 L9
 V93nF3EKmdK5KTz]]l`ZzE1
 !s100 KSOX1<P_F5oXEzY:2<I0f3
 R6
 31
-R250
+R183
 !i10b 1
-Z264 !s108 1594145169.302000
-Z265 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd|
-Z266 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd|
+Z258 !s108 1594233608.196000
+Z259 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd|
+Z260 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SinglePartialProduct.vhd|
 !i113 1
 R11
 R12
@@ -1467,44 +1467,44 @@ VfRRzhiEN@z_I]9146S7HL2
 !s100 >6nIhezEFJ9J9m>_SE>i32
 R6
 31
-R250
+R183
 !i10b 1
-R264
-R265
-R266
+R258
+R259
+R260
 !i113 1
 R11
 R12
 Esoc
-Z267 w1593630912
-R140
-R205
+Z261 w1593630912
+R137
+R201
 R2
 R3
 R0
-Z268 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
-Z269 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
+Z262 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
+Z263 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd
 l0
 L21
 VcInKfC>V;oUkzCSM=]j_a1
 !s100 z=L:mQZ>8ifKLN8J8HL^I2
 R6
 31
-Z270 !s110 1594145194
+R251
 !i10b 1
-Z271 !s108 1594145194.451000
-Z272 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd|
-Z273 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd|
+Z264 !s108 1594233625.919000
+Z265 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd|
+Z266 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/SoC.vhd|
 !i113 1
 R11
 R12
 Asocarch
-R229
-R192
-R198
-R261
-R140
-R205
+R225
+R188
+R194
+R255
+R137
+R201
 R2
 R3
 DEx4 work 3 soc 0 22 cInKfC>V;oUkzCSM=]j_a1
@@ -1512,6 +1512,47 @@ l43
 L33
 VUFiUo:ElMOJLA>VO8<j`43
 !s100 a@e6Dg04jaKVX4mn`I=;U1
+R6
+31
+R251
+!i10b 1
+R264
+R265
+R266
+!i113 1
+R11
+R12
+Esp
+Z267 w1592253000
+R137
+R2
+R3
+R0
+Z268 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
+Z269 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
+l0
+L20
+V>Bj^z5I8X2:PnP1EY]bDB2
+!s100 =keGzCh]AAAS5[MRC6a[?1
+R6
+31
+Z270 !s110 1594233619
+!i10b 1
+Z271 !s108 1594233619.635000
+Z272 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd|
+Z273 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd|
+!i113 1
+R11
+R12
+Asparch
+R137
+R2
+R3
+R240
+l50
+L41
+Vgfb[3zmlMCGOd`=hNTB?R3
+!s100 FFZj5S<7?KF>defg`0[0f2
 R6
 31
 R270
@@ -1522,83 +1563,42 @@ R273
 !i113 1
 R11
 R12
-Esp
-Z274 w1592253000
-R140
-R2
-R3
-R0
-Z275 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
-Z276 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd
-l0
-L20
-V>Bj^z5I8X2:PnP1EY]bDB2
-!s100 =keGzCh]AAAS5[MRC6a[?1
-R6
-31
-Z277 !s110 1594145168
-!i10b 1
-Z278 !s108 1594145168.565000
-Z279 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd|
-Z280 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Sp.vhd|
-!i113 1
-R11
-R12
-Asparch
-R140
-R2
-R3
-R245
-l50
-L41
-Vgfb[3zmlMCGOd`=hNTB?R3
-!s100 FFZj5S<7?KF>defg`0[0f2
-R6
-31
-R277
-!i10b 1
-R278
-R279
-R280
-!i113 1
-R11
-R12
 Eword
-Z281 w1592595398
+Z274 w1592595398
 R2
 R3
 R0
-Z282 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
-Z283 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
+Z275 8C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
+Z276 FC:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd
 l0
 L19
 V?ngg7N1z:[Ub_E493>=J^0
 !s100 =`LjQI=>ZR@]i[09;cdeb2
 R6
 31
-R241
+R270
 !i10b 1
-Z284 !s108 1594145189.097000
-Z285 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd|
-Z286 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd|
+Z277 !s108 1594233619.133000
+Z278 !s90 -reportprogress|300|-93|-work|work|C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd|
+Z279 !s107 C:/Users/user/Documents/GitHub/RISC-V-Processor-AHPL/SoC/VHDL/Word.vhd|
 !i113 1
 R11
 R12
 Awordarch
 R2
 R3
-R246
+R241
 l35
 L31
 V2oFfbjnjRY4zd[WCLOb2N0
 !s100 :ZX1CC?G9K^95K8Vn]UZc1
 R6
 31
-R241
+R270
 !i10b 1
-R284
-R285
-R286
+R277
+R278
+R279
 !i113 1
 R11
 R12

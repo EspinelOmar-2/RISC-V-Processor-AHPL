@@ -140,10 +140,9 @@ ToState( 44) <= NIr(6) AND NIr(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND
 ToState( 46) <= NIr(6) AND NIr(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(46); -- [0010011]
 ToState( 47) <= NIr(6) AND NIr(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(47); -- [0010011]
 ToState( 48) <= NIr(6) AND NIr(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(48); -- [0010011]
-ToState( 49) <= NIr(6) AND NIr(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(49); -- [0010011]
+ToState( 49) <= NIr(6)            AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(49); -- [0010011]
 ToState( 53) <= NIr(6) AND  Ir(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(53); -- [0110011]
 ToState( 55) <= NIr(6) AND  Ir(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(55); -- [0110011]
-ToState( 58) <= NIr(6) AND  Ir(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(58); -- [0110011]
 ToState( 60) <= NIr(6) AND  Ir(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(60); -- [0110011]
 ToState( 62) <= NIr(6) AND  Ir(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(62); -- [0110011]
 ToState( 64) <= NIr(6) AND  Ir(5) AND  Ir(4) AND NIr(3) AND NIr(2) AND Ir(1) AND  Ir(0) AND StateEx(64); -- [0110011]
@@ -267,17 +266,19 @@ ToState(43) <= (Q(41) AND (((NOT AluControl(1)) AND      AluControl(2) ) OR
 --
 --*******************************************************************************************************--
 
-ToState(50) <= (Q(49) AND  NIr(11) AND NIr( 9)) OR
-					(Q(50) AND (NOT CounterControl)) OR
+ToState(50) <= (Q(49) AND  NIr(11) AND NIr( 9) AND NIr(5)) OR
+					(Q(50) AND (NOT CounterControl)           ) OR
 					(Q(58) AND  NIr( 9));
 
-ToState(51) <= (Q(49) AND  NIr(11) AND  Ir( 9)) OR
+ToState(51) <= (Q(49) AND  NIr(11) AND  Ir( 9) AND NIr(5)) OR
 					(Q(51) AND (NOT CounterControl)) OR
 					(Q(58) AND   Ir( 9) AND NIr(11));
 
-ToState(52) <= (Q(49) AND   Ir(11))             OR
+ToState(52) <= (Q(49) AND   Ir(11)             AND NIr(5))  OR
 					(Q(52) AND (NOT CounterControl)) OR
 					(Q(58) AND   Ir( 9) AND  Ir(11));
+
+ToState(58) <=  Ir(5);
 
 ToState(59) <= (Q(50) AND      CounterControl) OR
 					(Q(51) AND      CounterControl) OR
@@ -439,7 +440,7 @@ D( 54) <= Q( 53);
 D( 55) <= Q(  5) AND ToState( 55);
 D( 56) <= Q( 55);
 D( 57) <= Q( 56);
-D( 58) <= Q(  5) AND ToState( 58);
+D( 58) <= Q( 49) AND ToState( 58);
 D( 59) <=            ToState( 59);
 D( 60) <= Q(  5) AND ToState( 60);
 D( 61) <= Q( 60);
