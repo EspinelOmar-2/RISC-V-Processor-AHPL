@@ -30,7 +30,7 @@ SIGNAL SpySignal        : Spy;
 
 BEGIN
 
-BranchTest: ENTITY WORK.SoC 
+ErrorTest: ENTITY WORK.SoC 
 PORT MAP	  (PeripheralPort   => PeripheralPort,
 				Reset            => Reset,
 				Clk              => Clk,
