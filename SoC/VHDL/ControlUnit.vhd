@@ -200,7 +200,6 @@ ToState( 84) <= '0' WHEN ((ToState( 6) = '1') AND (Q(5) = '1')) ELSE
 					 '0' WHEN ((ToState(49) = '1') AND (Q(5) = '1')) ELSE
 					 '0' WHEN ((ToState(53) = '1') AND (Q(5) = '1')) ELSE
 					 '0' WHEN ((ToState(55) = '1') AND (Q(5) = '1')) ELSE
-					 '0' WHEN ((ToState(58) = '1') AND (Q(5) = '1')) ELSE
 					 '0' WHEN ((ToState(60) = '1') AND (Q(5) = '1')) ELSE
 					 '0' WHEN ((ToState(62) = '1') AND (Q(5) = '1')) ELSE
 					 '0' WHEN ((ToState(64) = '1') AND (Q(5) = '1')) ELSE
