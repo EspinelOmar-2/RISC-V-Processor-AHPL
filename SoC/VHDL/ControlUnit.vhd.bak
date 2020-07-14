@@ -248,16 +248,16 @@ ToState( 36) <=  Ir(5) AND  Ir(8) AND NIr(7);
 
 ToState(42) <= (Q(41) AND   (NOT AluControl(1)) AND (NOT AluControl(2))) OR
 					(Q(45) AND   (NOT AluControl(1)) AND      AluControl(2) ) OR
-					(Q(61) AND   (NOT AluControl(1)) AND (    AluControl(2))) OR
-					(Q(63) AND   (NOT AluControl(1)) AND  NOT AluControl(2) );
+					(Q(61) AND   (NOT AluControl(1)) AND (NOT AluControl(2))) OR
+					(Q(63) AND   (NOT AluControl(1)) AND      AluControl(2) );
 
 ToState(43) <= (Q(41) AND (((NOT AluControl(1)) AND      AluControl(2) ) OR
 									(     AluControl(1))))                        OR
 					(Q(45) AND (((NOT AluControl(1)) AND (NOT AluControl(2))) OR
 									(     AluControl(1))))                        OR
-					(Q(61) AND (((NOT AluControl(1)) AND  NOT AluControl(2) ) OR
+					(Q(61) AND (((NOT AluControl(1)) AND      AluControl(2) ) OR
 									(     AluControl(1))))                        OR
-					(Q(63) AND (((NOT AluControl(1)) AND (    AluControl(2))) OR
+					(Q(63) AND (((NOT AluControl(1)) AND (NOT AluControl(2))) OR
 									(     AluControl(1))));
 
 --*******************************************************************************************************--

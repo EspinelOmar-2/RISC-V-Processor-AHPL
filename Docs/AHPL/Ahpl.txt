@@ -390,8 +390,8 @@
 
 61. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 19, mientras la comparacion se hace
     ->
-(ALU_Control[1]' . ALU_Control[2]'. X42) +                                                                               -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
-(ALU_Control[1]' . ALU_Control[2] . X43) +                                                                               -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
+(ALU_Control[1]' . ALU_Control[2]'. X43) +                                                                               -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
+(ALU_Control[1]' . ALU_Control[2] . X42) +                                                                               -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
 (ALU_Control[1]                     X43)                                                                                 -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
 62. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se resta el valor de Registers direccion IR(24:20) con Registers
@@ -399,8 +399,8 @@
 
 63. Salida_ALU = Suma( Registers[IR(19:15)], Registers[ IR(24:20)]', 1 );                                                -- Se repite la accion del estado 63, mientras la resta se efectua
     ->
-(ALU_Control[1]'. ALU_Control[2] . X42) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 42
-(ALU_Control[1]'. ALU_Control[2]'. X43) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 43
+(ALU_Control[1]'. ALU_Control[2] . X43) +                                                                                -- Registers dir IR(19:15) > Registers dir IR(24:20) GOTO 43
+(ALU_Control[1]'. ALU_Control[2]'. X42) +                                                                                -- Registers dir IR(19:15) < Registers dir IR(24:20) GOTO 42
 (ALU_Control[1]                    X43)                                                                                  -- Registers dir IR(19:15) = Registers dir IR(24:20) GOTO 43
 
 64. Registers[IR(11:7)] <= XOR( Registers[IR(19:15)], Registers[IR(24:20)] );                                            -- Se hace el XOR entre Registers direccion IR(19:15) con el dato
