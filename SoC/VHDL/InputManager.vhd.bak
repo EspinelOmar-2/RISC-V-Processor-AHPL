@@ -20,7 +20,7 @@ USE WORK.RegistersPackage.ALL;
 ENTITY InputManager IS
 	
 	PORT	 (
-				Ctrl        : IN  STD_LOGIC_VECTOR(27 DOWNTO 0);
+				Ctrl        : IN  STD_LOGIC_VECTOR(26 DOWNTO 0);
 				IrInput     : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				MemoryInput : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				CsrInput    : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -70,7 +70,7 @@ MemoryOrgn(2) <= Ctrl( 7);
 MemoryOrgn(3) <= Ctrl( 8);
 MemoryOrgn(4) <= Ctrl( 9);
 CsrOrgn       <= Ctrl(19);
-AluOrgn       <= Ctrl( 0) OR Ctrl(14) OR Ctrl(17) OR Ctrl(18) OR Ctrl(27);
+AluOrgn       <= Ctrl( 0) OR Ctrl(14) OR Ctrl(17) OR Ctrl(18);
 OneOrg        <= Ctrl(15);
 ZeroOrg       <= Ctrl(16);
 
@@ -112,7 +112,7 @@ NoInput  <= Ctrl( 2) OR Ctrl( 3) OR Ctrl( 4) OR Ctrl(10) OR Ctrl(11) OR
 
 EnaInput <= Ctrl( 1) OR Ctrl( 5) OR Ctrl( 6) OR Ctrl( 7) OR Ctrl( 8) OR
 				Ctrl( 9) OR Ctrl( 0) OR Ctrl(19) OR Ctrl(14) OR Ctrl(17) OR
-				Ctrl(18) OR Ctrl(15) OR Ctrl(16) OR Ctrl(27);
+				Ctrl(18) OR Ctrl(15) OR Ctrl(16);
 
 Address  <= EnaInput &  NoInput & IrInput(11 DOWNTO 7);
 

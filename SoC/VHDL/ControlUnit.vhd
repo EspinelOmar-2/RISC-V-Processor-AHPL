@@ -28,7 +28,7 @@ ENTITY ControlUnit IS
 				AluControl        : IN  STD_LOGIC_VECTOR( 3 DOWNTO 0);
 				Reset             : IN  STD_LOGIC;
 				Clk               : IN  STD_LOGIC;
-				ControlRegisters  : OUT STD_LOGIC_VECTOR(26 DOWNTO 0);
+				ControlRegisters  : OUT STD_LOGIC_VECTOR(27 DOWNTO 0);
 				ControlSp         : OUT STD_LOGIC_VECTOR( 1 DOWNTO 0);
 				ControlPc         : OUT STD_LOGIC_VECTOR( 2 DOWNTO 0);
 				ControlAlu        : OUT STD_LOGIC_VECTOR(36 DOWNTO 0);
@@ -573,12 +573,12 @@ ControlCsr(16)       <= Q( 99);
 ControlCsr(17)       <= Q(100);
 ControlCsr(18)       <= Q(101);
 
-ControlRegisters( 0) <= Q(  7) OR Q( 10) OR Q( 53) OR Q( 54) OR Q( 59);
+ControlRegisters( 0) <= Q(  7) OR Q( 10) OR Q( 59);
 ControlRegisters( 1) <= Q(  8);
 ControlRegisters( 2) <= Q( 13) OR Q( 14) OR Q( 23) OR Q( 24) OR Q( 38) OR Q( 40) OR Q( 41) OR
 								Q( 44) OR Q( 45) OR Q( 49) OR Q( 50) OR Q( 51) OR Q( 52);
 ControlRegisters( 3) <= Q( 15) OR Q( 16);
-ControlRegisters( 4) <= Q( 19) OR Q( 20) OR Q( 21) OR Q( 22) OR Q( 53) OR Q( 54) OR
+ControlRegisters( 4) <= Q( 19) OR Q( 20) OR Q( 21) OR Q( 22) OR
 								Q( 55) OR Q( 56) OR Q( 60) OR Q( 61) OR Q( 62) OR Q( 63);
 ControlRegisters( 5) <= Q( 27);
 ControlRegisters( 6) <= Q( 28);
@@ -602,6 +602,7 @@ ControlRegisters(23) <= Q( 77) OR Q( 78);
 ControlRegisters(24) <= Q( 95);
 ControlRegisters(25) <= Q( 86) OR Q( 87) OR Q( 96) OR Q( 97);
 ControlRegisters(26) <= Q( 58);
+ControlRegisters(27) <= Q( 53) OR Q( 54);
 
 ControlAlu( 0)       <= Q(  6);
 ControlAlu( 1)       <= Q(  7);

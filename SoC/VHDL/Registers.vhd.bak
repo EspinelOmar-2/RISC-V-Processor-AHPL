@@ -21,7 +21,7 @@ ENTITY Registers IS
 	
 	PORT	 (
 				ControlSp        : IN  STD_LOGIC_VECTOR( 1 DOWNTO 0);
-				ControlRegisters : IN  STD_LOGIC_VECTOR(27 DOWNTO 0);
+				ControlRegisters : IN  STD_LOGIC_VECTOR(26 DOWNTO 0);
 				IrRegisters      : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				MemoryOut        : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
 				CsrRegisters     : IN  STD_LOGIC_VECTOR(31 DOWNTO 0);
