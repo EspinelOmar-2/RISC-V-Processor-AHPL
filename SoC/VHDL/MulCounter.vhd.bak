@@ -16,7 +16,6 @@ port(
 		reset      : IN  STD_LOGIC;
 		enable     : IN  STD_LOGIC;
 		--Salidas
-		auxq			: out STD_LOGIC_VECTOR(1 DOWNTO 0);
 		endOfCount : OUT STD_LOGIC
 	  );
 end Entity MulCounter;    
@@ -30,26 +29,25 @@ signal auxEnable : STD_LOGIC_VECTOR(1 DOWNTO 0);
 
 begin
 
-PROCESS(reloj, reset, D)
+PROCESS(Reloj, Reset, D)
 
 BEGIN
 	
-	IF(reset = '1')THEN
+	IF(Reset = '1')THEN
 		
-		q<= "00";
+		Q <= "00";
 		
-	ELSIF(Rising_Edge(reloj))THEN
+	ELSIF(Rising_Edge(Reloj))THEN
 		
-		IF   (auxEnable(0) = '1')THEN
+		IF   (AuxEnable(0) = '1')THEN
 			
-			q(0) <= D(0);
+			Q(0) <= D(0);
 			
-			END IF;
-		IF(auxEnable(1) = '1')THEN
+		ELSIF(AuxEnable(1) = '1')THEN
 			
-			q(1) <= D(1);
-			END IF;
-		
+			Q(1) <= D(1);
+			
+		END IF;
 		
 	END IF;
 	
@@ -57,14 +55,13 @@ END PROCESS;
 
 -- Asigna los Data
 
-D(0) <= NOT(q(0));
-D(1) <= NOT(q(1));
-
+D(0) <= NOT(Q(0));
+D(1) <= NOT(Q(1));
 
 --Asigna los enable 
 auxEnable (0) <= enable;
 auxEnable (1) <= q(0) and enable;
-auxq<=q;
+
 auxSalida  <= (q(0) and q(1) );
 endOfCount <= auxSalida;
 
